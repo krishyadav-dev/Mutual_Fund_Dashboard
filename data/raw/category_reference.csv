@@ -1,0 +1,42 @@
+broad_category,sub_category,benchmark_index,risk_level
+Equity Scheme,Large Cap Fund,Nifty 100,Moderately High
+Equity Scheme,Large & Mid Cap Fund,Nifty LargeMidcap 250,Moderately High
+Equity Scheme,Mid Cap Fund,Nifty Midcap 150,High
+Equity Scheme,Small Cap Fund,Nifty Smallcap 250,Very High
+Equity Scheme,Multi Cap Fund,Nifty 500,High
+Equity Scheme,Flexi Cap Fund,Nifty 500,Moderately High
+Equity Scheme,ELSS,Nifty 500,High
+Equity Scheme,Sectoral / Thematic Fund,Nifty 500,Very High
+Equity Scheme,Focused Fund,Nifty 500,High
+Equity Scheme,Dividend Yield Fund,Nifty Dividend Opp 50,Moderately High
+Equity Scheme,Value Fund,Nifty 500 Value 50,Moderately High
+Equity Scheme,Contra Fund,Nifty 500,Moderately High
+Hybrid Scheme,Aggressive Hybrid Fund,Nifty 50 Hybrid 65:35,Moderately High
+Hybrid Scheme,Conservative Hybrid Fund,Nifty 50 Hybrid 25:75,Moderate
+Hybrid Scheme,Balanced Hybrid Fund,Nifty 50 Hybrid 50:50,Moderate
+Hybrid Scheme,Dynamic Asset Allocation,Nifty 50,Moderate
+Hybrid Scheme,Multi Asset Allocation,Nifty 50,Moderate
+Hybrid Scheme,Arbitrage Fund,Nifty 50 Arbitrage,Low
+Hybrid Scheme,Equity Savings Fund,Nifty Equity Savings,Low to Moderate
+Debt Scheme,Overnight Fund,CRISIL Overnight,Low
+Debt Scheme,Liquid Fund,CRISIL Liquid,Low
+Debt Scheme,Ultra Short Duration Fund,CRISIL Ultra Short,Low to Moderate
+Debt Scheme,Low Duration Fund,CRISIL Low Duration,Low to Moderate
+Debt Scheme,Money Market Fund,CRISIL Money Market,Low to Moderate
+Debt Scheme,Short Duration Fund,CRISIL Short Term,Moderate
+Debt Scheme,Medium Duration Fund,CRISIL Medium Term,Moderate
+Debt Scheme,Medium to Long Duration Fund,CRISIL Composite Bond,Moderate
+Debt Scheme,Long Duration Fund,CRISIL Long Term Gilt,Moderately High
+Debt Scheme,Dynamic Bond Fund,CRISIL Composite Bond,Moderate
+Debt Scheme,Corporate Bond Fund,CRISIL Corporate Bond,Moderate
+Debt Scheme,Credit Risk Fund,CRISIL Credit Risk,High
+Debt Scheme,Banking & PSU Fund,CRISIL Banking & PSU,Moderate
+Debt Scheme,Gilt Fund,CRISIL Gilt,Moderate
+Debt Scheme,Floater Fund,CRISIL Short Term,Low to Moderate
+Index / ETF Scheme,Index Fund - Nifty 50,Nifty 50,Moderately High
+Index / ETF Scheme,Index Fund - Nifty Next 50,Nifty Next 50,High
+Index / ETF Scheme,Index Fund - Nifty Midcap,Nifty Midcap 150,High
+Index / ETF Scheme,Index Fund - Sensex,BSE Sensex,Moderately High
+Index / ETF Scheme,Gold ETF,Domestic Gold Price,Moderate
+Solution Oriented,Retirement Fund,Nifty 50,Varies
+Solution Oriented,Children's Fund,Nifty 50,Varies
