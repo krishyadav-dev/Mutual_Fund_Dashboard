@@ -1,0 +1,51 @@
+[2026-05-21 02:00:35] INFO     — ============================================================
+[2026-05-21 02:00:35] INFO     —   MUTUAL FUND DASHBOARD — PIPELINE RUNNER
+[2026-05-21 02:00:35] INFO     —   Started : 2026-05-21 02:00:35
+[2026-05-21 02:00:35] INFO     —   Log     : C:\Users\krish\OneDrive\Documents\Programming\Mutual_Fund_Dashboard\logs\pipeline_20260521_020035.log
+[2026-05-21 02:00:35] INFO     —   Mode    : Full pipeline (collect → clean → calculate)
+[2026-05-21 02:00:35] INFO     — ============================================================
+[2026-05-21 02:00:35] INFO     — Running preflight checks...
+[2026-05-21 02:00:35] INFO     —   ✓ collect.py found
+[2026-05-21 02:00:35] INFO     —   ✓ clean.py found
+[2026-05-21 02:00:35] INFO     —   ✓ calculate.py found
+[2026-05-21 02:00:35] INFO     —   ✓ Directory ready: C:\Users\krish\OneDrive\Documents\Programming\Mutual_Fund_Dashboard\data\raw
+[2026-05-21 02:00:35] INFO     —   ✓ Directory ready: C:\Users\krish\OneDrive\Documents\Programming\Mutual_Fund_Dashboard\data\cleaned
+[2026-05-21 02:00:35] INFO     —   ✓ Directory ready: C:\Users\krish\OneDrive\Documents\Programming\Mutual_Fund_Dashboard\data\output
+[2026-05-21 02:00:35] INFO     —   ✓ Directory ready: C:\Users\krish\OneDrive\Documents\Programming\Mutual_Fund_Dashboard\logs
+[2026-05-21 02:00:35] INFO     —   ✓ Package available: requests
+[2026-05-21 02:00:36] INFO     —   ✓ Package available: pandas
+[2026-05-21 02:00:36] INFO     —   ✓ Package available: numpy
+[2026-05-21 02:00:36] INFO     —   ✓ Package available: yfinance
+[2026-05-21 02:00:37] INFO     —   ✓ Package available: openpyxl
+[2026-05-21 02:00:37] INFO     —   ✓ Package available: xlrd
+[2026-05-21 02:00:37] DEBUG    — Starting new HTTPS connection (1): api.mfapi.in:443
+[2026-05-21 02:00:37] DEBUG    — https://api.mfapi.in:443 "GET /mf HTTP/1.1" 200 None
+[2026-05-21 02:00:38] INFO     —   ✓ Internet connectivity confirmed (mfapi.in reachable)
+[2026-05-21 02:00:38] INFO     — Preflight checks passed ✓
+[2026-05-21 02:00:38] INFO     — ──────────────────────────────────────────────────
+[2026-05-21 02:00:38] INFO     — STARTING: COLLECT
+[2026-05-21 02:00:38] INFO     — Script  : C:\Users\krish\OneDrive\Documents\Programming\Mutual_Fund_Dashboard\collect.py
+[2026-05-21 02:00:38] INFO     — Python  : C:\Users\krish\miniconda3\envs\mutual_fund_dashboard\python.exe
+[2026-05-21 02:00:38] INFO     — ──────────────────────────────────────────────────
+[2026-05-21 02:00:40] DEBUG    —   [collect] ============================================================
+[2026-05-21 02:00:40] DEBUG    —   [collect]   MUTUAL FUND DASHBOARD — DATA COLLECTION
+[2026-05-21 02:00:40] DEBUG    —   [collect]   Started: 2026-05-21 02:00:39
+[2026-05-21 02:00:40] DEBUG    —   [collect] ============================================================
+[2026-05-21 02:00:40] DEBUG    —   [collect] Output folder ready: C:\Users\krish\OneDrive\Documents\Programming\Mutual_Fund_Dashboard\data\raw/
+[2026-05-21 02:00:40] DEBUG    —   [collect] [1] Fetching full scheme list from mfapi.in...
+[2026-05-21 02:00:40] DEBUG    —   [collect] Traceback (most recent call last):
+[2026-05-21 02:00:40] DEBUG    —   [collect]   File "C:\Users\krish\OneDrive\Documents\Programming\Mutual_Fund_Dashboard\collect.py", line 858, in <module>
+[2026-05-21 02:00:40] DEBUG    —   [collect]     run_all()
+[2026-05-21 02:00:40] DEBUG    —   [collect]     ~~~~~~~^^
+[2026-05-21 02:00:40] DEBUG    —   [collect]   File "C:\Users\krish\OneDrive\Documents\Programming\Mutual_Fund_Dashboard\collect.py", line 839, in run_all
+[2026-05-21 02:00:40] DEBUG    —   [collect]     get_all_schemes()              # \u2192 all_schemes.csv
+[2026-05-21 02:00:40] DEBUG    —   [collect]     ~~~~~~~~~~~~~~~^^
+[2026-05-21 02:00:40] DEBUG    —   [collect]   File "C:\Users\krish\OneDrive\Documents\Programming\Mutual_Fund_Dashboard\collect.py", line 168, in get_all_schemes
+[2026-05-21 02:00:40] DEBUG    —   [collect]     print(f"  Saved {len(df):,} schemes \u2192 {out_path}")
+[2026-05-21 02:00:40] DEBUG    —   [collect]     ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-05-21 02:00:40] DEBUG    —   [collect]   File "C:\Users\krish\miniconda3\envs\mutual_fund_dashboard\Lib\encodings\cp1252.py", line 19, in encode
+[2026-05-21 02:00:40] DEBUG    —   [collect]     return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+[2026-05-21 02:00:40] DEBUG    —   [collect]            ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-05-21 02:00:40] DEBUG    —   [collect] UnicodeEncodeError: 'charmap' codec can't encode character '\u2192' in position 23: character maps to <undefined>
+[2026-05-21 02:00:42] ERROR    — FAILED: COLLECT exited with code 1 (attempt 1)
+[2026-05-21 02:00:42] WARNING  — Retry 1/2 for collect (waiting 30s)...

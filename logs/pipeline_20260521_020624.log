@@ -1,0 +1,285 @@
+[2026-05-21 02:06:24] INFO     — ============================================================
+[2026-05-21 02:06:24] INFO     —   MUTUAL FUND DASHBOARD — PIPELINE RUNNER
+[2026-05-21 02:06:24] INFO     —   Started : 2026-05-21 02:06:24
+[2026-05-21 02:06:24] INFO     —   Log     : C:\Users\krish\OneDrive\Documents\Programming\Mutual_Fund_Dashboard\logs\pipeline_20260521_020624.log
+[2026-05-21 02:06:24] INFO     —   Mode    : Full pipeline (collect → clean → calculate)
+[2026-05-21 02:06:24] INFO     — ============================================================
+[2026-05-21 02:06:24] INFO     — Running preflight checks...
+[2026-05-21 02:06:24] INFO     —   [OK] collect.py found
+[2026-05-21 02:06:24] INFO     —   [OK] clean.py found
+[2026-05-21 02:06:24] INFO     —   [OK] calculate.py found
+[2026-05-21 02:06:24] INFO     —   [OK] Directory ready: C:\Users\krish\OneDrive\Documents\Programming\Mutual_Fund_Dashboard\data\raw
+[2026-05-21 02:06:24] INFO     —   [OK] Directory ready: C:\Users\krish\OneDrive\Documents\Programming\Mutual_Fund_Dashboard\data\cleaned
+[2026-05-21 02:06:24] INFO     —   [OK] Directory ready: C:\Users\krish\OneDrive\Documents\Programming\Mutual_Fund_Dashboard\data\output
+[2026-05-21 02:06:24] INFO     —   [OK] Directory ready: C:\Users\krish\OneDrive\Documents\Programming\Mutual_Fund_Dashboard\logs
+[2026-05-21 02:06:24] INFO     —   [OK] Package available: requests
+[2026-05-21 02:06:25] INFO     —   [OK] Package available: pandas
+[2026-05-21 02:06:25] INFO     —   [OK] Package available: numpy
+[2026-05-21 02:06:26] INFO     —   [OK] Package available: yfinance
+[2026-05-21 02:06:33] INFO     —   [OK] Package available: openpyxl
+[2026-05-21 02:06:33] INFO     —   [OK] Package available: xlrd
+[2026-05-21 02:06:33] DEBUG    — Starting new HTTPS connection (1): api.mfapi.in:443
+[2026-05-21 02:06:33] DEBUG    — https://api.mfapi.in:443 "GET /mf HTTP/1.1" 200 None
+[2026-05-21 02:06:34] INFO     —   [OK] Internet connectivity confirmed (mfapi.in reachable)
+[2026-05-21 02:06:34] INFO     — Preflight checks passed [OK]
+[2026-05-21 02:06:34] INFO     — --------------------------------------------------
+[2026-05-21 02:06:34] INFO     — STARTING: COLLECT
+[2026-05-21 02:06:34] INFO     — Script  : C:\Users\krish\OneDrive\Documents\Programming\Mutual_Fund_Dashboard\collect.py
+[2026-05-21 02:06:34] INFO     — Python  : C:\Users\krish\miniconda3\envs\mutual_fund_dashboard\python.exe
+[2026-05-21 02:06:34] INFO     — --------------------------------------------------
+[2026-05-21 02:07:42] DEBUG    —   [collect] ============================================================
+[2026-05-21 02:07:42] DEBUG    —   [collect]   MUTUAL FUND DASHBOARD â€” DATA COLLECTION
+[2026-05-21 02:07:42] DEBUG    —   [collect]   Started: 2026-05-21 02:06:36
+[2026-05-21 02:07:42] DEBUG    —   [collect] ============================================================
+[2026-05-21 02:07:42] DEBUG    —   [collect] Output folder ready: C:\Users\krish\OneDrive\Documents\Programming\Mutual_Fund_Dashboard\data\raw/
+[2026-05-21 02:07:42] DEBUG    —   [collect] [1] Fetching full scheme list from mfapi.in...
+[2026-05-21 02:07:42] DEBUG    —   [collect]   Saved 37,602 schemes â†’ C:\Users\krish\OneDrive\Documents\Programming\Mutual_Fund_Dashboard\data\raw\all_schemes.csv
+[2026-05-21 02:07:42] DEBUG    —   [collect] [2] Fetching scheme metadata...
+[2026-05-21 02:07:42] DEBUG    —   [collect]   âœ“ Axis Large Cap Fund - Direct Plan - Growth
+[2026-05-21 02:07:42] DEBUG    —   [collect]   âœ“ Mirae Asset Large Cap Fund - Direct Plan - Growth
+[2026-05-21 02:07:42] DEBUG    —   [collect]   âœ“ Parag Parikh Flexi Cap Fund - Direct Plan - Growth
+[2026-05-21 02:07:42] DEBUG    —   [collect]   âœ“ CANARA ROBECO FLEXICAP FUND - DIRECT PLAN - GROWTH OPTION
+[2026-05-21 02:07:42] DEBUG    —   [collect]   âœ“ Axis Midcap Fund - Direct Plan - Growth
+[2026-05-21 02:07:42] DEBUG    —   [collect]   âœ“ Kotak Midcap Fund - Direct Plan - Growth
+[2026-05-21 02:07:42] DEBUG    —   [collect]   âœ“ SBI Small Cap Fund - Direct Plan - Growth
+[2026-05-21 02:07:42] DEBUG    —   [collect]   âœ“ Nippon India Small Cap Fund - Direct Plan Growth
+[2026-05-21 02:07:42] DEBUG    —   [collect]   âœ“ UTI Nifty 50 Index Fund - Growth Option - Direct
+[2026-05-21 02:07:42] DEBUG    —   [collect]   âœ“ HDFC Nifty 50 Index Fund - Direct Plan
+[2026-05-21 02:07:42] DEBUG    —   [collect]   âœ“ Kotak Aggressive Hybrid Fund - Direct Plan - Growth
+[2026-05-21 02:07:42] DEBUG    —   [collect]   âœ“ ICICI Prudential Equity & Debt Fund - Direct Plan - Growth
+[2026-05-21 02:07:42] DEBUG    —   [collect]   âœ“ HDFC Short Term Debt Fund - Growth Option - Direct Plan
+[2026-05-21 02:07:42] DEBUG    —   [collect]   âœ“ ICICI Prudential Corporate Bond Fund - Direct Plan - Growth
+[2026-05-21 02:07:42] DEBUG    —   [collect]   Saved 14 schemes â†’ C:\Users\krish\OneDrive\Documents\Programming\Mutual_Fund_Dashboard\data\raw\scheme_metadata.csv
+[2026-05-21 02:07:42] DEBUG    —   [collect] [3] Fetching NAV history...
+[2026-05-21 02:07:42] DEBUG    —   [collect]   Fetching: Axis Large Cap Fund - Direct Plan - Growth...
+[2026-05-21 02:07:42] DEBUG    —   [collect]   Fetching: Mirae Asset Large Cap Fund - Direct Plan - Growth...
+[2026-05-21 02:07:42] DEBUG    —   [collect]   Fetching: Parag Parikh Flexi Cap Fund - Direct Plan - Growth...
+[2026-05-21 02:07:42] DEBUG    —   [collect]   Fetching: CANARA ROBECO FLEXICAP FUND - DIRECT PLAN - GROWTH OPTION...
+[2026-05-21 02:07:42] DEBUG    —   [collect]   Fetching: Axis Midcap Fund - Direct Plan - Growth...
+[2026-05-21 02:07:42] DEBUG    —   [collect]   Fetching: Kotak Midcap Fund - Direct Plan - Growth...
+[2026-05-21 02:07:42] DEBUG    —   [collect]   Fetching: SBI Small Cap Fund - Direct Plan - Growth...
+[2026-05-21 02:07:42] DEBUG    —   [collect]   Fetching: Nippon India Small Cap Fund - Direct Plan Growth...
+[2026-05-21 02:07:42] DEBUG    —   [collect]   Fetching: UTI Nifty 50 Index Fund - Growth Option - Direct...
+[2026-05-21 02:07:42] DEBUG    —   [collect]   Fetching: HDFC Nifty 50 Index Fund - Direct Plan...
+[2026-05-21 02:07:42] DEBUG    —   [collect]   Fetching: Kotak Aggressive Hybrid Fund - Direct Plan - Growth...
+[2026-05-21 02:07:42] DEBUG    —   [collect]   Fetching: ICICI Prudential Equity & Debt Fund - Direct Plan - Growth...
+[2026-05-21 02:07:42] DEBUG    —   [collect]   Fetching: HDFC Short Term Debt Fund - Growth Option - Direct Plan...
+[2026-05-21 02:07:42] DEBUG    —   [collect]   Fetching: ICICI Prudential Corporate Bond Fund - Direct Plan - Growth...
+[2026-05-21 02:07:42] DEBUG    —   [collect]   Saved 24,039 rows â†’ C:\Users\krish\OneDrive\Documents\Programming\Mutual_Fund_Dashboard\data\raw\nav_history_raw.csv
+[2026-05-21 02:07:42] DEBUG    —   [collect] [4] Building scheme profiles (NAV-derived features)...
+[2026-05-21 02:07:42] DEBUG    —   [collect]   Profiling: Axis Large Cap Fund - Direct Plan - Growth...
+[2026-05-21 02:07:42] DEBUG    —   [collect]   Profiling: Mirae Asset Large Cap Fund - Direct Plan - Growth...
+[2026-05-21 02:07:42] DEBUG    —   [collect]   Profiling: Parag Parikh Flexi Cap Fund - Direct Plan - Growth...
+[2026-05-21 02:07:42] DEBUG    —   [collect]   Profiling: CANARA ROBECO FLEXICAP FUND - DIRECT PLAN - GROWTH OPTION...
+[2026-05-21 02:07:42] DEBUG    —   [collect]   Profiling: Axis Midcap Fund - Direct Plan - Growth...
+[2026-05-21 02:07:42] DEBUG    —   [collect]   Profiling: Kotak Midcap Fund - Direct Plan - Growth...
+[2026-05-21 02:07:42] DEBUG    —   [collect]   Profiling: SBI Small Cap Fund - Direct Plan - Growth...
+[2026-05-21 02:07:42] DEBUG    —   [collect]   Profiling: Nippon India Small Cap Fund - Direct Plan Growth...
+[2026-05-21 02:07:42] DEBUG    —   [collect]   Profiling: UTI Nifty 50 Index Fund - Growth Option - Direct...
+[2026-05-21 02:07:42] DEBUG    —   [collect]   Profiling: HDFC Nifty 50 Index Fund - Direct Plan...
+[2026-05-21 02:07:42] DEBUG    —   [collect]   Profiling: Kotak Aggressive Hybrid Fund - Direct Plan - Growth...
+[2026-05-21 02:07:42] DEBUG    —   [collect]   Profiling: ICICI Prudential Equity & Debt Fund - Direct Plan - Growth...
+[2026-05-21 02:07:42] DEBUG    —   [collect]   Profiling: HDFC Short Term Debt Fund - Growth Option - Direct Plan...
+[2026-05-21 02:07:42] DEBUG    —   [collect]   Profiling: ICICI Prudential Corporate Bond Fund - Direct Plan - Growth...
+[2026-05-21 02:07:42] DEBUG    —   [collect]   Saved 14 scheme profiles â†’ C:\Users\krish\OneDrive\Documents\Programming\Mutual_Fund_Dashboard\data\raw\scheme_profiles.csv
+[2026-05-21 02:07:42] DEBUG    —   [collect] [5] Downloading AMFI NAVAll.txt...
+[2026-05-21 02:07:42] DEBUG    —   [collect]   Saved 14,367 schemes â†’ C:\Users\krish\OneDrive\Documents\Programming\Mutual_Fund_Dashboard\data\raw\amfi_master.csv
+[2026-05-21 02:07:42] DEBUG    —   [collect] [6] Fetching benchmark index data from Yahoo Finance...
+[2026-05-21 02:07:42] DEBUG    —   [collect]   Fetching: Nifty 50 (^NSEI)...
+[2026-05-21 02:07:42] DEBUG    —   [collect]   Fetching: Nifty 500 (^CRSLDX)...
+[2026-05-21 02:07:42] DEBUG    —   [collect]   Fetching: Nifty Midcap 150 (NIFTY_MID_SELECT.NS)...
+[2026-05-21 02:07:42] DEBUG    —   [collect]   Fetching: Nifty Smallcap 250 (^CNXSC)...
+[2026-05-21 02:07:42] DEBUG    —   [collect]   Fetching: Nifty Next 50 (^NSMIDCP)...
+[2026-05-21 02:07:42] DEBUG    —   [collect]   Fetching: BSE Sensex (^BSESN)...
+[2026-05-21 02:07:42] DEBUG    —   [collect]   Fetching: Nifty Bank (^NSEBANK)...
+[2026-05-21 02:07:42] DEBUG    —   [collect]   Fetching: India 10Y Bond (^IRX)...
+[2026-05-21 02:07:42] DEBUG    —   [collect]   Saved benchmark data (1812 days, 8 indices) â†’ C:\Users\krish\OneDrive\Documents\Programming\Mutual_Fund_Dashboard\data\raw\benchmark_data.csv
+[2026-05-21 02:07:42] DEBUG    —   [collect] [8] Fetching AUM from AMFI Monthly Excel...
+[2026-05-21 02:07:42] DEBUG    —   [collect]   Trying: https://portal.amfiindia.com/spages/ammay2026repo.xls
+[2026-05-21 02:07:42] DEBUG    —   [collect]   Attempt 1 failed: 404 Not Found (Fund not in database)
+[2026-05-21 02:07:42] DEBUG    —   [collect]   âœ— Not found â€” trying previous month...
+[2026-05-21 02:07:42] DEBUG    —   [collect]   Trying: https://portal.amfiindia.com/spages/amapr2026repo.xls
+[2026-05-21 02:07:42] DEBUG    —   [collect]   âœ“ Found: amapr2026repo.xls
+[2026-05-21 02:07:42] DEBUG    —   [collect]   Columns: ['unnamed:_0', 'unnamed:_1', 'unnamed:_2', 'unnamed:_3', 'unnamed:_4', 'unnamed:_5', 'unnamed:_6', 'unnamed:_7', 'unnamed:_8', 'unnamed:_9', 'unnamed:_10']
+[2026-05-21 02:07:42] DEBUG    —   [collect]   Rows: 91
+[2026-05-21 02:07:42] DEBUG    —   [collect]   Saved â†’ C:\Users\krish\OneDrive\Documents\Programming\Mutual_Fund_Dashboard\data\raw\aum_amfi_monthly.csv
+[2026-05-21 02:07:42] DEBUG    —   [collect] [9] Building SEBI category reference table...
+[2026-05-21 02:07:42] DEBUG    —   [collect]   Saved 41 categories â†’ C:\Users\krish\OneDrive\Documents\Programming\Mutual_Fund_Dashboard\data\raw\category_reference.csv
+[2026-05-21 02:07:42] DEBUG    —   [collect] [10] Capturing NAV snapshots at fixed dates...
+[2026-05-21 02:07:42] DEBUG    —   [collect]   âœ“ Axis Large Cap Fund - Direct Plan - Growth
+[2026-05-21 02:07:42] DEBUG    —   [collect]   âœ“ Mirae Asset Large Cap Fund - Direct Plan - Growth
+[2026-05-21 02:07:42] DEBUG    —   [collect]   âœ“ Parag Parikh Flexi Cap Fund - Direct Plan - Growth
+[2026-05-21 02:07:42] DEBUG    —   [collect]   âœ“ CANARA ROBECO FLEXICAP FUND - DIRECT PLAN - GROWTH OPTION
+[2026-05-21 02:07:42] DEBUG    —   [collect]   âœ“ Axis Midcap Fund - Direct Plan - Growth
+[2026-05-21 02:07:42] DEBUG    —   [collect]   âœ“ Kotak Midcap Fund - Direct Plan - Growth
+[2026-05-21 02:07:42] DEBUG    —   [collect]   âœ“ SBI Small Cap Fund - Direct Plan - Growth
+[2026-05-21 02:07:42] DEBUG    —   [collect]   âœ“ Nippon India Small Cap Fund - Direct Plan Growth
+[2026-05-21 02:07:42] DEBUG    —   [collect]   âœ“ UTI Nifty 50 Index Fund - Growth Option - Direct
+[2026-05-21 02:07:42] DEBUG    —   [collect]   âœ“ HDFC Nifty 50 Index Fund - Direct Plan
+[2026-05-21 02:07:42] DEBUG    —   [collect]   âœ“ Kotak Aggressive Hybrid Fund - Direct Plan - Growth
+[2026-05-21 02:07:42] DEBUG    —   [collect]   âœ“ ICICI Prudential Equity & Debt Fund - Direct Plan - Growth
+[2026-05-21 02:07:42] DEBUG    —   [collect]   âœ“ HDFC Short Term Debt Fund - Growth Option - Direct Plan
+[2026-05-21 02:07:42] DEBUG    —   [collect]   âœ“ ICICI Prudential Corporate Bond Fund - Direct Plan - Growth
+[2026-05-21 02:07:42] DEBUG    —   [collect]   Saved 14 snapshot records â†’ C:\Users\krish\OneDrive\Documents\Programming\Mutual_Fund_Dashboard\data\raw\nav_snapshots.csv
+[2026-05-21 02:07:42] DEBUG    —   [collect] ============================================================
+[2026-05-21 02:07:42] DEBUG    —   [collect]   COLLECTION COMPLETE
+[2026-05-21 02:07:42] DEBUG    —   [collect]   Finished: 2026-05-21 02:07:42
+[2026-05-21 02:07:42] DEBUG    —   [collect]   All files saved to: C:\Users\krish\OneDrive\Documents\Programming\Mutual_Fund_Dashboard\data\raw/
+[2026-05-21 02:07:42] DEBUG    —   [collect] ============================================================
+[2026-05-21 02:07:42] INFO     — COMPLETED: COLLECT in 68.5s [OK]
+[2026-05-21 02:07:42] INFO     —   Verifying collect outputs...
+[2026-05-21 02:07:42] INFO     —     [OK] all_schemes.csv (2936.3 KB)
+[2026-05-21 02:07:42] INFO     —     [OK] nav_history_raw.csv (1777.5 KB)
+[2026-05-21 02:07:42] INFO     —     [OK] scheme_metadata.csv (2.3 KB)
+[2026-05-21 02:07:42] INFO     —     [OK] benchmark_data.csv (229.0 KB)
+[2026-05-21 02:07:42] INFO     — --------------------------------------------------
+[2026-05-21 02:07:42] INFO     — STARTING: CLEAN
+[2026-05-21 02:07:42] INFO     — Script  : C:\Users\krish\OneDrive\Documents\Programming\Mutual_Fund_Dashboard\clean.py
+[2026-05-21 02:07:42] INFO     — Python  : C:\Users\krish\miniconda3\envs\mutual_fund_dashboard\python.exe
+[2026-05-21 02:07:42] INFO     — --------------------------------------------------
+[2026-05-21 02:07:44] DEBUG    —   [clean] C:\Users\krish\OneDrive\Documents\Programming\Mutual_Fund_Dashboard\clean.py:254: Pandas4Warning: For backward compatibility, 'str' dtypes are included by select_dtypes when 'object' dtype is specified. This behavior is deprecated and will be removed in a future version. Explicitly pass 'str' to `include` to select them, or to `exclude` to remove them and silence this warning.
+[2026-05-21 02:07:44] DEBUG    —   [clean] See https://pandas.pydata.org/docs/user_guide/migration-3-strings.html#string-migration-select-dtypes for details on how to write code that works with pandas 2 and 3.
+[2026-05-21 02:07:44] DEBUG    —   [clean]   for col in df.select_dtypes(include='object').columns:
+[2026-05-21 02:07:44] DEBUG    —   [clean] ============================================================
+[2026-05-21 02:07:44] DEBUG    —   [clean]   MUTUAL FUND DASHBOARD - DATA CLEANING STAGE
+[2026-05-21 02:07:44] DEBUG    —   [clean]   Started: 2026-05-21 02:07:43
+[2026-05-21 02:07:44] DEBUG    —   [clean] ============================================================
+[2026-05-21 02:07:44] DEBUG    —   [clean]   [OK] Output folder ready: C:\Users\krish\OneDrive\Documents\Programming\Mutual_Fund_Dashboard\data\cleaned/
+[2026-05-21 02:07:44] DEBUG    —   [clean] [1] Cleaning all_schemes.csv...
+[2026-05-21 02:07:44] DEBUG    —   [clean]   [OK] No duplicate scheme_codes found.
+[2026-05-21 02:07:44] DEBUG    —   [clean]   [OK] Cleaned: (37602, 4) -> (37602, 4) saved to C:\Users\krish\OneDrive\Documents\Programming\Mutual_Fund_Dashboard\data\cleaned\all_schemes_clean.csv
+[2026-05-21 02:07:44] DEBUG    —   [clean] [2] Cleaning amfi_master.csv...
+[2026-05-21 02:07:44] DEBUG    —   [clean]   [OK] No duplicate scheme_codes found.
+[2026-05-21 02:07:44] DEBUG    —   [clean]   [OK] Cleaned: (14367, 8) -> (14367, 8) saved to C:\Users\krish\OneDrive\Documents\Programming\Mutual_Fund_Dashboard\data\cleaned\amfi_master_clean.csv
+[2026-05-21 02:07:44] DEBUG    —   [clean] [3] Cleaning aum_amfi_monthly.csv...
+[2026-05-21 02:07:44] DEBUG    —   [clean]   [OK] Cleaned: (89, 11) -> (61, 11) saved to C:\Users\krish\OneDrive\Documents\Programming\Mutual_Fund_Dashboard\data\cleaned\aum_amfi_monthly_clean.csv
+[2026-05-21 02:07:44] DEBUG    —   [clean] [4] Cleaning benchmark_data.csv...
+[2026-05-21 02:07:44] DEBUG    —   [clean]   [OK] Cleaned: (1812, 9) -> (1812, 9) saved to C:\Users\krish\OneDrive\Documents\Programming\Mutual_Fund_Dashboard\data\cleaned\benchmark_data_clean.csv
+[2026-05-21 02:07:44] DEBUG    —   [clean] [5] Cleaning category_reference.csv...
+[2026-05-21 02:07:44] DEBUG    —   [clean]   [OK] sub_category uniqueness confirmed.
+[2026-05-21 02:07:44] DEBUG    —   [clean]   [OK] Cleaned: (41, 4) -> (41, 4) saved to C:\Users\krish\OneDrive\Documents\Programming\Mutual_Fund_Dashboard\data\cleaned\category_reference_clean.csv
+[2026-05-21 02:07:44] DEBUG    —   [clean] [6] Cleaning nav_history_raw.csv...
+[2026-05-21 02:07:44] DEBUG    —   [clean]   [OK] All NAV values are positive.
+[2026-05-21 02:07:44] DEBUG    —   [clean]   [OK] Composite key (scheme_code, date) uniqueness confirmed.
+[2026-05-21 02:07:44] DEBUG    —   [clean]   [OK] Cleaned: (24039, 4) -> (24039, 4) saved to C:\Users\krish\OneDrive\Documents\Programming\Mutual_Fund_Dashboard\data\cleaned\nav_history_clean.csv
+[2026-05-21 02:07:44] DEBUG    —   [clean] [7] Cleaning nav_snapshots.csv...
+[2026-05-21 02:07:44] DEBUG    —   [clean]   [OK] All today's NAVs are positive.
+[2026-05-21 02:07:44] DEBUG    —   [clean]   [OK] scheme_code uniqueness confirmed.
+[2026-05-21 02:07:44] DEBUG    —   [clean]   [OK] Cleaned: (14, 9) -> (14, 9) saved to C:\Users\krish\OneDrive\Documents\Programming\Mutual_Fund_Dashboard\data\cleaned\nav_snapshots_clean.csv
+[2026-05-21 02:07:44] DEBUG    —   [clean] [8] Cleaning scheme_metadata.csv...
+[2026-05-21 02:07:44] DEBUG    —   [clean]   [OK] scheme_code uniqueness confirmed.
+[2026-05-21 02:07:44] DEBUG    —   [clean]   [OK] Cleaned: (14, 7) -> (14, 8) saved to C:\Users\krish\OneDrive\Documents\Programming\Mutual_Fund_Dashboard\data\cleaned\scheme_metadata_clean.csv
+[2026-05-21 02:07:44] DEBUG    —   [clean] [9] Cleaning scheme_profiles.csv...
+[2026-05-21 02:07:44] DEBUG    —   [clean]   [OK] Cleaned: (14, 10) -> (14, 10) saved to C:\Users\krish\OneDrive\Documents\Programming\Mutual_Fund_Dashboard\data\cleaned\scheme_profiles_clean.csv
+[2026-05-21 02:07:44] DEBUG    —   [clean] ============================================================
+[2026-05-21 02:07:44] DEBUG    —   [clean]   CROSS-FILE INTEGRITY DIAGNOSTICS
+[2026-05-21 02:07:44] DEBUG    —   [clean] ============================================================
+[2026-05-21 02:07:44] DEBUG    —   [clean] Scheme code counts per file:
+[2026-05-21 02:07:44] DEBUG    —   [clean]   - all_schemes       : 37,602 unique codes
+[2026-05-21 02:07:44] DEBUG    —   [clean]   - amfi_master       : 14,367 unique codes
+[2026-05-21 02:07:44] DEBUG    —   [clean]   - nav_history_raw   : 14 unique codes
+[2026-05-21 02:07:44] DEBUG    —   [clean]   - nav_snapshots     : 14 unique codes
+[2026-05-21 02:07:44] DEBUG    —   [clean]   - scheme_metadata   : 14 unique codes
+[2026-05-21 02:07:44] DEBUG    —   [clean]   - scheme_profiles   : 14 unique codes
+[2026-05-21 02:07:44] DEBUG    —   [clean]   Orphan codes in NAV History (not present in all_schemes master): 0
+[2026-05-21 02:07:44] DEBUG    —   [clean]     [OK] Integrity Check Passed: No orphan codes in NAV history.
+[2026-05-21 02:07:44] DEBUG    —   [clean]   scheme_metadata coverage in NAV history: 14 / 14
+[2026-05-21 02:07:44] DEBUG    —   [clean] ============================================================
+[2026-05-21 02:07:44] DEBUG    —   [clean]   CLEANING COMPLETE
+[2026-05-21 02:07:44] DEBUG    —   [clean]   Finished: 2026-05-21 02:07:44
+[2026-05-21 02:07:44] DEBUG    —   [clean]   All files saved to: C:\Users\krish\OneDrive\Documents\Programming\Mutual_Fund_Dashboard\data\cleaned/
+[2026-05-21 02:07:44] DEBUG    —   [clean] ============================================================
+[2026-05-21 02:07:44] INFO     — COMPLETED: CLEAN in 1.7s [OK]
+[2026-05-21 02:07:44] INFO     —   Verifying clean outputs...
+[2026-05-21 02:07:44] INFO     —     [OK] nav_history_clean.csv (1777.5 KB)
+[2026-05-21 02:07:44] INFO     —     [OK] scheme_metadata_clean.csv (2.4 KB)
+[2026-05-21 02:07:44] INFO     —     [OK] benchmark_data_clean.csv (228.4 KB)
+[2026-05-21 02:07:44] INFO     — --------------------------------------------------
+[2026-05-21 02:07:44] INFO     — STARTING: CALCULATE
+[2026-05-21 02:07:44] INFO     — Script  : C:\Users\krish\OneDrive\Documents\Programming\Mutual_Fund_Dashboard\calculate.py
+[2026-05-21 02:07:44] INFO     — Python  : C:\Users\krish\miniconda3\envs\mutual_fund_dashboard\python.exe
+[2026-05-21 02:07:44] INFO     — --------------------------------------------------
+[2026-05-21 02:07:46] DEBUG    —   [calculate] ============================================================
+[2026-05-21 02:07:46] DEBUG    —   [calculate]   MUTUAL FUND DASHBOARD â€” METRICS CALCULATION
+[2026-05-21 02:07:46] DEBUG    —   [calculate] ============================================================
+[2026-05-21 02:07:46] DEBUG    —   [calculate] Output folder ready: C:\Users\krish\OneDrive\Documents\Programming\Mutual_Fund_Dashboard\data\output/
+[2026-05-21 02:07:46] DEBUG    —   [calculate] [Loading clean files...]
+[2026-05-21 02:07:46] DEBUG    —   [calculate]   âœ“ nav_history_clean.csv                    (24039, 4)
+[2026-05-21 02:07:46] DEBUG    —   [calculate]   âœ“ nav_snapshots_clean.csv                  (14, 9)
+[2026-05-21 02:07:46] DEBUG    —   [calculate]   âœ“ scheme_metadata_clean.csv                (14, 8)
+[2026-05-21 02:07:46] DEBUG    —   [calculate]   âœ“ scheme_profiles_clean.csv                (14, 10)
+[2026-05-21 02:07:46] DEBUG    —   [calculate]   âœ“ benchmark_data_clean.csv                 (1812, 9)
+[2026-05-21 02:07:46] DEBUG    —   [calculate]   âœ“ category_reference_clean.csv             (41, 4)
+[2026-05-21 02:07:46] DEBUG    —   [calculate]   âœ“ aum_amfi_monthly_clean.csv               (61, 11)
+[2026-05-21 02:07:46] DEBUG    —   [calculate]   Funds to process: 14
+[2026-05-21 02:07:46] DEBUG    —   [calculate] [Step 1] Calculating core metrics from NAV history...
+[2026-05-21 02:07:46] DEBUG    —   [calculate]   âœ“ CANARA ROBECO FLEXICAP FUND - DIRECT PLAN - GROWTH OPTION Sharpe: 0.511  CAGR 3Y: 15.6789%
+[2026-05-21 02:07:46] DEBUG    —   [calculate]   âœ“ Nippon India Small Cap Fund - Direct Plan Growth   Sharpe: 0.9048  CAGR 3Y: 23.1956%
+[2026-05-21 02:07:46] DEBUG    —   [calculate]   âœ“ Mirae Asset Large Cap Fund - Direct Plan - Growth  Sharpe: 0.3535  CAGR 3Y: 12.5914%
+[2026-05-21 02:07:46] DEBUG    —   [calculate]   âœ“ HDFC Short Term Debt Fund - Growth Option - Direct Plan Sharpe: 0.1776  CAGR 3Y: 7.8846%
+[2026-05-21 02:07:46] DEBUG    —   [calculate]   âœ“ HDFC Nifty 50 Index Fund - Direct Plan             Sharpe: 0.3078  CAGR 3Y: 11.2693%
+[2026-05-21 02:07:46] DEBUG    —   [calculate]   âœ“ Kotak Midcap Fund - Direct Plan - Growth           Sharpe: 0.8447  CAGR 3Y: 23.644%
+[2026-05-21 02:07:46] DEBUG    —   [calculate]   âœ“ ICICI Prudential Equity & Debt Fund - Direct Plan - Growth Sharpe: 0.7529  CAGR 3Y: 18.6014%
+[2026-05-21 02:07:46] DEBUG    —   [calculate]   âœ“ Axis Large Cap Fund - Direct Plan - Growth         Sharpe: 0.3033  CAGR 3Y: 10.7604%
+[2026-05-21 02:07:46] DEBUG    —   [calculate]   âœ“ Axis Midcap Fund - Direct Plan - Growth            Sharpe: 0.7773  CAGR 3Y: 20.9831%
+[2026-05-21 02:07:46] DEBUG    —   [calculate]   âœ“ ICICI Prudential Corporate Bond Fund - Direct Plan - Growth Sharpe: 0.2164  CAGR 3Y: 7.887%
+[2026-05-21 02:07:46] DEBUG    —   [calculate]   âœ“ UTI Nifty 50 Index Fund - Growth Option - Direct   Sharpe: 0.3115  CAGR 3Y: 11.3148%
+[2026-05-21 02:07:46] DEBUG    —   [calculate]   âœ“ Parag Parikh Flexi Cap Fund - Direct Plan - Growth Sharpe: 0.9093  CAGR 3Y: 18.4015%
+[2026-05-21 02:07:46] DEBUG    —   [calculate]   âœ“ SBI Small Cap Fund - Direct Plan - Growth          Sharpe: 0.7911  CAGR 3Y: 13.9288%
+[2026-05-21 02:07:46] DEBUG    —   [calculate]   âœ“ Kotak Aggressive Hybrid Fund - Direct Plan - Growth Sharpe: 0.629  CAGR 3Y: 16.3549%
+[2026-05-21 02:07:46] DEBUG    —   [calculate] [Step 2] Calculating snapshot period returns...
+[2026-05-21 02:07:46] DEBUG    —   [calculate] [Step 3] Merging scheme metadata...
+[2026-05-21 02:07:46] DEBUG    —   [calculate] [Step 4] Merging scheme profiles...
+[2026-05-21 02:07:46] DEBUG    —   [calculate] [Step 5] Calculating composite scores and universe rank...
+[2026-05-21 02:07:46] DEBUG    —   [calculate] [Step 6] Calculating within-category peer rank...
+[2026-05-21 02:07:46] DEBUG    —   [calculate] [Step 7] Generating rolling returns table...
+[2026-05-21 02:07:46] DEBUG    —   [calculate]   Calculating rolling 1Y returns...
+[2026-05-21 02:07:46] DEBUG    —   [calculate]   Saved 20,511 rows â†’ C:\Users\krish\OneDrive\Documents\Programming\Mutual_Fund_Dashboard\data\output\rolling_returns.csv
+[2026-05-21 02:07:46] DEBUG    —   [calculate] [Step 8] Saving fund_metrics.csv...
+[2026-05-21 02:07:46] DEBUG    —   [calculate] ============================================================
+[2026-05-21 02:07:46] DEBUG    —   [calculate]   CALCULATION COMPLETE
+[2026-05-21 02:07:46] DEBUG    —   [calculate] ============================================================
+[2026-05-21 02:07:46] DEBUG    —   [calculate]   Funds processed      : 14
+[2026-05-21 02:07:46] DEBUG    —   [calculate]   Metrics per fund     : 35
+[2026-05-21 02:07:46] DEBUG    —   [calculate]   Sharpe range         : 0.178 â†’ 0.909
+[2026-05-21 02:07:46] DEBUG    —   [calculate]   CAGR 3Y range        : 7.88% â†’ 23.64%
+[2026-05-21 02:07:46] DEBUG    —   [calculate]   Max Drawdown range   : -40.30% â†’ -2.01%
+[2026-05-21 02:07:46] DEBUG    —   [calculate]   Output files:
+[2026-05-21 02:07:46] DEBUG    —   [calculate]     â†’ data/output/fund_metrics.csv
+[2026-05-21 02:07:46] DEBUG    —   [calculate]     â†’ data/output/rolling_returns.csv
+[2026-05-21 02:07:46] DEBUG    —   [calculate] ============================================================
+[2026-05-21 02:07:46] DEBUG    —   [calculate] Preview of fund_metrics.csv:
+[2026-05-21 02:07:46] DEBUG    —   [calculate]                                                       fund_name  cagr_3y  sharpe_ratio  max_drawdown_pct  composite_score  universe_rank
+[2026-05-21 02:07:46] DEBUG    —   [calculate] 0     CANARA ROBECO FLEXICAP FUND - DIRECT PLAN - GROWTH OPTION  15.6789        0.5110          -33.2387            48.91              8
+[2026-05-21 02:07:46] DEBUG    —   [calculate] 1              Nippon India Small Cap Fund - Direct Plan Growth  23.1956        0.9048          -40.3026            83.93              1
+[2026-05-21 02:07:46] DEBUG    —   [calculate] 2             Mirae Asset Large Cap Fund - Direct Plan - Growth  12.5914        0.3535          -37.4417            36.94              9
+[2026-05-21 02:07:46] DEBUG    —   [calculate] 3       HDFC Short Term Debt Fund - Growth Option - Direct Plan   7.8846        0.1776           -2.6704            15.19             14
+[2026-05-21 02:07:46] DEBUG    —   [calculate] 4                        HDFC Nifty 50 Index Fund - Direct Plan  11.2693        0.3078          -38.3591            32.25             11
+[2026-05-21 02:07:46] DEBUG    —   [calculate] 5                      Kotak Midcap Fund - Direct Plan - Growth  23.6440        0.8447          -35.9712            80.96              2
+[2026-05-21 02:07:46] DEBUG    —   [calculate] 6    ICICI Prudential Equity & Debt Fund - Direct Plan - Growth  18.6014        0.7529          -30.7015            67.46              5
+[2026-05-21 02:07:46] DEBUG    —   [calculate] 7                    Axis Large Cap Fund - Direct Plan - Growth  10.7604        0.3033          -30.1040            28.44             12
+[2026-05-21 02:07:46] DEBUG    —   [calculate] 8                       Axis Midcap Fund - Direct Plan - Growth  20.9831        0.7773          -29.3625            70.17              4
+[2026-05-21 02:07:46] DEBUG    —   [calculate] 9   ICICI Prudential Corporate Bond Fund - Direct Plan - Growth   7.8870        0.2164           -2.0075            16.86             13
+[2026-05-21 02:07:46] DEBUG    —   [calculate] 10             UTI Nifty 50 Index Fund - Growth Option - Direct  11.3148        0.3115          -38.4179            32.52             10
+[2026-05-21 02:07:46] DEBUG    —   [calculate] 11           Parag Parikh Flexi Cap Fund - Direct Plan - Growth  18.4015        0.9093          -31.2021            74.63              3
+[2026-05-21 02:07:46] DEBUG    —   [calculate] 12                    SBI Small Cap Fund - Direct Plan - Growth  13.9288        0.7911          -33.8493            60.20              6
+[2026-05-21 02:07:46] DEBUG    —   [calculate] 13          Kotak Aggressive Hybrid Fund - Direct Plan - Growth  16.3549        0.6290          -32.1443            57.80              7
+[2026-05-21 02:07:46] INFO     — COMPLETED: CALCULATE in 1.9s [OK]
+[2026-05-21 02:07:46] INFO     —   Verifying calculate outputs...
+[2026-05-21 02:07:46] INFO     —     [OK] fund_metrics.csv (5.3 KB)
+[2026-05-21 02:07:46] INFO     —     [OK] rolling_returns.csv (1516.9 KB)
+[2026-05-21 02:07:46] INFO     — 
+[2026-05-21 02:07:46] INFO     — ============================================================
+[2026-05-21 02:07:46] INFO     —   PIPELINE RUN SUMMARY
+[2026-05-21 02:07:46] INFO     — ============================================================
+[2026-05-21 02:07:46] INFO     —   collect      PASSED   (68.5s)
+[2026-05-21 02:07:46] INFO     —   clean        PASSED   (1.7s)
+[2026-05-21 02:07:46] INFO     —   calculate    PASSED   (1.9s)
+[2026-05-21 02:07:46] INFO     — ------------------------------------------------------------
+[2026-05-21 02:07:46] INFO     —   Total time    : 1m 12s
+[2026-05-21 02:07:46] INFO     —   Finished at   : 2026-05-21 02:07:46
+[2026-05-21 02:07:46] INFO     —   Log file      : C:\Users\krish\OneDrive\Documents\Programming\Mutual_Fund_Dashboard\logs\pipeline_20260521_020624.log
+[2026-05-21 02:07:46] INFO     —   Status        : ALL STAGES PASSED [OK]
+[2026-05-21 02:07:46] INFO     —   Power BI      : Refresh your dataset to load the new data
+[2026-05-21 02:07:46] INFO     — ============================================================
+[2026-05-21 02:07:46] INFO     —   Status file   : C:\Users\krish\OneDrive\Documents\Programming\Mutual_Fund_Dashboard\last_run_status.txt

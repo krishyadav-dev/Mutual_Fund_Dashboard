@@ -1,0 +1,29 @@
+[2026-05-21 02:02:56] INFO     — ============================================================
+[2026-05-21 02:02:56] INFO     —   MUTUAL FUND DASHBOARD — PIPELINE RUNNER
+[2026-05-21 02:02:56] INFO     —   Started : 2026-05-21 02:02:56
+[2026-05-21 02:02:56] INFO     —   Log     : C:\Users\krish\OneDrive\Documents\Programming\Mutual_Fund_Dashboard\logs\pipeline_20260521_020256.log
+[2026-05-21 02:02:56] INFO     —   Mode    : Full pipeline (collect → clean → calculate)
+[2026-05-21 02:02:56] INFO     — ============================================================
+[2026-05-21 02:02:56] INFO     — Running preflight checks...
+[2026-05-21 02:02:56] INFO     —   ✓ collect.py found
+[2026-05-21 02:02:56] INFO     —   ✓ clean.py found
+[2026-05-21 02:02:56] INFO     —   ✓ calculate.py found
+[2026-05-21 02:02:56] INFO     —   ✓ Directory ready: C:\Users\krish\OneDrive\Documents\Programming\Mutual_Fund_Dashboard\data\raw
+[2026-05-21 02:02:56] INFO     —   ✓ Directory ready: C:\Users\krish\OneDrive\Documents\Programming\Mutual_Fund_Dashboard\data\cleaned
+[2026-05-21 02:02:56] INFO     —   ✓ Directory ready: C:\Users\krish\OneDrive\Documents\Programming\Mutual_Fund_Dashboard\data\output
+[2026-05-21 02:02:56] INFO     —   ✓ Directory ready: C:\Users\krish\OneDrive\Documents\Programming\Mutual_Fund_Dashboard\logs
+[2026-05-21 02:02:56] INFO     —   ✓ Package available: requests
+[2026-05-21 02:02:57] INFO     —   ✓ Package available: pandas
+[2026-05-21 02:02:57] INFO     —   ✓ Package available: numpy
+[2026-05-21 02:02:58] INFO     —   ✓ Package available: yfinance
+[2026-05-21 02:02:58] INFO     —   ✓ Package available: openpyxl
+[2026-05-21 02:02:58] INFO     —   ✓ Package available: xlrd
+[2026-05-21 02:02:58] DEBUG    — Starting new HTTPS connection (1): api.mfapi.in:443
+[2026-05-21 02:02:59] DEBUG    — https://api.mfapi.in:443 "GET /mf HTTP/1.1" 200 None
+[2026-05-21 02:02:59] INFO     —   ✓ Internet connectivity confirmed (mfapi.in reachable)
+[2026-05-21 02:02:59] INFO     — Preflight checks passed ✓
+[2026-05-21 02:02:59] INFO     — ──────────────────────────────────────────────────
+[2026-05-21 02:02:59] INFO     — STARTING: COLLECT
+[2026-05-21 02:02:59] INFO     — Script  : C:\Users\krish\OneDrive\Documents\Programming\Mutual_Fund_Dashboard\collect.py
+[2026-05-21 02:02:59] INFO     — Python  : C:\Users\krish\miniconda3\envs\mutual_fund_dashboard\python.exe
+[2026-05-21 02:02:59] INFO     — ──────────────────────────────────────────────────

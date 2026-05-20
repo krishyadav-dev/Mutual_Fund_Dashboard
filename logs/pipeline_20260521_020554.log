@@ -1,0 +1,99 @@
+[2026-05-21 02:05:54] INFO     — ============================================================
+[2026-05-21 02:05:54] INFO     —   MUTUAL FUND DASHBOARD — PIPELINE RUNNER
+[2026-05-21 02:05:54] INFO     —   Started : 2026-05-21 02:05:54
+[2026-05-21 02:05:54] INFO     —   Log     : C:\Users\krish\OneDrive\Documents\Programming\Mutual_Fund_Dashboard\logs\pipeline_20260521_020554.log
+[2026-05-21 02:05:54] INFO     —   Mode    : Single stage (clean)
+[2026-05-21 02:05:54] INFO     — ============================================================
+[2026-05-21 02:05:54] INFO     — Running preflight checks...
+[2026-05-21 02:05:54] INFO     —   [OK] collect.py found
+[2026-05-21 02:05:54] INFO     —   [OK] clean.py found
+[2026-05-21 02:05:54] INFO     —   [OK] calculate.py found
+[2026-05-21 02:05:54] INFO     —   [OK] Directory ready: C:\Users\krish\OneDrive\Documents\Programming\Mutual_Fund_Dashboard\data\raw
+[2026-05-21 02:05:54] INFO     —   [OK] Directory ready: C:\Users\krish\OneDrive\Documents\Programming\Mutual_Fund_Dashboard\data\cleaned
+[2026-05-21 02:05:54] INFO     —   [OK] Directory ready: C:\Users\krish\OneDrive\Documents\Programming\Mutual_Fund_Dashboard\data\output
+[2026-05-21 02:05:54] INFO     —   [OK] Directory ready: C:\Users\krish\OneDrive\Documents\Programming\Mutual_Fund_Dashboard\logs
+[2026-05-21 02:05:55] INFO     —   [OK] Package available: requests
+[2026-05-21 02:05:56] INFO     —   [OK] Package available: pandas
+[2026-05-21 02:05:56] INFO     —   [OK] Package available: numpy
+[2026-05-21 02:06:02] INFO     —   [OK] Package available: yfinance
+[2026-05-21 02:06:02] INFO     —   [OK] Package available: openpyxl
+[2026-05-21 02:06:02] INFO     —   [OK] Package available: xlrd
+[2026-05-21 02:06:02] DEBUG    — Starting new HTTPS connection (1): api.mfapi.in:443
+[2026-05-21 02:06:03] DEBUG    — https://api.mfapi.in:443 "GET /mf HTTP/1.1" 200 None
+[2026-05-21 02:06:03] INFO     —   [OK] Internet connectivity confirmed (mfapi.in reachable)
+[2026-05-21 02:06:03] INFO     — Preflight checks passed [OK]
+[2026-05-21 02:06:03] INFO     — --------------------------------------------------
+[2026-05-21 02:06:03] INFO     — STARTING: CLEAN
+[2026-05-21 02:06:03] INFO     — Script  : C:\Users\krish\OneDrive\Documents\Programming\Mutual_Fund_Dashboard\clean.py
+[2026-05-21 02:06:03] INFO     — Python  : C:\Users\krish\miniconda3\envs\mutual_fund_dashboard\python.exe
+[2026-05-21 02:06:03] INFO     — --------------------------------------------------
+[2026-05-21 02:06:05] DEBUG    —   [clean] C:\Users\krish\OneDrive\Documents\Programming\Mutual_Fund_Dashboard\clean.py:254: Pandas4Warning: For backward compatibility, 'str' dtypes are included by select_dtypes when 'object' dtype is specified. This behavior is deprecated and will be removed in a future version. Explicitly pass 'str' to `include` to select them, or to `exclude` to remove them and silence this warning.
+[2026-05-21 02:06:05] DEBUG    —   [clean] See https://pandas.pydata.org/docs/user_guide/migration-3-strings.html#string-migration-select-dtypes for details on how to write code that works with pandas 2 and 3.
+[2026-05-21 02:06:05] DEBUG    —   [clean]   for col in df.select_dtypes(include='object').columns:
+[2026-05-21 02:06:05] DEBUG    —   [clean] ============================================================
+[2026-05-21 02:06:05] DEBUG    —   [clean]   MUTUAL FUND DASHBOARD - DATA CLEANING STAGE
+[2026-05-21 02:06:05] DEBUG    —   [clean]   Started: 2026-05-21 02:06:05
+[2026-05-21 02:06:05] DEBUG    —   [clean] ============================================================
+[2026-05-21 02:06:05] DEBUG    —   [clean]   [OK] Output folder ready: C:\Users\krish\OneDrive\Documents\Programming\Mutual_Fund_Dashboard\data\cleaned/
+[2026-05-21 02:06:05] DEBUG    —   [clean] [1] Cleaning all_schemes.csv...
+[2026-05-21 02:06:05] DEBUG    —   [clean]   [OK] No duplicate scheme_codes found.
+[2026-05-21 02:06:05] DEBUG    —   [clean]   [OK] Cleaned: (37602, 4) -> (37602, 4) saved to C:\Users\krish\OneDrive\Documents\Programming\Mutual_Fund_Dashboard\data\cleaned\all_schemes_clean.csv
+[2026-05-21 02:06:05] DEBUG    —   [clean] [2] Cleaning amfi_master.csv...
+[2026-05-21 02:06:05] DEBUG    —   [clean]   [OK] No duplicate scheme_codes found.
+[2026-05-21 02:06:05] DEBUG    —   [clean]   [OK] Cleaned: (14367, 8) -> (14367, 8) saved to C:\Users\krish\OneDrive\Documents\Programming\Mutual_Fund_Dashboard\data\cleaned\amfi_master_clean.csv
+[2026-05-21 02:06:05] DEBUG    —   [clean] [3] Cleaning aum_amfi_monthly.csv...
+[2026-05-21 02:06:05] DEBUG    —   [clean]   [OK] Cleaned: (89, 11) -> (61, 11) saved to C:\Users\krish\OneDrive\Documents\Programming\Mutual_Fund_Dashboard\data\cleaned\aum_amfi_monthly_clean.csv
+[2026-05-21 02:06:05] DEBUG    —   [clean] [4] Cleaning benchmark_data.csv...
+[2026-05-21 02:06:05] DEBUG    —   [clean]   [OK] Cleaned: (1812, 9) -> (1812, 9) saved to C:\Users\krish\OneDrive\Documents\Programming\Mutual_Fund_Dashboard\data\cleaned\benchmark_data_clean.csv
+[2026-05-21 02:06:05] DEBUG    —   [clean] [5] Cleaning category_reference.csv...
+[2026-05-21 02:06:05] DEBUG    —   [clean]   [OK] sub_category uniqueness confirmed.
+[2026-05-21 02:06:05] DEBUG    —   [clean]   [OK] Cleaned: (41, 4) -> (41, 4) saved to C:\Users\krish\OneDrive\Documents\Programming\Mutual_Fund_Dashboard\data\cleaned\category_reference_clean.csv
+[2026-05-21 02:06:05] DEBUG    —   [clean] [6] Cleaning nav_history_raw.csv...
+[2026-05-21 02:06:05] DEBUG    —   [clean]   [OK] All NAV values are positive.
+[2026-05-21 02:06:05] DEBUG    —   [clean]   [OK] Composite key (scheme_code, date) uniqueness confirmed.
+[2026-05-21 02:06:05] DEBUG    —   [clean]   [OK] Cleaned: (24052, 4) -> (24052, 4) saved to C:\Users\krish\OneDrive\Documents\Programming\Mutual_Fund_Dashboard\data\cleaned\nav_history_clean.csv
+[2026-05-21 02:06:05] DEBUG    —   [clean] [7] Cleaning nav_snapshots.csv...
+[2026-05-21 02:06:05] DEBUG    —   [clean]   [OK] All today's NAVs are positive.
+[2026-05-21 02:06:05] DEBUG    —   [clean]   [OK] scheme_code uniqueness confirmed.
+[2026-05-21 02:06:05] DEBUG    —   [clean]   [OK] Cleaned: (14, 9) -> (14, 9) saved to C:\Users\krish\OneDrive\Documents\Programming\Mutual_Fund_Dashboard\data\cleaned\nav_snapshots_clean.csv
+[2026-05-21 02:06:05] DEBUG    —   [clean] [8] Cleaning scheme_metadata.csv...
+[2026-05-21 02:06:05] DEBUG    —   [clean]   [OK] scheme_code uniqueness confirmed.
+[2026-05-21 02:06:05] DEBUG    —   [clean]   [OK] Cleaned: (14, 7) -> (14, 8) saved to C:\Users\krish\OneDrive\Documents\Programming\Mutual_Fund_Dashboard\data\cleaned\scheme_metadata_clean.csv
+[2026-05-21 02:06:05] DEBUG    —   [clean] [9] Cleaning scheme_profiles.csv...
+[2026-05-21 02:06:05] DEBUG    —   [clean]   [OK] Cleaned: (14, 10) -> (14, 10) saved to C:\Users\krish\OneDrive\Documents\Programming\Mutual_Fund_Dashboard\data\cleaned\scheme_profiles_clean.csv
+[2026-05-21 02:06:05] DEBUG    —   [clean] ============================================================
+[2026-05-21 02:06:05] DEBUG    —   [clean]   CROSS-FILE INTEGRITY DIAGNOSTICS
+[2026-05-21 02:06:05] DEBUG    —   [clean] ============================================================
+[2026-05-21 02:06:05] DEBUG    —   [clean] Scheme code counts per file:
+[2026-05-21 02:06:05] DEBUG    —   [clean]   - all_schemes       : 37,602 unique codes
+[2026-05-21 02:06:05] DEBUG    —   [clean]   - amfi_master       : 14,367 unique codes
+[2026-05-21 02:06:05] DEBUG    —   [clean]   - nav_history_raw   : 14 unique codes
+[2026-05-21 02:06:05] DEBUG    —   [clean]   - nav_snapshots     : 14 unique codes
+[2026-05-21 02:06:05] DEBUG    —   [clean]   - scheme_metadata   : 14 unique codes
+[2026-05-21 02:06:05] DEBUG    —   [clean]   - scheme_profiles   : 14 unique codes
+[2026-05-21 02:06:05] DEBUG    —   [clean]   Orphan codes in NAV History (not present in all_schemes master): 0
+[2026-05-21 02:06:05] DEBUG    —   [clean]     [OK] Integrity Check Passed: No orphan codes in NAV history.
+[2026-05-21 02:06:05] DEBUG    —   [clean]   scheme_metadata coverage in NAV history: 14 / 14
+[2026-05-21 02:06:05] DEBUG    —   [clean] ============================================================
+[2026-05-21 02:06:05] DEBUG    —   [clean]   CLEANING COMPLETE
+[2026-05-21 02:06:05] DEBUG    —   [clean]   Finished: 2026-05-21 02:06:05
+[2026-05-21 02:06:05] DEBUG    —   [clean]   All files saved to: C:\Users\krish\OneDrive\Documents\Programming\Mutual_Fund_Dashboard\data\cleaned/
+[2026-05-21 02:06:05] DEBUG    —   [clean] ============================================================
+[2026-05-21 02:06:05] INFO     — COMPLETED: CLEAN in 1.9s [OK]
+[2026-05-21 02:06:05] INFO     —   Verifying clean outputs...
+[2026-05-21 02:06:05] INFO     —     [OK] nav_history_clean.csv (1778.5 KB)
+[2026-05-21 02:06:05] INFO     —     [OK] scheme_metadata_clean.csv (2.4 KB)
+[2026-05-21 02:06:05] INFO     —     [OK] benchmark_data_clean.csv (226.6 KB)
+[2026-05-21 02:06:05] INFO     — 
+[2026-05-21 02:06:05] INFO     — ============================================================
+[2026-05-21 02:06:05] INFO     —   PIPELINE RUN SUMMARY
+[2026-05-21 02:06:05] INFO     — ============================================================
+[2026-05-21 02:06:05] INFO     —   clean        PASSED   (1.9s)
+[2026-05-21 02:06:05] INFO     — ------------------------------------------------------------
+[2026-05-21 02:06:05] INFO     —   Total time    : 0m 1s
+[2026-05-21 02:06:05] INFO     —   Finished at   : 2026-05-21 02:06:05
+[2026-05-21 02:06:05] INFO     —   Log file      : C:\Users\krish\OneDrive\Documents\Programming\Mutual_Fund_Dashboard\logs\pipeline_20260521_020554.log
+[2026-05-21 02:06:05] INFO     —   Status        : ALL STAGES PASSED [OK]
+[2026-05-21 02:06:05] INFO     —   Power BI      : Refresh your dataset to load the new data
+[2026-05-21 02:06:05] INFO     — ============================================================
+[2026-05-21 02:06:05] INFO     —   Status file   : C:\Users\krish\OneDrive\Documents\Programming\Mutual_Fund_Dashboard\last_run_status.txt

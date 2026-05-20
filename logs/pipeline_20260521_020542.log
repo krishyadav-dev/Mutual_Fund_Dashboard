@@ -1,0 +1,25 @@
+[2026-05-21 02:05:42] INFO     — ============================================================
+[2026-05-21 02:05:42] INFO     —   MUTUAL FUND DASHBOARD — PIPELINE RUNNER
+[2026-05-21 02:05:42] INFO     —   Started : 2026-05-21 02:05:42
+[2026-05-21 02:05:42] INFO     —   Log     : C:\Users\krish\OneDrive\Documents\Programming\Mutual_Fund_Dashboard\logs\pipeline_20260521_020542.log
+[2026-05-21 02:05:42] INFO     —   Mode    : Dry run (preflight checks only)
+[2026-05-21 02:05:42] INFO     — ============================================================
+[2026-05-21 02:05:42] INFO     — Running preflight checks...
+[2026-05-21 02:05:42] INFO     —   [OK] collect.py found
+[2026-05-21 02:05:42] INFO     —   [OK] clean.py found
+[2026-05-21 02:05:42] INFO     —   [OK] calculate.py found
+[2026-05-21 02:05:42] INFO     —   [OK] Directory ready: C:\Users\krish\OneDrive\Documents\Programming\Mutual_Fund_Dashboard\data\raw
+[2026-05-21 02:05:42] INFO     —   [OK] Directory ready: C:\Users\krish\OneDrive\Documents\Programming\Mutual_Fund_Dashboard\data\cleaned
+[2026-05-21 02:05:42] INFO     —   [OK] Directory ready: C:\Users\krish\OneDrive\Documents\Programming\Mutual_Fund_Dashboard\data\output
+[2026-05-21 02:05:42] INFO     —   [OK] Directory ready: C:\Users\krish\OneDrive\Documents\Programming\Mutual_Fund_Dashboard\logs
+[2026-05-21 02:05:42] INFO     —   [OK] Package available: requests
+[2026-05-21 02:05:43] INFO     —   [OK] Package available: pandas
+[2026-05-21 02:05:43] INFO     —   [OK] Package available: numpy
+[2026-05-21 02:05:44] INFO     —   [OK] Package available: yfinance
+[2026-05-21 02:05:44] INFO     —   [OK] Package available: openpyxl
+[2026-05-21 02:05:44] INFO     —   [OK] Package available: xlrd
+[2026-05-21 02:05:44] DEBUG    — Starting new HTTPS connection (1): api.mfapi.in:443
+[2026-05-21 02:05:45] DEBUG    — https://api.mfapi.in:443 "GET /mf HTTP/1.1" 200 None
+[2026-05-21 02:05:45] INFO     —   [OK] Internet connectivity confirmed (mfapi.in reachable)
+[2026-05-21 02:05:45] INFO     — Preflight checks passed [OK]
+[2026-05-21 02:05:45] INFO     — Dry run complete. Exiting without running any stages.
