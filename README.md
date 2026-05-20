@@ -74,6 +74,7 @@ To run a single stage for testing (without re-scraping or recalculating everythi
 ```bash
 python run_pipeline.py --stage clean
 ```
+
 To run preflight environment and dependency checks (without executing any pipeline code):
 ```bash
 python run_pipeline.py --dry-run
