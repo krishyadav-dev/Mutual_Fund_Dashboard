@@ -1,0 +1,180 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.9.0/schema.json",
+  "name": "5ec47b367cbd48a2de1b",
+  "position": {
+    "x": 275.71428571428572,
+    "y": 380,
+    "z": 5000,
+    "height": 340,
+    "width": 454.28571428571433,
+    "tabOrder": 5000
+  },
+  "visual": {
+    "visualType": "treemap",
+    "query": {
+      "queryState": {
+        "Group": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "aum_amfi_monthly_clean"
+                    }
+                  },
+                  "Property": "scheme_name"
+                }
+              },
+              "queryRef": "aum_amfi_monthly_clean.scheme_name",
+              "nativeQueryRef": "scheme_name",
+              "active": true
+            }
+          ]
+        },
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "aum_amfi_monthly_clean"
+                        }
+                      },
+                      "Property": "aum_cr"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(aum_amfi_monthly_clean.aum_cr)",
+              "nativeQueryRef": "Sum of aum_cr"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "5549a2cc5dc8e512e5e8",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "aum_amfi_monthly_clean"
+              }
+            },
+            "Property": "scheme_name"
+          }
+        },
+        "type": "Categorical",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "a",
+              "Entity": "aum_amfi_monthly_clean",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "Not": {
+                  "Expression": {
+                    "In": {
+                      "Expressions": [
+                        {
+                          "Column": {
+                            "Expression": {
+                              "SourceRef": {
+                                "Source": "a"
+                              }
+                            },
+                            "Property": "scheme_name"
+                          }
+                        }
+                      ],
+                      "Values": [
+                        [
+                          {
+                            "Literal": {
+                              "Value": "'Grand Total'"
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "Literal": {
+                              "Value": "'Sub Total - I (i+ii+iii+iv+v+vi+vii+viii+ix+x+xi+xii+xiii+xiv+xv+xvi)'"
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "Literal": {
+                              "Value": "'Sub Total - II (i+ii+iii+iv+v+vi+vii+viii+ix+x+xi)'"
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "Literal": {
+                              "Value": "'Sub Total - III (i+ii+iii+iv+v+vi)'"
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "Literal": {
+                              "Value": "'Sub Total - IV (i+ii)'"
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "Literal": {
+                              "Value": "'Total A-Open ended Schemes'"
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "Literal": {
+                              "Value": "'Sub Total - V (i+ii+iii+iv)'"
+                            }
+                          }
+                        ]
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "objects": {
+          "general": [
+            {
+              "properties": {
+                "isInvertedSelectionMode": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "true"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

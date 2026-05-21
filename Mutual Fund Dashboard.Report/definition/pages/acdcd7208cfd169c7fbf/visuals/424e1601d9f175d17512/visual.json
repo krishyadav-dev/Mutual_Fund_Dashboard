@@ -1,0 +1,66 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.9.0/schema.json",
+  "name": "424e1601d9f175d17512",
+  "position": {
+    "x": 1053.3333333333335,
+    "y": 150,
+    "z": 2000,
+    "height": 150,
+    "width": 226.66666666666669,
+    "tabOrder": 2000
+  },
+  "visual": {
+    "visualType": "cardVisual",
+    "query": {
+      "queryState": {
+        "Data": {
+          "projections": [
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "fund_metrics"
+                        }
+                      },
+                      "Property": "cagr_3y"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(fund_metrics.cagr_3y)",
+              "nativeQueryRef": "Sum of cagr_3y"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Aggregation": {
+                "Expression": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "fund_metrics"
+                      }
+                    },
+                    "Property": "cagr_3y"
+                  }
+                },
+                "Function": 0
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

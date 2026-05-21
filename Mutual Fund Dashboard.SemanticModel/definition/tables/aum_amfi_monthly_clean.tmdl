@@ -1,0 +1,117 @@
+table aum_amfi_monthly_clean
+	lineageTag: c8b3a482-1603-489a-a062-1f67e2ab5819
+
+	column sr_no
+		dataType: string
+		lineageTag: 28817da3-90d0-436f-8ed0-8fd92676a285
+		summarizeBy: none
+		sourceColumn: sr_no
+
+		annotation SummarizationSetBy = Automatic
+
+	column scheme_name
+		dataType: string
+		lineageTag: 1963348c-e893-4fde-944e-fcd97d67c85a
+		summarizeBy: none
+		sourceColumn: scheme_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column num_schemes
+		dataType: int64
+		formatString: 0
+		lineageTag: d9d28721-1397-4d7e-9c30-c28935f19fc6
+		summarizeBy: sum
+		sourceColumn: num_schemes
+
+		annotation SummarizationSetBy = Automatic
+
+	column num_folios
+		dataType: int64
+		formatString: 0
+		lineageTag: fbc6add9-35ad-4107-9bfc-2199095cfbbe
+		summarizeBy: sum
+		sourceColumn: num_folios
+
+		annotation SummarizationSetBy = Automatic
+
+	column funds_mobilized_cr
+		dataType: double
+		lineageTag: 6b79811f-249c-4278-8fa1-328efd09e5cd
+		summarizeBy: sum
+		sourceColumn: funds_mobilized_cr
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column repurchase_redemption_cr
+		dataType: double
+		lineageTag: 56f9647e-2bca-4e54-a529-34ef23c404f3
+		summarizeBy: sum
+		sourceColumn: repurchase_redemption_cr
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column net_inflow_outflow_cr
+		dataType: double
+		lineageTag: 54dc574d-c25f-49d9-997e-26c88a7e70d0
+		summarizeBy: sum
+		sourceColumn: net_inflow_outflow_cr
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column aum_cr
+		dataType: double
+		lineageTag: d95ab2a4-b116-41b6-9c07-e69fb63b250c
+		summarizeBy: sum
+		sourceColumn: aum_cr
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column avg_aum_cr
+		dataType: double
+		lineageTag: b80b1a8c-2cac-4f35-a50b-68729ba0061b
+		summarizeBy: sum
+		sourceColumn: avg_aum_cr
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column segregated_portfolios
+		dataType: int64
+		formatString: 0
+		lineageTag: 48245fa7-189a-48fc-843a-775182b4e516
+		summarizeBy: sum
+		sourceColumn: segregated_portfolios
+
+		annotation SummarizationSetBy = Automatic
+
+	column segregated_aum_cr
+		dataType: int64
+		formatString: 0
+		lineageTag: e37564ea-d241-44f0-ba9b-f33773f4ce7a
+		summarizeBy: sum
+		sourceColumn: segregated_aum_cr
+
+		annotation SummarizationSetBy = Automatic
+
+	partition aum_amfi_monthly_clean = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("C:\Users\prith\OneDrive\Desktop\Mutual Fund Dashboard\Power Bi\aum_amfi_monthly_clean.csv"),[Delimiter=",", Columns=11, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"sr_no", type text}, {"scheme_name", type text}, {"num_schemes", Int64.Type}, {"num_folios", Int64.Type}, {"funds_mobilized_cr", type number}, {"repurchase_redemption_cr", type number}, {"net_inflow_outflow_cr", type number}, {"aum_cr", type number}, {"avg_aum_cr", type number}, {"segregated_portfolios", Int64.Type}, {"segregated_aum_cr", Int64.Type}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_ResultType = Table
+
