@@ -18,7 +18,7 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
         with:
-          ref: anudeep # Ensure it pulls and pushes to the anudeep branch
+          ref: main # Ensure it pulls and pushes to the main branch
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -43,7 +43,7 @@ jobs:
           # Commit only if there are changes
           if ! git diff --cached --quiet; then
             git commit -m "data: auto-sync mutual fund metrics and benchmarks [skip ci]"
-            git push origin anudeep
+            git push origin main
           else
             echo "No data changes detected. Skipping push."
           fi
