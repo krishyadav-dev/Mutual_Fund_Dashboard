@@ -92,3 +92,44 @@ python run_pipeline.py --no-retry
 - **Windows Console Safety**: Windows terminals using `CP1252` encoding typically crash with `UnicodeEncodeError` when scripts print special symbols (like checkmarks or arrows). The logging in this repository is explicitly restricted to safe ASCII characters (`[OK]`, `[FAIL]`, `[WARN]`, `->`) to guarantee robust terminal execution.
 - **UTF-8 Override**: The pipeline dynamically injects `PYTHONIOENCODING=utf-8` to child processes to ensure standard libraries parsing external sources do not trigger encoding failures.
 - **Monitoring status**: Each execution updates `last_run_status.txt` with a single line (e.g., `SUCCESS | 2026-05-21 02:07:46 | Duration: 1m 12s`). You can use this file to trigger alerts or verify updates before refreshing dashboards.
+
+---
+
+## Scheduling and Automation (Windows Task Scheduler)
+
+Since the pipeline is designed to run automatically every day, we provide a Windows Task Scheduler integration. This triggers `run_pipeline.py` daily inside its dedicated Miniconda environment.
+
+### 1. Register / Update the Daily Task
+To register the task to run automatically every day at **6:00 AM**, open a PowerShell terminal and run:
+```powershell
+powershell -ExecutionPolicy Bypass -File .\schedule_task.ps1 -Action Register
+```
+This sets up the task with robust options:
+* **Wake to run**: Wakes up your machine if it's sleeping at 6:00 AM.
+* **Network requirement**: Only executes if there is active internet connectivity.
+* **Missed start execution**: Automatically runs the pipeline as soon as possible if the computer was turned off at 6:00 AM.
+
+### 2. Control & Manage the Task
+You can easily control, test, or disable the task at any time using the same manager script:
+
+* **Turn OFF the Scheduler (Temporarily Disable)**:
+  ```powershell
+  powershell -ExecutionPolicy Bypass -File .\schedule_task.ps1 -Action Disable
+  ```
+* **Turn ON the Scheduler (Enable again)**:
+  ```powershell
+  powershell -ExecutionPolicy Bypass -File .\schedule_task.ps1 -Action Enable
+  ```
+* **Trigger a Test Run (Force Run in Background)**:
+  ```powershell
+  powershell -ExecutionPolicy Bypass -File .\schedule_task.ps1 -Action Run
+  ```
+* **Check Schedule & Last Run Status**:
+  ```powershell
+  powershell -ExecutionPolicy Bypass -File .\schedule_task.ps1 -Action Status
+  ```
+* **Completely Delete/Remove the Task**:
+  ```powershell
+  powershell -ExecutionPolicy Bypass -File .\schedule_task.ps1 -Action Unregister
+  ```
+

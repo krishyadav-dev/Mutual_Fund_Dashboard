@@ -41,8 +41,8 @@ API_BASE_URL = "https://api.mfapi.in/mf"
 BENCHMARKS = {
     "Nifty 50":           "^NSEI",
     "Nifty 500":          "^CRSLDX",
-    "Nifty Midcap 150":   "NIFTY_MID_SELECT.NS",
-    "Nifty Smallcap 250": "^CNXSC",
+    "Nifty Midcap 150":   "NIFTYMIDCAP150.NS",
+    "Nifty Smallcap 250": "HDFCSML250.NS",
     "Nifty Next 50":      "^NSMIDCP",
     "BSE Sensex":         "^BSESN",
     "Nifty Bank":         "^NSEBANK",

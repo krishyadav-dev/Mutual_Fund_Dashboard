@@ -131,21 +131,16 @@
         "sort": [
           {
             "field": {
-              "Aggregation": {
+              "Column": {
                 "Expression": {
-                  "Column": {
-                    "Expression": {
-                      "SourceRef": {
-                        "Entity": "fund_metrics"
-                      }
-                    },
-                    "Property": "composite_score"
+                  "SourceRef": {
+                    "Entity": "fund_metrics"
                   }
                 },
-                "Function": 0
+                "Property": "fund_name"
               }
             },
-            "direction": "Descending"
+            "direction": "Ascending"
           }
         ]
       }
