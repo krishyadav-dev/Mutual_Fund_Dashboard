@@ -37,7 +37,7 @@ table category_reference_clean
 		mode: import
 		source =
 				let
-				    Source = Csv.Document(File.Contents("C:\Users\prith\OneDrive\Desktop\Mutual Fund Dashboard\Power Bi\category_reference_clean.csv"),[Delimiter=",", Columns=4, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+				    Source = Csv.Document(File.Contents("C:\Users\anude\OneDrive\Documents\codeBase\mutual_funds\data\cleaned\category_reference_clean.csv"),[Delimiter=",", Columns=4, Encoding=1252, QuoteStyle=QuoteStyle.None]),
 				    #"Changed Type" = Table.TransformColumnTypes(Source,{{"Column1", type text}, {"Column2", type text}, {"Column3", type text}, {"Column4", type text}}),
 				    #"Promoted Headers" = Table.PromoteHeaders(#"Changed Type", [PromoteAllScalars=true]),
 				    #"Changed Type1" = Table.TransformColumnTypes(#"Promoted Headers",{{"broad_category", type text}, {"sub_category", type text}, {"benchmark_index", type text}, {"risk_level", type text}})
