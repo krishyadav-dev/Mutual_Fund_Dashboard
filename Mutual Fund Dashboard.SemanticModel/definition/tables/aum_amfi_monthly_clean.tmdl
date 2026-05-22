@@ -107,7 +107,7 @@ table aum_amfi_monthly_clean
 		mode: import
 		source =
 				let
-				    Source = Csv.Document(File.Contents("C:\Users\prith\OneDrive\Desktop\Mutual Fund Dashboard\Power Bi\aum_amfi_monthly_clean.csv"),[Delimiter=",", Columns=11, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+				    Source = Csv.Document(File.Contents("C:\Users\anude\OneDrive\Documents\codeBase\mutual_funds\data\cleaned\aum_amfi_monthly_clean.csv"),[Delimiter=",", Columns=11, Encoding=1252, QuoteStyle=QuoteStyle.None]),
 				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
 				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"sr_no", type text}, {"scheme_name", type text}, {"num_schemes", Int64.Type}, {"num_folios", Int64.Type}, {"funds_mobilized_cr", type number}, {"repurchase_redemption_cr", type number}, {"net_inflow_outflow_cr", type number}, {"aum_cr", type number}, {"avg_aum_cr", type number}, {"segregated_portfolios", Int64.Type}, {"segregated_aum_cr", Int64.Type}})
 				in

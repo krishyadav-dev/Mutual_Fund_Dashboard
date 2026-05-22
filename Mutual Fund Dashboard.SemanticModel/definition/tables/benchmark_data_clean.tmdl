@@ -101,7 +101,7 @@ table benchmark_data_clean
 		mode: import
 		source =
 				let
-				    Source = Csv.Document(File.Contents("C:\Users\prith\OneDrive\Desktop\Mutual Fund Dashboard\Power Bi\benchmark_data_clean.csv"),[Delimiter=",", Columns=9, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+				    Source = Csv.Document(File.Contents("C:\Users\anude\OneDrive\Documents\codeBase\mutual_funds\data\cleaned\benchmark_data_clean.csv"),[Delimiter=",", Columns=9, Encoding=1252, QuoteStyle=QuoteStyle.None]),
 				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
 				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"date", type date}, {"Nifty 50", type number}, {"Nifty 500", type number}, {"Nifty Midcap 150", type number}, {"Nifty Smallcap 250", type number}, {"Nifty Next 50", type number}, {"BSE Sensex", type number}, {"Nifty Bank", type number}, {"India 10Y Bond", type number}})
 				in

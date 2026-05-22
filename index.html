@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mutual Fund Dashboard</title>
+  <!-- Google Fonts (Inter) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Core Styles -->
+  <link rel="stylesheet" href="index.css">
+  <!-- Chart.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+  <div class="app-wrapper">
+    
+    <!-- Top Navigation Bar -->
+    <nav class="top-nav">
+      <div class="brand-title">Mutual Fund Dashboard</div>
+      <div style="display: flex; align-items: center; gap: 1.25rem;">
+        <div class="nav-tabs">
+          <button class="tab-btn active" data-page="screener">Screener</button>
+          <button class="tab-btn" data-page="visuals">Visuals</button>
+          <button class="tab-btn" data-page="compare">Compare</button>
+          <button class="tab-btn" data-page="powerbi">Power BI</button>
+        </div>
+        <button class="btn-flat btn-flat-secondary" id="sync-data-btn" title="Sync Latest AMFI Data" style="display: flex; align-items: center; gap: 0.5rem; padding: 0.4rem 0.85rem;">
+          <i class="fa-solid fa-rotate"></i>
+          <span>Sync Data</span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Main Workspace -->
+    <main class="main-content">
+
+      <!-- 1. Screener Page -->
+      <section id="screener-page" class="page-section active">
+        
+        <!-- Minimal Stats widgets -->
+        <div class="metrics-row">
+          <div class="metric-widget">
+            <div class="metric-label">Top Compounder (3Y)</div>
+            <div class="metric-num" id="stat-top-cagr">—</div>
+            <div class="metric-sub" id="stat-top-cagr-name">—</div>
+          </div>
+          <div class="metric-widget">
+            <div class="metric-label">Highest Sharpe</div>
+            <div class="metric-num" id="stat-top-sharpe">—</div>
+            <div class="metric-sub" id="stat-top-sharpe-name">—</div>
+          </div>
+          <div class="metric-widget">
+            <div class="metric-label">Lowest Volatility</div>
+            <div class="metric-num" id="stat-min-vol">—</div>
+            <div class="metric-sub" id="stat-min-vol-name">—</div>
+          </div>
+          <div class="metric-widget">
+            <div class="metric-label">Universe Size</div>
+            <div class="metric-num" id="stat-universe-size">—</div>
+            <div class="metric-sub">Analyzed Schemes</div>
+          </div>
+        </div>
+
+        <!-- Filters Section -->
+        <div class="toolbar">
+          <div class="filters-left">
+            <div class="search-wrapper">
+              <i class="fa-solid fa-magnifying-glass search-icon"></i>
+              <input type="text" id="scheme-search" class="search-input" placeholder="Search scheme or house...">
+            </div>
+
+            <select id="category-select" class="custom-select">
+              <option value="ALL">All Categories</option>
+              <option value="Equity Scheme">Equity</option>
+              <option value="Hybrid Scheme">Hybrid</option>
+              <option value="Debt Scheme">Debt</option>
+              <option value="Other Scheme">Index / Others</option>
+            </select>
+
+            <select id="amc-select" class="custom-select">
+              <option value="ALL">All Asset Managers</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- High-Density Data Table -->
+        <div class="table-container">
+          <table class="data-table" id="screener-table">
+            <thead>
+              <tr>
+                <th style="width: 40px; text-align: center;">
+                  <input type="checkbox" id="select-all-compare" style="cursor: pointer; display: none;">
+                </th>
+                <th class="sortable active" data-sort="fund_name">Scheme Name <span class="sort-indicator"></span></th>
+                <th class="sortable" data-sort="broad_category">Category <span class="sort-indicator"></span></th>
+                <th class="sortable numeric" data-sort="cagr_3y">3Y CAGR <span class="sort-indicator"></span></th>
+                <th class="sortable numeric" data-sort="cagr_1y">1Y CAGR <span class="sort-indicator"></span></th>
+                <th class="sortable numeric" data-sort="sharpe_ratio">Sharpe <span class="sort-indicator"></span></th>
+                <th class="sortable numeric" data-sort="volatility_pct">Volatility <span class="sort-indicator"></span></th>
+                <th class="sortable numeric" data-sort="max_drawdown_pct">Max Drawdown <span class="sort-indicator"></span></th>
+                <th class="sortable numeric" data-sort="composite_score">Score <span class="sort-indicator"></span></th>
+              </tr>
+            </thead>
+            <tbody id="screener-tbody">
+              <!-- Dynamically populated rows -->
+              <tr>
+                <td colspan="9" style="text-align: center; color: var(--text-muted); padding: 3rem;">
+                  Loading mutual fund data...
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        
+      </section>
+
+      <!-- 2. Performance Visuals Page -->
+      <section id="visuals-page" class="page-section">
+        <div class="visuals-grid">
+          
+          <!-- Risk vs Return Scatter Plot -->
+          <div class="chart-card">
+            <div class="chart-title">Risk vs. Return Profile (3Y CAGR vs Volatility)</div>
+            <div class="chart-container">
+              <canvas id="riskReturnChart"></canvas>
+            </div>
+          </div>
+
+          <!-- AUM Distribution Chart -->
+          <div class="chart-card">
+            <div class="chart-title">Category Assets Under Management (AUM)</div>
+            <div class="chart-container">
+              <canvas id="aumDistributionChart"></canvas>
+            </div>
+          </div>
+
+          <!-- Rolling Returns Chart -->
+          <div class="chart-card full-width-chart">
+            <div class="chart-title">Performance Consistency: 1-Year Rolling Returns Trend</div>
+            <div class="line-chart-selectors" id="rolling-selectors-container">
+              <!-- Checkboxes / Selector buttons will be dynamically rendered here -->
+            </div>
+            <div class="chart-container" style="height: 350px;">
+              <canvas id="rollingReturnsChart"></canvas>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- 3. Compare Funds Page -->
+      <section id="compare-page" class="page-section">
+        
+        <div id="compare-filled-state" style="display: none;">
+          <div class="comparison-grid" id="compare-grid-root">
+            <!-- Dynamically populated comparison grid -->
+          </div>
+        </div>
+
+        <div class="compare-empty" id="compare-empty-state">
+          <p>No funds selected for comparison. Select 2 or 3 funds using the checkboxes in the Screener.</p>
+          <button class="btn-flat btn-flat-primary" id="go-to-screener-btn">Go to Screener</button>
+        </div>
+
+      </section>
+
+      <!-- 4. Power BI Embed / Connection Page -->
+      <section id="powerbi-page" class="page-section">
+        <div class="powerbi-container">
+          <!-- Glassmorphic settings/walkthrough panel -->
+          <div class="powerbi-settings-card">
+            <div class="powerbi-header">
+              <div class="powerbi-title"><i class="fa-solid fa-chart-bar" style="color: #f2c811; margin-right: 0.5rem;"></i> Power BI Integration</div>
+              <p class="powerbi-subtitle">Connect your Power BI Desktop file for real-time visualization of the scraped data.</p>
+            </div>
+            
+            <div class="powerbi-setup-row">
+              <div class="setup-col">
+                <h3><i class="fa-solid fa-link"></i> Live Sync Connection</h3>
+                <p>The Power BI Model (<code>Mutual Fund Dashboard.pbip</code>) is configured to read from your local database files:</p>
+                <div class="code-path">C:\Users\anude\OneDrive\Documents\codeBase\mutual_funds\data\output\fund_metrics.csv</div>
+                <p>When you click <strong>Sync Data</strong> in the screener or run the pipeline, the source CSVs are overwritten, and Power BI will reflect the new numbers on refresh.</p>
+              </div>
+              <div class="setup-col border-left">
+                <h3><i class="fa-solid fa-earth-americas"></i> Embed Web Dashboard</h3>
+                <p>Publish your report (File &rarr; Embed report &rarr; Publish to web) and paste the link below to view it here live:</p>
+                <div class="embed-input-row">
+                  <input type="text" id="pbi-embed-url" placeholder="Paste Power BI Embed URL or iframe code...">
+                  <button id="pbi-embed-save-btn" class="btn-flat btn-flat-primary">Load Dashboard</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Live Power BI Iframe Container -->
+          <div class="powerbi-frame-wrapper" id="pbi-iframe-wrapper" style="display: none;">
+            <div class="frame-header">
+              <div class="frame-status"><span class="pulse-indicator"></span> Live Connected</div>
+              <button id="pbi-embed-clear-btn" class="btn-flat btn-flat-secondary" style="padding: 0.2rem 0.5rem; font-size: 0.75rem;"><i class="fa-solid fa-trash-can"></i> Clear Embed</button>
+            </div>
+            <iframe id="pbi-iframe" src="" frameborder="0" allowFullScreen="true"></iframe>
+          </div>
+
+          <div class="powerbi-placeholder-card" id="pbi-placeholder-card">
+            <div class="placeholder-icon"><i class="fa-solid fa-chart-column"></i></div>
+            <h3>No Live Web Dashboard Embedded</h3>
+            <p>Paste a published Power BI URL above to embed it here, or use <strong>Power BI Desktop</strong> locally to open <a href="file:///c:/Users/anude/OneDrive/Documents/codeBase/mutual_funds/Mutual%20Fund%20Dashboard.pbip" style="color: var(--color-up); text-decoration: underline;">Mutual Fund Dashboard.pbip</a>.</p>
+          </div>
+        </div>
+      </section>
+
+    </main>
+    
+    <!-- Floating Bottom Compare Drawer -->
+    <div class="compare-drawer" id="compare-sticky-bar">
+      <div class="drawer-info">
+        <div class="drawer-title">Compare Selected (<span id="compare-count">0</span>/3)</div>
+        <div class="drawer-tags" id="selected-funds-badges">
+          <!-- Selection tags will be injected dynamically -->
+        </div>
+      </div>
+      <div class="drawer-actions">
+        <button class="btn-flat btn-flat-secondary" id="clear-compare-btn">Clear Selection</button>
+        <button class="btn-flat btn-flat-primary" id="trigger-compare-btn">Compare Now</button>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Main Controller Script -->
+  <script src="index.js"></script>
+</body>
+</html>
