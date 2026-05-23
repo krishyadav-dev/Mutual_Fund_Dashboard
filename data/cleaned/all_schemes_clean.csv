@@ -4561,7 +4561,7 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 106790,Reliance Fixed Horizon Fund -IV-Series-5-Institutional Plan-Dividend Plan,,
 106791,Reliance Fixed Horizon Fund -IV-Series-5-Retail Plan Growth Option,,
 106792,Reliance Fixed Horizon Fund -IV-Series-5-Retail Plan-Dividend Option,,
-106793,HDFC ARBITRAGE FUND - Wholesale Growth Option,INF179K01343,
+106793,HDFC ARBITRAGE FUND - Regular Plan -Growth Option,INF179K01343,
 106794,HDFC Arbitrage Fund Wholesale Plan Dividend Option,,
 106795,HDFC ARBITRAGE FUND - Wholesale IDCW Option,INF179KA1KM1,INF179KA1KL3
 106796,HDFC ARBITRAGE FUND - Retail Growth Option,INF179K01319,
@@ -21401,10 +21401,10 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 129047,Motilal Oswal Flexi Cap Fund Direct - IDCW Payout/Reinvestment,INF247L01528,INF247L01510
 129048,Motilal Oswal Flexi Cap Fund Regular Plan-Growth Option,INF247L01478,
 129049,Motilal Oswal Flexi cap Fund Regular - IDCW Payout/Reinvestment,INF247L01494,INF247L01486
-129051,HDFC ARBITRAGE FUND - Wholesale Monthly IDCW Option,INF179KA1KO7,INF179KA1KN9
-129052,HDFC ARBITRAGE FUND - Wholesale Growth Option - Direct Plan,INF179KA1KT6,
+129051,HDFC ARBITRAGE FUND - Regular Plan - Monthly IDCW Option,INF179KA1KO7,INF179KA1KN9
+129052,HDFC ARBITRAGE FUND -Direct Plan - Growth Option,INF179KA1KT6,
 129053,HDFC ARBITRAGE FUND - Wholesale IDCW Option - Direct Plan,INF179KA1KQ2,INF179KA1KP4
-129054,HDFC ARBITRAGE FUND - Wholesale Monthly IDCW - Direct Plan,INF179KA1KS8,INF179KA1KR0
+129054,HDFC ARBITRAGE FUND - Monthly IDCW - Direct Plan,INF179KA1KS8,INF179KA1KR0
 129055,L&T FMP Series XI - Plan A (1484 days) - Direct Plan - Dividend,,
 129056,L&T FMP Series XI - Plan A (1484 days) - Direct Plan - Growth,,
 129057,L&T FMP Series XI - Plan A (1484 days) - Regular Plan - Dividend (Payout) Option,,
@@ -37599,6 +37599,8 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 154343,Invesco India Nifty Bank Index Fund - Direct Plan - Growth,INF205KA1BO4,
 154344,Invesco India Nifty Bank Index Fund - Regular Plan - Growth,INF205KA1BN6,
 154347,Edelweiss Nifty Next 50 ETF,INF754K01XF3,
+154353,SBI Nifty Smallcap 250 ETF,INF200KB1AY9,
+154354,SBI Nifty200 Value 30 ETF,INF200KB1AX1,
 154357,DSP Nifty FMCG ETF,INF740KA1ZA4,
 154358,Kotak Low Duration Fund - Direct Plan - Weekly - Reinvestment & Payout of Income Distribution cum Capital Withdrawal Option,INF174KA1ZW3,INF174KA1ZU7
 154361,Kotak Low Duration Fund - Direct Plan - Monthly - Reinvestment & Payout of Income Distribution cum Capital Withdrawal Option,INF174KA1A03,INF174KA1ZY9

@@ -527,84 +527,125 @@ def get_benchmark_data(years=NAV_YEARS):
 # AMFI aggregates this into a downloadable file.
 # ─────────────────────────────────────────────────────────────────────────────
 # TODO: Update get_aum_and_ter() to fetch per-scheme aum and ter from the amfi website, Problem:Website is written in JavaScript
-#def get_aum_and_ter(fund_dict=SAMPLE_FUNDS):
+def get_aum_and_ter(fund_dict=SAMPLE_FUNDS):
     """
-    Fetches AUM (₹ crore), expense ratio (%), Morningstar star rating,
-    and latest NAV for each fund from mfdata.in.
+    Fetches AUM (₹ crore), expense ratio (%), Morningstar/Crisil star rating,
+    and latest NAV for each fund from mf.captnemo.in/kuvera/{isin}.
 
-    This single function replaces the two dead AMFI endpoints:
-        ✗ amfiindia.com/modules/AumData   → 404
-        ✗ amfiindia.com/modules/TerHtml   → 404
-        ✓ mfdata.in/api/v1/schemes/{code} → works, free, no auth
+    This replaces the dead mfdata.in API and fetches data by mapping
+    AMFI scheme_codes to isin_growth using data/raw/amfi_master.csv.
 
     Saved to: data/raw/aum_and_ter.csv
     """
-    print("\n[7] Fetching AUM + TER from mfdata.in...")
+    print("\n[7] Fetching AUM + TER from mf.captnemo.in (Kuvera)...")
+
+    # Load AMFI master mapping to resolve ISINs
+    isin_mapping = {}
+    master_path = os.path.join(OUTPUT_DIR, "amfi_master.csv")
+    if os.path.exists(master_path):
+        try:
+            master_df = pd.read_csv(master_path)
+            # Ensure scheme_code is numeric and map it
+            master_df["scheme_code"] = pd.to_numeric(master_df["scheme_code"], errors="coerce")
+            mapping_df = master_df.dropna(subset=["scheme_code", "isin_growth"])
+            isin_mapping = dict(zip(mapping_df["scheme_code"].astype(int), mapping_df["isin_growth"]))
+            print(f"  Successfully loaded ISIN mapping for {len(isin_mapping)} schemes from AMFI master.")
+        except Exception as e:
+            print(f"  [WARN] Error reading AMFI master mapping: {e}")
+    else:
+        print("  [WARN] AMFI master file not found — ISIN lookup unavailable.")
 
     records = []
 
     for code, name in fund_dict.items():
+        isin = isin_mapping.get(code)
+        success = False
 
-        # ── Primary: mfdata.in ────────────────────────────────────────────
-        url      = f"https://mfdata.in/api/v1/schemes/{code}"
-        response = safe_get(url)
+        if isin:
+            url = f"https://mf.captnemo.in/kuvera/{isin}"
+            response = safe_get(url)
 
-        if response is not None:
-            try:
-                data = response.json().get("data", {})
-                records.append({
-                    "scheme_code":       code,
-                    "fund_name":         name,
-                    "aum_cr":            data.get("aum_cr"),
-                    "expense_ratio_pct": data.get("expense_ratio"),
-                    "morningstar_stars": data.get("morningstar"),
-                    "latest_nav":        data.get("nav"),
-                    "latest_nav_date":   data.get("nav_date"),
-                    "source":            "mfdata.in",
-                })
-                print(f"  ✓ {name}  [mfdata.in]")
-                time.sleep(API_DELAY)
-                continue                  # ← skip fallback if primary worked
-            except Exception as e:
-                print(f"  Parse error from mfdata.in for {name}: {e}")
+            if response is not None:
+                try:
+                    res_list = response.json()
+                    if isinstance(res_list, list) and len(res_list) > 0:
+                        data = res_list[0]
+                        
+                        raw_aum = data.get("aum")
+                        aum_cr = round(float(raw_aum) / 100, 2) if raw_aum is not None else None
+                        
+                        raw_ter = data.get("expense_ratio")
+                        expense_ratio_pct = float(raw_ter) if raw_ter is not None else None
+                        
+                        morningstar_stars = data.get("fund_rating")
+                        
+                        nav_data = data.get("nav") or data.get("last_nav") or {}
+                        latest_nav = nav_data.get("nav")
+                        latest_nav_date = nav_data.get("date")
 
-        # ── Fallback: mfapi.in ────────────────────────────────────────────
-        # mfapi.in returns AUM inside the meta block of the scheme detail
-        print(f"  → Falling back to mfapi.in for {name}...")
-        url      = f"https://api.mfapi.in/mf/{code}"
-        response = safe_get(url)
+                        records.append({
+                            "scheme_code":       code,
+                            "fund_name":         name,
+                            "aum_cr":            aum_cr,
+                            "expense_ratio_pct": expense_ratio_pct,
+                            "morningstar_stars": morningstar_stars,
+                            "latest_nav":        latest_nav,
+                            "latest_nav_date":   latest_nav_date,
+                            "source":            "mf.captnemo.in (kuvera)",
+                        })
+                        print(f"  [OK] {name}  [mf.captnemo.in]")
+                        success = True
+                except Exception as e:
+                    print(f"  Parse error from mf.captnemo.in for {name}: {e}")
 
-        if response is not None:
-            try:
-                data = response.json()
-                meta = data.get("meta", {})
-                records.append({
-                    "scheme_code":       code,
-                    "fund_name":         name,
-                    "aum_cr":            None,   # mfapi.in does not carry AUM
-                    "expense_ratio_pct": None,   # mfapi.in does not carry TER
-                    "morningstar_stars": None,
-                    "latest_nav":        data["data"][0]["nav"] if data.get("data") else None,
-                    "latest_nav_date":   data["data"][0]["date"] if data.get("data") else None,
-                    "source":            "mfapi.in (fallback — AUM/TER unavailable)",
-                })
-                print(f"  ✓ {name}  [mfapi.in fallback]")
-            except Exception as e:
-                print(f"  ✗ Both sources failed for {name}: {e}")
-        else:
-            print(f"  ✗ Both sources failed for {name}")
+        if not success:
+            # ── Fallback: mfapi.in ────────────────────────────────────────────
+            print(f"  -> Falling back to mfapi.in for {name}...")
+            url = f"https://api.mfapi.in/mf/{code}"
+            response = safe_get(url)
+
+            if response is not None:
+                try:
+                    data = response.json()
+                    # The response carries a list of daily NAVs under 'data', sorted newest first
+                    nav_records = data.get("data", [])
+                    latest_nav = float(nav_records[0]["nav"]) if nav_records else None
+                    latest_nav_date = nav_records[0]["date"] if nav_records else None
+                    
+                    # Convert dd-mm-yyyy date string to yyyy-mm-dd standard format
+                    if latest_nav_date:
+                        try:
+                            latest_nav_date = datetime.strptime(latest_nav_date, "%d-%m-%Y").strftime("%Y-%m-%d")
+                        except Exception:
+                            pass
+
+                    records.append({
+                        "scheme_code":       code,
+                        "fund_name":         name,
+                        "aum_cr":            None,   # mfapi.in does not carry AUM
+                        "expense_ratio_pct": None,   # mfapi.in does not carry TER
+                        "morningstar_stars": None,
+                        "latest_nav":        latest_nav,
+                        "latest_nav_date":   latest_nav_date,
+                        "source":            "mfapi.in (fallback — AUM/TER unavailable)",
+                    })
+                    print(f"  [OK] {name}  [mfapi.in fallback]")
+                except Exception as e:
+                    print(f"  [FAIL] Both sources failed for {name}: {e}")
+            else:
+                print(f"  [FAIL] Both sources failed for {name}")
 
         time.sleep(API_DELAY)
 
     df = pd.DataFrame(records)
     out_path = os.path.join(OUTPUT_DIR, "aum_and_ter.csv")
     df.to_csv(out_path, index=False)
-    print(f"\n  Saved {len(df)} records → {out_path}")
+    print(f"\n  Saved {len(df)} records -> {out_path}")
 
     # Warn if AUM data is missing for any fund
     missing = df["aum_cr"].isna().sum()
     if missing > 0:
-        print(f"  ⚠ AUM missing for {missing} fund(s) — mfdata.in was unavailable for those.")
+        print(f"  [WARN] AUM missing for {missing} fund(s) — mf.captnemo.in was unavailable or incomplete for those.")
     return df
 
 # ─────────────────────────────────────────────────────────────────────────────
@@ -842,7 +883,7 @@ def run_all():
     get_scheme_profiles_for_all()  # → scheme_profiles.csv
     get_amfi_master_data()         # → amfi_master.csv
     get_benchmark_data()           # → benchmark_data.csv
-    #get_aum_and_ter()              # → aum_and_ter.csv
+    get_aum_and_ter()              # → aum_and_ter.csv
     get_aum_from_amfi_excel()      # -> aum_amfi_monthly.csv
     build_category_reference()     # → category_reference.csv
     get_nav_snapshots()            # → nav_snapshots.csv

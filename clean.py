@@ -446,6 +446,58 @@ def clean_scheme_profiles():
     print(f"  [OK] Cleaned: {shape_before} -> {df.shape} saved to {out_path}")
     return df
 
+
+def clean_aum_and_ter():
+    """
+    Cleans aum_and_ter.csv.
+    - Standardises scheme_code to integer.
+    - Trim whitespace on strings.
+    - Parses and ensures float/numeric fields for aum_cr, expense_ratio_pct, morningstar_stars, latest_nav.
+    - Standardises latest_nav_date to datetime.
+    - Flags rows with nav_available and aum_ter_available flags.
+    - Verifies uniqueness of scheme_code.
+    """
+    filename = "aum_and_ter.csv"
+    if not check_file_exists(filename):
+        print(f"  [MISSING] Raw file not found: {filename} — skipping")
+        return pd.DataFrame()
+
+    print(f"\n[10] Cleaning {filename}...")
+    path = os.path.join(INPUT_DIR, filename)
+    df = pd.read_csv(path)
+    shape_before = df.shape
+
+    # 10a. Trim whitespace
+    df['fund_name'] = df['fund_name'].str.strip()
+    df['source']    = df['source'].str.strip()
+
+    # 10b. Ensure scheme_code is int
+    df['scheme_code'] = df['scheme_code'].astype(int)
+
+    # 10c. Convert date column
+    df['latest_nav_date'] = pd.to_datetime(df['latest_nav_date'], errors='coerce')
+
+    # 10d. Ensure numeric columns
+    numeric_cols = ['aum_cr', 'expense_ratio_pct', 'morningstar_stars', 'latest_nav']
+    for col in numeric_cols:
+        df[col] = pd.to_numeric(df[col], errors='coerce')
+
+    # 10e. Add flag columns
+    df['nav_available']     = ~df['latest_nav'].isnull()
+    df['aum_ter_available'] = ~df['aum_cr'].isnull() & ~df['expense_ratio_pct'].isnull()
+
+    # 10f. Check duplicate scheme_codes
+    dups = df.duplicated(subset=['scheme_code']).sum()
+    if dups > 0:
+        print(f"  [WARN] Found {dups} duplicate scheme_codes in aum_and_ter.csv")
+    else:
+        print("  [OK] scheme_code uniqueness confirmed.")
+
+    out_path = os.path.join(OUTPUT_DIR, "aum_and_ter_clean.csv")
+    df.to_csv(out_path, index=False)
+    print(f"  [OK] Cleaned: {shape_before} -> {df.shape} saved to {out_path}")
+    return df
+
 # -----------------------------------------------------------------------------
 # CROSS-FILE INTEGRITY DIAGNOSTIC
 # -----------------------------------------------------------------------------
@@ -466,6 +518,7 @@ def run_cross_file_diagnostics(cleaned_dfs):
     snap_df    = cleaned_dfs.get('nav_snapshots')
     meta_df    = cleaned_dfs.get('scheme_metadata')
     prof_df    = cleaned_dfs.get('scheme_profiles')
+    aum_ter_df = cleaned_dfs.get('aum_and_ter')
 
     codes = {}
     if schemes_df is not None and not schemes_df.empty:
@@ -480,6 +533,8 @@ def run_cross_file_diagnostics(cleaned_dfs):
         codes['scheme_metadata'] = set(meta_df['scheme_code'])
     if prof_df is not None and not prof_df.empty:
         codes['scheme_profiles'] = set(prof_df['scheme_code'])
+    if aum_ter_df is not None and not aum_ter_df.empty:
+        codes['aum_and_ter'] = set(aum_ter_df['scheme_code'])
 
     print("Scheme code counts per file:")
     for name, s in codes.items():
@@ -525,6 +580,7 @@ def run_all():
     cleaned_dfs['nav_snapshots']    = clean_nav_snapshots()
     cleaned_dfs['scheme_metadata']  = clean_scheme_metadata()
     cleaned_dfs['scheme_profiles']  = clean_scheme_profiles()
+    cleaned_dfs['aum_and_ter']      = clean_aum_and_ter()
 
     # Run integrity diagnostic reports across the cleaned dfs
     run_cross_file_diagnostics(cleaned_dfs)

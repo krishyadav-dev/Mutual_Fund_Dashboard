@@ -128,6 +128,7 @@ def load_clean_files():
         "benchmarks":        "benchmark_data_clean.csv",
         "category_ref":      "category_reference_clean.csv",
         "aum_monthly":       "aum_amfi_monthly_clean.csv",
+        "aum_and_ter":       "aum_and_ter_clean.csv",
     }
 
     loaded = {}
@@ -331,6 +332,32 @@ def calc_calmar_ratio(cagr_3y, max_drawdown):
     return round(calmar, 4)
 
 
+def calc_return_per_cost(cagr_3y, expense_ratio_pct):
+    """
+    Return Per Cost (Efficiency Score): How much CAGR the investor gets per 1% of expense paid.
+
+    Formula: cagr_3y / expense_ratio_pct
+
+    Returns: Return per cost score (dimensionless), or None.
+    """
+    if cagr_3y is None or expense_ratio_pct is None or expense_ratio_pct <= 0:
+        return None
+    return round(cagr_3y / expense_ratio_pct, 4)
+
+
+def calc_true_net_return(cagr_3y, expense_ratio_pct):
+    """
+    True Net Return: What the investor actually keeps after costs.
+
+    Formula: cagr_3y - expense_ratio_pct
+
+    Returns: Net return percentage, or None.
+    """
+    if cagr_3y is None or expense_ratio_pct is None:
+        return None
+    return round(cagr_3y - expense_ratio_pct, 4)
+
+
 # ─────────────────────────────────────────────────────────────────────────────
 # SNAPSHOT RETURNS — fast period returns from nav_snapshots_clean.csv
 # These complement the full NAV series calculations above.
@@ -523,6 +550,7 @@ def run_all_calculations():
     meta_df      = data["scheme_metadata"]
     profiles_df  = data["scheme_profiles"]
     bench_df     = data["benchmarks"]
+    aum_ter_df   = data["aum_and_ter"]
 
     # Prepare benchmark data — index by date for fast lookup
     bench_df = bench_df.set_index("date")
@@ -571,6 +599,18 @@ def run_all_calculations():
         beta, alpha = calc_beta_alpha(daily_returns, bench_returns)
         te      = calc_tracking_error(daily_returns, bench_returns)
 
+        # Lookup expense ratio
+        if aum_ter_df is not None and not aum_ter_df.empty and "scheme_code" in aum_ter_df.columns:
+            aum_ter_row = aum_ter_df[aum_ter_df["scheme_code"] == code]
+            expense_ratio_pct = aum_ter_row["expense_ratio_pct"].iloc[0] if not aum_ter_row.empty else None
+            if pd.isna(expense_ratio_pct):
+                expense_ratio_pct = None
+        else:
+            expense_ratio_pct = None
+
+        return_per_cost = calc_return_per_cost(cagr_3y, expense_ratio_pct)
+        true_net_return = calc_true_net_return(cagr_3y, expense_ratio_pct)
+
         all_metrics.append({
             "scheme_code":          code,
             "fund_name":            name,
@@ -586,6 +626,9 @@ def run_all_calculations():
             "beta":                 beta,
             "alpha_pct":            alpha,
             "tracking_error_pct":   te,
+            "expense_ratio_pct":    expense_ratio_pct,
+            "return_per_cost":      return_per_cost,
+            "true_net_return":      true_net_return,
         })
 
         print(f"  ✓ {name:<50} Sharpe: {sharpe}  CAGR 3Y: {cagr_3y}%")
@@ -649,6 +692,7 @@ def run_all_calculations():
         "volatility_pct", "max_drawdown_pct", "beta", "tracking_error_pct",
         # Risk-adjusted
         "sharpe_ratio", "sortino_ratio", "calmar_ratio", "alpha_pct",
+        "expense_ratio_pct", "return_per_cost", "true_net_return",
         # Composite
         "composite_score", "universe_rank", "category_rank",
     ]
@@ -684,5 +728,6 @@ def run_all_calculations():
 if __name__ == "__main__":
     result = run_all_calculations()
     print(f"\nPreview of fund_metrics.csv:")
-    print(result[["fund_name", "cagr_3y", "sharpe_ratio",
-                  "max_drawdown_pct", "composite_score", "universe_rank"]].to_string())
+    print(result[["fund_name", "cagr_3y", "sharpe_ratio", "max_drawdown_pct",
+                  "expense_ratio_pct", "return_per_cost", "true_net_return",
+                  "composite_score", "universe_rank"]].to_string())

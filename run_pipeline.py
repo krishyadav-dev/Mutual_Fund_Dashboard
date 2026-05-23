@@ -51,11 +51,13 @@ EXPECTED_OUTPUTS = {
         os.path.join(BASE_DIR, "data", "raw", "nav_history_raw.csv"),
         os.path.join(BASE_DIR, "data", "raw", "scheme_metadata.csv"),
         os.path.join(BASE_DIR, "data", "raw", "benchmark_data.csv"),
+        os.path.join(BASE_DIR, "data", "raw", "aum_and_ter.csv"),
     ],
     "clean": [
         os.path.join(BASE_DIR, "data", "cleaned", "nav_history_clean.csv"),
         os.path.join(BASE_DIR, "data", "cleaned", "scheme_metadata_clean.csv"),
         os.path.join(BASE_DIR, "data", "cleaned", "benchmark_data_clean.csv"),
+        os.path.join(BASE_DIR, "data", "cleaned", "aum_and_ter_clean.csv"),
     ],
     "calculate": [
         os.path.join(BASE_DIR, "data", "output", "fund_metrics.csv"),
