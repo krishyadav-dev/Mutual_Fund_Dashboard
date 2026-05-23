@@ -983,6 +983,96 @@ body {
   background: #000;
 }
 
+/* Deep Dive Tab Page Styles */
+.deepdive-toolbar {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  background: rgba(24, 24, 27, 0.25);
+  padding: 0.75rem 1.25rem;
+  border-radius: 10px;
+  border: 1px solid var(--border-subtle);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.deepdive-selector-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+/* Star Rating Styling */
+.star-gold {
+  color: #fbbf24;
+  margin-right: 2px;
+  font-size: 0.75rem;
+  text-shadow: 0 0 8px rgba(251, 191, 36, 0.3);
+}
+
+.star-grey {
+  color: rgba(255, 255, 255, 0.08);
+  margin-right: 2px;
+  font-size: 0.75rem;
+}
+
+/* Range input/slider premium styling */
+.calc-range-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 6px;
+  border-radius: 3px;
+  background: rgba(255, 255, 255, 0.08);
+  outline: none;
+  transition: background 0.15s ease;
+}
+
+.calc-range-slider:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+/* Range Slider thumb */
+.calc-range-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--text-primary);
+  cursor: pointer;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  transition: transform 0.15s ease, background 0.15s ease;
+}
+
+.calc-range-slider::-webkit-slider-thumb:hover {
+  transform: scale(1.2);
+}
+
+/* Calculator stats output text shadows and sizes */
+.calc-result-stat .stat-val {
+  text-shadow: 0 0 15px rgba(255, 255, 255, 0.05);
+}
+
+.calc-result-stat.drag-stat .stat-val {
+  color: #f43f5e !important; /* Muted Rose */
+  text-shadow: 0 0 15px rgba(244, 63, 94, 0.2);
+}
+
+/* Return Per Cost Rank badge tag */
+.rank-tag-badge {
+  display: inline-block;
+  font-size: 0.65rem;
+  font-weight: 500;
+  padding: 0.15rem 0.35rem;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-secondary);
+  margin-left: 6px;
+}
+
+
 
 
 
