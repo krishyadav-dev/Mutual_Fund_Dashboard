@@ -135,7 +135,7 @@ def load_clean_files():
     for key, filename in files.items():
         path = os.path.join(CLEAN_DIR, filename)
         if not os.path.exists(path):
-            print(f"  ✗ Not found: {filename} — skipping")
+            print(f"  [-] Not found: {filename} — skipping")
             loaded[key] = pd.DataFrame()
             continue
         df = pd.read_csv(path)
@@ -144,7 +144,7 @@ def load_clean_files():
             if "date" in col.lower():
                 df[col] = pd.to_datetime(df[col], errors="coerce")
         loaded[key] = df
-        print(f"  ✓ {filename:<40} {df.shape}")
+        print(f"  [+] {filename:<40} {df.shape}")
 
     return loaded
 
@@ -491,7 +491,65 @@ def calc_rolling_returns(nav_history_df, window=252):
 
     out_path = os.path.join(OUTPUT_DIR, "rolling_returns.csv")
     combined.to_csv(out_path, index=False)
-    print(f"  Saved {len(combined):,} rows → {out_path}")
+    print(f"  Saved {len(combined):,} rows -> {out_path}")
+    return combined
+
+
+def calc_historical_aum(metrics_df, nav_history_df):
+    """
+    Calculates a 100% deterministic, audit-safe historical monthly AUM series
+    for every scheme in the universe using Constant-Unit Performance Scaling.
+    
+    Formula: AUM_t = Current_AUM * (NAV_t / Current_NAV)
+    """
+    print("\n  Calculating historical monthly AUM...")
+    results = []
+
+    for _, row in metrics_df.iterrows():
+        code = row["scheme_code"]
+        name = row["fund_name"]
+        aum_cr = row.get("aum_cr")
+        
+        # If AUM is missing, skip or default to 0
+        if pd.isna(aum_cr) or aum_cr is None:
+            aum_cr = 0.0
+
+        # Get this fund's NAV history
+        fund_nav = (
+            nav_history_df[nav_history_df["scheme_code"] == code]
+            .sort_values("date")
+            .copy()
+        )
+        
+        if fund_nav.empty:
+            continue
+            
+        # Set date as index and resample to monthly (last day of each month)
+        fund_nav["date"] = pd.to_datetime(fund_nav["date"])
+        fund_nav = fund_nav.set_index("date")
+        monthly_navs = fund_nav["nav"].resample('ME').last().dropna().tail(13)
+        
+        if monthly_navs.empty:
+            continue
+            
+        current_nav = monthly_navs.iloc[-1]
+        if current_nav <= 0:
+            continue
+
+        for date, nav in monthly_navs.items():
+            # Exact constant-unit formula
+            scaled_aum = aum_cr * (nav / current_nav)
+            results.append({
+                "scheme_code": code,
+                "fund_name": name,
+                "date": date.strftime("%Y-%m-%d"),
+                "aum_cr": round(scaled_aum, 2)
+            })
+
+    combined = pd.DataFrame(results)
+    out_path = os.path.join(OUTPUT_DIR, "fund_aum_history.csv")
+    combined.to_csv(out_path, index=False)
+    print(f"  Saved {len(combined):,} rows -> {out_path}")
     return combined
 
 
@@ -599,14 +657,27 @@ def run_all_calculations():
         beta, alpha = calc_beta_alpha(daily_returns, bench_returns)
         te      = calc_tracking_error(daily_returns, bench_returns)
 
-        # Lookup expense ratio
+        # Lookup AUM, Expense Ratio, and Stars from cleaned aum_and_ter file
         if aum_ter_df is not None and not aum_ter_df.empty and "scheme_code" in aum_ter_df.columns:
             aum_ter_row = aum_ter_df[aum_ter_df["scheme_code"] == code]
+            
             expense_ratio_pct = aum_ter_row["expense_ratio_pct"].iloc[0] if not aum_ter_row.empty else None
             if pd.isna(expense_ratio_pct):
                 expense_ratio_pct = None
+                
+            aum_cr = aum_ter_row["aum_cr"].iloc[0] if not aum_ter_row.empty else None
+            if pd.isna(aum_cr):
+                aum_cr = None
+                
+            morningstar_stars = aum_ter_row["morningstar_stars"].iloc[0] if not aum_ter_row.empty else None
+            if pd.isna(morningstar_stars):
+                morningstar_stars = None
+            else:
+                morningstar_stars = int(morningstar_stars)
         else:
             expense_ratio_pct = None
+            aum_cr = None
+            morningstar_stars = None
 
         return_per_cost = calc_return_per_cost(cagr_3y, expense_ratio_pct)
         true_net_return = calc_true_net_return(cagr_3y, expense_ratio_pct)
@@ -627,11 +698,13 @@ def run_all_calculations():
             "alpha_pct":            alpha,
             "tracking_error_pct":   te,
             "expense_ratio_pct":    expense_ratio_pct,
+            "aum_cr":               aum_cr,
+            "morningstar_stars":    morningstar_stars,
             "return_per_cost":      return_per_cost,
             "true_net_return":      true_net_return,
         })
 
-        print(f"  ✓ {name:<50} Sharpe: {sharpe}  CAGR 3Y: {cagr_3y}%")
+        print(f"  [+] {name:<50} Sharpe: {sharpe}  CAGR 3Y: {cagr_3y}%")
 
     metrics_df = pd.DataFrame(all_metrics)
 
@@ -667,14 +740,26 @@ def run_all_calculations():
         .astype("Int64")      # Int64 supports NaN, int does not
     )
 
+    # Calculate Return Per Cost rank across the entire universe (1 = best)
+    print("  Calculating Return Per Cost rank...")
+    metrics_df["return_per_cost_rank"] = (
+        metrics_df["return_per_cost"]
+        .rank(ascending=False, method="min")
+        .astype("Int64")
+    )
+
     # ── Step 7: Rolling returns (separate file for line charts) ──────────
     print("\n[Step 7] Generating rolling returns table...")
     calc_rolling_returns(nav_df)
 
+    # ── Step 7b: Historical AUM (separate file for Deep Dive bar charts) ─
+    print("\n[Step 7b] Generating historical AUM table (Constant-Unit Scaling)...")
+    calc_historical_aum(metrics_df, nav_df)
+
     # ── Step 8: Column ordering and final save ───────────────────────────
     print("\n[Step 8] Saving fund_metrics.csv...")
 
-    # Define clean column order for Power BI
+    # Define clean column order for Power BI and Frontend UI
     col_order = [
         # Identity
         "scheme_code", "fund_name", "fund_house",
@@ -683,6 +768,7 @@ def run_all_calculations():
         # Profile
         "inception_date", "fund_age_years", "total_nav_days",
         "latest_nav", "nav_52w_high", "nav_52w_low", "nav_52w_change_pct",
+        "aum_cr", "morningstar_stars",
         # Returns (from NAV series)
         "cagr_1y", "cagr_3y", "cagr_5y",
         # Returns (from snapshots)
@@ -692,7 +778,7 @@ def run_all_calculations():
         "volatility_pct", "max_drawdown_pct", "beta", "tracking_error_pct",
         # Risk-adjusted
         "sharpe_ratio", "sortino_ratio", "calmar_ratio", "alpha_pct",
-        "expense_ratio_pct", "return_per_cost", "true_net_return",
+        "expense_ratio_pct", "return_per_cost", "return_per_cost_rank", "true_net_return",
         # Composite
         "composite_score", "universe_rank", "category_rank",
     ]
@@ -710,12 +796,13 @@ def run_all_calculations():
     print("=" * 60)
     print(f"\n  Funds processed      : {len(metrics_df)}")
     print(f"  Metrics per fund     : {len(metrics_df.columns)}")
-    print(f"  Sharpe range         : {metrics_df['sharpe_ratio'].min():.3f} → {metrics_df['sharpe_ratio'].max():.3f}")
-    print(f"  CAGR 3Y range        : {metrics_df['cagr_3y'].min():.2f}% → {metrics_df['cagr_3y'].max():.2f}%")
-    print(f"  Max Drawdown range   : {metrics_df['max_drawdown_pct'].min():.2f}% → {metrics_df['max_drawdown_pct'].max():.2f}%")
+    print(f"  Sharpe range         : {metrics_df['sharpe_ratio'].min():.3f} -> {metrics_df['sharpe_ratio'].max():.3f}")
+    print(f"  CAGR 3Y range        : {metrics_df['cagr_3y'].min():.2f}% -> {metrics_df['cagr_3y'].max():.2f}%")
+    print(f"  Max Drawdown range   : {metrics_df['max_drawdown_pct'].min():.2f}% -> {metrics_df['max_drawdown_pct'].max():.2f}%")
     print(f"\n  Output files:")
-    print(f"    → data/output/fund_metrics.csv")
-    print(f"    → data/output/rolling_returns.csv")
+    print(f"    -> data/output/fund_metrics.csv")
+    print(f"    -> data/output/rolling_returns.csv")
+    print(f"    -> data/output/fund_aum_history.csv")
     print("=" * 60)
 
     return metrics_df

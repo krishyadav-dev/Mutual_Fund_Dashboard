@@ -4,6 +4,17 @@
  */
 
 document.addEventListener("DOMContentLoaded", () => {
+  // --- THEME ENGINE INITIALIZATION ---
+  function initTheme() {
+    const savedTheme = localStorage.getItem("dashboard_theme") || "dark";
+    if (savedTheme === "light") {
+      document.body.classList.add("light-mode");
+    } else {
+      document.body.classList.remove("light-mode");
+    }
+  }
+  initTheme();
+
   // --- STATE ---
   let fundMetrics = [];
   let rollingReturns = [];
@@ -12,8 +23,12 @@ document.addEventListener("DOMContentLoaded", () => {
   let activeCategory = "ALL";
   let activeAMC = "ALL";
   let activeSearch = "";
+  let activeMaxExpense = "ALL";
+  let activeMinAUM = "ALL";
+  let activeMinStars = "ALL";
+  let fundAumHistory = [];
   let lastKnownModifiedTime = null;
-  
+
   // Sort Column State
   let activeSortColumn = "composite_score";
   let activeSortDirection = "desc";
@@ -22,27 +37,56 @@ document.addEventListener("DOMContentLoaded", () => {
   let riskReturnChartInstance = null;
   let aumChartInstance = null;
   let rollingReturnsChartInstance = null;
+  let deepdiveAumChartInstance = null;
+  let costCalculatorChartInstance = null;
   let selectedRollingCodes = []; // Funds selected for line chart
+  let activeDeepdiveCode = null; // Currently selected fund scheme code for Deep Dive
 
   // Category Theme Colors for charts (Muted, minimalist palettes)
-  const categoryColors = {
+  const categoryColorsDark = {
     "Equity Scheme": { color: "#22d3ee", bg: "rgba(34, 211, 238, 0.15)" },      // Cyan
     "Hybrid Scheme": { color: "#fbbf24", bg: "rgba(251, 191, 36, 0.15)" },      // Amber
     "Debt Scheme": { color: "#60a5fa", bg: "rgba(96, 165, 250, 0.15)" },       // Blue
     "Other Scheme": { color: "#818cf8", bg: "rgba(129, 140, 248, 0.15)" }       // Indigo
   };
-  const defaultColor = { color: "#94a3b8", bg: "rgba(148, 163, 184, 0.15)" };
+
+  const categoryColorsLight = {
+    "Equity Scheme": { color: "#2aa198", bg: "rgba(42, 161, 152, 0.12)" },      // Solarized Cyan
+    "Hybrid Scheme": { color: "#b58900", bg: "rgba(181, 137, 0, 0.12)" },       // Solarized Yellow
+    "Debt Scheme": { color: "#268bd2", bg: "rgba(38, 139, 210, 0.12)" },       // Solarized Blue
+    "Other Scheme": { color: "#6c71c4", bg: "rgba(108, 113, 196, 0.12)" }       // Solarized Violet
+  };
+
+  const defaultColorDark = { color: "#94a3b8", bg: "rgba(148, 163, 184, 0.15)" };
+  const defaultColorLight = { color: "#586e75", bg: "rgba(88, 110, 117, 0.12)" };
+
+  function getCategoryTheme(category) {
+    const isLight = document.body.classList.contains("light-mode");
+    const palette = isLight ? categoryColorsLight : categoryColorsDark;
+    const fallback = isLight ? defaultColorLight : defaultColorDark;
+    return palette[category] || fallback;
+  }
+
+  function getGridColor() {
+    return document.body.classList.contains("light-mode")
+      ? 'rgba(7, 54, 66, 0.06)'
+      : 'rgba(255, 255, 255, 0.04)';
+  }
+
+  function getAxisTitleColor() {
+    return document.body.classList.contains("light-mode") ? '#657b83' : '#a1a1aa';
+  }
 
   // --- RFC-4180 COMPLIANT CSV PARSER ---
   function parseCSV(text) {
     const lines = [];
     let row = [""];
     let inQuotes = false;
-    
+
     for (let i = 0; i < text.length; i++) {
       const char = text[i];
       const nextChar = text[i + 1];
-      
+
       if (char === '"') {
         if (inQuotes && nextChar === '"') {
           row[row.length - 1] += '"';
@@ -70,16 +114,16 @@ document.addEventListener("DOMContentLoaded", () => {
         row[row.length - 1] += char;
       }
     }
-    
+
     if (row.length > 1 || row[0] !== "") {
       lines.push(row);
     }
-    
+
     if (lines.length === 0) return [];
-    
+
     const headers = lines[0].map(h => h.trim());
     const data = [];
-    
+
     for (let i = 1; i < lines.length; i++) {
       const row = lines[i];
       if (row.length !== headers.length) continue;
@@ -124,6 +168,12 @@ document.addEventListener("DOMContentLoaded", () => {
         d.beta = parseFloat(d.beta) || null;
         d.alpha_pct = parseFloat(d.alpha_pct) || null;
         d.tracking_error_pct = parseFloat(d.tracking_error_pct) || null;
+        d.expense_ratio_pct = parseFloat(d.expense_ratio_pct) || null;
+        d.aum_cr = parseFloat(d.aum_cr) || null;
+        d.morningstar_stars = parseInt(d.morningstar_stars) || null;
+        d.return_per_cost = parseFloat(d.return_per_cost) || null;
+        d.return_per_cost_rank = parseInt(d.return_per_cost_rank) || null;
+        d.true_net_return = parseFloat(d.true_net_return) || null;
         d.composite_score = parseFloat(d.composite_score) || 0;
         d.universe_rank = parseInt(d.universe_rank) || 0;
         d.category_rank = parseInt(d.category_rank) || 0;
@@ -134,6 +184,11 @@ document.addEventListener("DOMContentLoaded", () => {
         d.fund_age_years = parseFloat(d.fund_age_years) || 0;
       });
 
+      // Default the deep dive active selection if not set
+      if (!activeDeepdiveCode && fundMetrics.length > 0) {
+        activeDeepdiveCode = fundMetrics[0].scheme_code;
+      }
+
       // Fetch file 2: rolling_returns.csv
       const rollingResponse = await fetch("data/output/rolling_returns.csv");
       if (rollingResponse.ok) {
@@ -142,6 +197,17 @@ document.addEventListener("DOMContentLoaded", () => {
         rollingReturns.forEach(d => {
           d.scheme_code = parseInt(d.scheme_code);
           d.rolling_1y_return_pct = parseFloat(d.rolling_1y_return_pct) || 0;
+        });
+      }
+
+      // Fetch file 2b: fund_aum_history.csv
+      const aumHistoryResponse = await fetch("data/output/fund_aum_history.csv");
+      if (aumHistoryResponse.ok) {
+        const aumHistoryText = await aumHistoryResponse.text();
+        fundAumHistory = parseCSV(aumHistoryText);
+        fundAumHistory.forEach(d => {
+          d.scheme_code = parseInt(d.scheme_code);
+          d.aum_cr = parseFloat(d.aum_cr) || 0;
         });
       }
 
@@ -168,6 +234,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       // Populate elements
       populateAMCs();
+      populateDeepdiveSelector();
       updateDashboardStats();
       updateSortHeaderClasses();
       renderScreener();
@@ -176,7 +243,7 @@ document.addEventListener("DOMContentLoaded", () => {
       // Maintain selection consistency on data updates
       selectedCompareCodes = selectedCompareCodes.filter(code => fundMetrics.some(f => f.scheme_code === code));
       updateCompareBar();
-      
+
       // Update visual tab if it was already rendered
       if (document.getElementById("visuals-page").classList.contains("active")) {
         renderCharts();
@@ -208,15 +275,15 @@ document.addEventListener("DOMContentLoaded", () => {
         <td><div class="loading-shimmer-row" style="width: 50px; height: 14px; border-radius: 4px; margin-left: auto;"></div></td>
         <td><div class="loading-shimmer-row" style="width: 40px; height: 14px; border-radius: 4px; margin-left: auto;"></div></td>
         <td><div class="loading-shimmer-row" style="width: 40px; height: 14px; border-radius: 4px; margin-left: auto;"></div></td>
+        <td><div class="loading-shimmer-row" style="width: 50px; height: 14px; border-radius: 4px; margin-left: auto;"></div></td>
+        <td><div class="loading-shimmer-row" style="width: 70px; height: 14px; border-radius: 4px; margin-left: auto;"></div></td>
         <td><div class="loading-shimmer-row" style="width: 40px; height: 14px; border-radius: 4px; margin-left: auto;"></div></td>
         <td><div class="loading-shimmer-row" style="width: 30px; height: 14px; border-radius: 4px; margin-left: auto;"></div></td>
       </tr>
     `).join('');
   }
 
-  function getCategoryTheme(category) {
-    return categoryColors[category] || defaultColor;
-  }
+
 
   // --- STATS BOARD ---
   function updateDashboardStats() {
@@ -226,7 +293,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const topCAGRFund = [...fundMetrics]
       .filter(d => d.cagr_3y !== null)
       .reduce((prev, current) => (prev.cagr_3y > current.cagr_3y) ? prev : current);
-    
+
     document.getElementById("stat-top-cagr").innerText = `${topCAGRFund.cagr_3y.toFixed(1)}%`;
     document.getElementById("stat-top-cagr-name").innerHTML = `<span class="text-profit" style="margin-right: 4px; font-size: 0.8rem;">▲</span> ${truncateString(topCAGRFund.fund_name, 22)}`;
     document.getElementById("stat-top-cagr-name").title = topCAGRFund.fund_name;
@@ -262,9 +329,9 @@ document.addEventListener("DOMContentLoaded", () => {
   function populateAMCs() {
     const amcSelect = document.getElementById("amc-select");
     const uniqueAMCs = [...new Set(fundMetrics.map(f => f.fund_house))].sort();
-    
+
     amcSelect.innerHTML = `<option value="ALL">All Asset Managers</option>`;
-    
+
     uniqueAMCs.forEach(amc => {
       const option = document.createElement("option");
       option.value = amc;
@@ -276,21 +343,30 @@ document.addEventListener("DOMContentLoaded", () => {
   // --- SCREENER ENGINE ---
   function renderScreener() {
     const tbody = document.getElementById("screener-tbody");
-    
+
     // Apply filters
     let filtered = fundMetrics.filter(fund => {
       // 1. Broad Category Filter
       const catMatch = (activeCategory === "ALL") || (fund.broad_category === activeCategory);
-      
+
       // 2. AMC/Fund House Filter
       const amcMatch = (activeAMC === "ALL") || (fund.fund_house === activeAMC);
-      
+
       // 3. Search text
-      const searchMatch = (activeSearch === "") || 
+      const searchMatch = (activeSearch === "") ||
         fund.fund_name.toLowerCase().includes(activeSearch.toLowerCase()) ||
         fund.fund_house.toLowerCase().includes(activeSearch.toLowerCase());
-        
-      return catMatch && amcMatch && searchMatch;
+
+      // 4. Max Expense Ratio Filter
+      const expMatch = (activeMaxExpense === "ALL") || (fund.expense_ratio_pct !== null && fund.expense_ratio_pct <= parseFloat(activeMaxExpense));
+
+      // 5. Min AUM Filter
+      const aumMatch = (activeMinAUM === "ALL") || (fund.aum_cr !== null && fund.aum_cr >= parseFloat(activeMinAUM));
+
+      // 6. Min Stars Filter
+      const starsMatch = (activeMinStars === "ALL") || (fund.morningstar_stars !== null && fund.morningstar_stars >= parseInt(activeMinStars));
+
+      return catMatch && amcMatch && searchMatch && expMatch && aumMatch && starsMatch;
     });
 
     // Apply Sorting
@@ -304,8 +380,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
       // Handle text vs numeric sorting
       if (typeof valA === "string") {
-        return activeSortDirection === "asc" 
-          ? valA.localeCompare(valB) 
+        return activeSortDirection === "asc"
+          ? valA.localeCompare(valB)
           : valB.localeCompare(valA);
       } else {
         return activeSortDirection === "asc"
@@ -318,7 +394,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (filtered.length === 0) {
       tbody.innerHTML = `
         <tr>
-          <td colspan="9" style="text-align: center; padding: 4rem 1rem; color: var(--text-muted);">
+          <td colspan="11" style="text-align: center; padding: 4rem 1rem; color: var(--text-muted);">
             <i class="fa-solid fa-folder-open" style="font-size: 1.5rem; margin-bottom: 0.5rem; display: block;"></i>
             No mutual funds match your filter criteria.
           </td>
@@ -329,7 +405,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     tbody.innerHTML = filtered.map(fund => {
       const isChecked = selectedCompareCodes.includes(fund.scheme_code);
-      
+
       // Map badge subclass
       let badgeClass = "equity";
       if (fund.broad_category === "Hybrid Scheme") badgeClass = "hybrid";
@@ -341,7 +417,26 @@ document.addEventListener("DOMContentLoaded", () => {
       const sharpe = fund.sharpe_ratio ? fund.sharpe_ratio.toFixed(2) : "N/A";
       const volatility = fund.volatility_pct ? `${fund.volatility_pct.toFixed(1)}%` : "N/A";
       const mdd = fund.max_drawdown_pct ? `${fund.max_drawdown_pct.toFixed(1)}%` : "N/A";
-      
+
+      // Star rating stars column HTML
+      let starsHtml = "";
+      if (fund.morningstar_stars) {
+        for (let s = 1; s <= 5; s++) {
+          if (s <= fund.morningstar_stars) {
+            starsHtml += `<i class="fa-solid fa-star star-gold"></i>`;
+          } else {
+            starsHtml += `<i class="fa-solid fa-star star-grey"></i>`;
+          }
+        }
+      } else {
+        starsHtml = `<span style="color: var(--text-muted);">—</span>`;
+      }
+
+      // Return Per Cost rank badges column HTML
+      const returnPerCostVal = fund.return_per_cost ? fund.return_per_cost.toFixed(1) : "N/A";
+      const rankBadgeHtml = fund.return_per_cost_rank ? `<span class="rank-tag-badge">Rank #${fund.return_per_cost_rank}</span>` : "";
+      const returnPerCostHtml = `${returnPerCostVal} ${rankBadgeHtml}`;
+
       // Determine score color text
       let scoreColor = "var(--color-down)";
       if (fund.composite_score > 65) scoreColor = "var(--color-up)";
@@ -363,6 +458,8 @@ document.addEventListener("DOMContentLoaded", () => {
           <td class="numeric-cell">${cagr1Y}</td>
           <td class="numeric-cell">${sharpe}</td>
           <td class="numeric-cell">${volatility}</td>
+          <td class="numeric-cell" style="text-align: right; white-space: nowrap;">${starsHtml}</td>
+          <td class="numeric-cell cell-bold" style="white-space: nowrap;">${returnPerCostHtml}</td>
           <td class="numeric-cell text-risk">${mdd}</td>
           <td class="numeric-cell score-cell-badge" style="color: ${scoreColor};">${fund.composite_score.toFixed(0)}</td>
         </tr>
@@ -400,7 +497,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (selectedCompareCodes.length > 0) {
       bar.classList.add("show");
-      
+
       // Render badges
       badgesContainer.innerHTML = selectedCompareCodes.map(code => {
         const fund = fundMetrics.find(f => f.scheme_code === code);
@@ -554,7 +651,7 @@ document.addEventListener("DOMContentLoaded", () => {
           }
           selectedRollingCodes.push(code);
         }
-        
+
         renderRollingSelectors();
         updateRollingReturnsChart();
       });
@@ -563,13 +660,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // --- CHARTS SYSTEM (CHART.JS CONFIG) ---
   function initGlobalChartDefaults() {
-    Chart.defaults.color = '#71717a'; // text-muted
+    const isLight = document.body.classList.contains("light-mode");
+
+    Chart.defaults.color = isLight ? '#586e75' : '#71717a';
     Chart.defaults.font.family = "'Inter', sans-serif";
-    Chart.defaults.borderColor = 'rgba(255, 255, 255, 0.05)';
-    Chart.defaults.plugins.tooltip.backgroundColor = 'rgba(9, 9, 11, 0.95)';
-    Chart.defaults.plugins.tooltip.titleColor = '#fff';
-    Chart.defaults.plugins.tooltip.bodyColor = '#e4e4e7';
-    Chart.defaults.plugins.tooltip.borderColor = 'rgba(255, 255, 255, 0.08)';
+    Chart.defaults.borderColor = isLight ? 'rgba(7, 54, 66, 0.06)' : 'rgba(255, 255, 255, 0.05)';
+
+    Chart.defaults.plugins.tooltip.backgroundColor = isLight ? 'rgba(240, 236, 228, 0.95)' : 'rgba(9, 9, 11, 0.95)';
+    Chart.defaults.plugins.tooltip.titleColor = isLight ? '#475b62' : '#fff';
+    Chart.defaults.plugins.tooltip.bodyColor = isLight ? '#586e75' : '#e4e4e7';
+    Chart.defaults.plugins.tooltip.borderColor = isLight ? 'rgba(7, 54, 66, 0.12)' : 'rgba(255, 255, 255, 0.08)';
     Chart.defaults.plugins.tooltip.borderWidth = 1;
     Chart.defaults.plugins.tooltip.padding = 10;
     Chart.defaults.plugins.tooltip.cornerRadius = 6;
@@ -579,7 +679,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (fundMetrics.length === 0) return;
 
     initGlobalChartDefaults();
-    
+
     // 1. Risk vs Return Scatter Plot
     renderRiskReturnScatter();
 
@@ -590,18 +690,40 @@ document.addEventListener("DOMContentLoaded", () => {
     updateRollingReturnsChart();
   }
 
-  // Visual 1: Risk vs. Return Scatter Plot
+  // Helper to convert hex colors to transparent rgba colors for glassy styling
+  function hexToRgbA(hex, alpha = 1) {
+    let c;
+    if (/^#([A-Fa-f0-9]{3}){1,2}$/.test(hex)) {
+      c = hex.substring(1).split('');
+      if (c.length === 3) {
+        c = [c[0], c[0], c[1], c[1], c[2], c[2]];
+      }
+      c = '0x' + c.join('');
+      return `rgba(${[(c >> 16) & 255, (c >> 8) & 255, c & 255].join(',')},${alpha})`;
+    }
+    return hex;
+  }
+
+  // Visual 1: Risk vs. Return Profile (3Y CAGR vs Volatility)
   function renderRiskReturnScatter() {
     const ctx = document.getElementById("riskReturnChart").getContext("2d");
-    
+
     if (riskReturnChartInstance) {
       riskReturnChartInstance.destroy();
     }
+    const isLight = document.body.classList.contains("light-mode");
 
     const scatterData = fundMetrics
       .filter(f => f.volatility_pct !== null && f.cagr_3y !== null)
       .map(f => {
         const theme = getCategoryTheme(f.broad_category);
+
+        // Performance square root scale based on AUM
+        let radius = 6;
+        if (f.aum_cr) {
+          radius = 6 + (Math.sqrt(f.aum_cr) * 0.13);
+        }
+
         return {
           x: f.volatility_pct,
           y: f.cagr_3y,
@@ -610,25 +732,62 @@ document.addEventListener("DOMContentLoaded", () => {
           subCategory: f.sub_category,
           sharpe: f.sharpe_ratio,
           score: f.composite_score,
+          aum: f.aum_cr,
+          radius: radius,
           color: theme.color
         };
-      });
+      })
+      .sort((a, b) => (b.aum || 0) - (a.aum || 0)); // Sort AUM descending (larger bubbles drawn first in background)
 
     riskReturnChartInstance = new Chart(ctx, {
       type: 'scatter',
       data: {
         datasets: [{
           data: scatterData,
-          backgroundColor: scatterData.map(d => d.color),
-          pointRadius: scatterData.map(d => Math.max(5, d.score / 10)),
-          pointHoverRadius: 9,
-          borderWidth: 1,
-          borderColor: 'rgba(255,255,255,0.2)'
+          backgroundColor: scatterData.map(d => hexToRgbA(d.color, 0.45)), // Glassy transparent fill
+          borderColor: scatterData.map(d => d.color), // Solid glow category border
+          borderWidth: 1.5,
+          pointRadius: scatterData.map(d => d.radius),
+          pointHoverRadius: scatterData.map(d => d.radius + 3),
+          pointHitRadius: scatterData.map(d => d.radius + 3), // Broaden hover hit radius area
+          hoverBorderColor: isLight ? '#586e75' : '#fafafa', // Highly defined hover outline
+          hoverBorderWidth: 2
         }]
       },
       options: {
         responsive: true,
         maintainAspectRatio: false,
+        interaction: {
+          mode: 'nearest',
+          intersect: true,
+          axis: 'xy'
+        },
+        animation: {
+          duration: 1000,
+          easing: 'easeOutQuart'
+        },
+        animations: {
+          radius: {
+            type: 'number',
+            easing: 'easeOutQuart',
+            from: 0
+          },
+          x: {
+            duration: 0
+          },
+          y: {
+            duration: 0
+          }
+        },
+        transitions: {
+          active: {
+            animations: {
+              radius: {
+                duration: 0
+              }
+            }
+          }
+        },
         plugins: {
           legend: { display: false },
           tooltip: {
@@ -640,6 +799,7 @@ document.addEventListener("DOMContentLoaded", () => {
                   `Category: ${item.subCategory}`,
                   `Risk (Vol): ${item.x.toFixed(1)}%`,
                   `Return (CAGR 3Y): ${item.y.toFixed(1)}%`,
+                  `AUM: ₹${item.aum ? item.aum.toLocaleString('en-IN') : 'N/A'} Cr`,
                   `Sharpe Ratio: ${item.sharpe.toFixed(2)}`,
                   `Score: ${item.score.toFixed(0)}`
                 ];
@@ -652,21 +812,22 @@ document.addEventListener("DOMContentLoaded", () => {
             title: {
               display: true,
               text: 'Volatility (Annualised Risk %)',
-              color: '#a1a1aa'
+              color: getAxisTitleColor()
             },
-            grid: { color: 'rgba(255, 255, 255, 0.04)' }
+            grid: { color: getGridColor() }
           },
           y: {
             title: {
               display: true,
               text: '3-Year CAGR (Return %)',
-              color: '#a1a1aa'
+              color: getAxisTitleColor()
             },
-            grid: { color: 'rgba(255, 255, 255, 0.04)' }
+            grid: { color: getGridColor() }
           }
         }
       }
     });
+    document.getElementById("riskReturnChart").classList.add("rendered");
   }
 
   // Visual 2: Category AUM Distribution Bar Chart
@@ -676,10 +837,11 @@ document.addEventListener("DOMContentLoaded", () => {
     if (aumChartInstance) {
       aumChartInstance.destroy();
     }
+    const isLight = document.body.classList.contains("light-mode");
 
-    const aumData = categoryAUM.filter(d => 
-      d.scheme_name && 
-      !d.scheme_name.toLowerCase().includes("sub total") && 
+    const aumData = categoryAUM.filter(d =>
+      d.scheme_name &&
+      !d.scheme_name.toLowerCase().includes("sub total") &&
       !d.scheme_name.toLowerCase().includes("grand total") &&
       !d.scheme_name.toLowerCase().includes("total")
     ).sort((a, b) => b.aum_cr - a.aum_cr).slice(0, 6);
@@ -687,20 +849,31 @@ document.addEventListener("DOMContentLoaded", () => {
     const labels = aumData.map(d => truncateString(d.scheme_name, 16));
     const values = aumData.map(d => d.aum_cr / 1000); // Convert to Thousands of Cr
 
+    const lightColors = [
+      'rgba(42, 161, 152, 0.75)',  // Solarized Cyan
+      'rgba(108, 113, 196, 0.75)', // Solarized Violet
+      'rgba(38, 139, 210, 0.75)',  // Solarized Blue
+      'rgba(181, 137, 0, 0.75)',   // Solarized Yellow
+      'rgba(211, 54, 130, 0.75)',  // Solarized Magenta
+      'rgba(220, 50, 47, 0.75)'    // Solarized Red
+    ];
+
+    const darkColors = [
+      'rgba(34, 211, 238, 0.75)',  // Muted Cyan
+      'rgba(129, 140, 248, 0.75)', // Muted Indigo
+      'rgba(96, 165, 250, 0.75)',  // Muted Blue
+      'rgba(251, 191, 36, 0.75)',  // Muted Amber
+      'rgba(168, 85, 247, 0.75)',  // Muted Purple
+      'rgba(244, 63, 94, 0.75)'    // Muted Rose
+    ];
+
     aumChartInstance = new Chart(ctx, {
       type: 'bar',
       data: {
         labels: labels,
         datasets: [{
           data: values,
-          backgroundColor: [
-            'rgba(34, 211, 238, 0.75)',  // Muted Cyan
-            'rgba(129, 140, 248, 0.75)', // Muted Indigo
-            'rgba(96, 165, 250, 0.75)',  // Muted Blue
-            'rgba(251, 191, 36, 0.75)',  // Muted Amber
-            'rgba(168, 85, 247, 0.75)',  // Muted Purple
-            'rgba(244, 63, 94, 0.75)'    // Muted Rose
-          ],
+          backgroundColor: isLight ? lightColors : darkColors,
           borderRadius: 4,
           borderWidth: 0,
           barThickness: 14
@@ -723,9 +896,9 @@ document.addEventListener("DOMContentLoaded", () => {
             title: {
               display: true,
               text: 'AUM (₹ Thousand Crore)',
-              color: '#a1a1aa'
+              color: getAxisTitleColor()
             },
-            grid: { color: 'rgba(255, 255, 255, 0.04)' }
+            grid: { color: getGridColor() }
           },
           y: {
             grid: { display: false }
@@ -733,6 +906,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       }
     });
+    document.getElementById("aumDistributionChart").classList.add("rendered");
   }
 
   // Visual 3: Rolling 1-Year Returns Line Chart
@@ -750,7 +924,7 @@ document.addEventListener("DOMContentLoaded", () => {
       if (!fund) return null;
 
       const theme = getCategoryTheme(fund.broad_category);
-      
+
       const fundRolling = rollingReturns
         .filter(r => r.scheme_code === code)
         .sort((a, b) => new Date(a.date) - new Date(b.date));
@@ -791,7 +965,7 @@ document.addEventListener("DOMContentLoaded", () => {
             labels: {
               boxWidth: 10,
               usePointStyle: true,
-              color: '#a1a1aa'
+              color: getAxisTitleColor()
             }
           },
           tooltip: {
@@ -814,19 +988,20 @@ document.addEventListener("DOMContentLoaded", () => {
               unit: 'month',
               displayFormats: { month: 'MMM yy' }
             },
-            grid: { color: 'rgba(255, 255, 255, 0.04)' }
+            grid: { color: getGridColor() }
           },
           y: {
             title: {
               display: true,
               text: '1Y Rolling Return %',
-              color: '#a1a1aa'
+              color: getAxisTitleColor()
             },
-            grid: { color: 'rgba(255, 255, 255, 0.04)' }
+            grid: { color: getGridColor() }
           }
         }
       }
     });
+    document.getElementById("rollingReturnsChart").classList.add("rendered");
   }
 
   // --- SPA VIEW ROUTING ---
@@ -851,9 +1026,47 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Trigger page-specific loads
     if (pageId === "visuals") {
-      setTimeout(renderCharts, 100);
+      const c1 = document.getElementById("riskReturnChart");
+      const c2 = document.getElementById("aumDistributionChart");
+      const c3 = document.getElementById("rollingReturnsChart");
+      if (c1) c1.classList.remove("rendered");
+      if (c2) c2.classList.remove("rendered");
+      if (c3) c3.classList.remove("rendered");
+
+      if (riskReturnChartInstance) {
+        riskReturnChartInstance.destroy();
+        riskReturnChartInstance = null;
+      }
+      if (aumChartInstance) {
+        aumChartInstance.destroy();
+        aumChartInstance = null;
+      }
+      if (rollingReturnsChartInstance) {
+        rollingReturnsChartInstance.destroy();
+        rollingReturnsChartInstance = null;
+      }
+      requestAnimationFrame(() => {
+        requestAnimationFrame(renderCharts);
+      });
     } else if (pageId === "compare") {
       renderComparison();
+    } else if (pageId === "deepdive") {
+      const c4 = document.getElementById("deepdiveAumChart");
+      const c5 = document.getElementById("costCalculatorChart");
+      if (c4) c4.classList.remove("rendered");
+      if (c5) c5.classList.remove("rendered");
+
+      if (deepdiveAumChartInstance) {
+        deepdiveAumChartInstance.destroy();
+        deepdiveAumChartInstance = null;
+      }
+      if (costCalculatorChartInstance) {
+        costCalculatorChartInstance.destroy();
+        costCalculatorChartInstance = null;
+      }
+      requestAnimationFrame(() => {
+        requestAnimationFrame(renderDeepDive);
+      });
     }
   }
 
@@ -922,6 +1135,33 @@ document.addEventListener("DOMContentLoaded", () => {
     renderScreener();
   });
 
+  // Expense Ratio Select Change
+  const expenseSelect = document.getElementById("expense-select");
+  if (expenseSelect) {
+    expenseSelect.addEventListener("change", (e) => {
+      activeMaxExpense = e.target.value;
+      renderScreener();
+    });
+  }
+
+  // Min AUM Select Change
+  const aumSelect = document.getElementById("aum-filter-select");
+  if (aumSelect) {
+    aumSelect.addEventListener("change", (e) => {
+      activeMinAUM = e.target.value;
+      renderScreener();
+    });
+  }
+
+  // Stars Rating Select Change
+  const starsSelect = document.getElementById("stars-select");
+  if (starsSelect) {
+    starsSelect.addEventListener("change", (e) => {
+      activeMinStars = e.target.value;
+      renderScreener();
+    });
+  }
+
   // Sticky Compare Bar Actions
   document.getElementById("clear-compare-btn").addEventListener("click", () => {
     selectedCompareCodes = [];
@@ -939,7 +1179,7 @@ document.addEventListener("DOMContentLoaded", () => {
     syncBtn.addEventListener("click", async () => {
       const icon = syncBtn.querySelector("i");
       const textSpan = syncBtn.querySelector("span");
-      
+
       icon.classList.add("fa-spin");
       textSpan.innerText = "Syncing...";
       syncBtn.disabled = true;
@@ -1028,6 +1268,26 @@ document.addEventListener("DOMContentLoaded", () => {
   // Set up sorting triggers
   setupTableSorting();
 
+  // Setup Theme Toggle Listener
+  function setupThemeToggle() {
+    const toggleBtn = document.getElementById("theme-toggle-btn");
+    if (!toggleBtn) return;
+
+    toggleBtn.addEventListener("click", () => {
+      const isLight = document.body.classList.toggle("light-mode");
+      localStorage.setItem("dashboard_theme", isLight ? "light" : "dark");
+
+      // Update Chart defaults
+      initGlobalChartDefaults();
+
+      // Re-draw all charts and elements to sync with the active theme
+      renderCharts();
+      renderDeepDive();
+      renderScreener();
+    });
+  }
+  setupThemeToggle();
+
   // --- BACKGROUND POLLING FOR LIVE UPDATES ---
   function startAutoRefreshPoll() {
     setInterval(async () => {
@@ -1037,7 +1297,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const res = await fetch(`data/output/fund_metrics.csv?t=${timestamp}`, {
           method: "HEAD"
         });
-        
+
         if (res.ok) {
           const newModifiedTime = res.headers.get("Last-Modified");
           // If we have a previously saved time and it has changed, trigger refresh
@@ -1051,6 +1311,405 @@ document.addEventListener("DOMContentLoaded", () => {
         console.warn("[AutoRefresh] Failed to poll server for updates:", err);
       }
     }, 5000); // Poll every 5 seconds
+  }
+
+  // --- DEEP DIVE SYSTEM ---
+
+  function populateDeepdiveSelector() {
+    const select = document.getElementById("deepdive-scheme-select");
+    if (!select || fundMetrics.length === 0) return;
+
+    select.innerHTML = fundMetrics.map(fund => `
+      <option value="${fund.scheme_code}" ${fund.scheme_code === activeDeepdiveCode ? 'selected' : ''}>
+        ${fund.fund_name}
+      </option>
+    `).join('');
+
+    // Attach selector change listener
+    select.addEventListener("change", (e) => {
+      activeDeepdiveCode = parseInt(e.target.value);
+      renderDeepDive();
+    });
+  }
+
+  function renderDeepDive() {
+    if (fundMetrics.length === 0 || !activeDeepdiveCode) return;
+
+    // 1. Draw AUM Trend Bar Chart
+    updateDeepdiveAumChart();
+
+    // 2. Initialise and run the Cost Impact Calculator
+    updateCostImpactCalculator(true);
+  }
+
+  function updateDeepdiveAumChart() {
+    const ctx = document.getElementById("deepdiveAumChart");
+    if (!ctx) return;
+
+    if (deepdiveAumChartInstance) {
+      deepdiveAumChartInstance.destroy();
+    }
+
+    const fund = fundMetrics.find(f => f.scheme_code === activeDeepdiveCode);
+    if (!fund) return;
+
+    // Filter history for the active fund and sort chronologically
+    const history = fundAumHistory
+      .filter(h => h.scheme_code === activeDeepdiveCode)
+      .sort((a, b) => new Date(a.date) - new Date(b.date));
+
+    if (history.length === 0) {
+      // Fallback: If no history, render single bar representing current AUM
+      history.push({
+        date: new Date().toISOString().slice(0, 10),
+        aum_cr: fund.aum_cr || 0
+      });
+    }
+
+    const labels = history.map(h => {
+      const date = new Date(h.date);
+      return date.toLocaleDateString('en-IN', { month: 'short', year: '2-digit' });
+    });
+
+    const dataValues = history.map(h => h.aum_cr);
+
+    const isLight = document.body.classList.contains("light-mode");
+    const barBg = isLight ? 'rgba(42, 161, 152, 0.75)' : 'rgba(34, 211, 238, 0.65)';
+    const barHoverBg = isLight ? 'rgba(42, 161, 152, 0.95)' : 'rgba(34, 211, 238, 0.95)';
+
+    deepdiveAumChartInstance = new Chart(ctx.getContext("2d"), {
+      type: 'bar',
+      data: {
+        labels: labels,
+        datasets: [{
+          label: 'AUM (₹ Crore)',
+          data: dataValues,
+          backgroundColor: barBg,
+          hoverBackgroundColor: barHoverBg,
+          borderRadius: 4,
+          borderWidth: 0,
+          barThickness: 18
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        animations: {
+          y: {
+            easing: 'easeOutQuart',
+            duration: 1000,
+            delay: (context) => {
+              if (context.type === 'data' && context.mode !== 'active') {
+                return context.dataIndex * 40;
+              }
+              return 0;
+            }
+          },
+          base: {
+            easing: 'easeOutQuart',
+            duration: 1000,
+            delay: (context) => {
+              if (context.type === 'data' && context.mode !== 'active') {
+                return context.dataIndex * 40;
+              }
+              return 0;
+            }
+          }
+        },
+        plugins: {
+          legend: { display: false },
+          tooltip: {
+            callbacks: {
+              label: (context) => ` AUM: ₹${context.raw.toLocaleString('en-IN')} Cr`
+            }
+          }
+        },
+        scales: {
+          x: {
+            grid: { display: false }
+          },
+          y: {
+            title: {
+              display: true,
+              text: 'AUM (₹ Crore)',
+              color: getAxisTitleColor()
+            },
+            grid: { color: getGridColor() }
+          }
+        }
+      }
+    });
+    document.getElementById("deepdiveAumChart").classList.add("rendered");
+  }
+
+  function updateCostImpactCalculator(isInitialLoad = false) {
+    const fund = fundMetrics.find(f => f.scheme_code === activeDeepdiveCode);
+    if (!fund) return;
+
+    const ter = fund.expense_ratio_pct || 0.50; // Default fallback to 0.50% if missing
+
+    // Helper to dynamically adjust manual input widths to prevent artificial gaps
+    const adjustInputWidth = (inputEl, minWidth = 20) => {
+      const tempSpan = document.createElement("span");
+      tempSpan.style.font = window.getComputedStyle(inputEl).font;
+      tempSpan.style.visibility = "hidden";
+      tempSpan.style.position = "absolute";
+      tempSpan.style.whiteSpace = "pre";
+      tempSpan.innerText = inputEl.value || inputEl.placeholder || "";
+      document.body.appendChild(tempSpan);
+      const width = tempSpan.getBoundingClientRect().width;
+      document.body.removeChild(tempSpan);
+      inputEl.style.width = Math.max(minWidth, Math.ceil(width) + 4) + "px";
+    };
+
+    // Sliders
+    const sipSlider = document.getElementById("calc-sip-slider");
+    const cagrSlider = document.getElementById("calc-cagr-slider");
+    const periodSlider = document.getElementById("calc-period-slider");
+
+    // Inputs (numeric)
+    const sipInput = document.getElementById("calc-sip-input");
+    const cagrInput = document.getElementById("calc-cagr-input");
+    const periodInput = document.getElementById("calc-period-input");
+
+    const grossOutputLabel = document.getElementById("calc-gross-output");
+    const netOutputLabel = document.getElementById("calc-net-output");
+    const dragOutputLabel = document.getElementById("calc-drag-output");
+
+    if (!sipSlider || !cagrSlider || !periodSlider || !sipInput || !cagrInput || !periodInput) return;
+
+    // Wealth computation logic
+    const recalculateCalculator = (isInitial = false) => {
+      const sip = parseFloat(sipInput.value) || 0;
+      const cagr = (parseFloat(cagrInput.value) || 0) / 100;
+      const years = parseInt(periodInput.value) || 0;
+
+      // Automatically size input box to numerals exactly
+      adjustInputWidth(sipInput, 40);
+      adjustInputWidth(cagrInput, 28);
+      adjustInputWidth(periodInput, 18);
+
+      // Wealth computation formulas
+      const r_gross = cagr / 12;
+      const r_net = (cagr - (ter / 100)) / 12;
+      const n_months = years * 12;
+
+      let grossWealth = 0;
+      let netWealth = 0;
+
+      if (r_gross > 0) {
+        grossWealth = sip * ((Math.pow(1 + r_gross, n_months) - 1) / r_gross) * (1 + r_gross);
+      } else {
+        grossWealth = sip * n_months;
+      }
+
+      if (r_net > 0) {
+        netWealth = sip * ((Math.pow(1 + r_net, n_months) - 1) / r_net) * (1 + r_net);
+      } else {
+        netWealth = sip * n_months;
+      }
+
+      const terDrag = grossWealth - netWealth;
+
+      const formatRupees = (num) => {
+        const lakhs = num / 100000;
+        if (lakhs >= 100) {
+          return `₹${(lakhs / 100).toFixed(2)} Cr`;
+        }
+        return `₹${lakhs.toFixed(2)} Lakhs`;
+      };
+
+      grossOutputLabel.innerText = formatRupees(grossWealth);
+      netOutputLabel.innerText = formatRupees(netWealth);
+      dragOutputLabel.innerText = formatRupees(terDrag);
+
+      updateCalculatorLineChart(sip, cagr, ter, years, isInitial);
+    };
+
+    // Sliders update inputs
+    sipSlider.oninput = () => {
+      sipInput.value = sipSlider.value;
+      recalculateCalculator(false);
+    };
+    cagrSlider.oninput = () => {
+      cagrInput.value = parseFloat(cagrSlider.value).toFixed(1);
+      recalculateCalculator(false);
+    };
+    periodSlider.oninput = () => {
+      periodInput.value = periodSlider.value;
+      recalculateCalculator(false);
+    };
+
+    // Setup manual input sync & limits
+    const setupManualInputSync = (inputEl, sliderEl, min, max, isDecimal = false) => {
+      inputEl.oninput = () => {
+        let val = parseFloat(inputEl.value);
+        if (isNaN(val)) return;
+
+        // Keep slider position synced but clamp slider pointer to its boundaries
+        sliderEl.value = Math.max(min, Math.min(max, val));
+        recalculateCalculator(false);
+      };
+
+      inputEl.onblur = () => {
+        let val = parseFloat(inputEl.value);
+        const hardMin = parseFloat(inputEl.min) || min;
+        const hardMax = parseFloat(inputEl.max) || max;
+
+        if (isNaN(val) || val < hardMin) {
+          val = hardMin;
+        } else if (val > hardMax) {
+          val = hardMax;
+        }
+
+        inputEl.value = isDecimal ? val.toFixed(1) : Math.round(val);
+        sliderEl.value = Math.max(min, Math.min(max, val));
+        recalculateCalculator(false);
+      };
+    };
+
+    setupManualInputSync(sipInput, sipSlider, 1000, 100000, false);
+    setupManualInputSync(cagrInput, cagrSlider, 5, 25, true);
+    setupManualInputSync(periodInput, periodSlider, 5, 30, false);
+
+    // Initial values
+    sipInput.value = sipSlider.value;
+    cagrInput.value = parseFloat(cagrSlider.value).toFixed(1);
+    periodInput.value = periodSlider.value;
+
+    recalculateCalculator(isInitialLoad);
+  }
+
+  function updateCalculatorLineChart(sip, cagr, ter, years, isInitialLoad = false) {
+    const ctx = document.getElementById("costCalculatorChart");
+    if (!ctx) return;
+
+    if (costCalculatorChartInstance) {
+      costCalculatorChartInstance.destroy();
+    }
+
+    const yearsLabels = [];
+    const grossData = [];
+    const netData = [];
+
+    for (let y = 0; y <= years; y++) {
+      yearsLabels.push(`Yr ${y}`);
+      if (y === 0) {
+        grossData.push(0);
+        netData.push(0);
+        continue;
+      }
+
+      const r_gross = cagr / 12;
+      const r_net = (cagr - (ter / 100)) / 12;
+      const n_months = y * 12;
+
+      let gw = 0;
+      let nw = 0;
+
+      if (r_gross > 0) {
+        gw = sip * ((Math.pow(1 + r_gross, n_months) - 1) / r_gross) * (1 + r_gross);
+      } else {
+        gw = sip * n_months;
+      }
+
+      if (r_net > 0) {
+        nw = sip * ((Math.pow(1 + r_net, n_months) - 1) / r_net) * (1 + r_net);
+      } else {
+        nw = sip * n_months;
+      }
+
+      grossData.push(Math.round(gw));
+      netData.push(Math.round(nw));
+    }
+
+    const isLight = document.body.classList.contains("light-mode");
+    const grossColor = isLight ? '#2aa198' : '#22d3ee';
+    const grossBg = isLight ? 'rgba(42, 161, 152, 0.04)' : 'rgba(34, 211, 238, 0.04)';
+    const netColor = isLight ? '#268bd2' : '#60a5fa';
+    const netBg = isLight ? 'rgba(38, 139, 210, 0.04)' : 'rgba(96, 165, 250, 0.04)';
+
+    costCalculatorChartInstance = new Chart(ctx.getContext("2d"), {
+      type: 'line',
+      data: {
+        labels: yearsLabels,
+        datasets: [
+          {
+            label: 'Gross Growth (No Fees)',
+            data: grossData,
+            borderColor: grossColor,
+            backgroundColor: grossBg,
+            borderWidth: 1.8,
+            pointRadius: 0,
+            pointHoverRadius: 4,
+            fill: true,
+            tension: 0.15
+          },
+          {
+            label: 'Net Growth (With Fees)',
+            data: netData,
+            borderColor: netColor,
+            backgroundColor: netBg,
+            borderWidth: 1.8,
+            pointRadius: 0,
+            pointHoverRadius: 4,
+            fill: true,
+            tension: 0.15
+          }
+        ]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        interaction: {
+          mode: 'index',
+          intersect: false
+        },
+        animation: isInitialLoad ? {} : false,
+        animations: isInitialLoad ? {
+          y: {
+            easing: 'easeOutQuart',
+            duration: 1000,
+            delay: (context) => {
+              if (context.type === 'data' && context.mode !== 'active') {
+                return context.dataIndex * 30;
+              }
+              return 0;
+            }
+          }
+        } : false,
+        plugins: {
+          legend: {
+            position: 'top',
+            labels: {
+              boxWidth: 8,
+              usePointStyle: true,
+              color: getAxisTitleColor(),
+              font: { size: 9 }
+            }
+          },
+          tooltip: {
+            callbacks: {
+              label: (context) => ` ${context.dataset.label}: ₹${context.raw.toLocaleString('en-IN')}`
+            }
+          }
+        },
+        scales: {
+          x: {
+            grid: { display: false },
+            ticks: { font: { size: 9 } }
+          },
+          y: {
+            ticks: {
+              font: { size: 9 },
+              callback: (value) => `₹${(value / 100000).toFixed(1)}L`
+            },
+            grid: { color: getGridColor() }
+          }
+        }
+      }
+    });
+    document.getElementById("costCalculatorChart").classList.add("rendered");
   }
 
   // Load Time Scales Support in ChartJS

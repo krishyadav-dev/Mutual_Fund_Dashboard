@@ -27,6 +27,7 @@
           <button class="tab-btn" data-page="visuals">Visuals</button>
           <button class="tab-btn" data-page="compare">Compare</button>
           <button class="tab-btn" data-page="powerbi">Power BI</button>
+          <button class="tab-btn" data-page="deepdive">Deep Dive</button>
         </div>
         <button class="btn-flat btn-flat-secondary" id="sync-data-btn" title="Sync Latest AMFI Data" style="display: flex; align-items: center; gap: 0.5rem; padding: 0.4rem 0.85rem;">
           <i class="fa-solid fa-rotate"></i>
@@ -84,6 +85,28 @@
             <select id="amc-select" class="custom-select">
               <option value="ALL">All Asset Managers</option>
             </select>
+
+            <select id="expense-select" class="custom-select">
+              <option value="ALL">All Expenses</option>
+              <option value="0.35">Max 0.35% Exp</option>
+              <option value="0.50">Max 0.50% Exp</option>
+              <option value="0.70">Max 0.70% Exp</option>
+              <option value="0.90">Max 0.90% Exp</option>
+            </select>
+
+            <select id="aum-filter-select" class="custom-select">
+              <option value="ALL">All AUM Sizes</option>
+              <option value="1000">Min ₹1,000 Cr AUM</option>
+              <option value="2500">Min ₹2,500 Cr AUM</option>
+              <option value="5000">Min ₹5,000 Cr AUM</option>
+            </select>
+
+            <select id="stars-select" class="custom-select">
+              <option value="ALL">All Ratings</option>
+              <option value="5">5 Stars Only</option>
+              <option value="4">4+ Stars</option>
+              <option value="3">3+ Stars</option>
+            </select>
           </div>
         </div>
 
@@ -95,12 +118,14 @@
                 <th style="width: 40px; text-align: center;">
                   <input type="checkbox" id="select-all-compare" style="cursor: pointer; display: none;">
                 </th>
-                <th class="sortable active" data-sort="fund_name">Scheme Name <span class="sort-indicator"></span></th>
+                <th class="sortable active" data-sort="fund_name" style="min-width: 320px;">Scheme Name <span class="sort-indicator"></span></th>
                 <th class="sortable" data-sort="broad_category">Category <span class="sort-indicator"></span></th>
                 <th class="sortable numeric" data-sort="cagr_3y">3Y CAGR <span class="sort-indicator"></span></th>
                 <th class="sortable numeric" data-sort="cagr_1y">1Y CAGR <span class="sort-indicator"></span></th>
                 <th class="sortable numeric" data-sort="sharpe_ratio">Sharpe <span class="sort-indicator"></span></th>
                 <th class="sortable numeric" data-sort="volatility_pct">Volatility <span class="sort-indicator"></span></th>
+                <th class="sortable numeric" data-sort="morningstar_stars">Stars <span class="sort-indicator"></span></th>
+                <th class="sortable numeric" data-sort="return_per_cost">Return Per Cost (Rank) <span class="sort-indicator"></span></th>
                 <th class="sortable numeric" data-sort="max_drawdown_pct">Max Drawdown <span class="sort-indicator"></span></th>
                 <th class="sortable numeric" data-sort="composite_score">Score <span class="sort-indicator"></span></th>
               </tr>
@@ -108,7 +133,7 @@
             <tbody id="screener-tbody">
               <!-- Dynamically populated rows -->
               <tr>
-                <td colspan="9" style="text-align: center; color: var(--text-muted); padding: 3rem;">
+                <td colspan="11" style="text-align: center; color: var(--text-muted); padding: 3rem;">
                   Loading mutual fund data...
                 </td>
               </tr>
@@ -213,6 +238,93 @@
         </div>
       </section>
 
+      <!-- 5. Fund Deep Dive Page -->
+      <section id="deepdive-page" class="page-section">
+        
+        <div class="deepdive-toolbar">
+          <div class="deepdive-selector-wrapper">
+            <label for="deepdive-scheme-select" style="font-weight: 500; font-size: 0.9rem; color: var(--text-secondary); margin-right: 0.75rem;">Select Fund for Deep Dive:</label>
+            <select id="deepdive-scheme-select" class="custom-select" style="min-width: 350px; font-weight: 500;">
+              <!-- Dynamic options -->
+            </select>
+          </div>
+        </div>
+
+        <div class="visuals-grid">
+          
+          <!-- AUM Trend over Time Card -->
+          <div class="chart-card">
+            <div class="chart-title">Historical AUM Trend (Constant-Unit Scaling)</div>
+            <div class="chart-container" style="height: 330px; margin-top: 15px;">
+              <canvas id="deepdiveAumChart"></canvas>
+            </div>
+            <div style="font-size: 0.7rem; color: var(--text-muted); margin-top: 12px; text-align: center; font-style: italic; opacity: 0.85;">
+              Historical AUM represents the performance-scaled value of the fund's current asset pool back-in-time (assuming constant unit capital).
+            </div>
+          </div>
+
+          <!-- Cost Impact Calculator Card -->
+          <div class="chart-card">
+            <div class="chart-title">Cost Impact Calculator (TER Drag)</div>
+            
+            <div class="calculator-inputs-grid" style="display: flex; flex-direction: column; gap: 0.95rem; margin-top: 12px;">
+              <div class="calc-input-group">
+                <div class="calc-label-row" style="display: flex; justify-content: space-between; font-size: 0.8rem; margin-bottom: 4px; align-items: center;">
+                  <span style="color: var(--text-secondary);">Monthly SIP Amount</span>
+                  <div class="calc-val-glow-wrapper" style="display: flex; align-items: center; color: #22d3ee; text-shadow: 0 0 10px rgba(34, 211, 238, 0.25); border-bottom: 1px dashed rgba(34, 211, 238, 0.3); padding-bottom: 1px; border-radius: 4px; transition: border-color 0.25s ease, background-color 0.25s ease, box-shadow 0.25s ease;">
+                    <span style="font-weight: 600; font-size: 0.8rem; margin-right: 1px; user-select: none;">₹</span>
+                    <input type="number" id="calc-sip-input" class="calc-inline-input" min="500" max="1000000" step="500" value="10000" style="font-weight: 600; color: #22d3ee; background: transparent; border: none; font-size: 0.85rem; width: 45px; text-align: left; outline: none; padding: 0; font-family: inherit; font-variant-numeric: tabular-nums;">
+                  </div>
+                </div>
+                <input type="range" id="calc-sip-slider" min="1000" max="100000" step="1000" value="10000" class="calc-range-slider" style="width: 100%; accent-color: #22d3ee;">
+              </div>
+
+              <div class="calc-input-group">
+                <div class="calc-label-row" style="display: flex; justify-content: space-between; font-size: 0.8rem; margin-bottom: 4px; align-items: center;">
+                  <span style="color: var(--text-secondary);">Expected Gross Return (CAGR)</span>
+                  <div class="calc-val-glow-wrapper" style="display: flex; align-items: center; color: #fbbf24; text-shadow: 0 0 10px rgba(251, 191, 36, 0.25); border-bottom: 1px dashed rgba(251, 191, 36, 0.3); padding-bottom: 1px; border-radius: 4px; transition: border-color 0.25s ease, background-color 0.25s ease, box-shadow 0.25s ease;">
+                    <input type="number" id="calc-cagr-input" class="calc-inline-input" min="1" max="50" step="0.1" value="12.0" style="font-weight: 600; color: #fbbf24; background: transparent; border: none; font-size: 0.85rem; width: 30px; text-align: left; outline: none; padding: 0; font-family: inherit; font-variant-numeric: tabular-nums;">
+                    <span style="font-weight: 600; font-size: 0.8rem; margin-left: 1px; user-select: none;">%</span>
+                  </div>
+                </div>
+                <input type="range" id="calc-cagr-slider" min="5" max="25" step="0.5" value="12" class="calc-range-slider" style="width: 100%; accent-color: #fbbf24;">
+              </div>
+
+              <div class="calc-input-group">
+                <div class="calc-label-row" style="display: flex; justify-content: space-between; font-size: 0.8rem; margin-bottom: 4px; align-items: center;">
+                  <span style="color: var(--text-secondary);">Investment Period</span>
+                  <div class="calc-val-glow-wrapper" style="display: flex; align-items: center; color: #60a5fa; text-shadow: 0 0 10px rgba(96, 165, 250, 0.25); border-bottom: 1px dashed rgba(96, 165, 250, 0.3); padding-bottom: 1px; border-radius: 4px; transition: border-color 0.25s ease, background-color 0.25s ease, box-shadow 0.25s ease;">
+                    <input type="number" id="calc-period-input" class="calc-inline-input" min="1" max="60" step="1" value="20" style="font-weight: 600; color: #60a5fa; background: transparent; border: none; font-size: 0.85rem; width: 20px; text-align: left; outline: none; padding: 0; font-family: inherit; font-variant-numeric: tabular-nums;">
+                    <span style="font-weight: 600; font-size: 0.8rem; margin-left: 2px; user-select: none;">Years</span>
+                  </div>
+                </div>
+                <input type="range" id="calc-period-slider" min="5" max="30" step="1" value="20" class="calc-range-slider" style="width: 100%; accent-color: #60a5fa;">
+              </div>
+            </div>
+
+            <div class="calculator-results-row">
+              <div class="calc-result-stat" style="flex: 1; text-align: center;">
+                <div class="stat-lbl" style="font-size: 0.65rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em;">Gross Value</div>
+                <div class="stat-val" id="calc-gross-output" style="font-size: 1rem; font-weight: 600; color: var(--text-secondary); margin-top: 2px;">₹0.0L</div>
+              </div>
+              <div class="calc-result-stat calc-stat-border" style="flex: 1; text-align: center;">
+                <div class="stat-lbl" style="font-size: 0.65rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em;">Net Value (After Fees)</div>
+                <div class="stat-val text-profit" id="calc-net-output" style="font-size: 1rem; font-weight: 600; color: var(--color-up); margin-top: 2px;">₹0.0L</div>
+              </div>
+              <div class="calc-result-stat drag-stat" style="flex: 1; text-align: center;">
+                <div class="stat-lbl" style="font-size: 0.65rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em;">TER Drag (Loss)</div>
+                <div class="stat-val text-risk" id="calc-drag-output" style="font-size: 1.05rem; font-weight: 700; color: var(--color-down); margin-top: 2px; text-shadow: 0 0 10px rgba(244, 63, 94, 0.15);">₹0.0L</div>
+              </div>
+            </div>
+
+            <div class="chart-container" style="height: 155px; margin-top: 15px;">
+              <canvas id="costCalculatorChart"></canvas>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
     </main>
     
     <!-- Floating Bottom Compare Drawer -->
@@ -228,6 +340,26 @@
         <button class="btn-flat btn-flat-primary" id="trigger-compare-btn">Compare Now</button>
       </div>
     </div>
+
+    <!-- Animated Theme Toggle Button -->
+    <button class="theme-toggle-btn" id="theme-toggle-btn" aria-label="Toggle visual theme" title="Toggle visual theme">
+      <div class="theme-toggle-thumb">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="theme-icon sun-icon">
+          <circle cx="12" cy="12" r="4"></circle>
+          <path d="M12 2v2"></path>
+          <path d="M12 20v2"></path>
+          <path d="M4.93 4.93l1.41 1.41"></path>
+          <path d="M17.66 17.66l1.41 1.41"></path>
+          <path d="M2 12h2"></path>
+          <path d="M20 12h2"></path>
+          <path d="M6.34 17.66l-1.41 1.41"></path>
+          <path d="M19.07 4.93l-1.41 1.41"></path>
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="0" class="theme-icon moon-icon">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>
+      </div>
+    </button>
 
   </div>
 
