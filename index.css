@@ -1072,6 +1072,382 @@ body {
   margin-left: 6px;
 }
 
+/* -------------------------------------------------------------
+ * Theme Engine (VS Code Solarized Light & Animated Toggle Switch)
+ * ------------------------------------------------------------- */
+
+/* Global Transition Rules for Smooth Theme Changes */
+body {
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+.top-nav, 
+.nav-tabs, 
+.tab-btn, 
+.metric-widget, 
+.toolbar, 
+.search-input, 
+.custom-select, 
+.table-container, 
+.data-table th, 
+.data-table td, 
+.data-table tbody tr, 
+.compare-drawer, 
+.drawer-tag, 
+.btn-flat, 
+.comparison-grid, 
+.comp-header, 
+.comp-cell, 
+.comp-footer, 
+.compare-empty, 
+.chart-card, 
+.line-chart-selectors, 
+.rank-badge, 
+.rank-tag-badge, 
+.star-grey, 
+.calc-range-slider, 
+.calculator-results-row, 
+.code-path, 
+.embed-input-row input {
+  transition: background 0.4s ease, 
+              background-color 0.4s ease, 
+              border-color 0.4s ease, 
+              color 0.4s ease, 
+              box-shadow 0.4s ease, 
+              transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* VS Code Solarized Light Theme Configuration */
+body.light-mode {
+  --bg-app: #faf8f5;                      /* Whiter, extremely subtle solarized base */
+  --bg-surface: rgba(240, 236, 228, 0.7); /* Translucent soft warm grey/cream */
+  --bg-hover: rgba(7, 54, 66, 0.03);
+  --bg-glass: rgba(250, 248, 245, 0.9);   /* Whiter glass background */
+  
+  --border-subtle: rgba(7, 54, 66, 0.07); /* Even softer borders */
+  --border-focus: rgba(7, 54, 66, 0.2);
+  
+  --text-primary: #3a4b50;                /* Higher contrast solarized primary */
+  --text-secondary: #586e75;              /* Solarized Base01 */
+  --text-muted: #859595;                  /* Solarized Base1 */
+  
+  --accent-color: #268bd2;                /* Solarized Blue */
+  --color-up: #859900;                    /* Solarized Green */
+  --color-down: #dc322f;                  /* Solarized Red */
+
+  background-image: 
+    radial-gradient(at 0% 0%, rgba(38, 139, 210, 0.03) 0px, transparent 50%),
+    radial-gradient(at 100% 0%, rgba(181, 137, 0, 0.03) 0px, transparent 50%);
+}
+
+/* Light Mode Specific Component Overrides */
+body.light-mode .top-nav {
+  background-color: var(--bg-glass);
+  box-shadow: 0 1px 10px rgba(7, 54, 66, 0.03);
+}
+
+body.light-mode .nav-tabs {
+  background: rgba(7, 54, 66, 0.05);
+}
+
+body.light-mode .tab-btn:hover {
+  background: rgba(7, 54, 66, 0.03);
+}
+
+body.light-mode .tab-btn.active {
+  background: rgba(7, 54, 66, 0.08);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+}
+
+body.light-mode .metric-widget {
+  background: linear-gradient(135deg, rgba(240, 236, 228, 0.7) 0%, rgba(250, 248, 245, 0.4) 100%);
+}
+
+body.light-mode .metric-widget:hover {
+  border-color: rgba(7, 54, 66, 0.15);
+  box-shadow: 0 8px 24px rgba(7, 54, 66, 0.05);
+}
+
+body.light-mode .toolbar,
+body.light-mode .deepdive-toolbar {
+  background: rgba(240, 236, 228, 0.45);
+}
+
+body.light-mode .search-input {
+  background: rgba(240, 236, 228, 0.6);
+}
+
+body.light-mode .search-input:focus {
+  background: #faf8f5;
+}
+
+body.light-mode .custom-select {
+  background-color: rgba(240, 236, 228, 0.6);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%2393a1a1'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E");
+}
+
+body.light-mode .custom-select:focus, 
+body.light-mode .custom-select:hover {
+  background-color: #faf8f5;
+}
+
+body.light-mode .table-container {
+  background: rgba(240, 236, 228, 0.35);
+  box-shadow: 0 12px 32px rgba(7, 54, 66, 0.04);
+}
+
+body.light-mode .data-table th {
+  background: rgba(240, 236, 228, 0.85);
+}
+
+body.light-mode .compare-drawer {
+  background: rgba(240, 236, 228, 0.95);
+  border-color: rgba(7, 54, 66, 0.15);
+  box-shadow: 0 24px 64px rgba(7, 54, 66, 0.08);
+}
+
+body.light-mode .drawer-tag {
+  background: rgba(7, 54, 66, 0.04);
+  border-color: rgba(7, 54, 66, 0.08);
+}
+
+body.light-mode .comparison-grid {
+  background: rgba(240, 236, 228, 0.35);
+  box-shadow: 0 16px 40px rgba(7, 54, 66, 0.04);
+}
+
+body.light-mode .comp-header {
+  background: rgba(240, 236, 228, 0.6);
+}
+
+body.light-mode .comp-cell:nth-child(even) {
+  background: rgba(7, 54, 66, 0.02);
+}
+
+body.light-mode .comp-footer {
+  background: rgba(240, 236, 228, 0.6);
+}
+
+body.light-mode .compare-empty {
+  background: rgba(240, 236, 228, 0.3);
+}
+
+body.light-mode .chart-card {
+  background: rgba(240, 236, 228, 0.35);
+  box-shadow: 0 12px 32px rgba(7, 54, 66, 0.04);
+}
+
+body.light-mode .line-chart-selectors {
+  background: rgba(240, 236, 228, 0.5);
+}
+
+body.light-mode .rank-badge,
+body.light-mode .rank-tag-badge {
+  background: rgba(7, 54, 66, 0.04);
+}
+
+body.light-mode .star-grey {
+  color: rgba(7, 54, 66, 0.08);
+}
+
+body.light-mode .calc-range-slider {
+  background: rgba(7, 54, 66, 0.08);
+}
+
+body.light-mode .code-path {
+  background: rgba(7, 54, 66, 0.05);
+  color: #6c71c4; /* Violet accent code path */
+}
+
+body.light-mode .embed-input-row input {
+  background: rgba(238, 232, 213, 0.6);
+}
+
+body.light-mode .powerbi-placeholder-card {
+  background: var(--bg-surface);
+  box-shadow: 0 8px 24px rgba(7, 54, 66, 0.02);
+}
+
+body.light-mode .powerbi-frame-wrapper iframe {
+  background: #eee8d5;
+}
+
+/* Category Badge Overrides for Light Mode (High Contrast Solarized colors) */
+body.light-mode .category-tag.equity {
+  background: rgba(42, 161, 152, 0.1);
+  color: #2aa198;
+  border-color: rgba(42, 161, 152, 0.2);
+}
+
+body.light-mode .category-tag.hybrid {
+  background: rgba(181, 137, 0, 0.1);
+  color: #b58900;
+  border-color: rgba(181, 137, 0, 0.2);
+}
+
+body.light-mode .category-tag.debt {
+  background: rgba(38, 139, 210, 0.1);
+  color: #268bd2;
+  border-color: rgba(38, 139, 210, 0.2);
+}
+
+body.light-mode .category-tag.index {
+  background: rgba(108, 113, 196, 0.1);
+  color: #6c71c4;
+  border-color: rgba(108, 113, 196, 0.2);
+}
+
+/* Cost Calculator Inline Styles Extraction classes */
+.calculator-results-row {
+  display: flex; 
+  justify-content: space-between; 
+  gap: 0.75rem; 
+  margin-top: 15px; 
+  padding: 0.65rem; 
+  background: rgba(255, 255, 255, 0.02); 
+  border: 1px solid rgba(255, 255, 255, 0.05); 
+  border-radius: 6px;
+}
+
+body.light-mode .calculator-results-row {
+  background: rgba(7, 54, 66, 0.02);
+  border-color: rgba(7, 54, 66, 0.06);
+}
+
+.calc-result-stat.calc-stat-border {
+  border-left: 1px solid var(--border-subtle);
+  border-right: 1px solid var(--border-subtle);
+}
+
+/* Dynamic slider and text shadow adaptations in calculator */
+body.light-mode #calc-sip-val {
+  color: #2aa198 !important;
+  text-shadow: none !important;
+}
+
+body.light-mode #calc-cagr-val {
+  color: #b58900 !important;
+  text-shadow: none !important;
+}
+
+body.light-mode #calc-period-val {
+  color: #268bd2 !important;
+  text-shadow: none !important;
+}
+
+/* Premium Scrollbars Light Mode adaptions */
+body.light-mode ::-webkit-scrollbar-track {
+  background: var(--bg-app);
+}
+
+body.light-mode ::-webkit-scrollbar-thumb {
+  background: rgba(7, 54, 66, 0.12);
+}
+
+body.light-mode ::-webkit-scrollbar-thumb:hover {
+  background: rgba(7, 54, 66, 0.25);
+}
+
+/* -------------------------------------------------------------
+ * Premium Theme Switch Button (Bottom Right Floating)
+ * ------------------------------------------------------------- */
+.theme-toggle-btn {
+  position: fixed;
+  bottom: 2rem;
+  right: 2.5rem;
+  width: 60px;
+  height: 32px;
+  background-color: rgba(24, 24, 27, 0.85);
+  border: 1px solid var(--border-subtle);
+  border-radius: 16px;
+  padding: 3px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  z-index: 1000;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
+  transition: background-color 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  outline: none;
+}
+
+.theme-toggle-btn:hover {
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.5);
+  border-color: var(--border-focus);
+}
+
+.theme-toggle-thumb {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  background-color: var(--text-primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+  transition: transform 0.45s cubic-bezier(0.34, 1.56, 0.64, 1), background-color 0.4s ease;
+}
+
+.theme-icon {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  transition: transform 0.45s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.3s ease;
+}
+
+/* Default Dark Mode Icon States */
+.theme-toggle-btn .sun-icon {
+  opacity: 0;
+  transform: scale(0.4) rotate(-180deg);
+  color: #fbbf24;
+}
+
+.theme-toggle-btn .moon-icon {
+  opacity: 1;
+  transform: scale(1) rotate(0);
+  color: #18181b;                 /* High contrast dark off-black moon on white thumb */
+}
+
+/* Light Mode Toggle States */
+body.light-mode .theme-toggle-btn {
+  background-color: rgba(240, 236, 228, 0.95);
+  border-color: rgba(7, 54, 66, 0.15);
+  box-shadow: 0 4px 20px rgba(7, 54, 66, 0.08);
+}
+
+body.light-mode .theme-toggle-btn:hover {
+  box-shadow: 0 4px 24px rgba(7, 54, 66, 0.12);
+  border-color: rgba(7, 54, 66, 0.3);
+}
+
+body.light-mode .theme-toggle-thumb {
+  transform: translateX(28px);
+  background-color: #b58900;       /* Golden Solarized Yellow Sun Background */
+  box-shadow: 0 2px 8px rgba(181, 137, 0, 0.35);
+}
+
+body.light-mode .theme-toggle-btn .sun-icon {
+  opacity: 1;
+  transform: scale(1.1) rotate(0);
+  color: #faf8f5;                 /* Crisp light inner sun detail */
+}
+
+body.light-mode .theme-toggle-btn .moon-icon {
+  opacity: 0;
+  transform: scale(0.4) rotate(180deg);
+}
+
+/* Hide on ultra-small viewports to prevent chart overlaps */
+@media (max-width: 480px) {
+  .theme-toggle-btn {
+    bottom: 1.25rem;
+    right: 1.25rem;
+    transform: scale(0.85);
+  }
+}
+
 
 
 

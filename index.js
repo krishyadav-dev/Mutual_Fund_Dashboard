@@ -4,6 +4,17 @@
  */
 
 document.addEventListener("DOMContentLoaded", () => {
+  // --- THEME ENGINE INITIALIZATION ---
+  function initTheme() {
+    const savedTheme = localStorage.getItem("dashboard_theme") || "dark";
+    if (savedTheme === "light") {
+      document.body.classList.add("light-mode");
+    } else {
+      document.body.classList.remove("light-mode");
+    }
+  }
+  initTheme();
+
   // --- STATE ---
   let fundMetrics = [];
   let rollingReturns = [];
@@ -32,13 +43,39 @@ document.addEventListener("DOMContentLoaded", () => {
   let activeDeepdiveCode = null; // Currently selected fund scheme code for Deep Dive
 
   // Category Theme Colors for charts (Muted, minimalist palettes)
-  const categoryColors = {
+  const categoryColorsDark = {
     "Equity Scheme": { color: "#22d3ee", bg: "rgba(34, 211, 238, 0.15)" },      // Cyan
     "Hybrid Scheme": { color: "#fbbf24", bg: "rgba(251, 191, 36, 0.15)" },      // Amber
     "Debt Scheme": { color: "#60a5fa", bg: "rgba(96, 165, 250, 0.15)" },       // Blue
     "Other Scheme": { color: "#818cf8", bg: "rgba(129, 140, 248, 0.15)" }       // Indigo
   };
-  const defaultColor = { color: "#94a3b8", bg: "rgba(148, 163, 184, 0.15)" };
+
+  const categoryColorsLight = {
+    "Equity Scheme": { color: "#2aa198", bg: "rgba(42, 161, 152, 0.12)" },      // Solarized Cyan
+    "Hybrid Scheme": { color: "#b58900", bg: "rgba(181, 137, 0, 0.12)" },       // Solarized Yellow
+    "Debt Scheme": { color: "#268bd2", bg: "rgba(38, 139, 210, 0.12)" },       // Solarized Blue
+    "Other Scheme": { color: "#6c71c4", bg: "rgba(108, 113, 196, 0.12)" }       // Solarized Violet
+  };
+
+  const defaultColorDark = { color: "#94a3b8", bg: "rgba(148, 163, 184, 0.15)" };
+  const defaultColorLight = { color: "#586e75", bg: "rgba(88, 110, 117, 0.12)" };
+
+  function getCategoryTheme(category) {
+    const isLight = document.body.classList.contains("light-mode");
+    const palette = isLight ? categoryColorsLight : categoryColorsDark;
+    const fallback = isLight ? defaultColorLight : defaultColorDark;
+    return palette[category] || fallback;
+  }
+
+  function getGridColor() {
+    return document.body.classList.contains("light-mode") 
+      ? 'rgba(7, 54, 66, 0.06)' 
+      : 'rgba(255, 255, 255, 0.04)';
+  }
+
+  function getAxisTitleColor() {
+    return document.body.classList.contains("light-mode") ? '#657b83' : '#a1a1aa';
+  }
 
   // --- RFC-4180 COMPLIANT CSV PARSER ---
   function parseCSV(text) {
@@ -246,9 +283,7 @@ document.addEventListener("DOMContentLoaded", () => {
     `).join('');
   }
 
-  function getCategoryTheme(category) {
-    return categoryColors[category] || defaultColor;
-  }
+
 
   // --- STATS BOARD ---
   function updateDashboardStats() {
@@ -625,13 +660,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // --- CHARTS SYSTEM (CHART.JS CONFIG) ---
   function initGlobalChartDefaults() {
-    Chart.defaults.color = '#71717a'; // text-muted
+    const isLight = document.body.classList.contains("light-mode");
+    
+    Chart.defaults.color = isLight ? '#586e75' : '#71717a'; 
     Chart.defaults.font.family = "'Inter', sans-serif";
-    Chart.defaults.borderColor = 'rgba(255, 255, 255, 0.05)';
-    Chart.defaults.plugins.tooltip.backgroundColor = 'rgba(9, 9, 11, 0.95)';
-    Chart.defaults.plugins.tooltip.titleColor = '#fff';
-    Chart.defaults.plugins.tooltip.bodyColor = '#e4e4e7';
-    Chart.defaults.plugins.tooltip.borderColor = 'rgba(255, 255, 255, 0.08)';
+    Chart.defaults.borderColor = isLight ? 'rgba(7, 54, 66, 0.06)' : 'rgba(255, 255, 255, 0.05)';
+    
+    Chart.defaults.plugins.tooltip.backgroundColor = isLight ? 'rgba(240, 236, 228, 0.95)' : 'rgba(9, 9, 11, 0.95)';
+    Chart.defaults.plugins.tooltip.titleColor = isLight ? '#475b62' : '#fff';
+    Chart.defaults.plugins.tooltip.bodyColor = isLight ? '#586e75' : '#e4e4e7';
+    Chart.defaults.plugins.tooltip.borderColor = isLight ? 'rgba(7, 54, 66, 0.12)' : 'rgba(255, 255, 255, 0.08)';
     Chart.defaults.plugins.tooltip.borderWidth = 1;
     Chart.defaults.plugins.tooltip.padding = 10;
     Chart.defaults.plugins.tooltip.cornerRadius = 6;
@@ -673,6 +711,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (riskReturnChartInstance) {
       riskReturnChartInstance.destroy();
     }
+    const isLight = document.body.classList.contains("light-mode");
 
     const scatterData = fundMetrics
       .filter(f => f.volatility_pct !== null && f.cagr_3y !== null)
@@ -710,7 +749,7 @@ document.addEventListener("DOMContentLoaded", () => {
           borderWidth: 1.5,
           pointRadius: scatterData.map(d => d.radius),
           pointHoverRadius: scatterData.map(d => d.radius + 3),
-          hoverBorderColor: '#fafafa', // Highly defined hover outline
+          hoverBorderColor: isLight ? '#586e75' : '#fafafa', // Highly defined hover outline
           hoverBorderWidth: 2
         }]
       },
@@ -741,17 +780,17 @@ document.addEventListener("DOMContentLoaded", () => {
             title: {
               display: true,
               text: 'Volatility (Annualised Risk %)',
-              color: '#a1a1aa'
+              color: getAxisTitleColor()
             },
-            grid: { color: 'rgba(255, 255, 255, 0.04)' }
+            grid: { color: getGridColor() }
           },
           y: {
             title: {
               display: true,
               text: '3-Year CAGR (Return %)',
-              color: '#a1a1aa'
+              color: getAxisTitleColor()
             },
-            grid: { color: 'rgba(255, 255, 255, 0.04)' }
+            grid: { color: getGridColor() }
           }
         }
       }
@@ -765,6 +804,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (aumChartInstance) {
       aumChartInstance.destroy();
     }
+    const isLight = document.body.classList.contains("light-mode");
 
     const aumData = categoryAUM.filter(d => 
       d.scheme_name && 
@@ -776,20 +816,31 @@ document.addEventListener("DOMContentLoaded", () => {
     const labels = aumData.map(d => truncateString(d.scheme_name, 16));
     const values = aumData.map(d => d.aum_cr / 1000); // Convert to Thousands of Cr
 
+    const lightColors = [
+      'rgba(42, 161, 152, 0.75)',  // Solarized Cyan
+      'rgba(108, 113, 196, 0.75)', // Solarized Violet
+      'rgba(38, 139, 210, 0.75)',  // Solarized Blue
+      'rgba(181, 137, 0, 0.75)',   // Solarized Yellow
+      'rgba(211, 54, 130, 0.75)',  // Solarized Magenta
+      'rgba(220, 50, 47, 0.75)'    // Solarized Red
+    ];
+
+    const darkColors = [
+      'rgba(34, 211, 238, 0.75)',  // Muted Cyan
+      'rgba(129, 140, 248, 0.75)', // Muted Indigo
+      'rgba(96, 165, 250, 0.75)',  // Muted Blue
+      'rgba(251, 191, 36, 0.75)',  // Muted Amber
+      'rgba(168, 85, 247, 0.75)',  // Muted Purple
+      'rgba(244, 63, 94, 0.75)'    // Muted Rose
+    ];
+
     aumChartInstance = new Chart(ctx, {
       type: 'bar',
       data: {
         labels: labels,
         datasets: [{
           data: values,
-          backgroundColor: [
-            'rgba(34, 211, 238, 0.75)',  // Muted Cyan
-            'rgba(129, 140, 248, 0.75)', // Muted Indigo
-            'rgba(96, 165, 250, 0.75)',  // Muted Blue
-            'rgba(251, 191, 36, 0.75)',  // Muted Amber
-            'rgba(168, 85, 247, 0.75)',  // Muted Purple
-            'rgba(244, 63, 94, 0.75)'    // Muted Rose
-          ],
+          backgroundColor: isLight ? lightColors : darkColors,
           borderRadius: 4,
           borderWidth: 0,
           barThickness: 14
@@ -812,9 +863,9 @@ document.addEventListener("DOMContentLoaded", () => {
             title: {
               display: true,
               text: 'AUM (₹ Thousand Crore)',
-              color: '#a1a1aa'
+              color: getAxisTitleColor()
             },
-            grid: { color: 'rgba(255, 255, 255, 0.04)' }
+            grid: { color: getGridColor() }
           },
           y: {
             grid: { display: false }
@@ -880,7 +931,7 @@ document.addEventListener("DOMContentLoaded", () => {
             labels: {
               boxWidth: 10,
               usePointStyle: true,
-              color: '#a1a1aa'
+              color: getAxisTitleColor()
             }
           },
           tooltip: {
@@ -903,15 +954,15 @@ document.addEventListener("DOMContentLoaded", () => {
               unit: 'month',
               displayFormats: { month: 'MMM yy' }
             },
-            grid: { color: 'rgba(255, 255, 255, 0.04)' }
+            grid: { color: getGridColor() }
           },
           y: {
             title: {
               display: true,
               text: '1Y Rolling Return %',
-              color: '#a1a1aa'
+              color: getAxisTitleColor()
             },
-            grid: { color: 'rgba(255, 255, 255, 0.04)' }
+            grid: { color: getGridColor() }
           }
         }
       }
@@ -1146,6 +1197,26 @@ document.addEventListener("DOMContentLoaded", () => {
   // Set up sorting triggers
   setupTableSorting();
 
+  // Setup Theme Toggle Listener
+  function setupThemeToggle() {
+    const toggleBtn = document.getElementById("theme-toggle-btn");
+    if (!toggleBtn) return;
+
+    toggleBtn.addEventListener("click", () => {
+      const isLight = document.body.classList.toggle("light-mode");
+      localStorage.setItem("dashboard_theme", isLight ? "light" : "dark");
+      
+      // Update Chart defaults
+      initGlobalChartDefaults();
+      
+      // Re-draw all charts and elements to sync with the active theme
+      renderCharts();
+      renderDeepDive();
+      renderScreener();
+    });
+  }
+  setupThemeToggle();
+
   // --- BACKGROUND POLLING FOR LIVE UPDATES ---
   function startAutoRefreshPoll() {
     setInterval(async () => {
@@ -1231,6 +1302,10 @@ document.addEventListener("DOMContentLoaded", () => {
     
     const dataValues = history.map(h => h.aum_cr);
     
+    const isLight = document.body.classList.contains("light-mode");
+    const barBg = isLight ? 'rgba(42, 161, 152, 0.75)' : 'rgba(34, 211, 238, 0.65)';
+    const barHoverBg = isLight ? 'rgba(42, 161, 152, 0.95)' : 'rgba(34, 211, 238, 0.95)';
+
     deepdiveAumChartInstance = new Chart(ctx.getContext("2d"), {
       type: 'bar',
       data: {
@@ -1238,8 +1313,8 @@ document.addEventListener("DOMContentLoaded", () => {
         datasets: [{
           label: 'AUM (₹ Crore)',
           data: dataValues,
-          backgroundColor: 'rgba(34, 211, 238, 0.65)', // Cyan glow
-          hoverBackgroundColor: 'rgba(34, 211, 238, 0.95)',
+          backgroundColor: barBg,
+          hoverBackgroundColor: barHoverBg,
           borderRadius: 4,
           borderWidth: 0,
           barThickness: 18
@@ -1264,9 +1339,9 @@ document.addEventListener("DOMContentLoaded", () => {
             title: {
               display: true,
               text: 'AUM (₹ Crore)',
-              color: '#a1a1aa'
+              color: getAxisTitleColor()
             },
-            grid: { color: 'rgba(255, 255, 255, 0.04)' }
+            grid: { color: getGridColor() }
           }
         }
       }
@@ -1394,6 +1469,12 @@ document.addEventListener("DOMContentLoaded", () => {
       netData.push(Math.round(nw));
     }
     
+    const isLight = document.body.classList.contains("light-mode");
+    const grossColor = isLight ? '#2aa198' : '#22d3ee';
+    const grossBg = isLight ? 'rgba(42, 161, 152, 0.04)' : 'rgba(34, 211, 238, 0.04)';
+    const netColor = isLight ? '#268bd2' : '#60a5fa';
+    const netBg = isLight ? 'rgba(38, 139, 210, 0.04)' : 'rgba(96, 165, 250, 0.04)';
+
     costCalculatorChartInstance = new Chart(ctx.getContext("2d"), {
       type: 'line',
       data: {
@@ -1402,8 +1483,8 @@ document.addEventListener("DOMContentLoaded", () => {
           {
             label: 'Gross Growth (No Fees)',
             data: grossData,
-            borderColor: '#22d3ee', // Cyan
-            backgroundColor: 'rgba(34, 211, 238, 0.04)',
+            borderColor: grossColor,
+            backgroundColor: grossBg,
             borderWidth: 1.8,
             pointRadius: 0,
             pointHoverRadius: 4,
@@ -1413,8 +1494,8 @@ document.addEventListener("DOMContentLoaded", () => {
           {
             label: 'Net Growth (With Fees)',
             data: netData,
-            borderColor: '#60a5fa', // Blue
-            backgroundColor: 'rgba(96, 165, 250, 0.04)',
+            borderColor: netColor,
+            backgroundColor: netBg,
             borderWidth: 1.8,
             pointRadius: 0,
             pointHoverRadius: 4,
@@ -1436,7 +1517,7 @@ document.addEventListener("DOMContentLoaded", () => {
             labels: {
               boxWidth: 8,
               usePointStyle: true,
-              color: '#a1a1aa',
+              color: getAxisTitleColor(),
               font: { size: 9 }
             }
           },
@@ -1456,7 +1537,7 @@ document.addEventListener("DOMContentLoaded", () => {
               font: { size: 9 },
               callback: (value) => `₹${(value / 100000).toFixed(1)}L`
             },
-            grid: { color: 'rgba(255, 255, 255, 0.03)' }
+            grid: { color: getGridColor() }
           }
         }
       }
