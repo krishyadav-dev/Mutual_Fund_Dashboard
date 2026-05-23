@@ -4,7 +4,7 @@
 
 # 1. Pipeline Data & Logs (Large/Generated Files)
 # ------------------------------------------
-# Exclude raw, cleaned, and final output data files to keep the repo lightweight
+# NOTE: The 'data/' folder is explicitly TRACKED (not excluded) and is kept in Git.
 # data/raw/
 # data/cleaned/
 # data/output/
@@ -61,11 +61,7 @@ venv.bak/
 .vscode/
 
 # PyCharm/IntelliJ
-.idea/workspace.xml
-.idea/tasks.xml
-.idea/usage.statistics.xml
-.idea/dictionaries
-.idea/shelf/
+.idea/
 out/
 
 # 4. OS and System Files
