@@ -652,7 +652,21 @@ document.addEventListener("DOMContentLoaded", () => {
     updateRollingReturnsChart();
   }
 
-  // Visual 1: Risk vs. Return Scatter Plot
+  // Helper to convert hex colors to transparent rgba colors for glassy styling
+  function hexToRgbA(hex, alpha = 1) {
+    let c;
+    if (/^#([A-Fa-f0-9]{3}){1,2}$/.test(hex)) {
+      c = hex.substring(1).split('');
+      if (c.length === 3) {
+        c = [c[0], c[0], c[1], c[1], c[2], c[2]];
+      }
+      c = '0x' + c.join('');
+      return `rgba(${[(c >> 16) & 255, (c >> 8) & 255, c & 255].join(',')},${alpha})`;
+    }
+    return hex;
+  }
+
+  // Visual 1: Risk vs. Return Profile (3Y CAGR vs Volatility)
   function renderRiskReturnScatter() {
     const ctx = document.getElementById("riskReturnChart").getContext("2d");
     
@@ -683,18 +697,21 @@ document.addEventListener("DOMContentLoaded", () => {
           radius: radius,
           color: theme.color
         };
-      });
+      })
+      .sort((a, b) => (b.aum || 0) - (a.aum || 0)); // Sort AUM descending (larger bubbles drawn first in background)
 
     riskReturnChartInstance = new Chart(ctx, {
       type: 'scatter',
       data: {
         datasets: [{
           data: scatterData,
-          backgroundColor: scatterData.map(d => d.color),
+          backgroundColor: scatterData.map(d => hexToRgbA(d.color, 0.45)), // Glassy transparent fill
+          borderColor: scatterData.map(d => d.color), // Solid glow category border
+          borderWidth: 1.5,
           pointRadius: scatterData.map(d => d.radius),
           pointHoverRadius: scatterData.map(d => d.radius + 3),
-          borderWidth: 1,
-          borderColor: 'rgba(255,255,255,0.2)'
+          hoverBorderColor: '#fafafa', // Highly defined hover outline
+          hoverBorderWidth: 2
         }]
       },
       options: {
