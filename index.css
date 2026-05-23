@@ -1500,3 +1500,44 @@ body.light-mode .theme-toggle-btn .moon-icon {
 .chart-container canvas.rendered {
   opacity: 1;
 }
+
+/* Premium Cost Calculator Inline Input Fields styling */
+.calc-inline-input::-webkit-outer-spin-button,
+.calc-inline-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.calc-inline-input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.calc-inline-input {
+  transition: color 0.25s ease !important;
+  border: none !important;
+  background: transparent !important;
+  outline: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+}
+
+/* Premium Wrapper Cards for Focus & Hover states using currentColor */
+.calc-val-glow-wrapper:hover {
+  border-bottom-color: currentColor !important;
+  opacity: 0.95;
+}
+
+.calc-val-glow-wrapper:focus-within {
+  border-bottom-style: solid !important;
+  border-bottom-color: currentColor !important;
+  background: rgba(255, 255, 255, 0.04);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  padding-left: 6px;
+  padding-right: 6px;
+}
+
+/* Light mode focus adjustments */
+body.light-mode .calc-val-glow-wrapper:focus-within {
+  background: rgba(7, 54, 66, 0.04) !important;
+  box-shadow: 0 4px 10px rgba(7, 54, 66, 0.06);
+}

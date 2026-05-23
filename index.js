@@ -1448,32 +1448,46 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const ter = fund.expense_ratio_pct || 0.50; // Default fallback to 0.50% if missing
 
+    // Helper to dynamically adjust manual input widths to prevent artificial gaps
+    const adjustInputWidth = (inputEl, minWidth = 20) => {
+      const tempSpan = document.createElement("span");
+      tempSpan.style.font = window.getComputedStyle(inputEl).font;
+      tempSpan.style.visibility = "hidden";
+      tempSpan.style.position = "absolute";
+      tempSpan.style.whiteSpace = "pre";
+      tempSpan.innerText = inputEl.value || inputEl.placeholder || "";
+      document.body.appendChild(tempSpan);
+      const width = tempSpan.getBoundingClientRect().width;
+      document.body.removeChild(tempSpan);
+      inputEl.style.width = Math.max(minWidth, Math.ceil(width) + 4) + "px";
+    };
+
     // Sliders
     const sipSlider = document.getElementById("calc-sip-slider");
     const cagrSlider = document.getElementById("calc-cagr-slider");
     const periodSlider = document.getElementById("calc-period-slider");
 
-    // Outputs
-    const sipValLabel = document.getElementById("calc-sip-val");
-    const cagrValLabel = document.getElementById("calc-cagr-val");
-    const periodValLabel = document.getElementById("calc-period-val");
+    // Inputs (numeric)
+    const sipInput = document.getElementById("calc-sip-input");
+    const cagrInput = document.getElementById("calc-cagr-input");
+    const periodInput = document.getElementById("calc-period-input");
 
     const grossOutputLabel = document.getElementById("calc-gross-output");
     const netOutputLabel = document.getElementById("calc-net-output");
     const dragOutputLabel = document.getElementById("calc-drag-output");
 
-    if (!sipSlider || !cagrSlider || !periodSlider) return;
+    if (!sipSlider || !cagrSlider || !periodSlider || !sipInput || !cagrInput || !periodInput) return;
 
     // Wealth computation logic
     const recalculateCalculator = (isInitial = false) => {
-      const sip = parseFloat(sipSlider.value);
-      const cagr = parseFloat(cagrSlider.value) / 100;
-      const years = parseInt(periodSlider.value);
+      const sip = parseFloat(sipInput.value) || 0;
+      const cagr = (parseFloat(cagrInput.value) || 0) / 100;
+      const years = parseInt(periodInput.value) || 0;
 
-      // Update displays
-      sipValLabel.innerText = `₹${sip.toLocaleString('en-IN')}`;
-      cagrValLabel.innerText = `${(cagr * 100).toFixed(1)}%`;
-      periodValLabel.innerText = `${years} Years`;
+      // Automatically size input box to numerals exactly
+      adjustInputWidth(sipInput, 40);
+      adjustInputWidth(cagrInput, 28);
+      adjustInputWidth(periodInput, 18);
 
       // Wealth computation formulas
       const r_gross = cagr / 12;
@@ -1512,10 +1526,56 @@ document.addEventListener("DOMContentLoaded", () => {
       updateCalculatorLineChart(sip, cagr, ter, years, isInitial);
     };
 
-    // Attach listeners
-    sipSlider.oninput = () => recalculateCalculator(false);
-    cagrSlider.oninput = () => recalculateCalculator(false);
-    periodSlider.oninput = () => recalculateCalculator(false);
+    // Sliders update inputs
+    sipSlider.oninput = () => {
+      sipInput.value = sipSlider.value;
+      recalculateCalculator(false);
+    };
+    cagrSlider.oninput = () => {
+      cagrInput.value = parseFloat(cagrSlider.value).toFixed(1);
+      recalculateCalculator(false);
+    };
+    periodSlider.oninput = () => {
+      periodInput.value = periodSlider.value;
+      recalculateCalculator(false);
+    };
+
+    // Setup manual input sync & limits
+    const setupManualInputSync = (inputEl, sliderEl, min, max, isDecimal = false) => {
+      inputEl.oninput = () => {
+        let val = parseFloat(inputEl.value);
+        if (isNaN(val)) return;
+
+        // Keep slider position synced but clamp slider pointer to its boundaries
+        sliderEl.value = Math.max(min, Math.min(max, val));
+        recalculateCalculator(false);
+      };
+
+      inputEl.onblur = () => {
+        let val = parseFloat(inputEl.value);
+        const hardMin = parseFloat(inputEl.min) || min;
+        const hardMax = parseFloat(inputEl.max) || max;
+
+        if (isNaN(val) || val < hardMin) {
+          val = hardMin;
+        } else if (val > hardMax) {
+          val = hardMax;
+        }
+
+        inputEl.value = isDecimal ? val.toFixed(1) : Math.round(val);
+        sliderEl.value = Math.max(min, Math.min(max, val));
+        recalculateCalculator(false);
+      };
+    };
+
+    setupManualInputSync(sipInput, sipSlider, 1000, 100000, false);
+    setupManualInputSync(cagrInput, cagrSlider, 5, 25, true);
+    setupManualInputSync(periodInput, periodSlider, 5, 30, false);
+
+    // Initial values
+    sipInput.value = sipSlider.value;
+    cagrInput.value = parseFloat(cagrSlider.value).toFixed(1);
+    periodInput.value = periodSlider.value;
 
     recalculateCalculator(isInitialLoad);
   }
