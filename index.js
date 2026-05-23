@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
   let activeMinStars = "ALL";
   let fundAumHistory = [];
   let lastKnownModifiedTime = null;
-  
+
   // Sort Column State
   let activeSortColumn = "composite_score";
   let activeSortDirection = "desc";
@@ -68,8 +68,8 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function getGridColor() {
-    return document.body.classList.contains("light-mode") 
-      ? 'rgba(7, 54, 66, 0.06)' 
+    return document.body.classList.contains("light-mode")
+      ? 'rgba(7, 54, 66, 0.06)'
       : 'rgba(255, 255, 255, 0.04)';
   }
 
@@ -82,11 +82,11 @@ document.addEventListener("DOMContentLoaded", () => {
     const lines = [];
     let row = [""];
     let inQuotes = false;
-    
+
     for (let i = 0; i < text.length; i++) {
       const char = text[i];
       const nextChar = text[i + 1];
-      
+
       if (char === '"') {
         if (inQuotes && nextChar === '"') {
           row[row.length - 1] += '"';
@@ -114,16 +114,16 @@ document.addEventListener("DOMContentLoaded", () => {
         row[row.length - 1] += char;
       }
     }
-    
+
     if (row.length > 1 || row[0] !== "") {
       lines.push(row);
     }
-    
+
     if (lines.length === 0) return [];
-    
+
     const headers = lines[0].map(h => h.trim());
     const data = [];
-    
+
     for (let i = 1; i < lines.length; i++) {
       const row = lines[i];
       if (row.length !== headers.length) continue;
@@ -243,7 +243,7 @@ document.addEventListener("DOMContentLoaded", () => {
       // Maintain selection consistency on data updates
       selectedCompareCodes = selectedCompareCodes.filter(code => fundMetrics.some(f => f.scheme_code === code));
       updateCompareBar();
-      
+
       // Update visual tab if it was already rendered
       if (document.getElementById("visuals-page").classList.contains("active")) {
         renderCharts();
@@ -293,7 +293,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const topCAGRFund = [...fundMetrics]
       .filter(d => d.cagr_3y !== null)
       .reduce((prev, current) => (prev.cagr_3y > current.cagr_3y) ? prev : current);
-    
+
     document.getElementById("stat-top-cagr").innerText = `${topCAGRFund.cagr_3y.toFixed(1)}%`;
     document.getElementById("stat-top-cagr-name").innerHTML = `<span class="text-profit" style="margin-right: 4px; font-size: 0.8rem;">▲</span> ${truncateString(topCAGRFund.fund_name, 22)}`;
     document.getElementById("stat-top-cagr-name").title = topCAGRFund.fund_name;
@@ -329,9 +329,9 @@ document.addEventListener("DOMContentLoaded", () => {
   function populateAMCs() {
     const amcSelect = document.getElementById("amc-select");
     const uniqueAMCs = [...new Set(fundMetrics.map(f => f.fund_house))].sort();
-    
+
     amcSelect.innerHTML = `<option value="ALL">All Asset Managers</option>`;
-    
+
     uniqueAMCs.forEach(amc => {
       const option = document.createElement("option");
       option.value = amc;
@@ -343,29 +343,29 @@ document.addEventListener("DOMContentLoaded", () => {
   // --- SCREENER ENGINE ---
   function renderScreener() {
     const tbody = document.getElementById("screener-tbody");
-    
+
     // Apply filters
     let filtered = fundMetrics.filter(fund => {
       // 1. Broad Category Filter
       const catMatch = (activeCategory === "ALL") || (fund.broad_category === activeCategory);
-      
+
       // 2. AMC/Fund House Filter
       const amcMatch = (activeAMC === "ALL") || (fund.fund_house === activeAMC);
-      
+
       // 3. Search text
-      const searchMatch = (activeSearch === "") || 
+      const searchMatch = (activeSearch === "") ||
         fund.fund_name.toLowerCase().includes(activeSearch.toLowerCase()) ||
         fund.fund_house.toLowerCase().includes(activeSearch.toLowerCase());
-        
+
       // 4. Max Expense Ratio Filter
       const expMatch = (activeMaxExpense === "ALL") || (fund.expense_ratio_pct !== null && fund.expense_ratio_pct <= parseFloat(activeMaxExpense));
-      
+
       // 5. Min AUM Filter
       const aumMatch = (activeMinAUM === "ALL") || (fund.aum_cr !== null && fund.aum_cr >= parseFloat(activeMinAUM));
-      
+
       // 6. Min Stars Filter
       const starsMatch = (activeMinStars === "ALL") || (fund.morningstar_stars !== null && fund.morningstar_stars >= parseInt(activeMinStars));
-      
+
       return catMatch && amcMatch && searchMatch && expMatch && aumMatch && starsMatch;
     });
 
@@ -380,8 +380,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
       // Handle text vs numeric sorting
       if (typeof valA === "string") {
-        return activeSortDirection === "asc" 
-          ? valA.localeCompare(valB) 
+        return activeSortDirection === "asc"
+          ? valA.localeCompare(valB)
           : valB.localeCompare(valA);
       } else {
         return activeSortDirection === "asc"
@@ -405,7 +405,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     tbody.innerHTML = filtered.map(fund => {
       const isChecked = selectedCompareCodes.includes(fund.scheme_code);
-      
+
       // Map badge subclass
       let badgeClass = "equity";
       if (fund.broad_category === "Hybrid Scheme") badgeClass = "hybrid";
@@ -417,7 +417,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const sharpe = fund.sharpe_ratio ? fund.sharpe_ratio.toFixed(2) : "N/A";
       const volatility = fund.volatility_pct ? `${fund.volatility_pct.toFixed(1)}%` : "N/A";
       const mdd = fund.max_drawdown_pct ? `${fund.max_drawdown_pct.toFixed(1)}%` : "N/A";
-      
+
       // Star rating stars column HTML
       let starsHtml = "";
       if (fund.morningstar_stars) {
@@ -497,7 +497,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (selectedCompareCodes.length > 0) {
       bar.classList.add("show");
-      
+
       // Render badges
       badgesContainer.innerHTML = selectedCompareCodes.map(code => {
         const fund = fundMetrics.find(f => f.scheme_code === code);
@@ -651,7 +651,7 @@ document.addEventListener("DOMContentLoaded", () => {
           }
           selectedRollingCodes.push(code);
         }
-        
+
         renderRollingSelectors();
         updateRollingReturnsChart();
       });
@@ -661,11 +661,11 @@ document.addEventListener("DOMContentLoaded", () => {
   // --- CHARTS SYSTEM (CHART.JS CONFIG) ---
   function initGlobalChartDefaults() {
     const isLight = document.body.classList.contains("light-mode");
-    
-    Chart.defaults.color = isLight ? '#586e75' : '#71717a'; 
+
+    Chart.defaults.color = isLight ? '#586e75' : '#71717a';
     Chart.defaults.font.family = "'Inter', sans-serif";
     Chart.defaults.borderColor = isLight ? 'rgba(7, 54, 66, 0.06)' : 'rgba(255, 255, 255, 0.05)';
-    
+
     Chart.defaults.plugins.tooltip.backgroundColor = isLight ? 'rgba(240, 236, 228, 0.95)' : 'rgba(9, 9, 11, 0.95)';
     Chart.defaults.plugins.tooltip.titleColor = isLight ? '#475b62' : '#fff';
     Chart.defaults.plugins.tooltip.bodyColor = isLight ? '#586e75' : '#e4e4e7';
@@ -679,7 +679,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (fundMetrics.length === 0) return;
 
     initGlobalChartDefaults();
-    
+
     // 1. Risk vs Return Scatter Plot
     renderRiskReturnScatter();
 
@@ -707,7 +707,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Visual 1: Risk vs. Return Profile (3Y CAGR vs Volatility)
   function renderRiskReturnScatter() {
     const ctx = document.getElementById("riskReturnChart").getContext("2d");
-    
+
     if (riskReturnChartInstance) {
       riskReturnChartInstance.destroy();
     }
@@ -717,13 +717,13 @@ document.addEventListener("DOMContentLoaded", () => {
       .filter(f => f.volatility_pct !== null && f.cagr_3y !== null)
       .map(f => {
         const theme = getCategoryTheme(f.broad_category);
-        
+
         // Performance square root scale based on AUM
         let radius = 6;
         if (f.aum_cr) {
           radius = 6 + (Math.sqrt(f.aum_cr) * 0.13);
         }
-        
+
         return {
           x: f.volatility_pct,
           y: f.cagr_3y,
@@ -749,6 +749,7 @@ document.addEventListener("DOMContentLoaded", () => {
           borderWidth: 1.5,
           pointRadius: scatterData.map(d => d.radius),
           pointHoverRadius: scatterData.map(d => d.radius + 3),
+          pointHitRadius: scatterData.map(d => d.radius + 3), // Broaden hover hit radius area
           hoverBorderColor: isLight ? '#586e75' : '#fafafa', // Highly defined hover outline
           hoverBorderWidth: 2
         }]
@@ -756,6 +757,37 @@ document.addEventListener("DOMContentLoaded", () => {
       options: {
         responsive: true,
         maintainAspectRatio: false,
+        interaction: {
+          mode: 'nearest',
+          intersect: true,
+          axis: 'xy'
+        },
+        animation: {
+          duration: 1000,
+          easing: 'easeOutQuart'
+        },
+        animations: {
+          radius: {
+            type: 'number',
+            easing: 'easeOutQuart',
+            from: 0
+          },
+          x: {
+            duration: 0
+          },
+          y: {
+            duration: 0
+          }
+        },
+        transitions: {
+          active: {
+            animations: {
+              radius: {
+                duration: 0
+              }
+            }
+          }
+        },
         plugins: {
           legend: { display: false },
           tooltip: {
@@ -795,6 +827,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       }
     });
+    document.getElementById("riskReturnChart").classList.add("rendered");
   }
 
   // Visual 2: Category AUM Distribution Bar Chart
@@ -806,9 +839,9 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     const isLight = document.body.classList.contains("light-mode");
 
-    const aumData = categoryAUM.filter(d => 
-      d.scheme_name && 
-      !d.scheme_name.toLowerCase().includes("sub total") && 
+    const aumData = categoryAUM.filter(d =>
+      d.scheme_name &&
+      !d.scheme_name.toLowerCase().includes("sub total") &&
       !d.scheme_name.toLowerCase().includes("grand total") &&
       !d.scheme_name.toLowerCase().includes("total")
     ).sort((a, b) => b.aum_cr - a.aum_cr).slice(0, 6);
@@ -873,6 +906,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       }
     });
+    document.getElementById("aumDistributionChart").classList.add("rendered");
   }
 
   // Visual 3: Rolling 1-Year Returns Line Chart
@@ -890,7 +924,7 @@ document.addEventListener("DOMContentLoaded", () => {
       if (!fund) return null;
 
       const theme = getCategoryTheme(fund.broad_category);
-      
+
       const fundRolling = rollingReturns
         .filter(r => r.scheme_code === code)
         .sort((a, b) => new Date(a.date) - new Date(b.date));
@@ -967,6 +1001,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       }
     });
+    document.getElementById("rollingReturnsChart").classList.add("rendered");
   }
 
   // --- SPA VIEW ROUTING ---
@@ -991,11 +1026,47 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Trigger page-specific loads
     if (pageId === "visuals") {
-      setTimeout(renderCharts, 100);
+      const c1 = document.getElementById("riskReturnChart");
+      const c2 = document.getElementById("aumDistributionChart");
+      const c3 = document.getElementById("rollingReturnsChart");
+      if (c1) c1.classList.remove("rendered");
+      if (c2) c2.classList.remove("rendered");
+      if (c3) c3.classList.remove("rendered");
+
+      if (riskReturnChartInstance) {
+        riskReturnChartInstance.destroy();
+        riskReturnChartInstance = null;
+      }
+      if (aumChartInstance) {
+        aumChartInstance.destroy();
+        aumChartInstance = null;
+      }
+      if (rollingReturnsChartInstance) {
+        rollingReturnsChartInstance.destroy();
+        rollingReturnsChartInstance = null;
+      }
+      requestAnimationFrame(() => {
+        requestAnimationFrame(renderCharts);
+      });
     } else if (pageId === "compare") {
       renderComparison();
     } else if (pageId === "deepdive") {
-      setTimeout(renderDeepDive, 100);
+      const c4 = document.getElementById("deepdiveAumChart");
+      const c5 = document.getElementById("costCalculatorChart");
+      if (c4) c4.classList.remove("rendered");
+      if (c5) c5.classList.remove("rendered");
+
+      if (deepdiveAumChartInstance) {
+        deepdiveAumChartInstance.destroy();
+        deepdiveAumChartInstance = null;
+      }
+      if (costCalculatorChartInstance) {
+        costCalculatorChartInstance.destroy();
+        costCalculatorChartInstance = null;
+      }
+      requestAnimationFrame(() => {
+        requestAnimationFrame(renderDeepDive);
+      });
     }
   }
 
@@ -1108,7 +1179,7 @@ document.addEventListener("DOMContentLoaded", () => {
     syncBtn.addEventListener("click", async () => {
       const icon = syncBtn.querySelector("i");
       const textSpan = syncBtn.querySelector("span");
-      
+
       icon.classList.add("fa-spin");
       textSpan.innerText = "Syncing...";
       syncBtn.disabled = true;
@@ -1205,10 +1276,10 @@ document.addEventListener("DOMContentLoaded", () => {
     toggleBtn.addEventListener("click", () => {
       const isLight = document.body.classList.toggle("light-mode");
       localStorage.setItem("dashboard_theme", isLight ? "light" : "dark");
-      
+
       // Update Chart defaults
       initGlobalChartDefaults();
-      
+
       // Re-draw all charts and elements to sync with the active theme
       renderCharts();
       renderDeepDive();
@@ -1226,7 +1297,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const res = await fetch(`data/output/fund_metrics.csv?t=${timestamp}`, {
           method: "HEAD"
         });
-        
+
         if (res.ok) {
           const newModifiedTime = res.headers.get("Last-Modified");
           // If we have a previously saved time and it has changed, trigger refresh
@@ -1243,50 +1314,50 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // --- DEEP DIVE SYSTEM ---
-  
+
   function populateDeepdiveSelector() {
     const select = document.getElementById("deepdive-scheme-select");
     if (!select || fundMetrics.length === 0) return;
-    
+
     select.innerHTML = fundMetrics.map(fund => `
       <option value="${fund.scheme_code}" ${fund.scheme_code === activeDeepdiveCode ? 'selected' : ''}>
         ${fund.fund_name}
       </option>
     `).join('');
-    
+
     // Attach selector change listener
     select.addEventListener("change", (e) => {
       activeDeepdiveCode = parseInt(e.target.value);
       renderDeepDive();
     });
   }
-  
+
   function renderDeepDive() {
     if (fundMetrics.length === 0 || !activeDeepdiveCode) return;
-    
+
     // 1. Draw AUM Trend Bar Chart
     updateDeepdiveAumChart();
-    
+
     // 2. Initialise and run the Cost Impact Calculator
-    updateCostImpactCalculator();
+    updateCostImpactCalculator(true);
   }
-  
+
   function updateDeepdiveAumChart() {
     const ctx = document.getElementById("deepdiveAumChart");
     if (!ctx) return;
-    
+
     if (deepdiveAumChartInstance) {
       deepdiveAumChartInstance.destroy();
     }
-    
+
     const fund = fundMetrics.find(f => f.scheme_code === activeDeepdiveCode);
     if (!fund) return;
-    
+
     // Filter history for the active fund and sort chronologically
     const history = fundAumHistory
       .filter(h => h.scheme_code === activeDeepdiveCode)
       .sort((a, b) => new Date(a.date) - new Date(b.date));
-      
+
     if (history.length === 0) {
       // Fallback: If no history, render single bar representing current AUM
       history.push({
@@ -1294,14 +1365,14 @@ document.addEventListener("DOMContentLoaded", () => {
         aum_cr: fund.aum_cr || 0
       });
     }
-    
+
     const labels = history.map(h => {
       const date = new Date(h.date);
       return date.toLocaleDateString('en-IN', { month: 'short', year: '2-digit' });
     });
-    
+
     const dataValues = history.map(h => h.aum_cr);
-    
+
     const isLight = document.body.classList.contains("light-mode");
     const barBg = isLight ? 'rgba(42, 161, 152, 0.75)' : 'rgba(34, 211, 238, 0.65)';
     const barHoverBg = isLight ? 'rgba(42, 161, 152, 0.95)' : 'rgba(34, 211, 238, 0.95)';
@@ -1323,6 +1394,28 @@ document.addEventListener("DOMContentLoaded", () => {
       options: {
         responsive: true,
         maintainAspectRatio: false,
+        animations: {
+          y: {
+            easing: 'easeOutQuart',
+            duration: 1000,
+            delay: (context) => {
+              if (context.type === 'data' && context.mode !== 'active') {
+                return context.dataIndex * 40;
+              }
+              return 0;
+            }
+          },
+          base: {
+            easing: 'easeOutQuart',
+            duration: 1000,
+            delay: (context) => {
+              if (context.type === 'data' && context.mode !== 'active') {
+                return context.dataIndex * 40;
+              }
+              return 0;
+            }
+          }
+        },
         plugins: {
           legend: { display: false },
           tooltip: {
@@ -1346,63 +1439,64 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       }
     });
+    document.getElementById("deepdiveAumChart").classList.add("rendered");
   }
 
-  function updateCostImpactCalculator() {
+  function updateCostImpactCalculator(isInitialLoad = false) {
     const fund = fundMetrics.find(f => f.scheme_code === activeDeepdiveCode);
     if (!fund) return;
-    
+
     const ter = fund.expense_ratio_pct || 0.50; // Default fallback to 0.50% if missing
-    
+
     // Sliders
     const sipSlider = document.getElementById("calc-sip-slider");
     const cagrSlider = document.getElementById("calc-cagr-slider");
     const periodSlider = document.getElementById("calc-period-slider");
-    
+
     // Outputs
     const sipValLabel = document.getElementById("calc-sip-val");
     const cagrValLabel = document.getElementById("calc-cagr-val");
     const periodValLabel = document.getElementById("calc-period-val");
-    
+
     const grossOutputLabel = document.getElementById("calc-gross-output");
     const netOutputLabel = document.getElementById("calc-net-output");
     const dragOutputLabel = document.getElementById("calc-drag-output");
-    
+
     if (!sipSlider || !cagrSlider || !periodSlider) return;
-    
+
     // Wealth computation logic
-    const recalculateCalculator = () => {
+    const recalculateCalculator = (isInitial = false) => {
       const sip = parseFloat(sipSlider.value);
       const cagr = parseFloat(cagrSlider.value) / 100;
       const years = parseInt(periodSlider.value);
-      
+
       // Update displays
       sipValLabel.innerText = `₹${sip.toLocaleString('en-IN')}`;
       cagrValLabel.innerText = `${(cagr * 100).toFixed(1)}%`;
       periodValLabel.innerText = `${years} Years`;
-      
+
       // Wealth computation formulas
       const r_gross = cagr / 12;
       const r_net = (cagr - (ter / 100)) / 12;
       const n_months = years * 12;
-      
+
       let grossWealth = 0;
       let netWealth = 0;
-      
+
       if (r_gross > 0) {
         grossWealth = sip * ((Math.pow(1 + r_gross, n_months) - 1) / r_gross) * (1 + r_gross);
       } else {
         grossWealth = sip * n_months;
       }
-      
+
       if (r_net > 0) {
         netWealth = sip * ((Math.pow(1 + r_net, n_months) - 1) / r_net) * (1 + r_net);
       } else {
         netWealth = sip * n_months;
       }
-      
+
       const terDrag = grossWealth - netWealth;
-      
+
       const formatRupees = (num) => {
         const lakhs = num / 100000;
         if (lakhs >= 100) {
@@ -1410,34 +1504,34 @@ document.addEventListener("DOMContentLoaded", () => {
         }
         return `₹${lakhs.toFixed(2)} Lakhs`;
       };
-      
+
       grossOutputLabel.innerText = formatRupees(grossWealth);
       netOutputLabel.innerText = formatRupees(netWealth);
       dragOutputLabel.innerText = formatRupees(terDrag);
-      
-      updateCalculatorLineChart(sip, cagr, ter, years);
+
+      updateCalculatorLineChart(sip, cagr, ter, years, isInitial);
     };
-    
+
     // Attach listeners
-    sipSlider.oninput = recalculateCalculator;
-    cagrSlider.oninput = recalculateCalculator;
-    periodSlider.oninput = recalculateCalculator;
-    
-    recalculateCalculator();
+    sipSlider.oninput = () => recalculateCalculator(false);
+    cagrSlider.oninput = () => recalculateCalculator(false);
+    periodSlider.oninput = () => recalculateCalculator(false);
+
+    recalculateCalculator(isInitialLoad);
   }
-  
-  function updateCalculatorLineChart(sip, cagr, ter, years) {
+
+  function updateCalculatorLineChart(sip, cagr, ter, years, isInitialLoad = false) {
     const ctx = document.getElementById("costCalculatorChart");
     if (!ctx) return;
-    
+
     if (costCalculatorChartInstance) {
       costCalculatorChartInstance.destroy();
     }
-    
+
     const yearsLabels = [];
     const grossData = [];
     const netData = [];
-    
+
     for (let y = 0; y <= years; y++) {
       yearsLabels.push(`Yr ${y}`);
       if (y === 0) {
@@ -1445,30 +1539,30 @@ document.addEventListener("DOMContentLoaded", () => {
         netData.push(0);
         continue;
       }
-      
+
       const r_gross = cagr / 12;
       const r_net = (cagr - (ter / 100)) / 12;
       const n_months = y * 12;
-      
+
       let gw = 0;
       let nw = 0;
-      
+
       if (r_gross > 0) {
         gw = sip * ((Math.pow(1 + r_gross, n_months) - 1) / r_gross) * (1 + r_gross);
       } else {
         gw = sip * n_months;
       }
-      
+
       if (r_net > 0) {
         nw = sip * ((Math.pow(1 + r_net, n_months) - 1) / r_net) * (1 + r_net);
       } else {
         nw = sip * n_months;
       }
-      
+
       grossData.push(Math.round(gw));
       netData.push(Math.round(nw));
     }
-    
+
     const isLight = document.body.classList.contains("light-mode");
     const grossColor = isLight ? '#2aa198' : '#22d3ee';
     const grossBg = isLight ? 'rgba(42, 161, 152, 0.04)' : 'rgba(34, 211, 238, 0.04)';
@@ -1511,6 +1605,19 @@ document.addEventListener("DOMContentLoaded", () => {
           mode: 'index',
           intersect: false
         },
+        animation: isInitialLoad ? {} : false,
+        animations: isInitialLoad ? {
+          y: {
+            easing: 'easeOutQuart',
+            duration: 1000,
+            delay: (context) => {
+              if (context.type === 'data' && context.mode !== 'active') {
+                return context.dataIndex * 30;
+              }
+              return 0;
+            }
+          }
+        } : false,
         plugins: {
           legend: {
             position: 'top',
@@ -1542,6 +1649,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       }
     });
+    document.getElementById("costCalculatorChart").classList.add("rendered");
   }
 
   // Load Time Scales Support in ChartJS
