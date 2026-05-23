@@ -1,0 +1,14 @@
+# ==========================================
+# MUTUAL FUND DASHBOARD — DEPENDENCIES
+# ==========================================
+# Core data science and manipulation libraries
+pandas
+numpy
+
+# Data collection & networking
+requests
+yfinance
+
+# Excel file reading/writing (used for AMFI disclosures)
+openpyxl
+xlrd
