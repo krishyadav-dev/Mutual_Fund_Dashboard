@@ -1,0 +1,58 @@
+table rolling_returns
+	lineageTag: 1d7463e6-6fe0-4ba0-b339-d34325bf3069
+
+	column date
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 6cd50d56-cbcd-4431-badf-254c7edf9e2c
+		summarizeBy: none
+		sourceColumn: date
+
+		variation Variation
+			isDefault
+			relationship: ceefc984-0bca-4267-af00-97f62cf19ddf
+			defaultHierarchy: LocalDateTable_fee0977a-e23f-4308-b111-72df75bc16d3.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column scheme_code
+		dataType: int64
+		formatString: 0
+		lineageTag: 46b76726-a68a-4a97-b6e5-16e38df76f4f
+		summarizeBy: none
+		sourceColumn: scheme_code
+
+		annotation SummarizationSetBy = Automatic
+
+	column fund_name
+		dataType: string
+		lineageTag: 9f776f97-d024-476f-a90c-3e2f466c8e50
+		summarizeBy: none
+		sourceColumn: fund_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column rolling_1y_return_pct
+		dataType: double
+		lineageTag: baf2429b-2938-4444-9bf4-7ef5ef64e50a
+		summarizeBy: sum
+		sourceColumn: rolling_1y_return_pct
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition rolling_returns = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("C:\Users\anude\OneDrive\Documents\codeBase\mutual_funds\data\output\rolling_returns.csv"),[Delimiter=",", Columns=4, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"date", type date}, {"scheme_code", Int64.Type}, {"fund_name", type text}, {"rolling_1y_return_pct", type number}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_ResultType = Table
+

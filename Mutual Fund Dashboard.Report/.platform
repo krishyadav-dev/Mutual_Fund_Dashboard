@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "Mutual Fund Dashboard"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "c23024d5-5117-4f13-8803-4a772d046c35"
+  }
+}

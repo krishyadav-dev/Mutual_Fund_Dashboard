@@ -1,0 +1,212 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.9.0/schema.json",
+  "name": "5ccacb246ca0933bfd5f",
+  "position": {
+    "x": 0,
+    "y": 280,
+    "z": 3000,
+    "height": 365,
+    "width": 1280,
+    "tabOrder": 3000
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fund_metrics"
+                    }
+                  },
+                  "Property": "fund_name"
+                }
+              },
+              "queryRef": "fund_metrics.fund_name",
+              "nativeQueryRef": "fund_name"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "fund_metrics"
+                        }
+                      },
+                      "Property": "composite_score"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(fund_metrics.composite_score)",
+              "nativeQueryRef": "Sum of composite_score"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "fund_metrics"
+                        }
+                      },
+                      "Property": "cagr_1y"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(fund_metrics.cagr_1y)",
+              "nativeQueryRef": "Sum of cagr_1y"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "fund_metrics"
+                        }
+                      },
+                      "Property": "cagr_3y"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(fund_metrics.cagr_3y)",
+              "nativeQueryRef": "Sum of cagr_3y"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "fund_metrics"
+                        }
+                      },
+                      "Property": "cagr_5y"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(fund_metrics.cagr_5y)",
+              "nativeQueryRef": "Sum of cagr_5y"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "fund_metrics"
+                        }
+                      },
+                      "Property": "sharpe_ratio"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(fund_metrics.sharpe_ratio)",
+              "nativeQueryRef": "Sum of sharpe_ratio"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "fund_metrics"
+                        }
+                      },
+                      "Property": "volatility_pct"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(fund_metrics.volatility_pct)",
+              "nativeQueryRef": "Sum of volatility_pct"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "fund_metrics"
+                        }
+                      },
+                      "Property": "max_drawdown_pct"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(fund_metrics.max_drawdown_pct)",
+              "nativeQueryRef": "Sum of max_drawdown_pct"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "fund_metrics"
+                        }
+                      },
+                      "Property": "universe_rank"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(fund_metrics.universe_rank)",
+              "nativeQueryRef": "Sum of universe_rank"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Aggregation": {
+                "Expression": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "fund_metrics"
+                      }
+                    },
+                    "Property": "composite_score"
+                  }
+                },
+                "Function": 0
+              }
+            },
+            "direction": "Descending"
+          }
+        ]
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

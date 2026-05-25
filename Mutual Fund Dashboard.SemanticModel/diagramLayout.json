@@ -1,0 +1,100 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 26.185527252333259,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 94,
+            "y": 0
+          },
+          "nodeIndex": "fund_metrics",
+          "nodeLineageTag": "06426427-6dc0-4bfc-a596-c7fb25d0feca",
+          "size": {
+            "height": 394,
+            "width": 234
+          },
+          "zIndex": 6
+        },
+        {
+          "location": {
+            "x": 425,
+            "y": 364
+          },
+          "nodeIndex": "rolling_returns",
+          "nodeLineageTag": "1d7463e6-6fe0-4ba0-b339-d34325bf3069",
+          "size": {
+            "height": 175,
+            "width": 234
+          },
+          "zIndex": 2
+        },
+        {
+          "location": {
+            "x": 768,
+            "y": 353
+          },
+          "nodeIndex": "aum_amfi_monthly_clean",
+          "nodeLineageTag": "c8b3a482-1603-489a-a062-1f67e2ab5819",
+          "size": {
+            "height": 354,
+            "width": 234
+          },
+          "zIndex": 3
+        },
+        {
+          "location": {
+            "x": 780,
+            "y": 0
+          },
+          "nodeIndex": "benchmark_data_clean",
+          "nodeLineageTag": "9a274e9c-6aac-4b63-9521-c1a98da1ed34",
+          "size": {
+            "height": 305,
+            "width": 234
+          },
+          "zIndex": 4
+        },
+        {
+          "location": {
+            "x": 483,
+            "y": 0
+          },
+          "nodeIndex": "category_reference_clean",
+          "nodeLineageTag": "e9c498ff-329e-43fe-bd52-c963b1a11782",
+          "size": {
+            "height": 176,
+            "width": 234
+          },
+          "zIndex": 5
+        },
+        {
+          "location": {
+            "x": 1118,
+            "y": 279
+          },
+          "nodeIndex": "_Measures",
+          "nodeLineageTag": "d8829f41-b694-42f2-bd00-f837f1afcc59",
+          "size": {
+            "height": 383.87177571905875,
+            "width": 234
+          },
+          "zIndex": 1
+        }
+      ],
+      "name": "All tables",
+      "zoomValue": 63.287087723234059,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "All tables",
+  "defaultDiagram": "All tables"
+}

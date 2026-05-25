@@ -1,0 +1,25 @@
+relationship ab9c22bd-8bc8-4cfc-a659-182a39853f03
+	joinOnDateBehavior: datePartOnly
+	fromColumn: fund_metrics.inception_date
+	toColumn: LocalDateTable_03f6d714-7a8a-4517-92e9-b413f5b47551.Date
+
+relationship ceefc984-0bca-4267-af00-97f62cf19ddf
+	joinOnDateBehavior: datePartOnly
+	fromColumn: rolling_returns.date
+	toColumn: LocalDateTable_fee0977a-e23f-4308-b111-72df75bc16d3.Date
+
+relationship c625cb16-8488-422c-b913-aa42c1c9054e
+	joinOnDateBehavior: datePartOnly
+	fromColumn: benchmark_data_clean.date
+	toColumn: LocalDateTable_397628ff-9418-472b-9fa9-fd310417d934.Date
+
+relationship 3de3b324-f5ed-341a-9b06-b342cc291e81
+	crossFilteringBehavior: bothDirections
+	fromColumn: fund_metrics.sub_category
+	toColumn: category_reference_clean.sub_category
+
+relationship 4cea177a-7210-cd17-958f-c57665aab2e1
+	crossFilteringBehavior: bothDirections
+	fromColumn: rolling_returns.scheme_code
+	toColumn: fund_metrics.scheme_code
+
