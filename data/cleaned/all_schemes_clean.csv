@@ -2637,9 +2637,9 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 104676,Z-REDEEMED-SBI Debt Fund Series - 18 Months -1- Dividend,,
 104679,DSP BlackRock Fixed Term Plan - Series 1G - Growth,,
 104680,DSP BlackRock Fixed Term Plan - Series 1G - Dividend,,
-104681,ICICI Prudential Equity Arbitrage Fund - IDCW,INF109K01EF0,INF109K01BE9
+104681,ICICI Prudential Arbitrage Fund - IDCW,INF109K01EF0,INF109K01BE9
 104682,ICICI Prudential Equity - Arbitrage Fund-Institutional Dividend Option,,
-104683,ICICI Prudential Equity Arbitrage Fund - Growth,INF109K01BF6,
+104683,ICICI Prudential Arbitrage Fund - Growth,INF109K01BF6,
 104684,ICICI Prudential Equity - Arbitrage Fund-Institutional Growth Option,,
 104685,ICICI Prudential Balanced Advantage Fund - Growth,INF109K01BH2,
 104686,ICICI Prudential Balanced Advantage Fund - IDCW,INF109K01EG8,INF109K01BG4
@@ -15250,8 +15250,8 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 120361,Sahara R.E.A.L Fund - Growth  Fund- Direct,,
 120362,LIC MF Interval Fund Quarterly Plan-Series 1-Direct Plan-Dividend,,
 120363,LIC MF Interval Fund Quarterly Plan-Series 1-Direct Plan-Growth,,
-120364,ICICI Prudential Equity Arbitrage Fund - Direct Plan - Growth,INF109K016O4,
-120365,ICICI Prudential Equity Arbitrage Fund - Direct Plan - IDCW,INF109K017O2,INF109K015O6
+120364,ICICI Prudential Arbitrage Fund - Direct Plan - Growth,INF109K016O4,
+120365,ICICI Prudential Arbitrage Fund - Direct Plan - IDCW,INF109K017O2,INF109K015O6
 120366,LIC MF Interval Fund Annual Plan-Series 1-Direct Plan-Growth,,
 120367,LIC MF Interval Fund Annual Plan-Series 1-Direct Plan-Dividend,,
 120368,Sahara Classic Fund- Growth Option- Direct,,
@@ -30319,10 +30319,10 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 144831,Axis Fixed Term Plan Series 96 (1124 Days) - Regular Plan - Half Yearly IDCW,,
 144832,Axis Fixed Term Plan Series 96 (1124 Days) - Regular Plan - Quarterly IDCW,,
 144833,Axis Fixed Term Plan Series 96 (1124 Days) - Regular Plan - Regular IDCW,,
-144834,Sundaram Services Fund Regular Plan - Reinvestment of Income Distribution cum Capital Withdrawal (IDCW),INF903JA1EZ2,
+144834,Sundaram Services Fund Regular Plan - Reinvestment of Income Distribution cum Capital Withdrawal (IDCW),,INF903JA1EZ2
 144835,Sundaram Services Fund Direct Plan - Growth,INF903JA1FA2,
 144836,Sundaram Services Fund Direct Plan - Payout of Income Distribution cum Capital Withdrawal (IDCW),INF903JA1FB0,
-144837,Sundaram Services Fund Direct Plan - Reinvestment of Income Distribution cum Capital Withdrawal (IDCW),INF903JA1FC8,
+144837,Sundaram Services Fund Direct Plan - Reinvestment of Income Distribution cum Capital Withdrawal (IDCW),,INF903JA1FC8
 144838,Sundaram Services Fund Regular Plan - Growth,INF903JA1EX7,
 144839,Sundaram Services Fund Regular Plan - Payout of Income Distribution cum Capital Withdrawal (IDCW),INF903JA1EY5,
 144840,SBI Debt Fund Series C - 23 - (1100 Days) - Regular Plan - Growth,,
@@ -31781,11 +31781,11 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 146954,Sundaram Overnight Fund Regular Plan - Weekly Payout of Income Distribution cum Capital Withdrawal (IDCW),,
 146955,Sundaram Overnight Fund Direct Plan - Weekly Reinvestment of Income Distribution cum Capital Withdrawal (IDCW),,
 146956,Sundaram Overnight Fund Direct Plan - Fortnightly Reinvestment of Income Distribution cum Capital Withdrawal (IDCW),,
-146957,Sundaram Overnight Fund Direct Plan - Monthly Reinvestment of Income Distribution cum Capital Withdrawal (IDCW),INF903JA1HM3,
+146957,Sundaram Overnight Fund Direct Plan - Monthly Reinvestment of Income Distribution cum Capital Withdrawal (IDCW),,INF903JA1HM3
 146958,Sundaram Overnight Fund Regular Plan - Fortnightly Reinvestment of Income Distribution cum Capital Withdrawal (IDCW),,
 146959,Sundaram Overnight Fund Regular Plan - Growth,INF903JA1GZ7,
 146960,Sundaram Overnight Fund Regular Plan - Monthly Payout of Income Distribution cum Capital Withdrawal (IDCW),INF903JA1HA8,
-146961,Sundaram Overnight Fund Regular Plan - Monthly Reinvestment of Income Distribution cum Capital Withdrawal (IDCW),INF903JA1HF7,
+146961,Sundaram Overnight Fund Regular Plan - Monthly Reinvestment of Income Distribution cum Capital Withdrawal (IDCW),,INF903JA1HF7
 146962,Sundaram Overnight Fund Direct Plan - Monthly Payout of Income Distribution cum Capital Withdrawal (IDCW),INF903JA1HH3,
 146963,Sundaram Overnight Fund Direct Plan - Growth,INF903JA1HG5,
 146964,Sundaram Overnight Fund Direct Plan - Daily Reinvestment of Income Distribution cum Capital Withdrawal (IDCW),,
@@ -32975,10 +32975,10 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 148503,Mirae Asset Diversified Equity Allocator Passive FOF - Regular Plan - IDCW,INF769K01GA7,INF769K01GC3
 148504,Sundaram Large Cap Fund(Formerly Known as Sundaram Blue Chip Fund) Regular Plan - Growth,INF903JA1IZ3,
 148505,Sundaram Large Cap Fund (Formerly Known as Sundaram Blue Chip Fund)  Regular Plan - Payout of Income Distribution cum Capital Withdrawal (IDCW),INF903JA1JA4,
-148506,Sundaram Large Cap Fund (Formerly Known as Sundaram Blue Chip Fund) Regular Plan - Reinvestment of Income Distribution cum Capital Withdrawal (IDCW),INF903JA1JB2,
+148506,Sundaram Large Cap Fund (Formerly Known as Sundaram Blue Chip Fund) Regular Plan - Reinvestment of Income Distribution cum Capital Withdrawal (IDCW),,INF903JA1JB2
 148507,Sundaram Large Cap Fund (Formerly Known as Sundaram Blue Chip Fund)Direct Plan - Growth,INF903JA1JC0,
 148508,Sundaram Large Cap Fund (Formerly Known as Sundaram Blue Chip Fund) Direct Plan - Payout of Income Distribution cum Capital Withdrawal (IDCW),INF903JA1JD8,
-148509,Sundaram Large Cap Fund (Formerly Known as Sundaram Blue Chip  Fund)  Direct Plan - Reinvestment of Income Distribution cum Capital Withdrawal (IDCW),INF903JA1JE6,
+148509,Sundaram Large Cap Fund (Formerly Known as Sundaram Blue Chip  Fund)  Direct Plan - Reinvestment of Income Distribution cum Capital Withdrawal (IDCW),,INF903JA1JE6
 148510,quant Liquid Fund-Unclaimed Dividend-Growth Option,,
 148511,quant Liquid Fund-Unclaimed Redemption Investor Education Plan-Growth Option,,
 148512,quant Liquid Fund-Unclaimed Redemption Plan-Growth Option,,
@@ -37599,9 +37599,13 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 154343,Invesco India Nifty Bank Index Fund - Direct Plan - Growth,INF205KA1BO4,
 154344,Invesco India Nifty Bank Index Fund - Regular Plan - Growth,INF205KA1BN6,
 154345,Groww Nifty Private Bank ETF,INF666M01OT5,
+154346,Groww Nifty Private Bank Index Fund Direct Growth,INF666M01OU3,
 154347,Edelweiss Nifty Next 50 ETF,INF754K01XF3,
 154348,Axis Nifty Capital Markets Index Fund- Direct Plan,INF846KA1549,
 154349,Axis Nifty Capital Markets Index Fund- Regular Plan,INF846KA1531,
+154350,Groww Nifty Private Bank Index Fund Regular Growth,INF666M01OX7,
+154351,Groww Nifty Private Bank Index Fund Regular IDCW,INF666M01OY5,INF666M01OZ2
+154352,Groww Nifty Private Bank Index Fund Direct IDCW,INF666M01OV1,INF666M01OW9
 154353,SBI Nifty Smallcap 250 ETF,INF200KB1AY9,
 154354,SBI Nifty200 Value 30 ETF,INF200KB1AX1,
 154357,DSP Nifty FMCG ETF,INF740KA1ZA4,
