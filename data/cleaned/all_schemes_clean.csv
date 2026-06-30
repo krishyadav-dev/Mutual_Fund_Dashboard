@@ -5333,7 +5333,7 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 107690,Birla Sun Life Fixed Term Plan - Series AL  RETAIL DIVIDEND,,
 107691,Standard Chartered FMP - QS26 Plan-A-Growth,,
 107692,Standard Chartered FMP - QS26 Plan-A-Dividend,,
-107693,Quantum Gold Fund,INF082J01408,
+107693,Quantum Gold ETF,INF082J01408,
 107694,Mirae Asset Savings Fund-Regular Plan- Bonus,,
 107695,Mirae Asset Savings Fund-Regular Plan- Growth,,
 107696,Mirae Asset Savings Fund-Regular Plan- Weekly Dividend,,
@@ -10697,7 +10697,7 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 115129,BNP Paribas Fixed Term Fund-Sr 21 J - Calendar Quarterly Dividend Option,,
 115130,BNP Paribas Fixed Term Fund-Sr 21 J - Growth Option,,
 115131,Axis Dynamic Bond Fund - Regular Plan - Half Yearly IDCW,INF846K01941,INF846K01958
-115132,Quantum Gold Savings Fund - Direct Plan Growth Option,INF082J01150,
+115132,Quantum Gold ETF FOF - Direct Plan Growth Option,INF082J01150,
 115133,UTI-FTIF  Sr. IX  Plan II (369 Days) - Growth Option,,
 115134,UTI-FTIF  Sr. IX  Plan II (369 Days) - Dividend Option,,
 115135,L&T FMP - III (April370D A) - Growth,,
@@ -24216,8 +24216,8 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 134482,UTI FTIF Series XXI-XV (1103 Days) - Annual Div Option - Direct,,
 134483,UTI FTIF Series XXI-XV (1103 Days) - Maturity Div Option - Direct,,
 134484,UTI Ultra Short Duration Fund - Regular Plan - Annual IDCW,INF789FA1P43,INF789FA1P50
-134493,Quantum Dynamic Bond Fund - Direct Plan Monthly IDCW,INF082J01184,INF082J01192
-134494,Quantum Dynamic Bond Fund - Direct Plan Growth Option,INF082J01176,
+134493,Quantum Dynamic Term Fund - Direct Plan Monthly IDCW,INF082J01184,INF082J01192
+134494,Quantum Dynamic Term Fund - Direct Plan Growth Option,INF082J01176,
 134495,UTI Medium Duration Fund - Regular Plan - Monthly IDCW,INF789FB1JV2,INF789FB1KP2
 134496,UTI Medium Duration Fund - Regular Plan - Quarterly IDCW,INF789FB1JW0,INF789FB1JX8
 134497,UTI Medium Duration Fund - Regular Plan - Half-Yearly IDCW,INF789FB1JY6,INF789FB1JZ3
@@ -27533,11 +27533,11 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 141057,Edelweiss Fixed Maturity Plan - Series 41 - Direct Plan - Dividend Payout,,
 141058,Edelweiss Fixed Maturity Plan - Series 41 - Regular Plan - Dividend Payout,,
 141059,Edelweiss Fixed Maturity Plan - Series 41 - Regular Plan - Growth,,
-141060,Quantum Dynamic Bond Fund - Regular Plan Monthly IDCW,INF082J01226,INF082J01234
-141061,Quantum Dynamic Bond Fund - Regular Plan Growth Option,INF082J01218,
+141060,Quantum Dynamic Term Fund - Regular Plan Monthly IDCW,INF082J01226,INF082J01234
+141061,Quantum Dynamic Term Fund - Regular Plan Growth Option,INF082J01218,
 141062,Quantum Diversified Equity All Cap Active FOF - Regular Plan IDCW,INF082J01283,INF082J01291
 141063,Quantum Diversified Equity All Cap Active FOF - Regular Plan Growth Option,INF082J01275,
-141064,Quantum Gold Savings Fund - Regular Plan Growth Option,INF082J01358,
+141064,Quantum Gold ETF FOF - Regular Plan Growth Option,INF082J01358,
 141065,Quantum Liquid Fund - Regular Plan Daily IDCW,,INF082J01317
 141066,Quantum Liquid Fund - Regular Plan Growth Option,INF082J01309,
 141067,Quantum Liquid Fund - Regular Plan Monthly IDCW,INF082J01325,INF082J01333
@@ -34202,8 +34202,8 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 150386,Baroda BNP Paribas Flexi Cap Fund - Regular Plan - IDCW Option,INF251K01QX7,INF251K01QY5
 150387,Baroda BNP Paribas Flexi Cap Fund - Direct Plan - Growth Option,INF251K01QZ2,
 150388,Baroda BNP Paribas Flexi Cap Fund - Direct Plan - IDCW Option,INF251K01RA3,INF251K01RB1
-150389,Quantum Nifty 50 ETF Fund of Fund - Regular Plan - Growth,INF082J01424,
-150390,Quantum Nifty 50 ETF Fund of Fund - Direct Plan - Growth,INF082J01416,
+150389,Quantum Nifty 50 ETF FOF - Regular Plan - Growth,INF082J01424,
+150390,Quantum Nifty 50 ETF FOF - Direct Plan - Growth,INF082J01416,
 150391,LIC MF Money Market Fund-Direct Plan-IDCW,INF767K01RF7,INF767K01RG5
 150392,LIC MF Money Market Fund-Direct Plan-Growth,INF767K01RE0,
 150393,LIC MF Money Market Fund-Regular Plan-Growth,INF767K01RB6,
