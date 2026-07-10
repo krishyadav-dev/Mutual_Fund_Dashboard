@@ -940,12 +940,12 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 102001,HDFC Large Cap Fund - IDCW Option - Regular Plan,INF179K01BC6,INF179K01BD4
 102003,UTI-  Liquid Fund-Short Term Plan-Income,,
 102004,UTI-  Liquid Fund-Short Term Plan-Growth,,
-102007,UTI-  Liquid Cash Plan- Discontinued -Regular Plan Periodic Dividend Option,,INF789F1AE94
-102008,UTI-  Liquid Cash Plan- Discontinued - Regular Plan - Monthly Dividend Option,INF789F1AF44,INF789F1AG27
-102009,UTI-  Liquid Cash Plan- Discontinued - Regular Plan -Growth,INF789F1AG35,
+102007,UTI Liquid Fund - Discontinued -Regular Plan Periodic Dividend Option,,INF789F1AE94
+102008,UTI Liquid Fund - Discontinued - Regular Plan - Monthly Dividend Option,INF789F1AF44,INF789F1AG27
+102009,UTI Liquid Fund - Discontinued - Regular Plan -Growth,INF789F1AG35,
 102010,UTI Liquid Fund - Regular Plan - Daily IDCW (Reinvestment),,INF789F1AF77
 102011,UTI Liquid Fund - Regular Plan - Monthly IDCW,INF789F1AF93,INF789F1AG01
-102012,UTI-  Liquid Cash Plan - Regular Plan - Growth Option,INF789F1AF85,
+102012,UTI Liquid Fund - Regular Plan - Growth Option,INF789F1AF85,
 102013,UTI Liquid Fund - Regular Plan - Weekly IDCW,,INF789F1AG19
 102015,GSSIF- MT(Div Bimonthly),,
 102016,Tata Gilt High Fund - Growth,,
@@ -4678,7 +4678,7 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 106926,SCAF-FM-S1-Plan A-Growth,,
 106927,SCAF-FM-S1-Plan B-Dividend,,
 106928,SCAF-FM-S1-Plan B-Growth,,
-106929,Kotak Nifty PSU Bank ETF,INF373I01023,
+106929,Kotak Nifty PSU Bank ETF,INF174KA1A86,
 106930,ICICI Prudential FMP series 41 - 18 Mths Plan - Institutional Dividend Option,,
 106931,ICICI Prudential FMP series 41 - 18 Mths Plan - Institutional Growth Option,,
 106932,ICICI Prudential FMP series 41 - 18 Mths Plan - Retail Growth Option,,
@@ -15190,7 +15190,7 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 120301,ICICI Prudential Blended Plan B - Direct Plan -  Monthly Dividend Option - I,,
 120302,ICICI Prudential Blended Plan B - Direct Plan -  Dividend Option - I,,
 120303,ICICI Prudential Blended Plan B-Direct Plan -  Daily Dividend Option - I,,
-120304,UTI-  Liquid Cash Plan - Direct Plan - Growth Option,INF789F1AD46,
+120304,UTI Liquid Fund - Direct Plan - Growth Option,INF789F1AD46,
 120305,LIC MF Index Fund-Sensex Advantage-Direct Plan Dividend Option,,
 120306,LIC  MF Index Fund-Sensex Advantage-Direct Plan Growth Option,,
 120307,LIC MF Nifty 50 Index Fund-Direct Plan-Growth,INF767K01FF2,
