@@ -940,9 +940,9 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 102001,HDFC Large Cap Fund - IDCW Option - Regular Plan,INF179K01BC6,INF179K01BD4
 102003,UTI-  Liquid Fund-Short Term Plan-Income,,
 102004,UTI-  Liquid Fund-Short Term Plan-Growth,,
-102007,UTI Liquid Fund - Discontinued -Regular Plan Periodic Dividend Option,,INF789F1AE94
-102008,UTI Liquid Fund - Discontinued - Regular Plan - Monthly Dividend Option,INF789F1AF44,INF789F1AG27
-102009,UTI Liquid Fund - Discontinued - Regular Plan -Growth,INF789F1AG35,
+102007,UTI Liquid Fund - Discontinued -Regular Plan Periodic Dividend Option,INF789F1AE86,INF789F1AE94
+102008,UTI Liquid Fund - Discontinued - Regular Plan - Monthly Dividend Option,INF789F1AG27,INF789F1AG35
+102009,UTI Liquid Fund - Discontinued - Regular Plan -Growth,INF789F1AF44,
 102010,UTI Liquid Fund - Regular Plan - Daily IDCW (Reinvestment),,INF789F1AF77
 102011,UTI Liquid Fund - Regular Plan - Monthly IDCW,INF789F1AF93,INF789F1AG01
 102012,UTI Liquid Fund - Regular Plan - Growth Option,INF789F1AF85,
@@ -37649,6 +37649,12 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 154399,Shriram Overnight Fund- Regular Growth,INF680P01505,
 154402,Shriram Overnight Fund- Regular Monthly IDCW,INF680P01620,INF680P01646
 154404,ICICI Prudential Nifty Smallcap 250 ETF,INF109K1A476,
+154405,Tata Multi Sector Passive FOF Regular Plan Growth Option,INF277KA1ES2,
+154406,Tata Multi Sector Passive FOF Regular Plan IDCW Payout Option,INF277KA1EU8,
+154407,Tata Multi Sector Passive FOF Regular Plan IDCW Reinvestment Option,,INF277KA1ET0
+154408,Tata Multi Sector Passive FOF Direct Plan IDCW Reinvestment Option,,INF277KA1EW4
+154409,Tata Multi Sector Passive FOF Direct Plan Growth Option,INF277KA1EV6,
+154410,Tata Multi Sector Passive FOF Direct Plan IDCW Payout Option,INF277KA1EX2,
 154413,Choice Overnight Fund - Growth Option - Direct Plan,,
 154414,Choice Overnight Fund - Daily IDCW Option - Regular Plan,,
 154415,Choice Overnight Fund - Growth Option - Regular Plan,,
