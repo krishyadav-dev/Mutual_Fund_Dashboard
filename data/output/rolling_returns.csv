@@ -1,5 +1,4 @@
 date,scheme_code,fund_name,rolling_1y_return_pct
-2020-07-31,118275,CANARA ROBECO FLEXICAP FUND - DIRECT PLAN - GROWTH OPTION,6.9023
 2020-08-03,118275,CANARA ROBECO FLEXICAP FUND - DIRECT PLAN - GROWTH OPTION,6.8075
 2020-08-04,118275,CANARA ROBECO FLEXICAP FUND - DIRECT PLAN - GROWTH OPTION,8.6608
 2020-08-05,118275,CANARA ROBECO FLEXICAP FUND - DIRECT PLAN - GROWTH OPTION,9.2819
@@ -1467,7 +1466,7 @@ date,scheme_code,fund_name,rolling_1y_return_pct
 2026-07-13,118275,CANARA ROBECO FLEXICAP FUND - DIRECT PLAN - GROWTH OPTION,0.1679
 2026-07-14,118275,CANARA ROBECO FLEXICAP FUND - DIRECT PLAN - GROWTH OPTION,-0.1762
 2026-07-15,118275,CANARA ROBECO FLEXICAP FUND - DIRECT PLAN - GROWTH OPTION,0.4802
-2020-08-03,118777,Nippon India Small Cap Fund - Direct Plan Growth,-0.7062
+2026-07-16,118275,CANARA ROBECO FLEXICAP FUND - DIRECT PLAN - GROWTH OPTION,0.1037
 2020-08-04,118777,Nippon India Small Cap Fund - Direct Plan Growth,1.5987
 2020-08-05,118777,Nippon India Small Cap Fund - Direct Plan Growth,2.211
 2020-08-06,118777,Nippon India Small Cap Fund - Direct Plan Growth,4.2432
@@ -2934,7 +2933,7 @@ date,scheme_code,fund_name,rolling_1y_return_pct
 2026-07-13,118777,Nippon India Small Cap Fund - Direct Plan Growth,5.8993
 2026-07-14,118777,Nippon India Small Cap Fund - Direct Plan Growth,5.2528
 2026-07-15,118777,Nippon India Small Cap Fund - Direct Plan Growth,5.4655
-2020-07-31,118825,Mirae Asset Large Cap Fund - Direct Plan - Growth,-0.4017
+2026-07-16,118777,Nippon India Small Cap Fund - Direct Plan Growth,5.3221
 2020-08-03,118825,Mirae Asset Large Cap Fund - Direct Plan - Growth,-1.3108
 2020-08-04,118825,Mirae Asset Large Cap Fund - Direct Plan - Growth,0.7733
 2020-08-05,118825,Mirae Asset Large Cap Fund - Direct Plan - Growth,1.7018
@@ -4402,7 +4401,7 @@ date,scheme_code,fund_name,rolling_1y_return_pct
 2026-07-13,118825,Mirae Asset Large Cap Fund - Direct Plan - Growth,-0.5422
 2026-07-14,118825,Mirae Asset Large Cap Fund - Direct Plan - Growth,-1.0253
 2026-07-15,118825,Mirae Asset Large Cap Fund - Direct Plan - Growth,-0.4536
-2020-08-06,119016,HDFC Short Term Debt Fund - Growth Option - Direct Plan,12.2003
+2026-07-16,118825,Mirae Asset Large Cap Fund - Direct Plan - Growth,-0.7841
 2020-08-07,119016,HDFC Short Term Debt Fund - Growth Option - Direct Plan,12.2244
 2020-08-10,119016,HDFC Short Term Debt Fund - Growth Option - Direct Plan,12.2825
 2020-08-11,119016,HDFC Short Term Debt Fund - Growth Option - Direct Plan,12.2874
@@ -5841,7 +5840,7 @@ date,scheme_code,fund_name,rolling_1y_return_pct
 2026-07-13,119016,HDFC Short Term Debt Fund - Growth Option - Direct Plan,6.3643
 2026-07-14,119016,HDFC Short Term Debt Fund - Growth Option - Direct Plan,6.1427
 2026-07-15,119016,HDFC Short Term Debt Fund - Growth Option - Direct Plan,6.2141
-2020-07-31,119063,HDFC Nifty 50 Index Fund - Direct Plan,-2.6066
+2026-07-16,119016,HDFC Short Term Debt Fund - Growth Option - Direct Plan,6.2004
 2020-08-03,119063,HDFC Nifty 50 Index Fund - Direct Plan,-3.5929
 2020-08-04,119063,HDFC Nifty 50 Index Fund - Direct Plan,-1.6688
 2020-08-05,119063,HDFC Nifty 50 Index Fund - Direct Plan,-1.1204
@@ -7309,7 +7308,7 @@ date,scheme_code,fund_name,rolling_1y_return_pct
 2026-07-13,119063,HDFC Nifty 50 Index Fund - Direct Plan,-4.3174
 2026-07-14,119063,HDFC Nifty 50 Index Fund - Direct Plan,-4.6144
 2026-07-15,119063,HDFC Nifty 50 Index Fund - Direct Plan,-4.3193
-2020-08-03,119775,Kotak Midcap Fund - Direct Plan - Growth,3.2885
+2026-07-16,119063,HDFC Nifty 50 Index Fund - Direct Plan,-4.5746
 2020-08-04,119775,Kotak Midcap Fund - Direct Plan - Growth,4.3392
 2020-08-05,119775,Kotak Midcap Fund - Direct Plan - Growth,4.8698
 2020-08-06,119775,Kotak Midcap Fund - Direct Plan - Growth,7.391
@@ -8776,7 +8775,7 @@ date,scheme_code,fund_name,rolling_1y_return_pct
 2026-07-13,119775,Kotak Midcap Fund - Direct Plan - Growth,8.9559
 2026-07-14,119775,Kotak Midcap Fund - Direct Plan - Growth,8.1647
 2026-07-15,119775,Kotak Midcap Fund - Direct Plan - Growth,8.6061
-2020-07-31,120251,ICICI Prudential Equity & Debt Fund - Direct Plan - Growth,-4.6217
+2026-07-16,119775,Kotak Midcap Fund - Direct Plan - Growth,8.3937
 2020-08-03,120251,ICICI Prudential Equity & Debt Fund - Direct Plan - Growth,-5.6349
 2020-08-04,120251,ICICI Prudential Equity & Debt Fund - Direct Plan - Growth,-5.1987
 2020-08-05,120251,ICICI Prudential Equity & Debt Fund - Direct Plan - Growth,-3.7764
@@ -10244,7 +10243,7 @@ date,scheme_code,fund_name,rolling_1y_return_pct
 2026-07-13,120251,ICICI Prudential Equity & Debt Fund - Direct Plan - Growth,3.991
 2026-07-14,120251,ICICI Prudential Equity & Debt Fund - Direct Plan - Growth,3.4554
 2026-07-15,120251,ICICI Prudential Equity & Debt Fund - Direct Plan - Growth,3.85
-2020-07-31,120465,Axis Large Cap Fund - Direct Plan - Growth,5.3907
+2026-07-16,120251,ICICI Prudential Equity & Debt Fund - Direct Plan - Growth,3.7678
 2020-08-03,120465,Axis Large Cap Fund - Direct Plan - Growth,5.2581
 2020-08-04,120465,Axis Large Cap Fund - Direct Plan - Growth,6.8665
 2020-08-05,120465,Axis Large Cap Fund - Direct Plan - Growth,7.1452
@@ -11720,7 +11719,7 @@ date,scheme_code,fund_name,rolling_1y_return_pct
 2026-07-13,120465,Axis Large Cap Fund - Direct Plan - Growth,-1.8563
 2026-07-14,120465,Axis Large Cap Fund - Direct Plan - Growth,-2.3678
 2026-07-15,120465,Axis Large Cap Fund - Direct Plan - Growth,-1.3828
-2020-07-31,120505,Axis Midcap Fund - Direct Plan - Growth,12.2155
+2026-07-16,120465,Axis Large Cap Fund - Direct Plan - Growth,-0.4607
 2020-08-03,120505,Axis Midcap Fund - Direct Plan - Growth,13.6748
 2020-08-04,120505,Axis Midcap Fund - Direct Plan - Growth,15.1828
 2020-08-05,120505,Axis Midcap Fund - Direct Plan - Growth,17.0549
@@ -13196,7 +13195,7 @@ date,scheme_code,fund_name,rolling_1y_return_pct
 2026-07-13,120505,Axis Midcap Fund - Direct Plan - Growth,6.6611
 2026-07-14,120505,Axis Midcap Fund - Direct Plan - Growth,6.1331
 2026-07-15,120505,Axis Midcap Fund - Direct Plan - Growth,7.4551
-2020-08-06,120692,ICICI Prudential Corporate Bond Fund - Direct Plan - Growth,12.0316
+2026-07-16,120505,Axis Midcap Fund - Direct Plan - Growth,7.9211
 2020-08-07,120692,ICICI Prudential Corporate Bond Fund - Direct Plan - Growth,11.9946
 2020-08-10,120692,ICICI Prudential Corporate Bond Fund - Direct Plan - Growth,12.0253
 2020-08-11,120692,ICICI Prudential Corporate Bond Fund - Direct Plan - Growth,11.9945
@@ -14634,7 +14633,7 @@ date,scheme_code,fund_name,rolling_1y_return_pct
 2026-07-13,120692,ICICI Prudential Corporate Bond Fund - Direct Plan - Growth,6.7005
 2026-07-14,120692,ICICI Prudential Corporate Bond Fund - Direct Plan - Growth,6.4543
 2026-07-15,120692,ICICI Prudential Corporate Bond Fund - Direct Plan - Growth,6.5073
-2020-07-31,120716,UTI Nifty 50 Index Fund - Growth Option - Direct,-2.3435
+2026-07-16,120692,ICICI Prudential Corporate Bond Fund - Direct Plan - Growth,6.5268
 2020-08-03,120716,UTI Nifty 50 Index Fund - Growth Option - Direct,-3.3359
 2020-08-04,120716,UTI Nifty 50 Index Fund - Growth Option - Direct,-1.4013
 2020-08-05,120716,UTI Nifty 50 Index Fund - Growth Option - Direct,-0.8499
@@ -16102,7 +16101,7 @@ date,scheme_code,fund_name,rolling_1y_return_pct
 2026-07-13,120716,UTI Nifty 50 Index Fund - Growth Option - Direct,-4.2445
 2026-07-14,120716,UTI Nifty 50 Index Fund - Growth Option - Direct,-4.5415
 2026-07-15,120716,UTI Nifty 50 Index Fund - Growth Option - Direct,-4.246
-2020-07-31,122639,Parag Parikh Flexi Cap Fund - Direct Plan - Growth,18.63
+2026-07-16,120716,UTI Nifty 50 Index Fund - Growth Option - Direct,-4.5014
 2020-08-03,122639,Parag Parikh Flexi Cap Fund - Direct Plan - Growth,19.8443
 2020-08-04,122639,Parag Parikh Flexi Cap Fund - Direct Plan - Growth,20.5471
 2020-08-05,122639,Parag Parikh Flexi Cap Fund - Direct Plan - Growth,21.3909
@@ -17568,7 +17567,7 @@ date,scheme_code,fund_name,rolling_1y_return_pct
 2026-07-10,122639,Parag Parikh Flexi Cap Fund - Direct Plan - Growth,-2.1089
 2026-07-13,122639,Parag Parikh Flexi Cap Fund - Direct Plan - Growth,-1.4696
 2026-07-14,122639,Parag Parikh Flexi Cap Fund - Direct Plan - Growth,-1.8082
-2020-07-31,125497,SBI Small Cap Fund - Direct Plan - Growth,3.5539
+2026-07-15,122639,Parag Parikh Flexi Cap Fund - Direct Plan - Growth,-1.4376
 2020-08-03,125497,SBI Small Cap Fund - Direct Plan - Growth,5.6403
 2020-08-04,125497,SBI Small Cap Fund - Direct Plan - Growth,6.3992
 2020-08-05,125497,SBI Small Cap Fund - Direct Plan - Growth,8.095
@@ -19045,7 +19044,7 @@ date,scheme_code,fund_name,rolling_1y_return_pct
 2026-07-13,125497,SBI Small Cap Fund - Direct Plan - Growth,3.849
 2026-07-14,125497,SBI Small Cap Fund - Direct Plan - Growth,3.0026
 2026-07-15,125497,SBI Small Cap Fund - Direct Plan - Growth,3.8949
-2020-08-03,133035,Kotak Aggressive Hybrid Fund - Direct Plan - Growth,0.7332
+2026-07-16,125497,SBI Small Cap Fund - Direct Plan - Growth,3.7274
 2020-08-04,133035,Kotak Aggressive Hybrid Fund - Direct Plan - Growth,2.2221
 2020-08-05,133035,Kotak Aggressive Hybrid Fund - Direct Plan - Growth,2.4764
 2020-08-06,133035,Kotak Aggressive Hybrid Fund - Direct Plan - Growth,3.7874
@@ -20512,3 +20511,4 @@ date,scheme_code,fund_name,rolling_1y_return_pct
 2026-07-13,133035,Kotak Aggressive Hybrid Fund - Direct Plan - Growth,5.3227
 2026-07-14,133035,Kotak Aggressive Hybrid Fund - Direct Plan - Growth,4.6976
 2026-07-15,133035,Kotak Aggressive Hybrid Fund - Direct Plan - Growth,5.4986
+2026-07-16,133035,Kotak Aggressive Hybrid Fund - Direct Plan - Growth,4.8733
