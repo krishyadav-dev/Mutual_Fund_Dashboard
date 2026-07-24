@@ -37676,7 +37676,7 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 154449,ICICI Prudential Multi-Asset Active FOF - Direct Plan - Growth,INF109K1A559,
 154450,ICICI Prudential Multi-Asset Active FOF - Growth,INF109K1A542,
 154462,Mirae Asset Money Market Fund - Direct Plan - Weekly IDCW,,INF769K01RA4
-154466,UTI Nifty 1D Rate Liquid ETF - Growth,,
+154466,UTI Nifty 1D Rate Liquid ETF - Growth,INF789F1AG68,
 154467,SBI Crisil - IBX SDL Index - June 2034 Index Fund - Direct Plan - Growth,INF200KB1BO8,
 154468,SBI Crisil - IBX SDL Index - June 2034 Index Fund - Regular Plan - Growth,INF200KB1BL4,
 154469,SBI Crisil - IBX SDL Index - June 2034 Index Fund - Regular Plan - IDCW,INF200KB1BM2,INF200KB1BN0
@@ -37686,5 +37686,6 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 154492,Bajaj Finserv BSE Top 10 Banks ETF,INF0QA701CI0,
 154507,Kotak Money Market Fund - Direct - IDCW Weekly,INF174KA1B28,INF174KA1B02
 154510,Kotak Bond Short Term Fund - Direct - IDCW Weekly,INF174KA1B69,INF174KA1B44
+154511,Kotak Corporate Bond Fund - Regular - IDCW Weekly,INF174KA1B93,INF174KA1C19
 154513,Kotak Savings Fund - Direct - IDCW Weekly,INF174KA1C43,INF174KA1C27
 154521,Abakkus Liquid Fund - Unclaimed Redemption Less than 3 Years,,
