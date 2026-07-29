@@ -37671,6 +37671,7 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 154427,HDFC Nifty Auto Index Fund- Direct Plan- Growth Option,INF179KC1KQ0,
 154428,HDFC Nifty Auto Index Fund- Growth Option,INF179KC1KP2,
 154431,Invesco India Ultra Short Duration Fund - Regular Plan - Weekly IDCW (Payout / Reinvestment),INF205KA1BQ9,INF205KA1BR7
+154432,Invesco India Ultra Short Duration Fund - Direct Plan - Weekly IDCW (Payout / Reinvestment),INF205KA1BS5,INF205KA1BT3
 154436,Zerodha Life Cycle Fund 2036 - Direct - Growth,,
 154437,Zerodha Life Cycle Fund 2041 - Direct - Growth,,
 154438,ALPHAGREP MULTI ASSET ALLOCATION FUND-DIRECT-GROWTH,INF2VOA01012,
@@ -37679,6 +37680,8 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 154443,ALPHAGREP MULTI ASSET ALLOCATION FUND-DIRECT-IDCW,INF2VOA01038,INF2VOA01020
 154449,ICICI Prudential Multi-Asset Active FOF - Direct Plan - Growth,INF109K1A559,
 154450,ICICI Prudential Multi-Asset Active FOF - Growth,INF109K1A542,
+154459,Axis Nifty50 Equal Weight Index Fund-Regular Plan- Growth Option,INF846KA1556,
+154460,Axis Nifty50 Equal Weight Index Fund-Direct Plan- Growth Option,INF846KA1564,
 154461,Edelweiss Nifty Metal ETF,INF754K01XG1,
 154462,Mirae Asset Money Market Fund - Direct Plan - Weekly IDCW,,INF769K01RA4
 154466,UTI Nifty 1D Rate Liquid ETF - Growth,INF789F1AG68,
@@ -37692,8 +37695,10 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 154476,Groww Nifty Cements ETF,INF666M01PH7,
 154491,Kotak Nifty Private Bank ETF,INF174KA1A94,
 154492,Bajaj Finserv BSE Top 10 Banks ETF,INF0QA701CI0,
+154497,Mirae Asset Nifty200 Momentum 30 Plus 8-13 yr G-Sec 50:50 ETF,INF769K01RJ5,
 154504,HDFC Nifty Metal ETF - Growth Option,,
 154507,Kotak Money Market Fund - Direct - IDCW Weekly,INF174KA1B28,INF174KA1B02
+154509,Kotak Bond Short Term Fund - Regular - IDCW Weekly,INF174KA1B51,INF174KA1B77
 154510,Kotak Bond Short Term Fund - Direct - IDCW Weekly,INF174KA1B69,INF174KA1B44
 154511,Kotak Corporate Bond Fund - Regular - IDCW Weekly,INF174KA1B93,INF174KA1C19
 154513,Kotak Savings Fund - Direct - IDCW Weekly,INF174KA1C43,INF174KA1C27
