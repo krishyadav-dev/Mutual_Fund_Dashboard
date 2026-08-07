@@ -36639,6 +36639,7 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 153289,Invesco India Business Cycle Fund - Regular Plan - IDCW,INF205KA1AG2,INF205KA1AH0
 153290,Invesco India Business Cycle Fund - Direct Plan - IDCW,INF205KA1AJ6,INF205KA1AK4
 153291,Invesco India Business Cycle Fund - Direct Plan - Growth,INF205KA1AI8,
+153292,Bank of India Money Market Fund - Direct - Weekly IDCW,,INF761K01GQ0
 153293,Bank of India Money Market Fund - Regular - Growth,INF761K01GS6,
 153294,Bank of India Money Market Fund - Direct - Growth,INF761K01GO5,
 153295,Bank of India Money Market Fund - Direct - Monthly IDCW,INF761K01GR8,INF761K01GX6
@@ -37707,6 +37708,12 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 154473,Mirae Asset BSE Midcap 150 Momentum 30 ETF FOF - Regular Plan - Growth,INF769K01QW0,
 154474,Mirae Asset BSE Midcap 150 Momentum 30 ETF FOF - Direct Plan - Growth,INF769K01QX8,
 154476,Groww Nifty Cements ETF,INF666M01PH7,
+154477,Abakkus Large & Mid Cap Fund - Direct  Plan - Growth,INF2JJD01193,
+154478,Abakkus Large & Mid Cap Fund - Regular Plan - Growth,INF2JJD01201,
+154479,The Wealth Company Mid Cap Fund- Regular-Growth,INF2F0001628,
+154481,The Wealth Company Mid Cap Fund- Direct-Growth,INF2F0001651,
+154483,The Wealth Company Mid Cap Fund- Direct- IDCW,INF2F0001669,INF2F0001677
+154484,The Wealth Company Mid Cap Fund-Regular-IDCW,INF2F0001636,INF2F0001644
 154485,Baroda BNP Paribas Services Fund - Direct IDCW Payout option,INF251K01VU3,INF251K01VZ2
 154486,Baroda BNP Paribas Services Fund - Regular Growth option,INF251K01VV1,
 154487,Baroda BNP Paribas Services Fund - Regular IDCW Payout,INF251K01VW9,INF251K01VX7
@@ -37720,6 +37727,8 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 154497,Mirae Asset Nifty200 Momentum 30 Plus 8-13 yr G-Sec 50:50 ETF,INF769K01RJ5,
 154503,ICICI Prudential BSE Insurance ETF,INF109K1A567,
 154504,HDFC Nifty Metal ETF - Growth Option,,
+154505,HDFC Nifty Metal ETF FOF - Direct Plan - Growth Option,,
+154506,HDFC Nifty Metal ETF FOF - Growth Option,,
 154507,Kotak Money Market Fund - Direct - IDCW Weekly,INF174KA1B28,INF174KA1B02
 154508,Kotak Money Market Fund - Regular - IDCW Weekly,INF174KA1B10,INF174KA1B36
 154509,Kotak Bond Short Term Fund - Regular - IDCW Weekly,INF174KA1B51,INF174KA1B77
@@ -37731,3 +37740,5 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 154524,Edelweiss BSE Top 10 Bank ETF,INF754K01XH9,
 154528,DSP BSE MidSmall Private Banks ETF,INF740KA1ZH9,
 154535,Edelweiss BSE LargeMid (60:40) Stable Dividend 50 ETF,INF754K01XI7,
+154551,Motilal Oswal Nifty Metal ETF,,
+154552,Motilal Oswal Nifty Oil & Gas ETF,,
