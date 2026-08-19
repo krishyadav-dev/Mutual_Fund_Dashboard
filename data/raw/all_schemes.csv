@@ -2596,7 +2596,7 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 104626,ING OptiMix Equity Multi-Manager FoF Scheme-Dividend,,
 104633,DSP BlackRock Fixed Term Plan-Series 1F-Growth,,
 104634,DSP BlackRock Fixed Term Plan-Series 1F-Dividend,,
-104635,Invesco India ELSS Tax Saver Fund - Regular Plan - IDCW Payout,INF205K01296,INF205K01288
+104635,Invesco India ELSS Tax Saver Fund - Regular Plan - IDCW Payout,INF205K01296,
 104636,Invesco India ELSS Tax Saver Fund - Regular Plan - Growth,INF205K01270,
 104637,Nippon India Focused Fund -Growth Plan -Growth Option,INF204K01GE7,
 104638,NIPPON INDIA FOCUSED  FUND - IDCW OPTION,INF204K01GF4,INF204K01GG2
@@ -5232,8 +5232,8 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 107575,Religare FMP-14M-Sr-III - Institutional Dividend Reinvestment,,
 107576,Religare FMP-14M-Sr-III - Institutional Growth,,
 107577,Religare FMP-14M-Sr-III - Retail Dividend Reinvestment,,
-107578,Mirae Asset Large Cap Fund - Growth Plan,INF769K01010,
-107579,Mirae Asset Large Cap Fund Regular IDCW,INF769K01036,INF769K01028
+107578,Mirae Asset Large Cap Fund - Regular Plan - Growth,INF769K01010,
+107579,Mirae Asset Large Cap Fund - Regular Plan - IDCW,INF769K01036,INF769K01028
 107580,DWS FIXED TERM FUND SERIES 45 Inst Gr,,
 107581,DWS FIXED TERM FUND SERIES 45 Reg Div,,
 107583,DWS FIXED TERM FUND SERIES 45 Reg Gr,,
@@ -8440,7 +8440,7 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 111644,Mirae Asset Liquid Fund - Regular Plan - Weekly IDCW,INF769K01PC4,INF769K01812
 111645,Mirae Asset Liquid Fund - Regular Plan - Monthly IDCW,INF769K01838,INF769K01820
 111646,Mirae Asset Liquid Fund - Regular Plan - Growth,INF769K01788,
-111647,Mirae Asset Liquid Fund - Regular - Daily IDCW,,INF769K01804
+111647,Mirae Asset Liquid Fund - Regular Plan - Daily IDCW,,INF769K01804
 111648,Mirae Asset Cash Management Fund - Bonus,,
 111665,ICICI Prudential S.M.A.R.T.(Structured Methodology Aiming at Returns over Tenure) Fund-Series B- 15 Months-Retail Growth,,
 111667,ICICI Prudential S.M.A.R.T.(Structured Methodology Aiming at Returns over Tenure) Fund-Series B- 15 Months- Retail Dividend,,
@@ -10527,8 +10527,8 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 114927,Reliance Fixed Horizon Fund - XVIII - Series 7 - Growth Option,,
 114928,Reliance Fixed Horizon Fund - XVIII - Series 7 - Dividend Payout Option,,
 114929,ICICI Prudential Interval Fund II Quarterly Interval Plan D - Quarterly Dividend Payout,,
-114930,Mirae Asset Great Consumer Fund Regular IDCW,INF769K01150,INF769K01143
-114931,Mirae Asset Great Consumer Fund - Regular Plan - Growth option,INF769K01135,
+114930,Mirae Asset Great Consumer Fund - Regular Plan - IDCW,INF769K01150,INF769K01143
+114931,Mirae Asset Great Consumer Fund - Regular Plan - Growth,INF769K01135,
 114932,TFMP Series 31 Scheme C- Periodic Dividend Payout Option,,
 114933,TFMP Series 31 Scheme C- Growth Option,,
 114934,Baroda Pioneer 380 Day Fixed Maturity plan - Series 1 - Dividend Option,,
@@ -13832,7 +13832,7 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 118822,Indiabulls Gilt Fund - Indirect Plan - Fortnightly Dividend Option,,
 118823,Indiabulls Gilt Fund - Indirect Plan - Monthly Dividend Option,,
 118825,Mirae Asset Large Cap Fund - Direct Plan - Growth,INF769K01AX2,
-118826,Mirae Asset Large Cap Fund Direct IDCW,INF769K01AY0,INF769K01AZ7
+118826,Mirae Asset Large Cap Fund - Direct Plan - IDCW,INF769K01AY0,INF769K01AZ7
 118828,Mirae Asset Global Commodity Stocks - Direct Plan - Growth,,
 118829,Mirae Asset Global Commodity Stocks - Direct Plan - Dividend,,
 118831,Mirae Asset China Advantage Fund - Direct Plan - Growth,,
@@ -13840,7 +13840,7 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 118834,Mirae Asset Large & Midcap Fund - Direct Plan - Growth,INF769K01BI1,
 118835,Mirae Asset Large & Midcap Fund - Direct Plan - IDCW,INF769K01BJ9,INF769K01BK7
 118837,Mirae Asset Great Consumer Fund - Direct Plan - Growth,INF769K01BL5,
-118838,Mirae Asset Great Consumer Fund Direct IDCW,INF769K01BM3,INF769K01BN1
+118838,Mirae Asset Great Consumer Fund - Direct Plan - IDCW,INF769K01BM3,INF769K01BN1
 118840,Mirae Asset Low Duration Fund - Direct Plan - Growth,INF769K01BO9,
 118841,Mirae Asset Low Duration Fund - Direct Plan - Monthly IDCW,INF769K01BP6,INF769K01BT8
 118842,Mirae Asset Low Duration Fund - Direct Plan - Quarterly IDCW,INF769K01BQ4,INF769K01BU6
@@ -13852,8 +13852,8 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 118850,Mirae Asset Short Term Bond Fund - Direct Plan - Weekly Dividend,,
 118857,Mirae Asset Liquid Fund - Direct Plan - Growth,,
 118859,Mirae Asset Liquid Fund - Direct Plan - Growth,INF769K01CM1,
-118860,Mirae Asset Liquid Fund - Direct Plan -Monthly IDCW,INF769K01CN9,INF769K01CQ2
-118861,Mirae Asset Liquid Fund - Direct Plan -Daily IDCW,,INF769K01CO7
+118860,Mirae Asset Liquid Fund - Direct Plan - Monthly IDCW,INF769K01CN9,INF769K01CQ2
+118861,Mirae Asset Liquid Fund - Direct Plan - Daily IDCW,,INF769K01CO7
 118862,Mirae Asset Liquid Fund - Direct Plan - Weekly IDCW,INF769K01PD2,INF769K01CP4
 118864,DSP BlackRock Dual Advantage Fund - Series 11 - 36M - Regular Plan - Growth Option (Maturity Date 04-Apr-2016),,
 118865,DSP BlackRock Dual Advantage Fund - Series 11 - 36M - Regular Plan - Dividend Payout Option (Maturity Date 04-Apr-2016),,
@@ -15303,7 +15303,7 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 120414,JM Floater Short Term Fund (Direct) - Daily Dividend Option,,
 120415,JM Floater Short Term Fund (Direct) - Growth Option,,
 120416,Invesco India ELSS Tax Saver Fund - Direct Plan - Growth,INF205K01NT8,
-120417,Invesco India ELSS Tax Saver Fund - Direct Plan - IDCW Payout,INF205K01NR2,INF205K01NS0
+120417,Invesco India ELSS Tax Saver Fund - Direct Plan - IDCW Payout,INF205K01NR2,
 120419,JM G-Sec Fund - (Direct) Bonus Option - Principal Units,,
 120420,JM G-Sec Fund - (Direct) - Quarterly Dividend Option,,
 120421,JM G-Sec Fund - (Direct) - Growth Option,,
@@ -27321,10 +27321,10 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 140762,SBI DEBT FUND SERIES B - 49 (1170 DAYS) - REGULAR PLAN - DIVIDEND PAYOUT,,
 140763,SBI DEBT FUND SERIES B - 49 (1170 DAYS) - REGULAR PLAN - GROWTH,,
 140764,SBI DEBT FUND SERIES B - 49 (1170 DAYS) - DIRECT PLAN - DIVIDEND PAYOUT,,
-140769,Mirae Asset Dynamic Bond Fund -Direct Plan -Growth,INF769K01DR8,
-140770,Mirae Asset Dynamic Bond Fund Direct IDCW,INF769K01DS6,INF769K01DT4
-140771,Mirae Asset Dynamic Bond Fund-Regular Plan Growth,INF769K01DO5,
-140772,Mirae Asset Dynamic Bond Fund Regular IDCW,INF769K01DP2,INF769K01DQ0
+140769,Mirae Asset Dynamic Bond Fund - Direct Plan - Growth,INF769K01DR8,
+140770,Mirae Asset Dynamic Bond Fund - Direct Plan - IDCW,INF769K01DS6,INF769K01DT4
+140771,Mirae Asset Dynamic Bond Fund - Regular Plan - Growth,INF769K01DO5,
+140772,Mirae Asset Dynamic Bond Fund - Regular Plan - IDCW,INF769K01DP2,INF769K01DQ0
 140773,ICICI Prudential Fixed Maturity Plan - Series 80 - 1150 Days Plan N -Direct Plan - Cumulative Option,,
 140774,ICICI Prudential Fixed Maturity Plan - Series 80 - 1150 Days Plan N - Direct Plan - Dividend Option,,
 140775,ICICI Prudential Fixed Maturity Plan - Series 80 - 1150 Days Plan N - Dividend Option,,
@@ -29573,10 +29573,10 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 143780,Franklin India Fixed Maturity Plans - Series 3 Plan F (1098 days) - Growth Direct,,
 143781,Franklin India Fixed Maturity Plans Series 3- Plan F (1098 days)- Quarterly Dividend,,
 143782,Franklin India Fixed Maturity Plans - Series 3 - Plan F 1098 days - IDCW ,,
-143783,Mirae Asset Healthcare Fund Direct Growth,INF769K01ED6,
-143784,Mirae Asset Healthcare Fund Direct IDCW,INF769K01EE4,INF769K01EF1
-143785,Mirae Asset Healthcare Fund -Regular Growth,INF769K01EA2,
-143786,Mirae Asset Healthcare Fund Regular IDCW,INF769K01EB0,INF769K01EC8
+143783,Mirae Asset Healthcare Fund - Direct Plan - Growth,INF769K01ED6,
+143784,Mirae Asset Healthcare Fund - Direct Plan - IDCW,INF769K01EE4,INF769K01EF1
+143785,Mirae Asset Healthcare Fund - Regular Plan - Growth,INF769K01EA2,
+143786,Mirae Asset Healthcare Fund - Regular Plan - IDCW,INF769K01EB0,INF769K01EC8
 143787,Navi Flexi Cap Fund - Regular Plan - Growth,INF959L01EE9,
 143788,NAVI FLEXI CAP FUND - REGULAR PLAN QUARTERLY IDCW PAYOUT,INF959L01EJ8,INF959L01EK6
 143789,NAVI FLEXI CAP FUND - REGULAR PLAN NORMAL IDCW PAYOUT,INF959L01EF6,INF959L01EG4
@@ -30935,10 +30935,10 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 145686,Aditya Birla Sun Life Fixed Term Plan - Series RR (1240 days) -  Direct - Payout of IDCW,,
 145687,Aditya Birla Sun Life Fixed Term Plan - Series RR (1240 days) -  Regular - Payout of IDCW,,
 145688,Aditya Birla Sun Life Fixed Term Plan - Series RR (1240 days) - Direct Plan-Growth,,
-145693,Mirae Asset Equity Savings Fund- Direct Plan- Growth,INF769K01EK1,
-145694,Mirae Asset Equity Savings Fund Direct IDCW,INF769K01EJ3,INF769K01EM7
-145695,Mirae Asset Equity Savings Fund- Regular Plan- Growth,INF769K01EI5,
-145696,Mirae Asset Equity Savings Fund Regular IDCW,INF769K01EH7,INF769K01EL9
+145693,Mirae Asset Equity Savings Fund - Direct Plan - Growth,INF769K01EK1,
+145694,Mirae Asset Equity Savings Fund - Direct Plan - IDCW,INF769K01EJ3,INF769K01EM7
+145695,Mirae Asset Equity Savings Fund - Regular Plan - Growth,INF769K01EI5,
+145696,Mirae Asset Equity Savings Fund - Regular Plan - IDCW,INF769K01EH7,INF769K01EL9
 145698,Invesco India Fixed Maturity Plan - Series 33 - Plan D - Regular - Growth,,
 145699,Invesco India Fixed Maturity Plan - Series 33 - Plan D - Direct - Growth,,
 145701,ICICI Prudential Fixed Maturity Plan - Series 84 - 1272 Days Plan Q - Direct Plan Cumulative Option,,
@@ -31890,10 +31890,10 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 147200,SBI Fixed Maturity Plan (FMP) - Series 4 - Direct Plan - Dividend Payout,,
 147201,SBI Fixed Maturity Plan (FMP) - Series 4 (365 Days) - Regular Plan - Dividend Payout,,
 147202,SBI Fixed Maturity Plan (FMP) - Series 4 (365 Days) - Regular Plan - Growth,,
-147203,Mirae Asset Focused Fund Regular Plan Growth,INF769K01ES4,
-147204,Mirae Asset Focused Fund Regular IDCW,INF769K01ER6,INF769K01EV8
-147205,Mirae Asset Focused Fund Direct IDCW,INF769K01ET2,INF769K01EW6
-147206,Mirae Asset Focused Fund Direct Plan Growth,INF769K01EU0,
+147203,Mirae Asset Focused Fund - Regular Plan - Growth,INF769K01ES4,
+147204,Mirae Asset Focused Fund - Regular Plan - IDCW,INF769K01ER6,INF769K01EV8
+147205,Mirae Asset Focused Fund - Direct Plan - IDCW,INF769K01ET2,INF769K01EW6
+147206,Mirae Asset Focused Fund - Direct Plan - Growth,INF769K01EU0,
 147207,Aditya Birla Sun Life Fixed Term Plan - Series SN (1099 days) - Regular Plan-Growth,,
 147208,Aditya Birla Sun Life Fixed Term Plan - Series SN (1099 days)  -Regular - Payout of IDCW,,
 147209,Aditya Birla Sun Life Fixed Term Plan - Series SN (1099 days) -Direct - Payout of IDCW,,
@@ -32081,7 +32081,7 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 147442,Motilal Oswal Liquid Fund - Unclaimed Dividend - Greater than 3 years,,
 147443,Motilal Oswal Liquid Fund - Unclaimed Redemption - Greater than 3 years,,
 147444,Motilal Oswal Liquid Fund - Unclaimed Redemption - Upto 3 years,,
-147445,Mirae Asset Midcap Fund- Direct Growth Option,INF769K01FA9,
+147445,Mirae Asset Midcap Fund - Direct Plan - Growth,INF769K01FA9,
 147446,Mahindra Manulife Aggressive Hybrid Fund - Direct Plan -Growth,INF174V01788,
 147447,Mahindra Manulife Aggressive Hybrid Fund - Regular Plan - Growth,INF174V01754,
 147448,Mahindra Manulife Aggressive Hybrid Fund - Direct Plan - Monthly IDCW,INF174V01804,INF174V01796
@@ -32108,9 +32108,9 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 147473,Kotak Focused Fund- Direct Plan- Growth option,INF174KA1EN7,
 147475,Kotak Focused Fund-Direct Plan- Income Distribution cum capital withdrawal option,INF174KA1EP2,INF174KA1EO5
 147477,Kotak Focused Fund- Regular plan _ Growth Option,INF174KA1EK3,
-147478,Mirae Asset Midcap Fund Direct IDCW,INF769K01EZ9,INF769K01FC5
-147479,Mirae Asset Midcap Fund - Regular Plan-Growth Option,INF769K01EY2,
-147480,Mirae Asset Midcap Fund Regular IDCW,INF769K01EX4,INF769K01FB7
+147478,Mirae Asset Midcap Fund - Direct Plan - IDCW,INF769K01EZ9,INF769K01FC5
+147479,Mirae Asset Midcap Fund - Regular Plan - Growth,INF769K01EY2,
+147480,Mirae Asset Midcap Fund - Regular Plan - IDCW,INF769K01EX4,INF769K01FB7
 147481,Parag Parikh ELSS Tax Saver Fund- Direct Growth,INF879O01100,
 147482,Parag Parikh ELSS Tax Saver Fund- Regular Growth,INF879O01092,
 147483,ICICI Prudential Nifty Bank ETF,INF109KC15I8,
@@ -32328,14 +32328,14 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 147733,Mahindra Manulife Ultra Short Duration Fund - Direct Plan - Daily IDCW,,INF174V01895
 147734,Mahindra Manulife Ultra Short Duration Fund - Regular Plan - Growth,INF174V01853,
 147735,Aditya Birla Sun Life Nifty Bank ETF,INF209KB17D5,
-147736,Mirae Asset Overnight Fund Direct Plan Growth,INF769K01FG6,
-147737,Mirae Asset Overnight Fund Direct Daily IDCW,,INF769K01FJ0
-147738,Mirae Asset Overnight Fund Direct Monthly IDCW,INF769K01FF8,INF769K01FI2
-147739,Mirae Asset Overnight Fund Regular Plan Growth,INF769K01FE1,
-147740,Mirae Asset Overnight Fund Direct Weekly IDCW,,INF769K01FK8
-147741,Mirae Asset Overnight Fund Regular Weekly IDCW,,INF769K01FM4
-147742,Mirae Asset Overnight Fund Regular Monthly IDCW,INF769K01FD3,INF769K01FH4
-147743,Mirae Asset Overnight Fund Regular Daily  IDCW ,,INF769K01FL6
+147736,Mirae Asset Overnight Fund - Direct Plan - Growth,INF769K01FG6,
+147737,Mirae Asset Overnight Fund - Direct Plan - Daily IDCW,,INF769K01FJ0
+147738,Mirae Asset Overnight Fund - Direct Plan - Monthly IDCW,INF769K01FF8,INF769K01FI2
+147739,Mirae Asset Overnight Fund - Regular Plan - Growth,INF769K01FE1,
+147740,Mirae Asset Overnight Fund - Direct Plan - Weekly IDCW,,INF769K01FK8
+147741,Mirae Asset Overnight Fund - Regular Plan - Weekly IDCW,,INF769K01FM4
+147742,Mirae Asset Overnight Fund - Regular Plan - Monthly IDCW,INF769K01FD3,INF769K01FH4
+147743,Mirae Asset Overnight Fund - Regular Plan - Daily IDCW,,INF769K01FL6
 147744,SBI Fixed Maturity Plan (FMP) - Series 21 (1109 Days) - Direct Plan - Growth,,
 147745,SBI Fixed Maturity Plan (FMP) - Series 21 (1109 Days) - Regular Plan - Growth,,
 147746,SBI Fixed Maturity Plan (FMP) - Series 21 (1109 Days) - Direct Plan - Income Distribution cum Capital Withdrawal Option (IDCW),,
@@ -32876,10 +32876,10 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 148397,IL&FS Infrastructure Debt Fund Series 2A - Growth - Direct,INF613Q01140,
 148398,IL&FS Infrastructure Debt Fund Series 2B - Growth - Direct,INF613Q01157,
 148399,IL&FS Infrastructure Debt Fund Series 2C - Growth - Direct,INF613Q01165,
-148400,Mirae Asset Arbitrage Fund Regular Growth,INF769K01FP7,
-148401,Mirae Asset Arbitrage Fund Direct Growth,INF769K01FS1,
-148402,Mirae Asset Arbitrage Fund Direct IDCW,INF769K01FR3,INF769K01FT9
-148403,Mirae Asset Arbitrage Fund Regular IDCW,INF769K01FO0,INF769K01FQ5
+148400,Mirae Asset Arbitrage Fund - Regular Plan - Growth,INF769K01FP7,
+148401,Mirae Asset Arbitrage Fund - Direct Plan - Growth,INF769K01FS1,
+148402,Mirae Asset Arbitrage Fund - Direct Plan - IDCW,INF769K01FR3,INF769K01FT9
+148403,Mirae Asset Arbitrage Fund - Regular Plan - IDCW,INF769K01FO0,INF769K01FQ5
 148404,BANK OF INDIA Flexi Cap Fund Direct Plan -Growth,INF761K01FF5,
 148405,BANK OF INDIA Flexi Cap Fund Regular Plan -Growth,INF761K01FI9,
 148406,BANK OF INDIA Flexi Cap Fund Direct Plan -IDCW,INF761K01FE8,INF761K01FG3
@@ -32995,10 +32995,10 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 148522,Principal Large Cap Fund - Regular Income Distribution CUM Capital Withdrawal Option,,
 148524,Principal Large Cap Fund - Direct Growth,,
 148525,Principal Large Cap Fund - Direct Income Distribution CUM Capital Withdrawal Option,,
-148529,Mirae Asset Ultra Short Duration Fund Direct Growth,INF769K01GK6,
-148530,Mirae Asset Ultra Short Duration Fund Regular Growth,INF769K01GH2,
-148531,Mirae Asset Ultra Short Duration Fund Regular IDCW,INF769K01GG4,INF769K01GI0
-148532,Mirae Asset Ultra Short Duration Fund Direct IDCW,INF769K01GJ8,INF769K01GL4
+148529,Mirae Asset Ultra Short Duration Fund - Direct Plan - Growth,INF769K01GK6,
+148530,Mirae Asset Ultra Short Duration Fund - Regular Plan - Growth,INF769K01GH2,
+148531,Mirae Asset Ultra Short Duration Fund - Regular Plan - IDCW,INF769K01GG4,INF769K01GI0
+148532,Mirae Asset Ultra Short Duration Fund - Direct Plan - IDCW,INF769K01GJ8,INF769K01GL4
 148533,ITI Banking & PSU Debt Fund - Regular Plan - IDCW Option,INF00XX01846,INF00XX01853
 148534,ITI Banking & PSU Debt Fund - Direct Plan - Growth Option,INF00XX01861,
 148535,ITI Banking & PSU Debt Fund - Regular Plan - Growth Option,INF00XX01838,
@@ -33029,10 +33029,10 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 148569,Mahindra Manulife Focused Fund - Direct Plan - IDCW,INF174V01AI3,INF174V01AH5
 148571,Mahindra Manulife Focused Fund - Regular Plan - Growth,INF174V01AD4,
 148572,Mirae Asset Nifty 100 ESG Sector Leaders ETF,INF769K01GS9,
-148573,Mirae Asset Nifty 100 ESG Sector Leaders Fund  of Fund Regular IDCW,INF769K01GM2,INF769K01GO8
-148574,Mirae Asset Nifty 100 ESG Sector Leaders Fund of Fund Direct Growth,INF769K01GQ3,
-148575,Mirae Asset Nifty 100 ESG Sector Leaders Fund  of Fund Direct IDCW,INF769K01GP5,INF769K01GR1
-148576,Mirae Asset Nifty 100 ESG Sector Leaders Fund of Fund Regular Growth,INF769K01GN0,
+148573,Mirae Asset Nifty 100 ESG Sector Leaders Fund of Fund - Regular Plan - IDCW,INF769K01GM2,INF769K01GO8
+148574,Mirae Asset Nifty 100 ESG Sector Leaders Fund of Fund - Direct Plan - Growth,INF769K01GQ3,
+148575,Mirae Asset Nifty 100 ESG Sector Leaders Fund of Fund - Direct Plan - IDCW,INF769K01GP5,INF769K01GR1
+148576,Mirae Asset Nifty 100 ESG Sector Leaders Fund of Fund - Regular Plan - Growth,INF769K01GN0,
 148585,Nippon India ETF Nifty CPSE Bond Plus SDL Sep2024 50:50,,
 148590,Union Aggressive Hybrid Fund - Regular Plan - IDCW Option,INF582M01HE0,INF582M01HD2
 148591,Union Aggressive Hybrid Fund - Regular Plan - Growth Option,INF582M01HC4,
@@ -33063,10 +33063,10 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 148618,UTI Small Cap Fund - Direct Plan - Growth Option,INF789F1AUQ1,
 148619,UTI Small Cap Fund - Direct Plan - IDCW (Payout),INF789F1AUR9,
 148620,Motilal Oswal Nifty 5 year Benchmark G-sec ETF,INF247L01AK4,
-148621,Mirae Asset Banking and Financial Services Fund Regular Growth,INF769K01GU5,
-148622,Mirae Asset Banking and Financial Services Fund Regular IDCW,INF769K01GT7,INF769K01GV3
-148623,Mirae Asset Banking and Financial Services Fund Direct Growth,INF769K01GX9,
-148624,Mirae Asset Banking and Financial Services Fund Direct  IDCW,INF769K01GW1,INF769K01GY7
+148621,Mirae Asset Banking and Financial Services Fund - Regular Plan - Growth,INF769K01GU5,
+148622,Mirae Asset Banking and Financial Services Fund - Regular Plan - IDCW,INF769K01GT7,INF769K01GV3
+148623,Mirae Asset Banking and Financial Services Fund - Direct Plan - Growth,INF769K01GX9,
+148624,Mirae Asset Banking and Financial Services Fund - Direct Plan - IDCW,INF769K01GW1,INF769K01GY7
 148625,Baroda BNP Paribas Banking and PSU Bond Fund-Regular Plan -Growth Option,INF955L01JX6,
 148626,Baroda BNP Paribas Banking and PSU Bond Fund-Regular Plan -Monthly IDCW Option,INF955L01KA2,INF955L01KB0
 148627,Baroda BNP Paribas Banking and PSU Bond Fund-Regular Plan-Quarterly IDCW Option,INF955L01JY4,INF955L01JZ1
@@ -33185,10 +33185,10 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 148752,Invesco India ESG Integration Strategy Fund - Direct Plan - IDCW (Payout / Reinvestment),INF205KA1320,INF205KA1346
 148753,Invesco India ESG Integration Strategy Fund - Regular Plan - Growth,INF205KA1304,
 148754,Invesco India ESG Integration Strategy Fund - Regular Plan - IDCW (Payout / Reinvestment),INF205KA1296,INF205KA1312
-148755,Mirae Asset Corporate Bond Fund Direct Growth Plan,INF769K01HD9,
-148756,Mirae Asset Corporate Bond Fund Direct IDCW,INF769K01HC1,INF769K01HE7
-148757,Mirae Asset Corporate Bond Fund Regular Growth,INF769K01HA5,
-148758,Mirae Asset Corporate Bond Fund Regular IDCW,INF769K01GZ4,INF769K01HB3
+148755,Mirae Asset Corporate Bond Fund - Direct Plan - Growth,INF769K01HD9,
+148756,Mirae Asset Corporate Bond Fund - Direct Plan - IDCW,INF769K01HC1,INF769K01HE7
+148757,Mirae Asset Corporate Bond Fund - Regular Plan - Growth,INF769K01HA5,
+148758,Mirae Asset Corporate Bond Fund - Regular Plan - IDCW,INF769K01GZ4,INF769K01HB3
 148759,SBI US Specific Equity Active FoF- Regular Plan - Income Distribution cum Capital Withdrawal Option (IDCW),INF200KA1U02,INF200KA1U10
 148760,SBI US Specific Equity Active FoF - Direct Plan - Growth,INF200KA1U28,
 148761,SBI US Specific Equity Active FoF- Direct Plan - Income Distribution cum Capital Withdrawal Option (IDCW),INF200KA1U36,INF200KA1U44
@@ -33447,10 +33447,10 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 149109,SBI Fixed Maturity Plan (FMP) - Series 48 (1458 Days) - Regular Plan - Growth,INF200KA1Y08,
 149110,SBI Fixed Maturity Plan (FMP) - Series 48 (1458 Days) - Regular Plan - Income Distribution cum Capital Withdrawal Option (IDCW),INF200KA1Y16,
 149111,SBI Fixed Maturity Plan (FMP) - Series 48 (1458 Days) - Direct Plan - Growth,INF200KA1Y24,
-149112,Mirae Asset Money Market Fund Direct Growth,INF769K01HN8,
-149113,Mirae Asset Money Market Fund Direct IDCW,INF769K01HM0,INF769K01HO6
-149114,Mirae Asset Money Market Fund Regular IDCW,INF769K01HJ6,INF769K01HL2
-149115,Mirae Asset Money Market Fund Regular Growth,INF769K01HK4,
+149112,Mirae Asset Money Market Fund - Direct Plan - Growth,INF769K01HN8,
+149113,Mirae Asset Money Market Fund - Direct Plan - IDCW,INF769K01HM0,INF769K01HO6
+149114,Mirae Asset Money Market Fund - Regular Plan - IDCW,INF769K01HJ6,INF769K01HL2
+149115,Mirae Asset Money Market Fund - Regular Plan - Growth,INF769K01HK4,
 149116,Union Money Market Fund - Regular Plan -  Growth Option,INF582M01HO9,
 149117,Union Money Market Fund - Direct Plan -  Growth Option,INF582M01HG5,
 149118,Union Money Market Fund - Regular Plan - Daily IDCW Option,,INF582M01HP6
@@ -33662,8 +33662,8 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 149377,Axis Fixed Term Plan Series 109 (111 Days) - Regular Plan - Quarterly IDCW,,
 149378,Axis Fixed Term Plan Series 109 (111 Days) - Regular Plan - Growth Option,,
 149379,Mirae Asset Hang Seng TECH ETF,INF769K01HS7,
-149380,Mirae Asset Hang Seng TECH ETF Fund of Fund Regular Plan - Growth Option,INF769K01HT5,
-149381,Mirae AssetHang Seng TECH ETF Fund of Fund Direct Plan - Growth Option,INF769K01HU3,
+149380,Mirae Asset Hang Seng TECH ETF Fund of Fund - Regular Plan - Growth,INF769K01HT5,
+149381,Mirae Asset Hang Seng TECH ETF Fund of Fund - Direct Plan - Growth,INF769K01HU3,
 149382,Axis Multicap Fund - Regular Plan - Growth,INF846K016E3,
 149383,Axis Multicap Fund - Direct Growth,INF846K013E0,
 149384,Axis Multicap Fund - Direct Plan - IDCW,INF846K014E8,INF846K015E5
@@ -33866,7 +33866,7 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 149783,Aditya Birla Sun Life Silver ETF FOF-Regular Growth,INF209KB13F9,
 149784,Aditya Birla Sun Life Silver ETF FOF-Regular IDCW,INF209KB14F7,INF209KB15F4
 149786,Mirae Asset Nifty India Manufacturing ETF,INF769K01IB1,
-149787,Mirae Asset Nifty India Manufacturing ETF FOF - Direct Plan- IDCW,INF769K01HY5,INF769K01IA3
+149787,Mirae Asset Nifty India Manufacturing ETF FOF - Direct Plan - IDCW,INF769K01HY5,INF769K01IA3
 149788,Mirae Asset Nifty India Manufacturing ETF FOF - Regular Plan - Growth,INF769K01HW9,
 149789,Mirae Asset Nifty India Manufacturing ETF FOF - Regular Plan - IDCW,INF769K01HV1,INF769K01HX7
 149790,Mirae Asset Nifty India Manufacturing ETF FOF - Direct Plan - Growth,INF769K01HZ2,
@@ -34179,7 +34179,7 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 150355,Aditya Birla Sun Life Crisil IBX 60:40 SDL+AAA PSU-APR 2025 Index Fund-Direct IDCW,INF209KB14I1,
 150356,Aditya Birla Sun Life Crisil IBX 60:40 SDL+AAA PSU-APR 2025 Index Fund-Regular IDCW,INF209KB12I5,
 150357,Aditya Birla Sun Life Crisil IBX 60:40 SDL+AAA PSU-APR 2025 Index Fund-Direct Growth,INF209KB13I3,
-150358,Mirae Asset Nifty SDL Jun 2027 Index Fund -Direct Plan - Growth,INF769K01IH8,
+150358,Mirae Asset Nifty SDL Jun 2027 Index Fund - Direct Plan - Growth,INF769K01IH8,
 150359,Mirae Asset Nifty SDL Jun 2027 Index Fund - Direct Plan - IDCW,INF769K01IG0,INF769K01II6
 150360,Mirae Asset Nifty SDL Jun 2027 Index Fund - Regular Plan - Growth,INF769K01IE5,
 150361,Mirae Asset Nifty SDL Jun 2027 Index Fund - Regular Plan - IDCW,INF769K01ID7,INF769K01IF2
@@ -34271,10 +34271,10 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 150467,ICICI Prudential Nifty IT Index Fund - IDCW,INF109KC11E6,INF109KC12E4
 150468,ICICI Prudential Nifty IT Index Fund - Direct Plan - Growth,INF109KC13E2,
 150469,ICICI Prudential Nifty IT Index Fund - Direct Plan - IDCW,INF109KC14E0,INF109KC15E7
-150470,Mirae Asset Balanced Advantage Fund Direct Plan- Growth,INF769K01IN6,
-150471,Mirae Asset Balanced Advantage Fund Direct Plan- IDCW,INF769K01IM8,INF769K01IO4
-150473,Mirae Asset Balanced Advantage Fund Regular Plan- Growth,INF769K01IK2,
-150474,Mirae Asset Balanced Advantage Fund Regular Plan IDCW,INF769K01IJ4,INF769K01IL0
+150470,Mirae Asset Balanced Advantage Fund - Direct Plan - Growth,INF769K01IN6,
+150471,Mirae Asset Balanced Advantage Fund - Direct Plan - IDCW,INF769K01IM8,INF769K01IO4
+150473,Mirae Asset Balanced Advantage Fund - Regular Plan - Growth,INF769K01IK2,
+150474,Mirae Asset Balanced Advantage Fund - Regular Plan - IDCW,INF769K01IJ4,INF769K01IL0
 150476,HDFC NIFTY 100 ETF - Growth Option,INF179KC1HR4,
 150477,HDFC NIFTY NEXT 50 ETF - Growth Option,INF179KC1HS2,
 150478,Franklin India Balanced Advantage Fund- IDCW,INF090I01WO0,INF090I01WP7
@@ -35242,8 +35242,8 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 151691,Mirae Asset Nifty SDL June 2028 Index Fund - Direct Plan - Growth,INF769K01JZ8,
 151692,Mirae Asset Nifty SDL June 2028 Index Fund - Direct Plan - IDCW,INF769K01JY1,INF769K01KA9
 151693,Mirae Asset Nifty SDL June 2028 Index Fund - Regular Plan - IDCW,INF769K01JV7,INF769K01JX3
-151694,Mirae Asset Nifty SDL June 2028 Index Fund -Regular Plan - Growth,INF769K01JW5,
-151695,Mirae Asset Nifty 8-13 yr Gsec ETF,INF769K01KF8,
+151694,Mirae Asset Nifty SDL June 2028 Index Fund - Regular Plan - Growth,INF769K01JW5,
+151695,Mirae Asset Nifty 8-13 yr G-Sec ETF,INF769K01KF8,
 151700,Aditya Birla Sun Life Fixed Term Plan - Series UJ (1110 days) - Direct Plan - Growth Option,INF209KB13V6,
 151701,Aditya Birla Sun Life Fixed Term Plan - Series UJ (1110 days) - Regular Plan - Payout of IDCW Option,INF209KB12V8,
 151702,Aditya Birla Sun Life Fixed Term Plan - Series UJ (1110 days) - Direct Plan - Payout of IDCW Option,INF209KB14V4,
@@ -37767,3 +37767,6 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 154614,Bajaj Finserv Money Market Fund-Direct Plan-Weekly-IDCW,INF0QA701CK6,
 154624,Choice Overnight Fund -Direct -Unclaimed Less than 3 years Redemption Plan,,
 154626,Mirae Asset BSE LargeMid (60:40) Stable Dividend 50 ETF,INF769K01RK3,
+154632,JioBlackRock Large Cap Fund - Regular Plan - Growth Option,INF22M001192,
+154633,JioBlackRock Nifty 50 Index Fund - Regular Plan - Growth Option,INF22M001200,
+154641,JioBlackRock Flexi Cap Fund - Regular Plan - Growth Option,INF22M001325,
