@@ -38,18 +38,18 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 100067,Aditya Birla Sun Life Tax Plan -Regular - IDCW,,
 100068,BARODA ELSS 96 - Plan A - IDCW,,
 100069,BARODA PIONEER DIVERSIFIED FUND,,
-100077,DSP Bond Fund - Regular Plan - IDCW,INF740K01565,INF740K01995
-100078,DSP Bond Fund - Regular Plan - Growth,INF740K01557,
-100079,DSP Bond Fund - Regular Plan - Monthly IDCW,INF740K01573,INF740K01AA1
+100077,DSP Medium Term Fund - Regular Plan - IDCW,INF740K01565,INF740K01995
+100078,DSP Medium Term Fund - Regular Plan - Growth,INF740K01557,
+100079,DSP Medium Term Fund - Regular Plan - Monthly IDCW,INF740K01573,INF740K01AA1
 100080,DSP Flexi Cap Fund - Regular Plan - IDCW,INF740K01011,INF740K01029
 100081,DSP Aggressive Hybrid Fund - Regular Plan - Growth,INF740K01318,
 100082,DSP Aggressive Hybrid Fund - Regular Plan - IDCW,INF740K01326,INF740K01334
 100084,DSP Gilt Fund - Regular Plan - Growth,INF740K01615,
 100085,DSP Gilt Fund - Regular Plan - IDCW,INF740K01607,INF740K01AD5
 100086,DSP Gilt Fund - Regular Plan - Monthly IDCW,INF740K01623,INF740K01AE3
-100087,DSP Savings Fund - Regular Plan - Growth,INF740K01714,
-100088,DSP Savings Fund - Regular Plan - IDCW,INF740K01706,INF740K01AJ2
-100089,DSP Savings Fund - Regular Plan - Monthly IDCW,INF740K01722,INF740K01AK0
+100087,DSP Money Market Fund - Regular Plan - Growth,INF740K01714,
+100088,DSP Money Market Fund - Regular Plan - IDCW,INF740K01706,INF740K01AJ2
+100089,DSP Money Market Fund - Regular Plan - Monthly IDCW,INF740K01722,INF740K01AK0
 100090,DSP BlackRock Technology.com   Fund - Regular Plan - Growth,,
 100119,HDFC Balanced Advantage Fund - Regular Plan - Growth Option,INF179K01830,
 100120,HDFC Balanced Advantage Fund - Regular Plan - IDCW Option,INF179K01814,INF179K01822
@@ -219,8 +219,8 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 100489,Franklin India Govt.Sec. Fund-Treasury Plan(Growth Option),,
 100490,Franklin India Govt.Sec. Fund-PF Plan - Growth,,
 100491,Franklin India Govt.Sec. Fund-PF Plan - Dividend,,
-100493,Franklin India Government Securities Fund - Regular Plan - Growth,INF090I01CU9,
-100494,Franklin India Government Securities Fund - Regular Plan - Quarterly IDCW,INF090I01CS3,INF090I01CT1
+100493,Franklin India Gilt Fund - Regular Plan - Growth,INF090I01CU9,
+100494,Franklin India Gilt Fund - Regular Plan - Quarterly IDCW,INF090I01CS3,INF090I01CT1
 100495,Franklin India Govt.Sec. Fund-Long Term Plan - Bonus,,
 100496,Templeton India Value Fund - Regular Plan - Growth,INF090I01296,
 100497,Templeton India Value Fund - Regular Plan - IDCW,INF090I01270,INF090I01288
@@ -239,11 +239,11 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 100524,Franklin India Opportunities Fund - Regular Plan - IDCW,INF090I01858,INF090I01866
 100525,Franklin India ELSS Tax Saver Fund - Regular Plan - IDCW,INF090I01783,INF090I01791
 100526,Franklin India ELSS Tax Saver Fund - Regular Plan - Growth,INF090I01775,
-100527,Franklin India Corporate Debt Fund - Regular Plan - Annual IDCW,INF090I01DH4,INF090I01DI2
-100528,Franklin India Corporate Debt Fund - Regular Plan - Growth,INF090I01DG6,
-100529,Franklin India Corporate Debt Fund - Regular Plan - Monthly IDCW,INF090I01DJ0,INF090I01DK8
-100530,Franklin India Corporate Debt Fund - Regular Plan - Quarterly IDCW,INF090I01DL6,INF090I01DM4
-100531,Franklin India Corporate Debt Fund - Regular Plan - Half Yearly IDCW,INF090I01DN2,INF090I01DO0
+100527,Franklin India Corporate Bond Fund - Regular Plan - Annual IDCW,INF090I01DH4,INF090I01DI2
+100528,Franklin India Corporate Bond Fund - Regular Plan - Growth,INF090I01DG6,
+100529,Franklin India Corporate Bond Fund - Regular Plan - Monthly IDCW,INF090I01DJ0,INF090I01DK8
+100530,Franklin India Corporate Bond Fund - Regular Plan - Quarterly IDCW,INF090I01DL6,INF090I01DM4
+100531,Franklin India Corporate Bond Fund - Regular Plan - Half Yearly IDCW,INF090I01DN2,INF090I01DO0
 100532,Franklin India Corporate Debt Fund - Monthly Bonus,,
 100535,Franklin India Retirement Fund - Regular Plan - IDCW,INF090I01528,INF090I01536
 100536,Franklin India Retirement Fund - Regular Plan - Growth,INF090I01510,
@@ -481,8 +481,8 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 101003,SBI CONSTANT MATURITY 10-Year GILT FUND - Regular Plan - IDCW,INF200K01AO7,INF200K01AP4
 101037,Franklin India Index Tax Fund,,
 101042,Tata Gilt Securities Fund - Regular Plan - Growth Option,INF277K01519,
-101044,Franklin India Floating Rate Fund - Regular Plan - Daily IDCW,INF090I01LN5,
-101048,Franklin India Floating Rate Fund - Regular Plan - Growth,INF090I01LM7,
+101044,Franklin India Floating Interest Rates Fund - Regular Plan - Daily IDCW,INF090I01LN5,
+101048,Franklin India Floating Interest Rates Fund - Regular Plan - Growth,INF090I01LM7,
 101049,Tata Gilt Securities Fund - Regular Plan - Payout of IDCW Option,INF277K01DN1,INF277K01535
 101059,SUNDARAM GILT FUND (DIV. OPTION),,
 101065,Quant Mid Cap Fund - Regular Plan - Growth Option,INF966L01176,
@@ -1170,9 +1170,9 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 102445,DSP BlackRock Savings Manager Fund - Conservative - Growth,,
 102446,DSP BlackRock Savings Manager Fund - Conservative - Monthly Dividend,,
 102447,DSP BlackRock Savings Manager Fund - Conservative - Quarterly Dividend,,
-102448,DSP Regular Savings Fund - Regular Plan - Growth,INF740K01441,
-102450,DSP Regular Savings Fund - Regular Plan - Monthly IDCW,INF740K01458,INF740K01466
-102451,DSP Regular Savings Fund - Regular Plan - Quarterly IDCW,INF740K01474,INF740K01482
+102448,DSP Conservative Hybrid Fund - Regular Plan - Growth,INF740K01441,
+102450,DSP Conservative Hybrid Fund - Regular Plan - Monthly IDCW,INF740K01458,INF740K01466
+102451,DSP Conservative Hybrid Fund - Regular Plan - Quarterly IDCW,INF740K01474,INF740K01482
 102452,HDFC Low Duration Fund - Regular Plan - Growth Option,INF179K01442,
 102453,HDFC Low Duration Fund - Regular Plan - Weekly IDCW,INF179K01475,INF179K01483
 102455,Benchmark Fund of Funds-Nifty BeES Plan-Dividend,,
@@ -1695,9 +1695,9 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 103344,ICICI Prudential Liquid Fund - Institutional Option - I,,
 103345,Aditya Birla Fixed Term Plan - Series D-Dividend,,
 103346,Aditya Birla Fixed Term Plan - Series D-Growth,,
-103347,DSP Liquidity Fund - Regular Plan - Growth,INF740K01FK9,
-103348,DSP Liquidity Fund - Regular Plan - Weekly IDCW,INF740K01FM5,INF740K01FL7
-103349,DSP Liquidity Fund - Regular Plan - Daily IDCW,,INF740KA1OE0
+103347,DSP Liquid Fund - Regular Plan - Growth,INF740K01FK9,
+103348,DSP Liquid Fund - Regular Plan - Weekly IDCW,INF740K01FM5,INF740K01FL7
+103349,DSP Liquid Fund - Regular Plan - Daily IDCW,,INF740KA1OE0
 103354,SBI Magnum Debt Fund Series-180 days-3-Dividend,,
 103356,DBS Chola Tax Saver Fund-Dividend Option,,
 103357,DBS Chola Tax Saver Fund-Cumulative Option,,
@@ -2173,9 +2173,9 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 104135,ICICI Prudential FMP series 32 - 3 Mths Plan B - Retail Cumulative Option,,
 104136,ICICI Prudential FMP series 32 - 3 Mths Plan B - Retail Dividend Option,,
 104137,GSSIF-MT-Plan A-Monthly,,
-104138,DSP Ultra Short Fund - Regular Plan - Growth,INF740K01QQ3,
-104139,DSP Ultra Short Fund - Regular Plan - Weekly IDCW Reinvestment,,
-104140,DSP Ultra Short Fund - Regular Plan - Daily IDCW Reinvestment,,INF740KA1NW4
+104138,DSP Ultra Short Term Fund - Regular Plan - Growth,INF740K01QQ3,
+104139,DSP Ultra Short Term Fund - Regular Plan - Weekly IDCW Reinvestment,,
+104140,DSP Ultra Short Term Fund - Regular Plan - Daily IDCW Reinvestment,,INF740KA1NW4
 104141,DSP BlackRock Ultra Short Fund - Institutional Plan - Weekly Dividend,,
 104142,DSP BlackRock Ultra Short Fund - Institutional Plan - Growth,,
 104143,DSP BlackRock Ultra Short Fund - Institutional Plan - Daily Dividend Reinvest,,
@@ -3548,9 +3548,9 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 105664,DSP BlackRock Strategic Bond Fund - Regular Plan - Monthly Dividend,,
 105665,DSP BlackRock Strategic Bond Fund - Regular Plan - Dividend,,
 105666,DSP BlackRock Strategic Bond Fund - Regular Plan - Growth,,
-105667,DSP Strategic Bond Fund - Regular Plan - Monthly IDCW,INF740K01GM3,INF740K01GL5
-105668,DSP Strategic Bond Fund - Regular Plan - IDCW,INF740K01GO9,INF740K01GN1
-105669,DSP Strategic Bond Fund - Regular Plan - Growth,INF740K01GK7,
+105667,DSP Dynamic Term Fund - Regular Plan - Monthly IDCW,INF740K01GM3,INF740K01GL5
+105668,DSP Dynamic Term Fund - Regular Plan - IDCW,INF740K01GO9,INF740K01GN1
+105669,DSP Dynamic Term Fund - Regular Plan - Growth,INF740K01GK7,
 105670,UTI Low Duration Fund - Regular Plan - Discontinued Monthly Dividend,INF789F01OY9,INF789F01OZ6
 105672,DWS INSTA CASH PLUS FUND - Regular Plan BONUS OPTION,,
 105675,JM Fixed Maturity Fund - Series V - Quarterly plan 3 - Regular - Dividend option,,
@@ -3743,7 +3743,7 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 105875,DSP Flexi Cap Fund - Regular Plan - Growth,INF740K01037,
 105876,DSP BlackRock Equity Fund - Institutional Plan - Growth,,
 105877,DSP BlackRock Strategic Bond Fund - Regular Plan - Weekly Dividend,,
-105878,DSP Strategic Bond Fund - Regular Plan - Weekly IDCW,INF740K01GQ4,INF740K01GP6
+105878,DSP Dynamic Term Fund - Regular Plan - Weekly IDCW,INF740K01GQ4,INF740K01GP6
 105879,DBS Chola Fixed Maturity Plan - Series 7 (Quarterly Plan - IV) - Cumulative,,
 105880,DBS Chola Fixed Maturity Plan - Series 7 (Quarterly Plan - IV) - Dividend Payout,,
 105881,Aditya Birla Sun Life Savings Fund-Weekly - retail IDCW,INF209K01MD6,
@@ -5340,11 +5340,11 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 107697,Mirae Asset Savings Fund-Regular Plan- Monthly Dividend,,
 107698,Mirae Asset Savings Fund-Regular Plan- Daily Dividend,,
 107699,Mirae Asset Savings Fund-Regular Plan- Quarterly Dividend,,
-107700,Mirae Asset Low Duration Fund - Regular Plan - Daily IDCW,,INF769K01986
-107701,Mirae Asset Low Duration Fund - Regular Plan - Weekly IDCW,,INF769K01994
-107702,Mirae Asset Low Duration Fund - Regular Plan - Quarterly IDCW,INF769K01978,INF769K01AB8
-107704,Mirae Asset Low Duration Fund - Regular Plan - Monthly IDCW,INF769K01960,INF769K01AA0
-107705,Mirae Asset Low Duration Fund - Regular Plan - Growth,INF769K01937,
+107700,Mirae Asset Ultra Short to Short Term Fund - Regular Plan - Daily IDCW,,INF769K01986
+107701,Mirae Asset Ultra Short to Short Term Fund - Regular Plan - Weekly IDCW,,INF769K01994
+107702,Mirae Asset Ultra Short to Short Term Fund - Regular Plan - Quarterly IDCW,INF769K01978,INF769K01AB8
+107704,Mirae Asset Ultra Short to Short Term Fund - Regular Plan - Monthly IDCW,INF769K01960,INF769K01AA0
+107705,Mirae Asset Ultra Short to Short Term Fund - Regular Plan - Growth,INF769K01937,
 107706,Mirae Asset Savings Bond Fund-Regular Super Savings Plan- Growth,,
 107709,Mirae Asset Savings Fund-Regular Super Savings Plan- Weekly Dividend,,
 107710,Mirae Asset Savings Fund-Regular Super Savings Plan- Monthly Dividend,,
@@ -8540,7 +8540,7 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 111782,SAHARA SHORT TERM BOND FUND-GROWTH,,
 111783,Kotak FMP 18M Series 1 - Growth,,
 111785,DSP BlackRock Strategic Bond Fund - Regular Plan - Daily Dividend,,
-111786,DSP Strategic Bond Fund - Regular Plan - Daily IDCW,,INF740KA1PA5
+111786,DSP Dynamic Term Fund - Regular Plan - Daily IDCW,,INF740KA1PA5
 111787,Taurus Ethical Fund - Regular Plan - Growth,INF044D01864,
 111788,Taurus Ethical Fund - Regular Plan - Income Distribution cum Capital Withdrawal,INF044D01831,INF044D01849
 111789,Taurus  FMP 370 Days Sr 2 Retail Growth Plan,,
@@ -9400,8 +9400,8 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 113031,DSP BlackRock FMP - 3M - Series 17 - Dividend Payout,,
 113032,DSP Focused Fund - Regular Plan - IDCW,INF740K01540,INF740K01AC7
 113033,DWS Fixed Term Fund Series 72,,
-113036,Baroda BNP Paribas Short Duration Fund(the scheme has 2 segregated portfolios) - Regular Plan - Growth Option,INF955L01153,
-113037,Baroda BNP Paribas Short Duration Fund(the scheme has 2 segregated portfolios) - Regular Plan - Monthly IDCW Option,INF955L01138,INF955L01146
+113036,Baroda BNP Paribas Short Term Fund(the scheme has 2 segregated portfolios) - Regular Plan - Growth Option,INF955L01153,
+113037,Baroda BNP Paribas Short Term Fund(the scheme has 2 segregated portfolios) - Regular Plan - Monthly IDCW Option,INF955L01138,INF955L01146
 113038,IDFC FMP-QS-58 Growth,,
 113039,IDFC FMP-QS-58 Dividend,,
 113040,Reliance Fixed Horizon Fund - XV - Series 1 - Growth Option,,
@@ -12401,7 +12401,7 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 117059,DSP BlackRock Income Opportunities Fund - Institutional Plan - Quarterly Dividend,,
 117061,DSP Credit Risk Fund - Regular Plan - Monthly IDCW,INF740K01JW6,INF740K01JV8
 117062,DSP Credit Risk Fund - Regular Plan - Quarterly IDCW,INF740K01JY2,INF740K01JX4
-117063,DSP Ultra Short Fund - Regular Plan - Monthly IDCW,INF740K01QS9,INF740K01QR1
+117063,DSP Ultra Short Term Fund - Regular Plan - Monthly IDCW,INF740K01QS9,INF740K01QR1
 117064,DSP BlackRock Ultra Short Fund - Institutional Plan - Monthly Dividend,,
 117065,IDFC FMP - QS - 74 - Dividend,,
 117066,IDFC FMP - QS - 74 - Growth,,
@@ -13204,7 +13204,7 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 117991,HDFC FMP 371D October 2012 (1)-Flexi Option,,
 117992,Goldman Sachs India Equity Fund - Dividend Plan,,
 117993,Goldman Sachs India Equity Fund - Growth Plan,,
-117995,DSP Ultra Short Fund - Regular Plan - IDCW Payout,INF740K01MK5,
+117995,DSP Ultra Short Term Fund - Regular Plan - IDCW Payout,INF740K01MK5,
 117996,SBI DEBT FUND SERIES - 366 DAYS - 17 - GROWTH,,
 117997,SBI DEBT FUND SERIES - 366 DAYS - 17 - DIVIDEND,,
 117998,Kotak Dynamic Bond Fund - Regular Plan - Standard Income Distribution cum capital withdrawal option,INF174K01IY6,INF174K01IZ3
@@ -13571,8 +13571,8 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 118494,Templeton India Value Fund - Direct Plan - Growth,INF090I01GY2,
 118495,Franklin India Dynamic Accrual Fund - Direct - Growth,,
 118496,Franklin India Dynamic Accrual Fund - Direct - IDCW,,
-118497,Franklin India Government Securities Fund - Direct Plan - Quarterly IDCW,INF090I01HQ6,INF090I01HR4
-118498,Franklin India Government Securities Fund - Direct Plan - Growth,INF090I01HS2,
+118497,Franklin India Gilt Fund - Direct Plan - Quarterly IDCW,INF090I01HQ6,INF090I01HR4
+118498,Franklin India Gilt Fund - Direct Plan - Growth,INF090I01HS2,
 118499,Franklin India GOVERNMENT SECURITIES FUND TREASURY PLAN - Direct - Growth,,
 118500,Franklin India GOVERNMENT SECURITIES FUND TREASURY PLAN - Direct - Quarterly Dividend,,
 118501,Franklin India GOVERNMENT SECURITIES FUND - Composite Plan - Direct - Quarterly Dividend,,
@@ -13581,8 +13581,8 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 118504,Franklin India GOVERNMENT SECURITIES FUND PF PLAN - Direct - Growth,,
 118505,Franklin India Money Market Fund - Direct Plan - Retail Plan Quarterly IDCW,INF090I01GT2,INF090I01GU0
 118506,Franklin India Money Market Fund - Direct Plan - Retail Plan Growth,INF090I01GV8,
-118507,Franklin India Floating Rate Fund - Direct Plan - Daily IDCW,INF090I01LL9,
-118508,Franklin India Floating Rate Fund - Direct Plan - Growth,INF090I01LK1,
+118507,Franklin India Floating Interest Rates Fund - Direct Plan - Daily IDCW,INF090I01LL9,
+118508,Franklin India Floating Interest Rates Fund - Direct Plan - Growth,INF090I01LK1,
 118509,Franklin India Large & Mid Cap Fund - Direct Plan - IDCW,INF090I01IL5,INF090I01IM3
 118510,Franklin India Large & Mid Cap Fund - Direct Plan - Growth,INF090I01IN1,
 118511,Franklin India Life Stage Fund of Funds - 20's Plan - Direct - IDCW,,
@@ -13643,11 +13643,11 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 118566,Franklin India Short Term Income Plan -  Retail Plan - Direct - Quarterly - IDCW,INF090I01GL9,INF090I01GM7
 118567,Franklin India Short Term Income Plan -  Retail Plan - Direct - Monthly - IDCW,INF090I01GN5,INF090I01GO3
 118568,Franklin India Short Term Income Plan -  Retail Plan - Direct - Weekly - IDCW,INF090I01GP0,
-118569,Franklin India Corporate Debt Fund - Direct Plan - Growth,INF090I01FW8,
-118570,Franklin India Corporate Debt Fund - Direct Plan - Annual IDCW,INF090I01FX6,INF090I01FY4
-118571,Franklin India Corporate Debt Fund - Direct Plan - Monthly IDCW,INF090I01FQ0,INF090I01FR8
-118572,Franklin India Corporate Debt Fund - Direct Plan - Quarterly IDCW,INF090I01FS6,INF090I01FT4
-118573,Franklin India Corporate Debt Fund - Direct Plan - Half Yearly IDCW,INF090I01FU2,INF090I01FV0
+118569,Franklin India Corporate Bond Fund - Direct Plan - Growth,INF090I01FW8,
+118570,Franklin India Corporate Bond Fund - Direct Plan - Annual IDCW,INF090I01FX6,INF090I01FY4
+118571,Franklin India Corporate Bond Fund - Direct Plan - Monthly IDCW,INF090I01FQ0,INF090I01FR8
+118572,Franklin India Corporate Bond Fund - Direct Plan - Quarterly IDCW,INF090I01FS6,INF090I01FT4
+118573,Franklin India Corporate Bond Fund - Direct Plan - Half Yearly IDCW,INF090I01FU2,INF090I01FV0
 118574,Franklin India Conservative Hybrid Fund - Direct Plan - Growth,INF090I01GF1,
 118575,Franklin India Conservative Hybrid Fund - Direct Plan - Monthly IDCW,INF090I01GG9,INF090I01GH7
 118576,Franklin India Conservative Hybrid Fund - Direct Plan - Quarterly IDCW,INF090I01GI5,INF090I01GJ3
@@ -13841,11 +13841,11 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 118835,Mirae Asset Large & Midcap Fund - Direct Plan - IDCW,INF769K01BJ9,INF769K01BK7
 118837,Mirae Asset Great Consumer Fund - Direct Plan - Growth,INF769K01BL5,
 118838,Mirae Asset Great Consumer Fund - Direct Plan - IDCW,INF769K01BM3,INF769K01BN1
-118840,Mirae Asset Low Duration Fund - Direct Plan - Growth,INF769K01BO9,
-118841,Mirae Asset Low Duration Fund - Direct Plan - Monthly IDCW,INF769K01BP6,INF769K01BT8
-118842,Mirae Asset Low Duration Fund - Direct Plan - Quarterly IDCW,INF769K01BQ4,INF769K01BU6
-118843,Mirae Asset Low Duration Fund - Direct Plan - Daily IDCW,,INF769K01BR2
-118844,Mirae Asset Low Duration Fund - Direct Plan - Weekly IDCW,,INF769K01BS0
+118840,Mirae Asset Ultra Short to Short Term Fund - Direct Plan - Growth,INF769K01BO9,
+118841,Mirae Asset Ultra Short to Short Term Fund - Direct Plan - Monthly IDCW,INF769K01BP6,INF769K01BT8
+118842,Mirae Asset Ultra Short to Short Term Fund - Direct Plan - Quarterly IDCW,INF769K01BQ4,INF769K01BU6
+118843,Mirae Asset Ultra Short to Short Term Fund - Direct Plan - Daily IDCW,,INF769K01BR2
+118844,Mirae Asset Ultra Short to Short Term Fund - Direct Plan - Weekly IDCW,,INF769K01BS0
 118847,Mirae Asset Short Term Bond Fund - Direct Plan - Growth,,
 118848,Mirae Asset Short Term Bond Fund - Direct Plan - Monthly Dividend,,
 118849,Mirae Asset Short Term Bond Fund - Direct Plan - Quarterly Dividend,,
@@ -13907,9 +13907,9 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 118918,JPMorgan India Fixed Maturity Plan - Series 12 - Regular Plan - Dividend Option,,
 118919,JPMorgan India Fixed Maturity Plan - Series 12 - Direct Plan - Growth Option,,
 118920,JPMorgan India Fixed Maturity Plan - Series 12 - Direct Plan - Dividend Option,,
-118921,DSP Bond Fund - Direct Plan - Monthly IDCW,INF740K01NA4,INF740K01NC0
-118922,DSP Bond Fund - Direct Plan - IDCW,INF740K01NB2,INF740K01ND8
-118924,DSP Bond Fund - Direct Plan - Growth,INF740K01MZ3,
+118921,DSP Medium Term Fund - Direct Plan - Monthly IDCW,INF740K01NA4,INF740K01NC0
+118922,DSP Medium Term Fund - Direct Plan - IDCW,INF740K01NB2,INF740K01ND8
+118924,DSP Medium Term Fund - Direct Plan - Growth,INF740K01MZ3,
 118926,HDFC Focused Large-Cap Fund -Direct Plan - Dividend Option,,
 118927,HDFC Focused Large-Cap Fund -Direct Plan - Growth Option,,
 118928,HDFC Long Term Advantage Plan - IDCW Option - Direct Plan,,
@@ -13970,9 +13970,9 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 118989,HDFC Mid Cap Fund - Direct Plan - Growth Option,INF179K01XQ0,
 118990,HDFC Prudence Fund -Direct Plan - Dividend Option,,
 118991,HDFC Prudence Fund -Direct Plan - Growth Option,,
-118992,DSP Regular Savings Fund - Direct Plan - Monthly IDCW,INF740K01NP2,INF740K01NR8
-118993,DSP Regular Savings Fund - Direct Plan - Quarterly IDCW,INF740K01NQ0,INF740K01NS6
-118994,DSP Regular Savings Fund - Direct Plan - Growth,INF740K01NO5,
+118992,DSP Conservative Hybrid Fund - Direct Plan - Monthly IDCW,INF740K01NP2,INF740K01NR8
+118993,DSP Conservative Hybrid Fund - Direct Plan - Quarterly IDCW,INF740K01NQ0,INF740K01NS6
+118994,DSP Conservative Hybrid Fund - Direct Plan - Growth,INF740K01NO5,
 118995,HDFC Quarterly Interval Fund - Plan A-Direct Plan - Retail Dividend Option,,
 118996,HDFC Quarterly Interval Fund - Plan A-Direct Plan - Retail Growth Option,,
 118997,DWS Insta Cash Plus Fund - Direct Plan - Annual Dividend,,
@@ -14079,9 +14079,9 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 119103,Tata Corporate Bond Fund- Direct Plan-Weekly Dividend,,
 119104,Tata Corporate Bond Fund- Direct Plan-Growth,,
 119105,Tata Corporate Bond Fund- Direct Plan-Monthly Dividend,,
-119106,DSP Savings Fund - Direct Plan - Growth,INF740K01NU2,
-119107,DSP Savings Fund - Direct Plan - Monthly IDCW,INF740K01NT4,INF740K01NW8
-119108,DSP Savings Fund - Direct Plan - IDCW,INF740K01NV0,INF740K01NX6
+119106,DSP Money Market Fund - Direct Plan - Growth,INF740K01NU2,
+119107,DSP Money Market Fund - Direct Plan - Monthly IDCW,INF740K01NT4,INF740K01NW8
+119108,DSP Money Market Fund - Direct Plan - IDCW,INF740K01NV0,INF740K01NX6
 119109,HDFC Overnight Fund - Direct Plan - IDCW Option,,INF179KB1HY1
 119110,HDFC Overnight Fund - Direct Plan - Growth Option,INF179KB1HT1,
 119111,HDFC Floating Rate Income Fund Long -Direct Plan - Weekly Dividend Option,,
@@ -14096,9 +14096,9 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 119120,HDFC Hybrid Debt Fund - Direct Plan - IDCW Quarterly,INF179K01XH9,INF179K01XI7
 119121,HDFC MF MIP STP -Direct Plan - Growth Option,,
 119122,HDFC MF MIP STP -Direct Plan - Monthly Dividend Option,,
-119123,DSP Liquidity Fund - Direct Plan - Weekly IDCW,INF740KA1OC4,INF740KA1OD2
-119124,DSP Liquidity Fund - Direct Plan - Daily IDCW,,INF740KA1OB6
-119125,DSP Liquidity Fund - Direct Plan - Growth,INF740K01QL4,
+119123,DSP Liquid Fund - Direct Plan - Weekly IDCW,INF740KA1OC4,INF740KA1OD2
+119124,DSP Liquid Fund - Direct Plan - Daily IDCW,,INF740KA1OB6
+119125,DSP Liquid Fund - Direct Plan - Growth,INF740K01QL4,
 119126,Tata Medium Term Fund- Direct Plan - Payout of IDCW Option,,
 119127,Tata Medium Term Fund- Direct Plan- Growth Option,,
 119128,HDFC Equity Savings Fund - Direct Plan - Growth Option,INF179K01XT4,
@@ -14169,11 +14169,11 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 119200,Morgan Stanley Liquid Fund - Direct Monthly Dividend,,
 119201,Tata Large & Mid Cap Fund - Direct Plan - Payout of IDCW Option,INF277K01MI2,INF277K01MJ0
 119202,Tata Large & Mid Cap Fund - Direct Plan - Growth Option,INF277K01MK8,
-119203,DSP Ultra Short Fund - Direct Plan - Daily IDCW,,INF740KA1NT0
-119204,DSP Ultra Short Fund - Direct Plan - Monthly IDCW,INF740K01OO3,INF740K01OP0
-119205,DSP Ultra Short Fund - Direct Plan - Growth,INF740K01ON5,
-119206,DSP Ultra Short Fund - Direct Plan - IDCW,INF740K01OQ8,INF740K01OR6
-119207,DSP Ultra Short Fund - Direct Plan - Weekly IDCW,INF740KA1NU8,INF740KA1NV6
+119203,DSP Ultra Short Term Fund - Direct Plan - Daily IDCW,,INF740KA1NT0
+119204,DSP Ultra Short Term Fund - Direct Plan - Monthly IDCW,INF740K01OO3,INF740K01OP0
+119205,DSP Ultra Short Term Fund - Direct Plan - Growth,INF740K01ON5,
+119206,DSP Ultra Short Term Fund - Direct Plan - IDCW,INF740K01OQ8,INF740K01OR6
+119207,DSP Ultra Short Term Fund - Direct Plan - Weekly IDCW,INF740KA1NU8,INF740KA1NV6
 119208,Morgan Stanley Multi Asset Fund- Plan A - Direct Growth Plan,,
 119211,Morgan Stanley Multi Asset Fund- Plan A - Direct Monthly Dividend,,
 119212,DSP Small Cap Fund - Direct Plan - Growth,INF740K01QD1,
@@ -14196,10 +14196,10 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 119233,Tata Value Fund - Direct Plan - Payout of IDCW Option,INF277K01NB5,INF277K01NC3
 119234,Tata Dividend Yield Fund-Direct Plan Growth,,
 119235,Tata Dividend Yield Fund-Direct Plan Dividend,,
-119236,DSP Strategic Bond Fund - Direct Plan - Monthly IDCW,INF740K01QH2,INF740K01QJ8
+119236,DSP Dynamic Term Fund - Direct Plan - Monthly IDCW,INF740K01QH2,INF740K01QJ8
 119237,DSP Strategic Bond Fund - Direct Plan - IDCW - Weekly,,
-119238,DSP Strategic Bond Fund - Direct Plan - IDCW,INF740K01QI0,INF740K01QK6
-119239,DSP Strategic Bond Fund - Direct Plan - Growth,INF740K01QG4,
+119238,DSP Dynamic Term Fund - Direct Plan - IDCW,INF740K01QI0,INF740K01QK6
+119239,DSP Dynamic Term Fund - Direct Plan - Growth,INF740K01QG4,
 119240,DSP Strategic Bond Fund - Direct Plan - IDCW - Daily,,
 119241,DSP ELSS Tax Saver Fund - Direct Plan - IDCW,INF740K01OL9,INF740K01OM7
 119242,DSP ELSS Tax Saver Fund - Direct Plan - Growth,INF740K01OK1,
@@ -14345,8 +14345,8 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 119396,BANK OF INDIA CONSERVATIVE HYBRID FUND - Direct Plan - Annual IDCW,INF761K01793,INF761K01801
 119397,L&T Large and Midcap Fund-Direct Plan-Growth,,
 119398,L&T Large and Midcap Fund- Direct Plan -IDCW,,
-119399,Baroda BNP Paribas Short Duration Fund(the scheme has 2 segregated portfolios) - Direct Plan - Monthly IDCW Option,INF955L01BB9,
-119400,Baroda BNP Paribas Short Duration Fund(the scheme has 2 segregated portfolios) - Direct Plan - Growth Option,INF955L01BD5,
+119399,Baroda BNP Paribas Short Term Fund(the scheme has 2 segregated portfolios) - Direct Plan - Monthly IDCW Option,INF955L01BB9,
+119400,Baroda BNP Paribas Short Term Fund(the scheme has 2 segregated portfolios) - Direct Plan - Growth Option,INF955L01BD5,
 119401,PineBridge Quarterly Interval Fund Series I- Direct Plan- Dividend Option,,
 119402,PineBridge Quarterly Interval Fund Series I- Direct Plan- Growth Option,,
 119403,L&T India Value Fund-Direct Plan-IDCW,,
@@ -16741,10 +16741,10 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 122384,JPMorgan India Fixed Maturity Plan - Series 20 - Regular Plan - Dividend Option,,
 122385,JPMorgan India Fixed Maturity Plan - Series 20 - Direct Plan - Growth Option,,
 122386,JPMorgan India Fixed Maturity Plan - Series 20 - Direct Plan - Dividend Option,,
-122387,Motilal Oswal Focused Fund,INF247L01155,
-122388,Motilal Oswal Focused Fund,INF247L01171,INF247L01163
-122389,Motilal Oswal Focused Fund,INF247L01189,
-122390,Motilal Oswal Focused Fund,INF247L01205,INF247L01197
+122387,Motilal Oswal Focused Fund - Regular Plan - Growth,INF247L01155,
+122388,Motilal Oswal Focused Fund - Regular Plan - Payout/Reinvestment,INF247L01171,INF247L01163
+122389,Motilal Oswal Focused Fund - Direct Plan - Growth,INF247L01189,
+122390,Motilal Oswal Focused Fund - Direct Plan - Payout/Reinvestment,INF247L01205,INF247L01197
 122393,BNP Paribas Government Securities Fund - Annual dividend option,,
 122400,BNP Paribas Government Securities Fund - Direct Plan - Monthly Dividend Option,,
 122401,ICICI Prudential Multiple Yield Fund - Series 3 - Plan C - Direct Plan - Dividend,,
@@ -16866,7 +16866,7 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 122609,ICICI Prudential Fixed Maturity Plan-Series 68-745 Days Plan C - Direct Plan - Dividend,,
 122610,ICICI Prudential Fixed Maturity Plan-Series 68-745 Days Plan C - Dividend,,
 122611,ICICI Prudential Fixed Maturity Plan-Series 68-745 Days Plan C - Cumulative,,
-122612,360 ONE Dynamic Bond Fund - Regular Plan - GROWTH Option,INF579M01183,
+122612,360 ONE Dynamic Term Fund - Regular Plan - GROWTH Option,INF579M01183,
 122613,ICICI Prudential Dynamic Bond Fund - Bonus,,
 122614,Reliance Fixed Horizon Fund - XXIII - Series 12 - Growth Option,,
 122615,Reliance Fixed Horizon Fund - XXIII - Series 12 - Direct Plan - Growth  Option,,
@@ -16940,13 +16940,13 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 122704,JPMorgan India Fixed Maturity Plan - Series 21 - Direct Plan - Dividend Option,,
 122705,JPMorgan India Fixed Maturity Plan - Series 21 - Regular Plan - Growth Option,,
 122706,JPMorgan India Fixed Maturity Plan - Series 21 - Direct Plan - Growth Option,,
-122711,360 ONE Dynamic Bond Fund - Regular Plan - GROWTH Option,INF579M01191,
-122712,360 ONE Dynamic Bond Fund - Regular Plan - IDCW Option,INF579M01217,INF579M01241
-122715,360 ONE Dynamic Bond Fund - Direct Plan - GROWTH Option,INF579M01266,
-122717,360 ONE Dynamic Bond Fund - Direct Plan - IDCW Option,INF579M01290,INF579M01324
-122719,360 ONE Dynamic Bond Fund - Regular Plan - IDCW Option,INF579M01209,INF579M01233
-122720,360 ONE Dynamic Bond Fund - Regular Plan - IDCW Option,INF579M01225,INF579M01258
-122721,360 ONE Dynamic Bond Fund - Direct Plan - IDCW Option,INF579M01282,INF579M01316
+122711,360 ONE Dynamic Term Fund - Regular Plan - GROWTH Option,INF579M01191,
+122712,360 ONE Dynamic Term Fund - Regular Plan - IDCW Option,INF579M01217,INF579M01241
+122715,360 ONE Dynamic Term Fund - Direct Plan - GROWTH Option,INF579M01266,
+122717,360 ONE Dynamic Term Fund - Direct Plan - IDCW Option,INF579M01290,INF579M01324
+122719,360 ONE Dynamic Term Fund - Regular Plan - IDCW Option,INF579M01209,INF579M01233
+122720,360 ONE Dynamic Term Fund - Regular Plan - IDCW Option,INF579M01225,INF579M01258
+122721,360 ONE Dynamic Term Fund - Direct Plan - IDCW Option,INF579M01282,INF579M01316
 122722,IIFL Dynamic Bond Fund Direct Plan Half Yearly Dividend,,
 122726,Reliance Yearly Interval Fund - Series 9 - Direct Plan - Growth Plan - Growth Option,,
 122727,Reliance Yearly Interval Fund - Series 9 - Dividend Plan - Dividend Option,,
@@ -17399,8 +17399,8 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 123284,DSP BlackRock Dual Advantage Fund - Series 17 - 35M - Regular Plan - Growth Option (Maturity Date 10-Oct-2016),,
 123285,DSP BlackRock Dual Advantage Fund - Series 17 - 35M - Regular Plan - Dividend Payout Option (Maturity Date 10-Oct-2016),,
 123286,DSP BlackRock Dual Advantage Fund - Series 17 - 35M - Direct Plan - Growth Option (Maturity Date 10-Oct-2016),,
-123287,DSP Savings Fund - Regular Plan - Daily IDCW,,INF740KA1PC1
-123288,DSP Savings Fund - Direct Plan - Daily IDCW,,INF740KA1PB3
+123287,DSP Money Market Fund - Regular Plan - Daily IDCW,,INF740KA1PC1
+123288,DSP Money Market Fund - Direct Plan - Daily IDCW,,INF740KA1PB3
 123289,L&T FMP- Series VIII-Plan B - Dividend-Direct Plan,,
 123290,L&T FMP- Series VIII-Plan B - Growth Option - Regular Plan,,
 123291,L&T FMP- Series VIII-Plan B - Dividend Option - Regular Plan,,
@@ -18098,18 +18098,18 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 124169,DSP BlackRock FMP - Series 117 -12M (Maturity Date 29-Sep-2016) - Direct Plan - Dividend Payout - Quarterly Payout,,
 124170,DSP BlackRock FMP - Series 117 -12M (Maturity Date 29-Sep-2016) - Direct Plan - Dividend Payout - Regular Payout,,
 124171,DSP BlackRock FMP - Series 117 -12M (Maturity Date 29-Sep-2016) - Regular Plan - Dividend Payout - Regular Payout,,
-124172,DSP Banking & PSU Debt Fund - Regular Plan - Growth,INF740K01ZP6,
-124173,DSP Banking & PSU Debt Fund - Regular Plan - Daily IDCW Reinvestment,,INF740KA1OI1
-124174,DSP Banking & PSU Debt Fund - Regular Plan - IDCW,INF740K01ZU6,INF740K01ZV4
-124175,DSP Banking & PSU Debt Fund - Direct Plan - Growth,INF740K01ZW2,
-124176,DSP Banking & PSU Debt Fund - Direct Plan - Monthly IDCW,INF740K01ZX0,INF740K01ZY8
-124177,DSP Banking & PSU Debt Fund - Direct Plan - Quarterly IDCW,INF740K01ZZ5,INF740K01A00
-124178,DSP Banking & PSU Debt Fund - Direct Plan - IDCW,INF740K01A18,INF740K01A26
-124179,DSP Banking & PSU Debt Fund - Regular Plan - Weekly IDCW,INF740KA1OJ9,INF740KA1OK7
-124180,DSP Banking & PSU Debt Fund - Regular Plan - Monthly IDCW,INF740K01ZQ4,INF740K01ZR2
-124181,DSP Banking & PSU Debt Fund - Regular Plan - Quarterly IDCW,INF740K01ZS0,INF740K01ZT8
-124182,DSP Banking & PSU Debt Fund - Direct Plan - Daily IDCW Reinvestment,,INF740KA1OF7
-124183,DSP Banking & PSU Debt Fund - Direct Plan - Weekly IDCW,INF740KA1OG5,INF740KA1OH3
+124172,DSP Banking and PSU Debt Fund - Regular Plan - Growth,INF740K01ZP6,
+124173,DSP Banking and PSU Debt Fund - Regular Plan - Daily IDCW Reinvestment,,INF740KA1OI1
+124174,DSP Banking and PSU Debt Fund - Regular Plan - IDCW,INF740K01ZU6,INF740K01ZV4
+124175,DSP Banking and PSU Debt Fund - Direct Plan - Growth,INF740K01ZW2,
+124176,DSP Banking and PSU Debt Fund - Direct Plan - Monthly IDCW,INF740K01ZX0,INF740K01ZY8
+124177,DSP Banking and PSU Debt Fund - Direct Plan - Quarterly IDCW,INF740K01ZZ5,INF740K01A00
+124178,DSP Banking and PSU Debt Fund - Direct Plan - IDCW,INF740K01A18,INF740K01A26
+124179,DSP Banking and PSU Debt Fund - Regular Plan - Weekly IDCW,INF740KA1OJ9,INF740KA1OK7
+124180,DSP Banking and PSU Debt Fund - Regular Plan - Monthly IDCW,INF740K01ZQ4,INF740K01ZR2
+124181,DSP Banking and PSU Debt Fund - Regular Plan - Quarterly IDCW,INF740K01ZS0,INF740K01ZT8
+124182,DSP Banking and PSU Debt Fund - Direct Plan - Daily IDCW Reinvestment,,INF740KA1OF7
+124183,DSP Banking and PSU Debt Fund - Direct Plan - Weekly IDCW,INF740KA1OG5,INF740KA1OH3
 124184,L&T FMP SERIES -VIII-Plan G - Growth Option - Regular Plan,,
 124185,L&T FMP SERIES -VIII-Plan G - Growth Option-Direct Plan,,
 124186,L&T FMP SERIES -VIII-Plan G - Dividend Option - Regular Plan,,
@@ -18146,8 +18146,8 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 124230,DSP BlackRock FMP - Series 118 -12M (Maturity Date 29-Sep-2016) - Direct Plan - Growth Option,,
 124231,DSP BlackRock FMP - Series 118 -12M (Maturity Date 29-Sep-2016) - Direct Plan - Dividend Payout - Regular Payout,,
 124232,DSP BlackRock FMP - Series 118 -12M (Maturity Date 29-Sep-2016) - Regular Plan - Dividend Payout - Regular Payout,,
-124233,Motilal Oswal Ultra Short Term Fund,INF247L01213,
-124234,Motilal Oswal Ultra Short Term Fund,INF247L01247,
+124233,Motilal Oswal Ultra Short Term Fund - Regular Plan - Growth,INF247L01213,
+124234,Motilal Oswal Ultra Short Term Fund - Direct Plan - Growth,INF247L01247,
 124235,DSP BlackRock FMP - Series 119 -12M (Maturity Date 29-Sep-2016) - Regular Plan - Growth Option,,
 124236,DSP BlackRock FMP - Series 119 -12M (Maturity Date 29-Sep-2016) - Regular Plan - Dividend Payout - Quarterly Payout,,
 124237,DSP BlackRock FMP - Series 119 -12M (Maturity Date 29-Sep-2016) - Regular Plan - Dividend Payout - Regular Payout,,
@@ -18200,16 +18200,16 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 124300,Sundaram Fixed Term Plan DZ Regular Plan Growth,,
 124301,Sundaram Fixed Term Plan DZ Regular Plan Half Yearly Dividend Payout,,
 124302,Sundaram Fixed Term Plan DZ Regular Plan Quarterly Dividend Payout,,
-124303,Motilal Oswal Ultra Short Term Fund,,INF247L01270
-124305,Motilal Oswal Ultra Short Term Fund,INF247L01338,INF247L01312
-124306,Motilal Oswal Ultra Short Term Fund,,INF247L01353
-124308,Motilal Oswal Ultra Short Term Fund,INF247L01395,INF247L01379
-124310,Motilal Oswal Ultra Short Term Fund,,INF247L01288
-124311,Motilal Oswal Ultra Short Term Fund,,INF247L01361
-124312,Motilal Oswal Ultra Short Term Fund,INF247L01403,INF247L01387
-124313,Motilal Oswal Ultra Short Term Fund,,INF247L01296
-124315,Motilal Oswal Ultra Short Term Fund,INF247L01320,INF247L01304
-124316,Motilal Oswal Ultra Short Term Fund,,INF247L01346
+124303,Motilal Oswal Ultra Short Term Fund - Payout/Reinvestment,,INF247L01270
+124305,Motilal Oswal Ultra Short Term Fund - Regular Plan - Payout/Reinvestment,INF247L01338,INF247L01312
+124306,Motilal Oswal Ultra Short Term Fund - Direct Plan - Reinvestment,,INF247L01353
+124308,Motilal Oswal Ultra Short Term Fund - Direct Plan - Payout/Reinvestment,INF247L01395,INF247L01379
+124310,Motilal Oswal Ultra Short Term Fund - Regular Plan - Reinvestment,,INF247L01288
+124311,Motilal Oswal Ultra Short Term Fund - Direct Plan - Reinvestment,,INF247L01361
+124312,Motilal Oswal Ultra Short Term Fund - Direct Plan - Payout/Reinvestment,INF247L01403,INF247L01387
+124313,Motilal Oswal Ultra Short Term Fund - Regular Plan - Reinvestment,,INF247L01296
+124315,Motilal Oswal Ultra Short Term Fund - Regular Plan - Payout/Reinvestment,INF247L01320,INF247L01304
+124316,Motilal Oswal Ultra Short Term Fund - Direct Plan - Reinvestment,,INF247L01346
 124317,ICICI Prudential Fixed Maturity Plan-Series 70-745 Days Plan G - Direct Plan - Cumulative,,
 124318,ICICI Prudential Fixed Maturity Plan-Series 70-745 Days Plan G - Direct Plan - Dividend,,
 124319,ICICI Prudential Fixed Maturity Plan-Series 70-745 Days Plan G - Cumulative,,
@@ -21397,10 +21397,10 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 129043,Tata FMP Series 47 Scheme F - Plan A -Dividend Option ( Payout),,
 129044,Tata FMP Series 47 Scheme F - Direct Plan -Growth Option,,
 129045,Tata FMP Series 47 Scheme F - Direct Plan - Dividend Option ( Payout),,
-129046,Motilal Oswal Flexi Cap Fund,INF247L01502,
-129047,Motilal Oswal Flexi Cap Fund,INF247L01528,INF247L01510
-129048,Motilal Oswal Flexi Cap Fund,INF247L01478,
-129049,Motilal Oswal Flexi Cap Fund,INF247L01494,INF247L01486
+129046,Motilal Oswal Flexi Cap Fund - Direct Plan - Growth,INF247L01502,
+129047,Motilal Oswal Flexi Cap Fund - Direct Plan - Payout/Reinvestment,INF247L01528,INF247L01510
+129048,Motilal Oswal Flexi Cap Fund - Regular Plan - Growth,INF247L01478,
+129049,Motilal Oswal Flexi Cap Fund - Regular Plan - Payout/Reinvestment,INF247L01494,INF247L01486
 129051,HDFC Arbitrage Fund - Regular Plan - Monthly IDCW Option,INF179KA1KO7,INF179KA1KN9
 129052,HDFC Arbitrage Fund - Direct Plan - Growth Option,INF179KA1KT6,
 129053,HDFC ARBITRAGE FUND - Wholesale IDCW Option - Direct Plan,INF179KA1KQ2,INF179KA1KP4
@@ -22892,14 +22892,14 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 131294,JPMorgan India Corporate Debt Opportunities Fund - Regular Plan - Fortnightly Dividend Option,,
 131295,JPMorgan India Corporate Debt Opportunities Fund - Regular Plan - Monthly Dividend Option,,
 131296,JPMorgan India Corporate Debt Opportunities Fund - Regular Plan - Annual Dividend Option,,
-131297,DSP 10Y G-Sec Fund - Regular Plan - Growth,INF740K012I0,
-131298,DSP 10Y G-Sec Fund - Regular Plan - IDCW,INF740K013I8,INF740K014I6
-131299,DSP 10Y G-Sec Fund - Regular Plan - Monthly IDCW,INF740K015I3,INF740K016I1
-131300,DSP 10Y G-Sec Fund - Regular Plan - Quarterly IDCW,INF740K017I9,INF740K018I7
-131301,DSP 10Y G-Sec Fund - Direct Plan - Growth,INF740K019I5,
-131302,DSP 10Y G-Sec Fund - Direct Plan - Quarterly IDCW,INF740K014J4,INF740K015J1
-131303,DSP 10Y G-Sec Fund - Direct Plan - Monthly IDCW,INF740K012J8,INF740K013J6
-131304,DSP 10Y G-Sec Fund - Direct Plan - IDCW,INF740K010J2,INF740K011J0
+131297,DSP 10 year Constant Maturity Gilt Fund - Regular Plan - Growth,INF740K012I0,
+131298,DSP 10 year Constant Maturity Gilt Fund - Regular Plan - IDCW,INF740K013I8,INF740K014I6
+131299,DSP 10 year Constant Maturity Gilt Fund - Regular Plan - Monthly IDCW,INF740K015I3,INF740K016I1
+131300,DSP 10 year Constant Maturity Gilt Fund - Regular Plan - Quarterly IDCW,INF740K017I9,INF740K018I7
+131301,DSP 10 year Constant Maturity Gilt Fund - Direct Plan - Growth,INF740K019I5,
+131302,DSP 10 year Constant Maturity Gilt Fund - Direct Plan - Quarterly IDCW,INF740K014J4,INF740K015J1
+131303,DSP 10 year Constant Maturity Gilt Fund - Direct Plan - Monthly IDCW,INF740K012J8,INF740K013J6
+131304,DSP 10 year Constant Maturity Gilt Fund - Direct Plan - IDCW,INF740K010J2,INF740K011J0
 131305,Reliance Dual Advantage Fixed Tenure Fund VI- Plan C- Growth Option,,
 131306,Reliance Dual Advantage Fixed Tenure Fund VI- Plan C- Dividend Payout Option,,
 131307,Reliance Dual Advantage Fixed Tenure Fund VI- Plan C- Direct Plan Dividend Payout Option,,
@@ -23546,10 +23546,10 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 133380,ICICI Prudential Capital Protection Oriented Fund - Series VII - 1284 Days Plan E Direct Plan Dividend Option,,
 133381,ICICI Prudential Capital Protection Oriented Fund - Series VII - 1284 Days Plan E Dividend Option,,
 133382,ICICI Prudential Capital Protection Oriented Fund - Series VII - 1284 Days Plan E Cumulative Option,,
-133383,Motilal Oswal ELSS Tax Saver Fund,INF247L01551,
-133384,Motilal Oswal ELSS Tax Saver Fund,INF247L01577,
-133385,Motilal Oswal ELSS Tax Saver Fund,INF247L01544,
-133386,Motilal Oswal ELSS Tax Saver Fund,INF247L01569,
+133383,Motilal Oswal ELSS Tax Saver Fund - Regular Plan - Payout,INF247L01551,
+133384,Motilal Oswal ELSS Tax Saver Fund - Direct Plan - Payout,INF247L01577,
+133385,Motilal Oswal ELSS Tax Saver Fund - Regular Plan - Growth,INF247L01544,
+133386,Motilal Oswal ELSS Tax Saver Fund - Direct Plan - Growth,INF247L01569,
 133387,UTI - Money Market Fund - Direct Plan - Monthly IDCW,INF789FA1M46,INF789FA1M53
 133388,JM Dynamic Bond Fund - (Direct) - Half Yearly Bonus Option - Principal Units,INF192K01IP6,
 133389,JM Dynamic Bond Fund (Regular) - Half Yearly Bonus Option - Principal Units,INF192K01IN1,
@@ -23897,16 +23897,16 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 133916,DSP BlackRock Dual Advantage Fund - Series 36 - 36M - Direct Plan - Growth Option,,
 133917,DSP BlackRock Dual Advantage Fund - Series 36 - 36M - Regular Plan - Growth Option,,
 133918,DSP BlackRock Dual Advantage Fund - Series 36 - 36M - Regular Plan - Dividend Payout Option,,
-133919,DSP Low Duration Fund - Regular Plan - Daily IDCW,,INF740KA1OO9
-133920,DSP Low Duration Fund - Regular Plan - Monthly IDCW,INF740K019P0,INF740K010Q7
-133921,DSP Low Duration Fund - Regular Plan - Quarterly IDCW,INF740K011Q5,INF740K012Q3
-133922,DSP Low Duration Fund - Direct Plan - Daily IDCW,,INF740KA1OL5
-133923,DSP Low Duration Fund - Direct Plan - Weekly IDCW,INF740KA1OM3,INF740KA1ON1
-133924,DSP Low Duration Fund - Direct Plan - Quarterly IDCW,INF740K016Q4,INF740K017Q2
-133925,DSP Low Duration Fund - Direct Plan - Growth,INF740K013Q1,
-133926,DSP Low Duration Fund - Regular Plan - Growth,INF740K018P2,
-133927,DSP Low Duration Fund - Regular Plan - Weekly IDCW,INF740KA1OP6,INF740KA1OQ4
-133928,DSP Low Duration Fund - Direct Plan - Monthly IDCW,INF740K014Q9,INF740K015Q6
+133919,DSP Ultra Short to Short Term Fund - Regular Plan - Daily IDCW,,INF740KA1OO9
+133920,DSP Ultra Short to Short Term Fund - Regular Plan - Monthly IDCW,INF740K019P0,INF740K010Q7
+133921,DSP Ultra Short to Short Term Fund - Regular Plan - Quarterly IDCW,INF740K011Q5,INF740K012Q3
+133922,DSP Ultra Short to Short Term Fund - Direct Plan - Daily IDCW,,INF740KA1OL5
+133923,DSP Ultra Short to Short Term Fund - Direct Plan - Weekly IDCW,INF740KA1OM3,INF740KA1ON1
+133924,DSP Ultra Short to Short Term Fund - Direct Plan - Quarterly IDCW,INF740K016Q4,INF740K017Q2
+133925,DSP Ultra Short to Short Term Fund - Direct Plan - Growth,INF740K013Q1,
+133926,DSP Ultra Short to Short Term Fund - Regular Plan - Growth,INF740K018P2,
+133927,DSP Ultra Short to Short Term Fund - Regular Plan - Weekly IDCW,INF740KA1OP6,INF740KA1OQ4
+133928,DSP Ultra Short to Short Term Fund - Direct Plan - Monthly IDCW,INF740K014Q9,INF740K015Q6
 133931,DWS Fixed Maturity Plan - Series 85 - Regular Plan - Quarterly Dividend,,
 133932,DWS Fixed Maturity Plan - Series 85 - Direct Plan - Growth,,
 133934,DWS Fixed Maturity Plan - Series 85 - Regular Plan - Growth,,
@@ -26674,12 +26674,12 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 139860,UTI Capital Protection Oriented Scheme - Series VIII-II (1831 Days) - Direct Plan - IDCW,,
 139861,UTI Capital Protection Oriented Scheme Series VIII - II (1831 Days) - Regular Plan - Growth Option,,
 139862,UTI Capital Protection Oriented Scheme - Series VIII-II (1831 Days) - Regular Plan - IDCW,,
-139863,Motilal Oswal Balanced Advantage Fund,INF247L01601,INF247L01627
-139865,Motilal Oswal Balanced Advantage Fund,INF247L01643,INF247L01668
-139866,Motilal Oswal Balanced Advantage Fund,INF247L01650,INF247L01676
-139870,Motilal Oswal Balanced Advantage Fund,INF247L01585,
-139871,Motilal Oswal Balanced Advantage Fund,INF247L01593,INF247L01619
-139872,Motilal Oswal Balanced Advantage Fund,INF247L01635,
+139863,Motilal Oswal Balanced Advantage Fund - Regular Plan - Payout,INF247L01601,INF247L01627
+139865,Motilal Oswal Balanced Advantage Fund - Direct Plan - Reinvestment/Payout,INF247L01643,INF247L01668
+139866,Motilal Oswal Balanced Advantage Fund - Direct Plan - Reinvestment/Payout,INF247L01650,INF247L01676
+139870,Motilal Oswal Balanced Advantage Fund - Regular Plan - Growth,INF247L01585,
+139871,Motilal Oswal Balanced Advantage Fund - Regular Plan - Reinvestment/Payout,INF247L01593,INF247L01619
+139872,Motilal Oswal Balanced Advantage Fund - Direct Plan - Growth,INF247L01635,
 139889,Franklin India Liquid Fund - Regular Plan - Unclaimed Redemption Plan - Growth,INF090I01LO3,
 139890,Franklin India Liquid Fund - Regular Plan - Unclaimed IDCW Plan - Growth,INF090I01LP0,
 139891,Franklin India Liquid Fund - Regular Plan - Unclaimed Redemption Investor Education Plan - Growth,INF090I01LQ8,
@@ -27102,8 +27102,8 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 140459,IDBI Midcap Fund IDCW Regular,,
 140460,IDBI Midcap Fund Growth Regular,,
 140461,IDBI Midcap Fund Growth Direct,,
-140463,Baroda BNP Paribas Short Duration Fund(the scheme has 2 segregated portfolios) - Direct Plan - Quarterly IDCW Option,INF955L01GU8,
-140465,Baroda BNP Paribas Short Duration Fund(the scheme has 2 segregated portfolios) - Regular Plan - Quarterly IDCW Option,INF955L01GS2,
+140463,Baroda BNP Paribas Short Term Fund(the scheme has 2 segregated portfolios) - Direct Plan - Quarterly IDCW Option,INF955L01GU8,
+140465,Baroda BNP Paribas Short Term Fund(the scheme has 2 segregated portfolios) - Regular Plan - Quarterly IDCW Option,INF955L01GS2,
 140466,UTI FTIF Series XXVI-I (1182 Days)- Direct Plan - Growth Option,,
 140467,UTI FTIF Series XXVI-I (1182 Days)- Regular Plan - Maturity Div Option,,
 140468,UTI FTIF Series XXVI-I (1182 Days)- Direct Plan - Flexi Div Option,,
@@ -27321,10 +27321,10 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 140762,SBI DEBT FUND SERIES B - 49 (1170 DAYS) - REGULAR PLAN - DIVIDEND PAYOUT,,
 140763,SBI DEBT FUND SERIES B - 49 (1170 DAYS) - REGULAR PLAN - GROWTH,,
 140764,SBI DEBT FUND SERIES B - 49 (1170 DAYS) - DIRECT PLAN - DIVIDEND PAYOUT,,
-140769,Mirae Asset Dynamic Bond Fund - Direct Plan - Growth,INF769K01DR8,
-140770,Mirae Asset Dynamic Bond Fund - Direct Plan - IDCW,INF769K01DS6,INF769K01DT4
-140771,Mirae Asset Dynamic Bond Fund - Regular Plan - Growth,INF769K01DO5,
-140772,Mirae Asset Dynamic Bond Fund - Regular Plan - IDCW,INF769K01DP2,INF769K01DQ0
+140769,Mirae Asset Dynamic Term Fund - Direct Plan - Growth,INF769K01DR8,
+140770,Mirae Asset Dynamic Term Fund - Direct Plan - IDCW,INF769K01DS6,INF769K01DT4
+140771,Mirae Asset Dynamic Term Fund - Regular Plan - Growth,INF769K01DO5,
+140772,Mirae Asset Dynamic Term Fund - Regular Plan - IDCW,INF769K01DP2,INF769K01DQ0
 140773,ICICI Prudential Fixed Maturity Plan - Series 80 - 1150 Days Plan N -Direct Plan - Cumulative Option,,
 140774,ICICI Prudential Fixed Maturity Plan - Series 80 - 1150 Days Plan N - Direct Plan - Dividend Option,,
 140775,ICICI Prudential Fixed Maturity Plan - Series 80 - 1150 Days Plan N - Dividend Option,,
@@ -28737,10 +28737,10 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 142635,ICICI Prudential Fixed Maturity Plan - series 82 - 103 Days Plan O - Dividend Option,,
 142637,ICICI Prudential Fixed Maturity Plan - Series 82 - 103 Days Plan O - Cumulative Option,,
 142638,ICICI Prudential Fixed Maturity Plan - Series 82 - 103 Days Plan O - Direct Plan Cumulative Option,,
-142640,Mirae Asset Short Duration Fund - Direct Plan - IDCW,INF769K01DY4,INF769K01DZ1
-142641,Mirae Asset Short Duration Fund - Direct Plan - Growth,INF769K01DX6,
-142642,Mirae Asset Short Duration Fund - Regular Plan - Growth,INF769K01DU2,
-142643,Mirae Asset Short Duration Fund - Regular Plan - IDCW,INF769K01DV0,INF769K01DW8
+142640,Mirae Asset Short Term Fund - Direct Plan - IDCW,INF769K01DY4,INF769K01DZ1
+142641,Mirae Asset Short Term Fund - Direct Plan - Growth,INF769K01DX6,
+142642,Mirae Asset Short Term Fund - Regular Plan - Growth,INF769K01DU2,
+142643,Mirae Asset Short Term Fund - Regular Plan - IDCW,INF769K01DV0,INF769K01DW8
 142644,Nippon India Fixed Horizon Fund XXXVI- Series 7- Direct Plan-Growth Option,,
 142645,NIPPON INDIA FIXED HORIZON FUND - XXXVI - SERIES 7 - DIRECT Plan - IDCW Option,,
 142646,Nippon India Fixed Horizon Fund XXXVI- Series 7- Growth Option,,
@@ -29329,7 +29329,7 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 143454,Nippon India Fixed Horizon Fund XXXVII- Series 10- Growth Option,,
 143456,NIPPON INDIA FIXED HORIZON FUND - XXXVII - SERIES 10 - DIRECT Plan - IDCW Option,,
 143457,Nippon India Fixed Horizon Fund XXXVII- Series 10- Direct Plan- Growth Option,,
-143464,Baroda BNP Paribas Ultra Short Duration Fund - Regular Plan - Growth Option,INF955L01GX2,
+143464,Baroda BNP Paribas Ultra Short Term Fund - Regular Plan - Growth Option,INF955L01GX2,
 143465,DHFL Pramerica Fixed Duration Fund - Series AX - Direct Plan - Standard Dividend Option,,
 143466,DHFL Pramerica Fixed Duration Fund - Series AX - Direct Plan - Growth Option,,
 143468,DHFL Pramerica Fixed Duration Fund - Series AX - Regular Plan - Growth Option,,
@@ -29366,11 +29366,11 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 143504,Sundaram Emerging Small Cap Series IV Regular Plan - Payout of Income Distribution cum Capital Withdrawal (IDCW),,
 143505,Sundaram Emerging Small Cap Series IV Direct Plan - Payout of Income Distribution cum Capital Withdrawal (IDCW),,
 143506,Sundaram Emerging Small Cap Series IV Direct Plan - Growth,,
-143507,Baroda BNP Paribas Ultra Short Duration Fund - Regular Plan - Daily IDCW Option,,INF955L01GW4
-143508,Baroda BNP Paribas Ultra Short Duration Fund - Direct Plan - Growth Option,INF955L01HA8,
-143509,Baroda BNP Paribas Ultra Short Duration Fund - Direct Plan - Weekly IDCW Option,INF251K01SM6,INF955L01HB6
-143510,Baroda BNP Paribas Ultra Short Duration Fund - Regular Plan - Weekly IDCW Option,INF251K01SN4,INF955L01GY0
-143511,Baroda BNP Paribas Ultra Short Duration Fund - Direct Plan - Daily IDCW Option,,INF955L01GZ7
+143507,Baroda BNP Paribas Ultra Short Term Fund - Regular Plan - Daily IDCW Option,,INF955L01GW4
+143508,Baroda BNP Paribas Ultra Short Term Fund - Direct Plan - Growth Option,INF955L01HA8,
+143509,Baroda BNP Paribas Ultra Short Term Fund - Direct Plan - Weekly IDCW Option,INF251K01SM6,INF955L01HB6
+143510,Baroda BNP Paribas Ultra Short Term Fund - Regular Plan - Weekly IDCW Option,INF251K01SN4,INF955L01GY0
+143511,Baroda BNP Paribas Ultra Short Term Fund - Direct Plan - Daily IDCW Option,,INF955L01GZ7
 143512,ICICI Prudential Fixed Maturity Plan - Series 83 - 1113 Days Plan E - Direct Plan Cumulative Option,,
 143513,ICICI Prudential Fixed Maturity Plan - Series 83 - 1113 Days Plan E - Direct Plan Quarterly IDCW Option,,
 143514,ICICI Prudential Fixed Maturity Plan - Series 83 - 1113 Days Plan E - Half Yearly IDCW Option,,
@@ -30700,14 +30700,14 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 145379,Kotak FMP Series 250-Regular plan-growth option,,
 145380,Kotak FMP Series 250-regular plan-Payout of Income Distribution cum capital withdrawal Option,,
 145381,Kotak FMP Series 250-Direct Plan-Growth Option,,
-145387,Baroda BNP Paribas Balanced Advantage Fund - Regular Plan - Growth Option,INF955L01HC4,
+145387,Baroda BNP Paribas Dynamic Asset Allocation Fund - Regular Plan - Growth Option,INF955L01HC4,
 145388,HDFC FMP 1261D October 2018 (1) - IDCW Option - Direct Plan,,
-145389,Baroda BNP Paribas Balanced Advantage Fund - Regular Plan - IDCW Option,INF955L01HD2,INF955L01HE0
+145389,Baroda BNP Paribas Dynamic Asset Allocation Fund - Regular Plan - IDCW Option,INF955L01HD2,INF955L01HE0
 145391,HDFC FMP 1261D October 2018 (1) - Quarterly IDCW Option - Direct Plan,,
 145394,HDFC FMP 1261D October 2018 (1) - Growth Option - Direct Plan,,
 145395,HDFC FMP 1261D October 2018 (1) - Growth Option,,
-145396,Baroda BNP Paribas Balanced Advantage Fund - Direct Plan - Growth Option,INF955L01HF7,
-145397,Baroda BNP Paribas Balanced Advantage Fund - Direct Plan - IDCW Option,INF955L01HG5,INF955L01HH3
+145396,Baroda BNP Paribas Dynamic Asset Allocation Fund - Direct Plan - Growth Option,INF955L01HF7,
+145397,Baroda BNP Paribas Dynamic Asset Allocation Fund - Direct Plan - IDCW Option,INF955L01HG5,INF955L01HH3
 145399,ICICI Prudential Ultra Short term Fund - Regular Plan - Daily IDCW,,INF109KC1ND7
 145400,ICICI Prudential Ultra Short term Fund - Direct Plan - Weekly IDCW,INF109KC1NA3,INF109KC1MZ2
 145401,ICICI Prudential Ultra Short Term Fund - Direct Plan - Fortnightly IDCW,,
@@ -32215,14 +32215,14 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 147616,ITI Arbitrage Fund - Regular Plan - IDCW Option,INF00XX01424,INF00XX01432
 147617,ITI Arbitrage Fund - Direct Plan - Growth Option,INF00XX01440,
 147618,ITI Arbitrage Fund - Regular Plan - Growth Option,INF00XX01416,
-147619,Motilal Oswal Nifty Bank Index Fund,INF247L01882,
-147620,Motilal Oswal Nifty Bank Index Fund,INF247L01890,
-147621,Motilal Oswal Nifty Midcap 150 Index Fund,INF247L01908,
-147622,Motilal Oswal Nifty Midcap 150 Index Fund,INF247L01916,
-147623,Motilal Oswal Nifty Smallcap 250 Index Fund,INF247L01932,
-147624,Motilal Oswal Nifty Smallcap 250 Index Fund,INF247L01924,
-147625,Motilal Oswal Nifty 500 Index Fund,INF247L01957,
-147626,Motilal Oswal Nifty 500 Index Fund,INF247L01940,
+147619,Motilal Oswal Nifty Bank Index Fund - Regular Plan - Growth,INF247L01882,
+147620,Motilal Oswal Nifty Bank Index Fund - Direct Plan - Growth,INF247L01890,
+147621,Motilal Oswal Nifty Midcap 150 Index Fund - Regular Plan - Growth,INF247L01908,
+147622,Motilal Oswal Nifty Midcap 150 Index Fund - Direct Plan - Growth,INF247L01916,
+147623,Motilal Oswal Nifty Smallcap 250 Index Fund - Direct Plan - Growth,INF247L01932,
+147624,Motilal Oswal Nifty Smallcap 250 Index Fund - Regular Plan - GROWTH,INF247L01924,
+147625,Motilal Oswal Nifty 500 Index Fund - Direct Plan - Growth,INF247L01957,
+147626,Motilal Oswal Nifty 500 Index Fund - Regular Plan - Growth,INF247L01940,
 147627,SBI Fixed Maturity Plan (FMP) - Series 17 (1116 Days) - Direct Plan - Growth,,
 147628,SBI Fixed Maturity Plan (FMP) - Series 17 (1116 Days) - Direct Plan - Income Distribution cum Capital Withdrawal Option (IDCW),,
 147629,SBI Fixed Maturity Plan (FMP) - Series 17 (1116 Days) - Regular Plan - Growth,,
@@ -32297,9 +32297,9 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 147698,NIPPON INDIA EQUITY SAVINGS FUND - SEGREGATED PORTFOLIO 1 - Direct Plan - QUARTERLY IDCW Option,INF204KB12E5,INF204KB13E3
 147699,NIPPON INDIA EQUITY SAVINGS FUND - SEGREGATED PORTFOLIO 1 - MONTHLY IDCW Option,INF204KB14F8,INF204KB15F5
 147700,Nippon India Equity Savings Fund - Segregated Portfolio 1 - Growth Plan - Growth Option,INF204KB19E0,
-147701,Motilal Oswal Large and Midcap Fund,INF247L01965,
-147703,Motilal Oswal Large and Midcap Fund,INF247L01981,INF247L01973
-147704,Motilal Oswal Large and Midcap Fund,INF247L01999,
+147701,Motilal Oswal Large and Midcap Fund - Regular Plan - Growth,INF247L01965,
+147703,Motilal Oswal Large and Midcap Fund - Regular Plan - Payout/Reinvestment,INF247L01981,INF247L01973
+147704,Motilal Oswal Large and Midcap Fund - Direct Plan - Growth,INF247L01999,
 147706,Motilal Oswal Large and Midcap Fund,INF247L01AB3,INF247L01AA5
 147707,ITI Overnight Fund - Direct Plan - Annual IDCW Option,INF00XX01648,INF00XX01614
 147708,ITI Overnight Fund - Direct Plan - Daily IDCW Option,,INF00XX01572
@@ -32386,10 +32386,10 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 147791,SBI Fixed Maturity Plan (FMP) - Series 26 (1112 Days) - Regular Plan - Income Distribution cum Capital Withdrawal Option (IDCW),,
 147792,SBI Fixed Maturity Plan (FMP) - Series 26 (1112 Days) - Direct Plan - Growth,,
 147793,SBI Fixed Maturity Plan (FMP) - Series 26 (1112 Days) - Direct Plan - Income Distribution cum Capital Withdrawal Option (IDCW),,
-147794,Motilal Oswal Nifty 50 Index Fund,INF247L01AE7,
-147795,Motilal Oswal Nifty 50 Index Fund,INF247L01AF4,
-147796,Motilal Oswal Nifty Next 50 Index Fund,INF247L01AC1,
-147797,Motilal Oswal Nifty Next 50 Index Fund,INF247L01AD9,
+147794,Motilal Oswal Nifty 50 Index Fund - Direct Plan - Growth,INF247L01AE7,
+147795,Motilal Oswal Nifty 50 Index Fund - Regular Plan - Growth,INF247L01AF4,
+147796,Motilal Oswal Nifty Next 50 Index Fund - Direct Plan - Growth,INF247L01AC1,
+147797,Motilal Oswal Nifty Next 50 Index Fund - Regular Plan - Growth,INF247L01AD9,
 147798,Aditya Birla Sun Life Credit Risk Fund- Segregated Portfolio 1-Regular Plan- Growth,,
 147799,Aditya Birla Sun Life Credit Risk Fund- Segregated Portfolio 1- Regular Plan - Bonus,,
 147800,Aditya Birla Sun Life Credit Risk Fund- Segregated Portfolio 1-Direct - IDCW,,
@@ -32892,10 +32892,10 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 148413,JM Liquid Fund - Direct Plan - Unclaimed Brokerage I.E.F - Growth Plan,,
 148414,JM Liquid Fund - Direct Plan - Unclaimed Application Refund Amount I.E.F - Growth Plan,,
 148415,JM Liquid Fund - Withheld Brokerage I.E.F. (Direct) - Growth Plan,,
-148416,Mirae Asset Banking and PSU Fund - Regular Plan - Growth,INF769K01FV5,
-148417,Mirae Asset Banking and PSU Fund - Direct Plan - IDCW,INF769K01FX1,INF769K01FZ6
-148418,Mirae Asset Banking and PSU Fund - Regular Plan - IDCW,INF769K01FU7,INF769K01FW3
-148419,Mirae Asset Banking and PSU Fund - Direct Plan - Growth,INF769K01FY9,
+148416,Mirae Asset Banking and PSU Debt Fund - Regular Plan - Growth,INF769K01FV5,
+148417,Mirae Asset Banking and PSU Debt Fund - Direct Plan - IDCW,INF769K01FX1,INF769K01FZ6
+148418,Mirae Asset Banking and PSU Debt Fund - Regular Plan - IDCW,INF769K01FU7,INF769K01FW3
+148419,Mirae Asset Banking and PSU Debt Fund - Direct Plan - Growth,INF769K01FY9,
 148420,UTI - Credit Risk Fund (Segregated - 07072020) - Regular Plan - Annual Dividend Option,,
 148421,UTI - Medium Term Fund (Segregated - 07072020) - Regular Plan - Annual Dividend Option,,
 148422,UTI - Credit Risk Fund (Segregated - 07072020) - Regular Plan - Quarterly Dividend Option,,
@@ -32995,10 +32995,10 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 148522,Principal Large Cap Fund - Regular Income Distribution CUM Capital Withdrawal Option,,
 148524,Principal Large Cap Fund - Direct Growth,,
 148525,Principal Large Cap Fund - Direct Income Distribution CUM Capital Withdrawal Option,,
-148529,Mirae Asset Ultra Short Duration Fund - Direct Plan - Growth,INF769K01GK6,
-148530,Mirae Asset Ultra Short Duration Fund - Regular Plan - Growth,INF769K01GH2,
-148531,Mirae Asset Ultra Short Duration Fund - Regular Plan - IDCW,INF769K01GG4,INF769K01GI0
-148532,Mirae Asset Ultra Short Duration Fund - Direct Plan - IDCW,INF769K01GJ8,INF769K01GL4
+148529,Mirae Asset Ultra Short-Term Fund - Direct Plan - Growth,INF769K01GK6,
+148530,Mirae Asset Ultra Short-Term Fund - Regular Plan - Growth,INF769K01GH2,
+148531,Mirae Asset Ultra Short-Term Fund - Regular Plan - IDCW,INF769K01GG4,INF769K01GI0
+148532,Mirae Asset Ultra Short-Term Fund - Direct Plan - IDCW,INF769K01GJ8,INF769K01GL4
 148533,ITI Banking & PSU Debt Fund - Regular Plan - IDCW Option,INF00XX01846,INF00XX01853
 148534,ITI Banking & PSU Debt Fund - Direct Plan - Growth Option,INF00XX01861,
 148535,ITI Banking & PSU Debt Fund - Regular Plan - Growth Option,INF00XX01838,
@@ -33194,10 +33194,10 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 148761,SBI US Specific Equity Active FoF - Direct Plan - IDCW,INF200KA1U36,INF200KA1U44
 148762,SBI US Specific Equity Active FoF - Regular Plan - Growth,INF200KA1T96,
 148763,Kotak Nifty IT ETF,INF174KA1GC5,
-148768,DSP Floater Fund - Regular Plan - Growth,INF740KA1PS7,
-148769,DSP Floater Fund - Direct Plan - IDCW,INF740KA1PW9,INF740KA1PX7
-148770,DSP Floater Fund - Regular Plan - IDCW,INF740KA1PT5,INF740KA1PU3
-148771,DSP Floater Fund - Direct Plan - Growth,INF740KA1PV1,
+148768,DSP Floating Interest Rates Fund - Regular Plan - Growth,INF740KA1PS7,
+148769,DSP Floating Interest Rates Fund - Direct Plan - IDCW,INF740KA1PW9,INF740KA1PX7
+148770,DSP Floating Interest Rates Fund - Regular Plan - IDCW,INF740KA1PT5,INF740KA1PU3
+148771,DSP Floating Interest Rates Fund - Direct Plan - Growth,INF740KA1PV1,
 148786,BANDHAN CRISIL IBX GILT JUNE 2027 INDEX FUND - Regular Plan - Growth,INF194KB1BL2,
 148787,BANDHAN CRISIL IBX GILT JUNE 2027 INDEX FUND - Regular Plan - IDCW,INF194KB1BM0,INF194KB1BO6
 148788,BANDHAN CRISIL IBX GILT JUNE 2027 INDEX FUND - Direct Plan - IDCW,INF194KB1BQ1,INF194KB1BR9
@@ -33537,8 +33537,8 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 149233,SBI Fixed Maturity Plan (FMP) - Series 52 (1848 Days) - Regular Plan - IDCW,INF200KA13A1,
 149234,SBI Fixed Maturity Plan (FMP) - Series 52 (1848 Days) - Direct Plan - IDCW,INF200KA15A6,
 149235,SBI Fixed Maturity Plan (FMP) - Series 52 (1848 Days) - Regular Plan - Growth,INF200KA12A3,
-149240,Motilal Oswal 5 Year G-Sec Fund of Fund,INF247L01AQ1,
-149241,Motilal Oswal 5 Year G-Sec Fund of Fund,INF247L01AR9,
+149240,Motilal Oswal 5 Year G-Sec Fund of Fund - Direct Plan - Growth,INF247L01AQ1,
+149241,Motilal Oswal 5 Year G-Sec Fund of Fund - Regular Plan - Growth,INF247L01AR9,
 149242,Axis Nifty AAA Bond Plus SDL Apr 2026 50:50 ETF FOF - Regular Plan - Growth Option,INF846K010D8,
 149243,Axis Nifty AAA Bond Plus SDL Apr 2026 50:50 ETF FOF - Direct Plan - Growth Option,INF846K017C5,
 149244,Axis Nifty AAA Bond Plus SDL April 2026 50:50 ETF FOF - Direct Plan - IDCW Option,INF846K018C3,INF846K019C1
@@ -33879,7 +33879,7 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 149797,TRUSTMF Overnight Fund - Direct Plan - Growth,INF0GCD01453,
 149798,TRUSTMF Overnight Fund - Regular Plan - Daily IDCW Reinvestment,,INF0GCD01446
 149799,Motilal Oswal Nifty 200 Momentum 30 Index Fund,INF247L01AW9,
-149800,Motilal Oswal Nifty 200 Momentum 30 Index Fund,INF247L01AV1,
+149800,Motilal Oswal Nifty 200 Momentum 30 Index Fund - Direct Plan - Growth,INF247L01AV1,
 149801,Motilal Oswal Nifty 200 Momentum 30 ETF,INF247L01BK2,
 149802,UTI BSE Sensex Index Fund - Regular Plan - Growth,INF789F1AVC9,
 149803,UTI BSE Sensex Index Fund - Direct Plan - Growth,INF789F1AVD7,
@@ -34043,31 +34043,31 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 150157,Baroda BNP Paribas ELSS Tax Saver Fund - Regular Plan - IDCW Option,INF251K01AA9,INF251K01993
 150158,Baroda BNP Paribas ELSS Tax Saver Fund - Direct Plan - IDCW Option,INF251K01HH9,INF251K01HG1
 150159,Baroda BNP Paribas ELSS Tax Saver Fund - Direct Plan - Growth Option,INF251K01HF3,
-150160,BARODA BNP PARIBAS LOW DURATION FUND - Growth Option,INF251K01DL0,
-150161,BARODA BNP PARIBAS LOW DURATION FUND - Weekly IDCW Option,,INF251K01DN6
-150162,BARODA BNP PARIBAS LOW DURATION FUND - Monthly IDCW Option,INF251K01DO4,INF251K01DP1
-150163,BARODA BNP PARIBAS LOW DURATION FUND - Daily IDCW Option,,INF251K01DM8
-150164,BARODA BNP PARIBAS LOW DURATION FUND - Regular Plan - Daily IDCW Option,,INF251K01DR7
-150165,BARODA BNP PARIBAS LOW DURATION FUND - Regular Plan - Growth Option,INF251K01DQ9,
-150166,BARODA BNP PARIBAS LOW DURATION FUND - Regular Plan - Weekly IDCW Option,INF251K01DS5,INF251K01DT3
-150167,BARODA BNP PARIBAS LOW DURATION FUND - Regular Plan - Monthly IDCW Option,INF251K01DU1,INF251K01DV9
-150168,BARODA BNP PARIBAS LOW DURATION FUND - Direct Plan - Daily IDCW Option,,INF251K01GK5
-150169,BARODA BNP PARIBAS LOW DURATION FUND - Direct Plan - Growth Option,INF251K01GJ7,
-150170,BARODA BNP PARIBAS LOW DURATION FUND - Direct Plan - Monthly IDCW Option,INF251K01GN9,INF251K01GO7
-150171,BARODA BNP PARIBAS LOW DURATION FUND - Direct Plan - Weekly IDCW Option,INF251K01GL3,INF251K01GM1
-150172,Baroda BNP Paribas Dynamic Bond Fund - Growth Option,INF251K01EF0,
-150173,Baroda BNP Paribas Dynamic Bond Fund - Regular Plan - Growth Option,INF251K01DW7,
-150174,Baroda BNP Paribas Dynamic Bond Fund - Regular Plan - Daily IDCW Option,,INF251K01DX5
-150175,Baroda BNP Paribas Dynamic Bond Fund - Regular Plan - Weekly IDCW Option,,INF251K01DY3
-150176,Baroda BNP Paribas Dynamic Bond Fund - Regular Plan - Monthly IDCW Option,INF251K01DZ0,INF251K01EA1
-150177,Baroda BNP Paribas Dynamic Bond Fund - Regular Plan - Quarterly IDCW Option,INF251K01EB9,INF251K01EC7
-150178,Baroda BNP Paribas Dynamic Bond Fund - Regular Plan - Half Yearly IDCW Option,INF251K01ED5,INF251K01EE3
-150179,Baroda BNP Paribas Dynamic Bond Fund - Direct Plan - Daily IDCW Option,,INF251K01GX8
-150180,Baroda BNP Paribas Dynamic Bond Fund - Direct Plan - Growth Option,INF251K01GW0,
+150160,BARODA BNP PARIBAS ULTRA SHORT TO SHORT TERM FUND - Growth Option,INF251K01DL0,
+150161,BARODA BNP PARIBAS ULTRA SHORT TO SHORT TERM FUND - Weekly IDCW Option,,INF251K01DN6
+150162,BARODA BNP PARIBAS ULTRA SHORT TO SHORT TERM FUND - Monthly IDCW Option,INF251K01DO4,INF251K01DP1
+150163,BARODA BNP PARIBAS ULTRA SHORT TO SHORT TERM FUND - Daily IDCW Option,,INF251K01DM8
+150164,BARODA BNP PARIBAS ULTRA SHORT TO SHORT TERM FUND - Regular Plan - Daily IDCW Option,,INF251K01DR7
+150165,BARODA BNP PARIBAS ULTRA SHORT TO SHORT TERM FUND - Regular Plan - Growth Option,INF251K01DQ9,
+150166,BARODA BNP PARIBAS ULTRA SHORT TO SHORT TERM FUND - Regular Plan - Weekly IDCW Option,INF251K01DS5,INF251K01DT3
+150167,BARODA BNP PARIBAS ULTRA SHORT TO SHORT TERM FUND - Regular Plan - Monthly IDCW Option,INF251K01DU1,INF251K01DV9
+150168,BARODA BNP PARIBAS ULTRA SHORT TO SHORT TERM FUND - Direct Plan - Daily IDCW Option,,INF251K01GK5
+150169,BARODA BNP PARIBAS ULTRA SHORT TO SHORT TERM FUND - Direct Plan - Growth Option,INF251K01GJ7,
+150170,BARODA BNP PARIBAS ULTRA SHORT TO SHORT TERM FUND - Direct Plan - Monthly IDCW Option,INF251K01GN9,INF251K01GO7
+150171,BARODA BNP PARIBAS ULTRA SHORT TO SHORT TERM FUND - Direct Plan - Weekly IDCW Option,INF251K01GL3,INF251K01GM1
+150172,Baroda BNP Paribas Dynamic Term Fund - Growth Option,INF251K01EF0,
+150173,Baroda BNP Paribas Dynamic Term Fund - Regular Plan - Growth Option,INF251K01DW7,
+150174,Baroda BNP Paribas Dynamic Term Fund - Regular Plan - Daily IDCW Option,,INF251K01DX5
+150175,Baroda BNP Paribas Dynamic Term Fund - Regular Plan - Weekly IDCW Option,,INF251K01DY3
+150176,Baroda BNP Paribas Dynamic Term Fund - Regular Plan - Monthly IDCW Option,INF251K01DZ0,INF251K01EA1
+150177,Baroda BNP Paribas Dynamic Term Fund - Regular Plan - Quarterly IDCW Option,INF251K01EB9,INF251K01EC7
+150178,Baroda BNP Paribas Dynamic Term Fund - Regular Plan - Half Yearly IDCW Option,INF251K01ED5,INF251K01EE3
+150179,Baroda BNP Paribas Dynamic Term Fund - Direct Plan - Daily IDCW Option,,INF251K01GX8
+150180,Baroda BNP Paribas Dynamic Term Fund - Direct Plan - Growth Option,INF251K01GW0,
 150181,Baroda BNP Paribas Dynamic Bond Fund - Direct Plan - Half Yearly IDCW Option,,
-150182,Baroda BNP Paribas Dynamic Bond Fund - Direct Plan - Monthly IDCW Option,INF251K01GZ3,INF251K01HA4
-150183,Baroda BNP Paribas Dynamic Bond Fund - Direct Plan - Quarterly IDCW Option,INF251K01HB2,INF251K01HC0
-150184,Baroda BNP Paribas Dynamic Bond Fund - Direct Plan - Weekly IDCW Option,,INF251K01GY6
+150182,Baroda BNP Paribas Dynamic Term Fund - Direct Plan - Monthly IDCW Option,INF251K01GZ3,INF251K01HA4
+150183,Baroda BNP Paribas Dynamic Term Fund - Direct Plan - Quarterly IDCW Option,INF251K01HB2,INF251K01HC0
+150184,Baroda BNP Paribas Dynamic Term Fund - Direct Plan - Weekly IDCW Option,,INF251K01GY6
 150185,BARODA BNP PARIBAS LARGE CAP FUND - Regular Plan - Growth Option,INF251K01894,
 150186,BARODA BNP PARIBAS LARGE CAP FUND - Regular Plan - IDCW Option,INF251K01910,INF251K01902
 150187,BARODA BNP PARIBAS LARGE CAP FUND - Direct Plan - Growth Option,INF251K01HN7,
@@ -34418,8 +34418,8 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 150638,ICICI Prudential Nifty50 Equal Weight Index Fund- - Regular Plan - IDCW,INF109KC18I2,INF109KC19I0
 150639,ICICI Prudential Nifty50 Equal Weight Index Fund- - Direct Plan - Growth,INF109KC10J7,
 150640,ICICI Prudential Nifty50 Equal Weight Index Fund- - Direct Plan - IDCW,INF109KC11J5,INF109KC12J3
-150641,Motilal Oswal Gold and Silver Passive Fund of Funds,INF247L01BN6,
-150642,Motilal Oswal Gold and Silver Passive Fund of Funds,INF247L01BM8,
+150641,Motilal Oswal Gold and Silver Passive Fund of Funds - Regular Plan - Growth,INF247L01BN6,
+150642,Motilal Oswal Gold and Silver Passive Fund of Funds - Direct Plan - Growth,INF247L01BM8,
 150643,ICICI Prudential Nifty Auto Index Fund - Direct Plan - Growth,INF109KC16J4,
 150644,ICICI Prudential Nifty Auto Index Fund - Direct Plan - IDCW,INF109KC17J2,INF109KC18J0
 150645,ICICI Prudential Nifty Auto Index Fund - Regular Plan - Growth,INF109KC13J1,
@@ -35332,8 +35332,8 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 151811,Mirae Asset Multicap Fund - Direct Plan - IDCW,INF769K01KL6,INF769K01KM4
 151812,Mirae Asset Multicap Fund - Regular Plan - Growth,INF769K01KH4,
 151813,Mirae Asset Multicap Fund - Regular Plan - IDCW,INF769K01KI2,INF769K01KJ0
-151814,Motilal Oswal Nifty Microcap 250 Index Fund,INF247L01BQ9,
-151815,Motilal Oswal Nifty Microcap 250 Index Fund,INF247L01BR7,
+151814,Motilal Oswal Nifty Microcap 250 Index Fund - Direct Plan - Growth,INF247L01BQ9,
+151815,Motilal Oswal Nifty Microcap 250 Index Fund - Regular Plan - Growth,INF247L01BR7,
 151816,BANDHAN FINANCIAL SERVICES FUND - Direct Plan - Growth,INF194KB1GB2,
 151817,BANDHAN FINANCIAL SERVICES FUND - Direct Plan - IDCW,INF194KB1GC0,INF194KB1GD8
 151818,BANDHAN FINANCIAL SERVICES FUND - Regular Plan - Growth,INF194KB1GE6,
@@ -35662,10 +35662,10 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 152229,Axis Fixed Term Plan - Series 118 (100 Days) - Direct Plan - Quarterly IDCW,,
 152230,Axis Fixed Term Plan - Series 118 (100 Days) - Regular Plan - Growth,,
 152231,Baroda BNP Paribas Gold ETF - Regular Plan - Growth Option,INF251K01SU9,
-152232,Motilal Oswal Small Cap Fund,INF247L01BV9,
-152234,Motilal Oswal Small Cap Fund,INF247L01BW7,INF247L01BX5
-152235,Motilal Oswal Small Cap Fund,INF247L01BZ0,INF247L01CA1
-152237,Motilal Oswal Small Cap Fund,INF247L01BY3,
+152232,Motilal Oswal Small Cap Fund - Regular Plan - Growth,INF247L01BV9,
+152234,Motilal Oswal Small Cap Fund - Regular Plan - Reinvestment/Payout,INF247L01BW7,INF247L01BX5
+152235,Motilal Oswal Small Cap Fund - Direct Plan - Reinvestment/Payout,INF247L01BZ0,INF247L01CA1
+152237,Motilal Oswal Small Cap Fund - Direct Plan - Growth,INF247L01BY3,
 152238,Axis US Specific Treasury Dynamic Debt Passive FOF - Regular Plan - IDCW Option,INF846K014T6,INF846K016T1
 152239,Axis US Specific Treasury Dynamic Debt Passive FOF - Regular Plan - Growth Option,INF846K013T8,
 152240,Axis US Specific Treasury Dynamic Debt Passive FOF - Direct Plan - Growth Option,INF846K017T9,
@@ -35733,10 +35733,10 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 152304,SBI Fixed Maturity Plan-Series 91 (90 Days) - Regular Plan - Growth,,
 152305,SBI Fixed Maturity Plan-Series 91 (90 Days) - Direct Plan - Income Distribution Cum Capital Withdrawal,,
 152306,DSP Nifty Healthcare ETF,INF740KA1ZG1,
-152307,DSP Multicap Fund - Regular Plan - Growth,INF740KA1TZ4,
-152308,DSP Multicap Fund - Regular Plan - IDCW,INF740KA1UA5,INF740KA1UB3
-152309,DSP Multicap Fund - Direct Plan - IDCW,INF740KA1UD9,INF740KA1UE7
-152310,DSP Multicap Fund - Direct Plan - Growth,INF740KA1UC1,
+152307,DSP Multi Cap Fund - Regular Plan - Growth,INF740KA1TZ4,
+152308,DSP Multi Cap Fund - Regular Plan - IDCW,INF740KA1UA5,INF740KA1UB3
+152309,DSP Multi Cap Fund - Direct Plan - IDCW,INF740KA1UD9,INF740KA1UE7
+152310,DSP Multi Cap Fund - Direct Plan - Growth,INF740KA1UC1,
 152311,Sundaram Multi Asset Allocation Fund - Regular Plan - GROWTH,INF903JA1LH5,
 152312,Sundaram Multi Asset Allocation Fund - Direct Plan - IDCW (Income Distribution CUM Capital Withdrawal),,INF903JA1LM5
 152313,Sundaram Multi Asset Allocation Fund - Regular Plan - IDCW (Income Distribution CUM Capital Withdrawal),,INF903JA1LJ1
@@ -36062,10 +36062,10 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 152689,Canara Robeco Balanced Advantage Fund - Direct Plan - IDCW Option,INF760K01LE8,INF760K01LF5
 152690,Canara Robeco Balanced Advantage Fund - Regular Plan - Growth Option,INF760K01LA6,
 152691,Canara Robeco Balanced Advantage Fund - Regular Plan - IDCW Option,INF760K01LB4,INF760K01LC2
-152692,Motilal Oswal Quant Fund,INF247L01CP9,
-152693,Motilal Oswal Quant Fund,INF247L01CQ7,INF247L01CR5
-152694,Motilal Oswal Quant Fund,INF247L01CS3,
-152695,Motilal Oswal Quant Fund,INF247L01CT1,INF247L01CU9
+152692,Motilal Oswal Quant Fund - Regular Plan - GROWTH,INF247L01CP9,
+152693,Motilal Oswal Quant Fund - Regular Plan - Reinvestment/Payout,INF247L01CQ7,INF247L01CR5
+152694,Motilal Oswal Quant Fund - Direct Plan - GROWTH,INF247L01CS3,
+152695,Motilal Oswal Quant Fund - Direct Plan - Reinvestment/Payout,INF247L01CT1,INF247L01CU9
 152696,Baroda BNP Paribas Manufacturing Fund - Regular Plan - Growth Option,INF251K01TM4,
 152697,Baroda BNP Paribas Manufacturing Fund - Direct Plan - Growth Option,INF251K01TP7,
 152698,Baroda BNP Paribas Manufacturing Fund - Direct Plan - IDCW Option,INF251K01TQ5,INF251K01TR3
@@ -36075,8 +36075,8 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 152703,Kotak Special Opportunities Fund - Regular Plan - Growth,INF174KA1SC0,
 152704,Kotak Special Opportunities Fund - Direct Plan - IDCW,INF174KA1SG1,
 152710,Edelweiss Business Cycle Fund - Direct Plan - Growth,INF754K01TA2,
-152711,Motilal Oswal Nifty India Defence Index Fund,INF247L01CV7,
-152712,Motilal Oswal Nifty India Defence Index Fund,INF247L01CW5,
+152711,Motilal Oswal Nifty India Defence Index Fund - Regular Plan - Growth,INF247L01CV7,
+152712,Motilal Oswal Nifty India Defence Index Fund - Direct Plan - Growth,INF247L01CW5,
 152713,HDFC NIFTY100 Low Volatility 30 Index Fund - Direct Plan - Growth Option,INF179KC1IM3,HDFCNIVODG
 152714,HDFC NIFTY100 Low Volatility 30 Index Fund - Regular Plan - Growth Option,INF179KC1IL5,
 152715,Mirae Asset Nifty EV and New Age Automotive ETF,INF769K01LQ3,
@@ -36187,10 +36187,10 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 152822,ITI Large & Mid Cap Fund - Regular Plan - IDCW Option,INF00XX01CY6,INF00XX01CZ3
 152823,ITI Large & Mid Cap Fund - Direct Plan - IDCW Option,INF00XX01DB2,INF00XX01DC0
 152824,ITI Large & Mid Cap Fund - Regular Plan - Growth Option,INF00XX01CX8,
-152825,Franklin India Ultra Short Duration Fund - Direct Plan - Growth,INF090I01XL4,
-152826,Franklin India Ultra Short Duration Fund - Regular Plan - IDCW,INF090I01XK6,INF090I01XO8
-152827,Franklin India Ultra Short Duration Fund - Direct Plan - IDCW,INF090I01XM2,INF090I01XN0
-152828,Franklin India Ultra Short Duration Fund - Regular Plan - Growth,INF090I01XJ8,
+152825,Franklin India Ultra Short Term Fund - Direct Plan - Growth,INF090I01XL4,
+152826,Franklin India Ultra Short Term Fund - Regular Plan - IDCW,INF090I01XK6,INF090I01XO8
+152827,Franklin India Ultra Short Term Fund - Direct Plan - IDCW,INF090I01XM2,INF090I01XN0
+152828,Franklin India Ultra Short Term Fund - Regular Plan - Growth,INF090I01XJ8,
 152829,HSBC India Export Opportunities Fund - Direct Plan - Growth,INF336L01RO1,
 152830,HSBC India Export Opportunities Fund - Regular Plan - Growth,INF336L01RL7,
 152831,HSBC India Export Opportunities Fund - Direct Plan - IDCW,INF336L01RP8,INF336L01RQ6
@@ -36213,10 +36213,10 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 152848,Samco Multi Cap Fund - Regular Plan - Growth,INF0K1H01206,
 152849,WhiteOak Capital Arbitrage Fund - Direct Plan - Growth Option,INF03VN01910,
 152850,WhiteOak Capital Arbitrage Fund - Regular Plan - Growth Option,INF03VN01928,
-152851,Franklin India Medium to Long Duration Fund - Direct Plan - Growth,INF090I01XG4,
-152852,Franklin India Medium to Long Duration Fund - Direct Plan - IDCW,INF090I01XH2,INF090I01XI0
-152853,Franklin India Medium to Long Duration Fund - Regular Plan - Growth,INF090I01XD1,
-152854,Franklin India Medium to Long Duration Fund - Regular Plan - IDCW,INF090I01XE9,INF090I01XF6
+152851,Franklin India Medium to Long Term Fund - Direct Plan - Growth,INF090I01XG4,
+152852,Franklin India Medium to Long Term Fund - Direct Plan - IDCW,INF090I01XH2,INF090I01XI0
+152853,Franklin India Medium to Long Term Fund - Regular Plan - Growth,INF090I01XD1,
+152854,Franklin India Medium to Long Term Fund - Regular Plan - IDCW,INF090I01XE9,INF090I01XF6
 152855,Bandhan Nifty Midcap 150 Index Fund - Direct Plan - Growth,INF194KB1IT0,
 152856,Bandhan Nifty Midcap 150 Index Fund - Regular Plan - Growth,INF194KB1IU8,
 152857,Edelweiss Nifty Bank ETF,INF754K01TE4,
@@ -36237,8 +36237,8 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 152872,Kotak Nifty India Tourism Index Fund - Regular Plan - Growth,INF174KA1TC8,
 152873,Kotak Nifty India Tourism Index Fund - Direct Plan - IDCW,INF174KA1TA2,INF174KA1TB0
 152874,Motilal Oswal Nifty 500 Momentum 50 ETF,INF247L01DK8,
-152875,Motilal Oswal Nifty 500 Momentum 50 Index Fund,INF247L01DL6,
-152876,Motilal Oswal Nifty 500 Momentum 50 Index Fund,INF247L01DM4,
+152875,Motilal Oswal Nifty 500 Momentum 50 Index Fund - Direct Plan - Growth,INF247L01DL6,
+152876,Motilal Oswal Nifty 500 Momentum 50 Index Fund - Regular Plan - Growth,INF247L01DM4,
 152877,Bandhan Business Cycle Fund - Regular Plan - Growth,INF194KB1IP8,
 152878,Bandhan Business Cycle Fund - Direct Plan - Growth,INF194KB1IQ6,
 152879,Bandhan Business Cycle Fund - Direct Plan - IDCW,INF194KB1IL7,INF194KB1IM5
@@ -36326,10 +36326,10 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 152961,Aditya Birla Sun Life Crisil-IBX AAA NBFC-HFC Index-Dec 2025 Fund-Regular Growth,INF209KC1274,
 152962,WhiteOak Capital ESG Best-In-Class Strategy Fund - Direct Plan - Growth Option,INF03VN01951,
 152963,WhiteOak Capital ESG Best-In-Class Strategy Fund - Regular Plan - Growth Option,INF03VN01969,
-152964,Motilal Oswal Digital India Fund,INF247L01DN2,
-152965,Motilal Oswal Digital India Fund,INF247L01DO0,INF247L01DP7
-152966,Motilal Oswal Digital India Fund,INF247L01DQ5,
-152967,Motilal Oswal Digital India Fund,INF247L01DR3,INF247L01DS1
+152964,Motilal Oswal Digital India Fund - Direct Plan - Growth,INF247L01DN2,
+152965,Motilal Oswal Digital India Fund - Direct Plan - Growth,INF247L01DO0,INF247L01DP7
+152966,Motilal Oswal Digital India Fund - Regular Plan - Growth,INF247L01DQ5,
+152967,Motilal Oswal Digital India Fund - Regular Plan - Growth,INF247L01DR3,INF247L01DS1
 152968,Mirae Asset Nifty Total Market Index Fund - Direct Plan - Growth,INF769K01MD9,
 152969,Mirae Asset Nifty Total Market Index Fund - Direct Plan - IDCW,INF769K01ME7,INF769K01MF4
 152970,Mirae Asset Nifty Total Market Index Fund - Regular Plan - Growth,INF769K01MA5,
@@ -36375,13 +36375,13 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 153014,SBI Nifty India Consumption Index Fund - Direct Plan - IDCW,INF200KB1456,INF200KB1464
 153015,SBI Nifty India Consumption Index Fund - Direct Plan - Growth,INF200KB1449,
 153021,Samco Overnight Fund,,
-153022,Motilal Oswal Nifty MidSmall Healthcare Index Fund,INF247L01DT9,
-153023,Motilal Oswal Nifty MidSmall Healthcare Index Fund,INF247L01EA7,
-153024,Motilal Oswal Nifty MidSmall India Consumption Index Fund,INF247L01DV5,
-153025,Motilal Oswal Nifty MidSmall India Consumption Index Fund,INF247L01DU7,
-153026,Motilal Oswal Nifty MidSmall Financial Services Index Fund,INF247L01DX1,
-153027,Motilal Oswal Nifty MidSmall Financial Services Index Fund,INF247L01DW3,
-153028,Motilal Oswal Nifty MidSmall IT and Telecom Index Fund,INF247L01DZ6,
+153022,Motilal Oswal Nifty MidSmall Healthcare Index Fund - Regular Plan - Growth,INF247L01DT9,
+153023,Motilal Oswal Nifty MidSmall Healthcare Index Fund - Direct Plan - Growth,INF247L01EA7,
+153024,Motilal Oswal Nifty MidSmall India Consumption Index Fund - Regular Plan - Growth,INF247L01DV5,
+153025,Motilal Oswal Nifty MidSmall India Consumption Index Fund - Direct Plan - Growth,INF247L01DU7,
+153026,Motilal Oswal Nifty MidSmall Financial Services Index Fund - Regular Plan - Growth,INF247L01DX1,
+153027,Motilal Oswal Nifty MidSmall Financial Services Index Fund - Direct Plan - Growth,INF247L01DW3,
+153028,Motilal Oswal Nifty MidSmall IT and Telecom Index Fund - Regular Plan - Growth,INF247L01DZ6,
 153029,Motilal Oswal Nifty MidSmall IT and Telecom Index Fund,INF247L01DY9,
 153030,Aditya Birla Sun Life Crisil-IBX AAA Financial Services Index-Sep 2027 Fund - Direct Plan - GROWTH,INF209KC1290,
 153031,Aditya Birla Sun Life Crisil-IBX AAA Financial Services Index-Sep 2027 Fund - Direct Plan - IDCW Payout,INF209KC1308,
@@ -36454,14 +36454,14 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 153098,Groww Multicap Fund - Direct Plan - Income Distribution cum capital withdrawal,INF666M01JE7,INF666M01JF4
 153099,Groww Multicap Fund - Regular Plan - Income Distribution cum capital withdrawal,INF666M01JH0,INF666M01JI8
 153100,Groww Multicap Fund - Regular Plan - Growth,INF666M01JG2,
-153101,Franklin India Long Duration Fund - Regular Plan - IDCW,INF090I01XX9,INF090I01XW1
-153102,Franklin India Long Duration Fund - Direct Plan - Growth,INF090I01XY7,
-153103,Franklin India Long Duration Fund - Direct Plan - IDCW,INF090I01YA5,INF090I01XZ4
-153104,Franklin India Long Duration Fund - Regular Plan - Growth,INF090I01XV3,
-153105,Mirae Asset Long Duration Fund - Direct Plan - Growth,INF769K01NC9,
-153106,Mirae Asset Long Duration Fund - Direct Plan - IDCW,INF769K01ND7,INF769K01NF2
-153107,Mirae Asset Long Duration Fund - Regular Plan - Growth,INF769K01MZ2,
-153108,Mirae Asset Long Duration Fund - Regular Plan - IDCW,INF769K01NA3,INF769K01NB1
+153101,Franklin India Long Term Fund - Regular Plan - IDCW,INF090I01XX9,INF090I01XW1
+153102,Franklin India Long Term Fund - Direct Plan - Growth,INF090I01XY7,
+153103,Franklin India Long Term Fund - Direct Plan - IDCW,INF090I01YA5,INF090I01XZ4
+153104,Franklin India Long Term Fund - Regular Plan - Growth,INF090I01XV3,
+153105,Mirae Asset Long Term Fund - Direct Plan - Growth,INF769K01NC9,
+153106,Mirae Asset Long Term Fund - Direct Plan - IDCW,INF769K01ND7,INF769K01NF2
+153107,Mirae Asset Long Term Fund - Regular Plan - Growth,INF769K01MZ2,
+153108,Mirae Asset Long Term Fund - Regular Plan - IDCW,INF769K01NA3,INF769K01NB1
 153109,Union Active Momentum Fund - Direct Plan - Growth Option,INF582M01KG9,
 153110,Union Active Momentum Fund - Direct Plan - IDCW Option,INF582M01KH7,INF582M01KI5
 153111,Union Active Momentum Fund - Regular Plan - Growth Option,INF582M01KC8,
@@ -36490,8 +36490,8 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 153134,Tata BSE Select Business Groups Index Fund - Regular Plan - Growth Option,INF277KA1CX6,
 153135,Tata BSE Select Business Groups Index Fund - Direct Plan - IDCW Reinvestment Option,,INF277KA1DB0
 153136,Tata BSE Select Business Groups Index Fund - Regular Plan - IDCW Reinvestment Option,,INF277KA1CY4
-153137,Motilal Oswal Nifty Capital Market Index Fund,INF247L01EC3,
-153138,Motilal Oswal Nifty Capital Market Index Fund,INF247L01EB5,
+153137,Motilal Oswal Nifty Capital Market Index Fund - Regular Plan - Growth,INF247L01EC3,
+153138,Motilal Oswal Nifty Capital Market Index Fund - Direct Plan - Growth,INF247L01EB5,
 153139,Bank of India Consumption Fund - Direct Plan - Growth,INF761K01GI7,
 153140,Bank of India Consumption Fund - Regular Plan - Growth,INF761K01GL1,
 153141,Bank of India Consumption Fund - Regular Plan - IDCW,INF761K01GM9,INF761K01GN7
@@ -36536,10 +36536,10 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 153182,ICICI Prudential Rural Opportunities Fund - Direct Plan - IDCW,INF109KC14Z5,INF109KC13Z7
 153183,ICICI Prudential Rural Opportunities Fund - Regular Plan - IDCW,INF109KC11Z1,INF109KC10Z3
 153184,ICICI Prudential Rural Opportunities Fund - Direct Plan - Growth,INF109KC12Z9,
-153185,Motilal Oswal Arbitrage Fund,INF247L01EE9,INF247L01EF6
-153186,Motilal Oswal Arbitrage Fund,INF247L01EH2,INF247L01EI0
-153187,Motilal Oswal Arbitrage Fund,INF247L01ED1,
-153188,Motilal Oswal Arbitrage Fund,INF247L01EG4,
+153185,Motilal Oswal Arbitrage Fund - Direct Plan - Reinvestment/Payout,INF247L01EE9,INF247L01EF6
+153186,Motilal Oswal Arbitrage Fund - Regular Plan - Reinvestment/Payout,INF247L01EH2,INF247L01EI0
+153187,Motilal Oswal Arbitrage Fund - Direct Plan - Growth,INF247L01ED1,
+153188,Motilal Oswal Arbitrage Fund - Regular Plan - Growth,INF247L01EG4,
 153189,WhiteOak Capital Quality Equity Fund - Direct Plan - Growth Option,INF03VN01977,
 153190,WhiteOak Capital Quality Equity Fund - Regular Plan - Growth Option,INF03VN01985,
 153191,Mirae Asset Nifty India New Age Consumption ETF,INF769K01NS5,
@@ -36605,10 +36605,10 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 153253,SBI Nifty Bank Index Fund - Regular Plan - Growth,INF200KB1530,
 153254,Edelweiss Consumption Fund - Direct Plan - IDCW Payout,INF754K01TZ9,INF754K01UA0
 153255,Edelweiss Consumption Fund - Regular Plan - Growth,INF754K01UC6,
-153256,Motilal Oswal Innovation Opportunities Fund,INF247L01EM2,
-153257,Motilal Oswal Innovation Opportunities Fund,INF247L01EN0,INF247L01EO8
-153258,Motilal Oswal Innovation Opportunities Fund,INF247L01EJ8,
-153259,Motilal Oswal Innovation Opportunities Fund,INF247L01EK6,INF247L01EL4
+153256,Motilal Oswal Innovation Opportunities Fund - Regular Plan - Growth,INF247L01EM2,
+153257,Motilal Oswal Innovation Opportunities Fund - Regular Plan - Payout/Reinvestment,INF247L01EN0,INF247L01EO8
+153258,Motilal Oswal Innovation Opportunities Fund - Direct Plan - Growth,INF247L01EJ8,
+153259,Motilal Oswal Innovation Opportunities Fund - Direct Plan - Payout/Reinvestment,INF247L01EK6,INF247L01EL4
 153260,ITI Bharat Consumption Fund - Direct Plan - Growth Option,INF00XX01DG1,
 153261,ITI Bharat Consumption Fund - Direct Plan - IDCW Option,INF00XX01DH9,INF00XX01DI7
 153262,ITI Bharat Consumption Fund - Regular Plan - IDCW Option,INF00XX01DE6,INF00XX01DF3
@@ -36705,14 +36705,14 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 153357,360 ONE Gold ETF - Direct Plan - GROWTH Option,INF579M01BB5,
 153362,Navi Nifty Smallcap250 Momentum Quality 100 Index Fund - Direct Plan - Growth,INF959L01HQ6,
 153363,Navi Nifty Smallcap250 Momentum Quality 100 Index Fund - Regular Plan - Growth,INF959L01HP8,
-153364,Motilal Oswal Active Momentum Fund,INF247L01EP5,
-153365,Motilal Oswal Active Momentum Fund,INF247L01ES9,
-153366,Motilal Oswal Active Momentum Fund,INF247L01ET7,INF247L01EU5
-153367,Motilal Oswal Active Momentum Fund,INF247L01EQ3,INF247L01ER1
-153368,Franklin India Low Duration Fund - Direct Plan - Growth,INF090I01YE7,
-153369,Franklin India Low Duration Fund - Direct Plan - IDCW,INF090I01YG2,INF090I01YF4
-153370,Franklin India Low Duration Fund - Regular Plan - IDCW,INF090I01YD9,INF090I01YC1
-153371,Franklin India Low Duration Fund - Regular Plan - Growth,INF090I01YB3,
+153364,Motilal Oswal Active Momentum Fund - Direct Plan - Growth,INF247L01EP5,
+153365,Motilal Oswal Active Momentum Fund - Regular Plan - Growth,INF247L01ES9,
+153366,Motilal Oswal Active Momentum Fund - Regular Plan - Reinvestment/Payout,INF247L01ET7,INF247L01EU5
+153367,Motilal Oswal Active Momentum Fund - Direct Plan - Reinvestment/Payout,INF247L01EQ3,INF247L01ER1
+153368,Franklin India Ultra Short to Short Term Fund - Direct Plan - Growth,INF090I01YE7,
+153369,Franklin India Ultra Short to Short Term Fund - Direct Plan - IDCW,INF090I01YG2,INF090I01YF4
+153370,Franklin India Ultra Short to Short Term Fund - Regular Plan - IDCW,INF090I01YD9,INF090I01YC1
+153371,Franklin India Ultra Short to Short Term Fund - Regular Plan - Growth,INF090I01YB3,
 153372,Kotak CRISIL-IBX Financial Services 3-6 Months Debt Index Fund - Direct Plan - Growth,INF174KA1VK7,
 153373,Kotak CRISIL-IBX Financial Services 3-6 Months Debt Index Fund - Direct Plan - IDCW,INF174KA1VL5,INF174KA1VM3
 153374,Kotak CRISIL-IBX Financial Services 3-6 Months Debt Index Fund - Regular Plan - IDCW,INF174KA1VO9,INF174KA1VP6
@@ -36819,10 +36819,10 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 153479,Bajaj Finserv Nifty Next 50 Index Fund - Direct Plan - Growth,INF0QA701BG6,
 153480,Bajaj Finserv Nifty Next 50 Index Fund - Regular Plan - Growth,INF0QA701BD3,
 153481,Bajaj Finserv Nifty Next 50 Index Fund - Regular Plan - IDCW,INF0QA701BE1,INF0QA701BF8
-153482,Motilal Oswal Infrastructure Fund,INF247L01EZ4,
-153483,Motilal Oswal Infrastructure Fund,INF247L01EX9,INF247L01EY7
-153484,Motilal Oswal Infrastructure Fund,INF247L01EW1,
-153485,Motilal Oswal Infrastructure Fund,INF247L01FA4,INF247L01FB2
+153482,Motilal Oswal Infrastructure Fund - Regular Plan - Growth,INF247L01EZ4,
+153483,Motilal Oswal Infrastructure Fund - Direct Plan - Payout/Reinvestment,INF247L01EX9,INF247L01EY7
+153484,Motilal Oswal Infrastructure Fund - Direct Plan - Growth,INF247L01EW1,
+153485,Motilal Oswal Infrastructure Fund - Regular Plan - Payout/Reinvestment,INF247L01FA4,INF247L01FB2
 153486,DSP Silver ETF Fund of Fund - Regular Plan - Growth,INF740KA1VW7,
 153487,DSP Silver ETF Fund of Fund - Direct Plan - Growth,INF740KA1VZ0,
 153488,DSP Silver ETF Fund of Fund - Regular Plan - IDCW,INF740KA1VX5,INF740KA1VY3
@@ -36884,10 +36884,10 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 153555,SBI Nifty200 Quality 30 Index Fund - Direct Plan - Growth,INF200KB1811,
 153556,SBI Nifty200 Quality 30 Index Fund - Regular Plan - IDCW,INF200KB1795,INF200KB1803
 153557,SBI Nifty200 Quality 30 Index Fund - Direct Plan - IDCW,INF200KB1829,INF200KB1837
-153558,Motilal Oswal Services Fund,INF247L01FE6,
-153561,Motilal Oswal Services Fund,INF247L01FG1,
-153562,Motilal Oswal Services Fund,INF247L01FJ5,INF247L01FH9
-153563,Motilal Oswal Services Fund,INF247L01FI7,INF247L01FF3
+153558,Motilal Oswal Services Fund - Direct Plan - GROWTH,INF247L01FE6,
+153561,Motilal Oswal Services Fund - Regular Plan - GROWTH,INF247L01FG1,
+153562,Motilal Oswal Services Fund - Regular Plan - Reinvestment/Payout,INF247L01FJ5,INF247L01FH9
+153563,Motilal Oswal Services Fund - Direct Plan - Reinvestment/Payout,INF247L01FI7,INF247L01FF3
 153564,Motilal Oswal BSE India Infrastructure ETF,INF247L01FL1,
 153565,Nippon India BSE Sensex Next 30 Index Fund - Direct Plan - IDCW Option,INF204KC1FE5,INF204KC1FF2
 153566,Nippon India BSE Sensex Next 30 Index Fund - Regular Plan - Growth Option,INF204KC1FA3,
@@ -36918,8 +36918,8 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 153593,DSP Nifty Healthcare Index Fund - Direct Plan - IDCW,INF740KA1WG8,INF740KA1WH6
 153594,DSP Nifty Healthcare Index Fund - Direct Plan - Growth,INF740KA1WF0,
 153595,DSP Nifty Healthcare Index Fund - Regular Plan - IDCW,INF740KA1WD5,INF740KA1WE3
-153596,Motilal Oswal BSE 1000 Index Fund,INF247L01FM9,
-153597,Motilal Oswal BSE 1000 Index Fund,INF247L01FN7,
+153596,Motilal Oswal BSE 1000 Index Fund - Direct Plan - Growth,INF247L01FM9,
+153597,Motilal Oswal BSE 1000 Index Fund - Regular Plan - Growth,INF247L01FN7,
 153598,Nippon India Income Plus Arbitrage Active Fund of Fund - Direct Plan - IDCW Option,INF204KC1FK2,INF204KC1FL0
 153599,Nippon India Income Plus Arbitrage Active Fund of Fund - Regular Plan - IDCW Option,INF204KC1FH8,INF204KC1FI6
 153600,Nippon India Income Plus Arbitrage Active Fund of Fund - Direct Plan - Growth Option,INF204KC1FJ4,
@@ -37063,10 +37063,10 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 153746,Groww BSE Power ETF FOF - Direct Plan - Income Distribution cum capital withdrawal,INF666M01LO2,INF666M01LP9
 153747,Groww BSE Power ETF FOF - Regular Plan - Income Distribution cum capital withdrawal,INF666M01LR5,INF666M01LS3
 153748,Groww BSE Power ETF FOF - Regular Plan - Growth,INF666M01LQ7,
-153749,Motilal Oswal Special Opportunities Fund,INF247L01FS6,
-153750,Motilal Oswal Special Opportunities Fund,INF247L01FT4,INF247L01FU2
-153751,Motilal Oswal Special Opportunities Fund,INF247L01FV0,
-153752,Motilal Oswal Special Opportunities Fund,INF247L01FW8,INF247L01FX6
+153749,Motilal Oswal Special Opportunities Fund - Direct Plan - Growth,INF247L01FS6,
+153750,Motilal Oswal Special Opportunities Fund - Direct Plan - Payout/Reinvestment,INF247L01FT4,INF247L01FU2
+153751,Motilal Oswal Special Opportunities Fund - Regular Plan - Growth,INF247L01FV0,
+153752,Motilal Oswal Special Opportunities Fund - Regular Plan - Payout/Reinvestment,INF247L01FW8,INF247L01FX6
 153753,Kotak Active Momentum Fund - Direct Plan - Growth Option,INF174KA1XA4,
 153754,Kotak Active Momentum Fund - Direct Plan - Dividend Reinvestment Option,INF174KA1XB2,INF174KA1XC0
 153755,Kotak Active Momentum Fund - Regular Plan - Payout of Income Distribution cum capital withdrawal option- Direct,INF174KA1XD8,
@@ -37211,7 +37211,7 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 153913,Motilal Oswal Consumption Fund,INF247L01GA2,
 153914,Motilal Oswal Consumption Fund,INF247L01GB0,INF247L01GC8
 153915,Motilal Oswal Consumption Fund,INF247L01GE4,INF247L01GF1
-153916,Motilal Oswal Consumption Fund,INF247L01GD6,
+153916,Motilal Oswal Consumption Fund - Regular Plan - Growth,INF247L01GD6,
 153917,Groww Nifty Capital Markets ETF FOF - Direct Plan - Income Distribution cum capital withdrawal,INF666M01MH4,INF666M01MI2
 153918,Groww Nifty Capital Markets ETF FOF - Regular Plan - Growth,INF666M01MJ0,
 153919,Groww Nifty Capital Markets ETF FOF - Regular Plan - Income Distribution cum capital withdrawal,INF666M01MK8,INF666M01ML6
@@ -37385,8 +37385,8 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 154108,Edelweiss Financial Services Fund - Direct Plan - Growth,INF754K01WH1,
 154109,Zerodha Nifty Short Duration G-Sec Index Fund - Direct Plan - Growth Option,INF0R8F01182,
 154111,Groww Nifty Chemicals ETF,INF666M01NP5,
-154112,Motilal Oswal Diversified Equity Flexicap Passive Fund of Funds,INF247L01GL9,
-154113,Motilal Oswal Diversified Equity Flexicap Passive Fund of Funds,INF247L01GM7,
+154112,Motilal Oswal Diversified Equity Flexicap Passive Fund of Funds - Direct Plan - Growth,INF247L01GL9,
+154113,Motilal Oswal Diversified Equity Flexicap Passive Fund of Funds - Regular Plan - Growth,INF247L01GM7,
 154114,Samco Mid Cap Fund - Direct Plan - Growth,INF0K1H01313,
 154115,Samco Mid Cap Fund - Regular Plan - Growth,INF0K1H01321,
 154119,Mahindra Manulife Innovation Opportunities Fund - Regular Plan - IDCW,INF174V01CZ3,INF174V01CY6
@@ -37405,10 +37405,10 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 154134,The Wealth Company Gold ETF FOF - Regular Plan - IDCW,INF2F0001396,INF2F0001404
 154135,Bandhan Silver ETF FOF - Regular Plan - Growth,INF194KB1KM1,
 154136,Bandhan Silver ETF FOF - Direct Plan - Growth,INF194KB1KN9,
-154137,Motilal Oswal Financial Services Fund,INF247L01GQ8,
-154139,Motilal Oswal Financial Services Fund,INF247L01GR6,INF247L01GS4
-154140,Motilal Oswal Financial Services Fund,INF247L01GO3,INF247L01GP0
-154142,Motilal Oswal Financial Services Fund,INF247L01GN5,
+154137,Motilal Oswal Financial Services Fund - Regular Plan - Growth,INF247L01GQ8,
+154139,Motilal Oswal Financial Services Fund - Regular Plan - Payout,INF247L01GR6,INF247L01GS4
+154140,Motilal Oswal Financial Services Fund - Direct Plan - Payout/Reinvestment,INF247L01GO3,INF247L01GP0
+154142,Motilal Oswal Financial Services Fund - Direct Plan - Growth,INF247L01GN5,
 154143,Shriram Money Market Fund - Regular Plan - Growth,INF680P01489,
 154144,Shriram Money Market Fund - Direct Plan - Growth,INF680P01471,
 154145,Kotak Nifty200 Value 30 Index Fund - Direct Plan - Growth,INF174KA1YP0,
@@ -37597,10 +37597,10 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 154333,SBI CRISIL-IBX Financial Services 9-12 Months Debt Index Fund - Regular Plan - IDCW,INF200KB1AS1,INF200KB1AT9
 154334,SBI CRISIL-IBX Financial Services 9-12 Months Debt Index Fund - Direct Plan - Growth,INF200KB1AU7,
 154335,SBI CRISIL-IBX Financial Services 9-12 Months Debt Index Fund - Direct Plan - IDCW,INF200KB1AV5,INF200KB1AW3
-154336,Motilal Oswal Contra Fund,INF247L01GX4,INF247L01GY2
-154337,Motilal Oswal Contra Fund,INF247L01GW6,
-154338,Motilal Oswal Contra Fund,INF247L01GZ9,
-154339,Motilal Oswal Contra Fund,INF247L01HA0,INF247L01HB8
+154336,Motilal Oswal Contra Fund - Direct Plan - Payout/Reinvestment,INF247L01GX4,INF247L01GY2
+154337,Motilal Oswal Contra Fund - Direct Plan - Payout/Reinvestment,INF247L01GW6,
+154338,Motilal Oswal Contra Fund - Regular Plan - Growth,INF247L01GZ9,
+154339,Motilal Oswal Contra Fund - Regular Plan - Payout/Reinvestment,INF247L01HA0,INF247L01HB8
 154340,Invesco India BSE Sensex Index Fund - Direct Plan - Growth,INF205KA1BM8,
 154342,Invesco India BSE Sensex Index Fund - Regular Plan - Growth,INF205KA1BL0,
 154343,Invesco India Nifty Bank Index Fund - Direct Plan - Growth,INF205KA1BO4,
@@ -37621,7 +37621,7 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 154361,Kotak Low Duration Fund - Direct Plan - Monthly - Reinvestment & Payout of Income Distribution cum Capital Withdrawal Option,INF174KA1A03,INF174KA1ZY9
 154362,SBI Nifty G-sec Jul 2031 Index Fund - Regular Plan - Growth,INF200KB1AZ6,
 154363,SBI CRISIL-IBX 10:90 Gilt + SDL Index - Dec 2029 Index Fund - Regular Plan - Growth,INF200KB1BF6,
-154364,Motilal Oswal BSE Clean Environment Index Fund,INF247L01HC6,
+154364,Motilal Oswal BSE Clean Environment Index Fund - Direct Plan - Growth,INF247L01HC6,
 154365,Motilal Oswal BSE Clean Environment Index Fund,INF247L01HD4,
 154366,360 ONE MSCI India ETF - Direct Plan - GROWTH Option,INF579M01BP5,
 154367,SBI CRISIL-IBX 10:90 Gilt + SDL Index - Dec 2029 Index Fund - Regular Plan - IDCW,INF200KB1BG4,INF200KB1BH2
@@ -37672,7 +37672,7 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 154422,JM Multi Asset Allocation Fund - Regular Plan - IDCW Option,INF192K01NV4,INF192K01NU6
 154423,JM Multi Asset Allocation Fund - Direct Plan - Growth Option,INF192K01NQ4,
 154424,JM Multi Asset Allocation Fund - Regular Plan - Growth Option,INF192K01NT8,
-154426,DSP Savings Fund - Direct Plan - Weekly IDCW,INF740KA1ZD8,INF740KA1ZE6
+154426,DSP Money Market Fund - Direct Plan - Weekly IDCW,INF740KA1ZD8,INF740KA1ZE6
 154427,HDFC Nifty Auto Index Fund - Direct Plan - Growth Option,INF179KC1KQ0,
 154428,HDFC Nifty Auto Index Fund - Regular Plan - Growth Option,INF179KC1KP2,
 154431,Invesco India Ultra Short Duration Fund - Regular Plan - Weekly IDCW,INF205KA1BQ9,INF205KA1BR7
@@ -37770,6 +37770,7 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 154614,Bajaj Finserv Money Market Fund - Direct Plan - Weekly-IDCW,INF0QA701CK6,
 154619,Zerodha Arbitrage Fund - Direct Plan - Growth Option,INF0R8F01232,
 154624,Choice Overnight Fund - Direct Plan - Unclaimed Less than 3 years Redemption,,
+154625,quant Silver ETF - Direct Plan,,
 154626,Mirae Asset BSE LargeMid (60:40) Stable Dividend 50 ETF,INF769K01RK3,
 154632,JioBlackRock Large Cap Fund - Regular Plan - Growth Option,INF22M001192,
 154633,JioBlackRock Nifty 50 Index Fund - Regular Plan - Growth Option,INF22M001200,
@@ -37783,23 +37784,23 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 154643,JioBlackRock Nifty Midcap 150 Index Fund - Regular Plan - Growth Option,INF22M001341,
 154644,JioBlackRock Nifty Next 50 Index Fund - Regular Plan - Growth Option,INF22M001358,
 154645,JioBlackRock Liquid Fund - Regular Plan - Growth Option,INF22M001267,
-154672,Baroda BNP Paribas Short Duration Fund(the scheme has 2 segregated portfolios) - Direct Plan - Direct Monthly IDCW Payout and Re-investment,INF955L01IW0,INF955L01IX8
-154673,Baroda BNP Paribas Short Duration Fund(the scheme has 2 segregated portfolios) - Direct Plan - SG1 Direct Growth,INF955L01IT6,
-154674,Baroda BNP Paribas Short Duration Fund(the scheme has 2 segregated portfolios) - Direct Plan - Direct Quarterly IDCW Payout and Re-Investment,INF955L01IU4,INF955L01IV2
-154675,Baroda BNP Paribas Short Duration Fund(the scheme has 2 segregated portfolios) - Regular Plan - SG 1 Regular Growth,INF955L01IO7,
-154676,Baroda BNP Paribas Short Duration Fund(the scheme has 2 segregated portfolios) - Regular Plan - Regular Monthly IDCW Payout,INF955L01IR0,INF955L01IS8
-154677,Baroda BNP Paribas Short Duration Fund(the scheme has 2 segregated portfolios) - Regular Plan - Regular Quarterly IDCW Payout and Re-investment,INF955L01IP4,INF955L01IQ2
-154678,Baroda BNP Paribas Short Duration Fund(the scheme has 2 segregated portfolios) - Direct Plan - Direct Daily IDCW Reinvestment,,INF955L01JK3
-154679,Baroda BNP Paribas Short Duration Fund(the scheme has 2 segregated portfolios) - Direct Growth,INF955L01JF3,
-154680,Baroda BNP Paribas Short Duration Fund(the scheme has 2 segregated portfolios) - Direct Monthly IDCW Payout and Re-investment,INF955L01JI7,INF955L01JJ5
-154681,Baroda BNP Paribas Short Duration Fund(the scheme has 2 segregated portfolios) - Direct Plan - Direct Quarterly IDCW Payout and Re-investment,INF955L01JG1,INF955L01JH9
-154682,Baroda BNP Paribas Short Duration Fund(the scheme has 2 segregated portfolios) - Direct Weekly Reinvestment,,INF955L01JL1
-154683,Baroda BNP Paribas Short Duration Fund(the scheme has 2 segregated portfolios) - Regular Daily IDCW Reinvestment,,INF955L01JD8
-154684,Baroda BNP Paribas Short Duration Fund(the scheme has 2 segregated portfolios) - SG 2 Regular Growth,INF955L01IY6,
-154685,Baroda BNP Paribas Short Duration Fund(the scheme has 2 segregated portfolios) - Regular Monthly IDCW Payout and Re-investment,INF955L01JB2,INF955L01JC0
-154686,Baroda BNP Paribas Short Duration Fund(the scheme has 2 segregated portfolios) - Regular Plan - Regular Quarterly IDCW Payout,INF955L01IZ3,
-154687,Baroda BNP Paribas Short Duration Fund(the scheme has 2 segregated portfolios) - Regular Plan - Regular Weekly IDCW Reinvestment,,INF955L01JE6
+154672,Baroda BNP Paribas Short Term Fund(the scheme has 2 segregated portfolios) - Direct Plan - Direct Monthly IDCW Payout and Re-investment,INF955L01IW0,INF955L01IX8
+154673,Baroda BNP Paribas Short Term Fund(the scheme has 2 segregated portfolios) - Direct Plan - SG1 Direct Growth,INF955L01IT6,
+154674,Baroda BNP Paribas Short Term Fund(the scheme has 2 segregated portfolios) - Direct Plan - Direct Quarterly IDCW Payout and Re-Investment,INF955L01IU4,INF955L01IV2
+154675,Baroda BNP Paribas Short Term Fund(the scheme has 2 segregated portfolios) - Regular Plan - SG 1 Regular Growth,INF955L01IO7,
+154676,Baroda BNP Paribas Short Term Fund(the scheme has 2 segregated portfolios) - Regular Plan - Regular Monthly IDCW Payout,INF955L01IR0,INF955L01IS8
+154677,Baroda BNP Paribas Short Term Fund(the scheme has 2 segregated portfolios) - Regular Plan - Regular Quarterly IDCW Payout and Re-investment,INF955L01IP4,INF955L01IQ2
+154678,Baroda BNP Paribas Short Term Fund(the scheme has 2 segregated portfolios) - Direct Plan - Direct Daily IDCW Reinvestment,,INF955L01JK3
+154679,Baroda BNP Paribas Short Term Fund(the scheme has 2 segregated portfolios) - Direct Growth,INF955L01JF3,
+154680,Baroda BNP Paribas Short Term Fund(the scheme has 2 segregated portfolios) - Direct Monthly IDCW Payout and Re-investment,INF955L01JI7,INF955L01JJ5
+154681,Baroda BNP Paribas Short Term Fund(the scheme has 2 segregated portfolios) - Direct Plan - Direct Quarterly IDCW Payout and Re-investment,INF955L01JG1,INF955L01JH9
+154682,Baroda BNP Paribas Short Term Fund(the scheme has 2 segregated portfolios) - Direct Weekly Reinvestment,,INF955L01JL1
+154683,Baroda BNP Paribas Short Term Fund(the scheme has 2 segregated portfolios) - Regular Daily IDCW Reinvestment,,INF955L01JD8
+154684,Baroda BNP Paribas Short Term Fund(the scheme has 2 segregated portfolios) - SG 2 Regular Growth,INF955L01IY6,
+154685,Baroda BNP Paribas Short Term Fund(the scheme has 2 segregated portfolios) - Regular Monthly IDCW Payout and Re-investment,INF955L01JB2,INF955L01JC0
+154686,Baroda BNP Paribas Short Term Fund(the scheme has 2 segregated portfolios) - Regular Plan - Regular Quarterly IDCW Payout,INF955L01IZ3,
+154687,Baroda BNP Paribas Short Term Fund(the scheme has 2 segregated portfolios) - Regular Plan - Regular Weekly IDCW Reinvestment,,INF955L01JE6
 154688,Baroda BNP Paribas Short Duration Fund(the scheme has 2 segregated portfolios) - Regular Plan - Defunct Daily IDCW Reinvestment,,INF955L01JN7
-154689,Baroda BNP Paribas Short Duration Fund(the scheme has 2 segregated portfolios) - Regular Plan - Defunct Growth,INF955L01JM9,
-154690,Baroda BNP Paribas Short Duration Fund(the scheme has 2 segregated portfolios) - Regular Plan - Defunct Monthly IDCW Payout,INF955L01JP2,
-154691,Baroda BNP Paribas Short Duration Fund(the scheme has 2 segregated portfolios) - Regular Plan - Defunct Weekly IDCW Reinvestment,,INF955L01JO5
+154689,Baroda BNP Paribas Short Term Fund(the scheme has 2 segregated portfolios) - Regular Plan - Defunct Growth,INF955L01JM9,
+154690,Baroda BNP Paribas Short Term Fund(the scheme has 2 segregated portfolios) - Regular Plan - Defunct Monthly IDCW Payout,INF955L01JP2,
+154691,Baroda BNP Paribas Short Term Fund(the scheme has 2 segregated portfolios) - Regular Plan - Defunct Weekly IDCW Reinvestment,,INF955L01JO5
