@@ -282,8 +282,8 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 100597,Canara Robeco Gilt Fund - Regular Plan - GROWTH OPTION,INF760K01AE1,
 100600,Canara Robeco Conservative Hybrid Fund - Regular Plan - MONTHLY IDCW (Payout/Reinvestment),INF760K01308,INF760K01316
 100601,Canara Robeco Conservative Hybrid Fund - Regular Plan - GROWTH OPTION,INF760K01282,
-100602,Sundaram Medium Duration Fund (Formerly Known as Sundaram Medium Term Bond Fund) - Regular Plan - IDCW (Income Distribution CUM Capital Withdrawal),INF903J01FR0,INF903J01FU4
-100603,Sundaram Medium Duration Fund (Formerly Known as Sundaram Medium Term Bond Fund) - Regular Plan - GROWTH,INF903J01FQ2,
+100602,Sundaram Medium Term Fund (Formerly Known as Sundaram Medium Duration Fund) - Regular Plan - IDCW (Income Distribution CUM Capital Withdrawal),INF903J01FR0,INF903J01FU4
+100603,Sundaram Medium Term Fund (Formerly Known as Sundaram Medium Duration Fund) - Regular Plan - GROWTH,INF903J01FQ2,
 100604,Sundaram Medium Duration Fund (Formerly Known as Sundaram Medium Term Bond Fund) Regular Plan - Bonus,INF903J01FX8,
 100605,Sundaram Medium Term Bond Fund -Institutional Plan(Qtrly Dividend),,
 100606,Sundaram Medium Term Bond Fund-Institutional Plan(Half-Yearly Dividend),,
@@ -348,7 +348,7 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 100781,Sundaram Banking & PSU Fund (Formerly Known as Sundaram Banking and PSU Debt Fund) Retail Plan - Growth,,
 100782,Sundaram Banking & PSU Fund (Formerly Known as Sundaram Banking and PSU Debt Fund) Regular Plan - Daily Reinvestment of Income Distribution cum Capital Withdrawal (IDCW),,
 100783,Sundaram Banking & PSU Fund (Formerly Known as Sundaram Banking and PSU Debt Fund) Regular Plan - Weekly Reinvestment of Income Distribution cum Capital Withdrawal (IDCW),,
-100784,Sundaram Banking & PSU Fund (Formerly Known as Sundaram Banking & PSU Debt Fund) - Regular Plan - GROWTH,INF903J01IN3,
+100784,Sundaram Banking and PSU Debt Fund (Formerly Known as Sundaram Banking and PSU Fund) - Regular Plan - GROWTH,INF903J01IN3,
 100785,Sundaram Corporate Bond Fund Regular Plan - Monthly Income Distribution cum Capital Withdrawal (IDCW),INF903J01HX4,INF903J01IB8
 100786,Sundaram Corporate Bond Fund - Regular Plan - IDCW (Income Distribution CUM Capital Withdrawal),INF903J01HY2,INF903J01IC6
 100787,Sundaram Corporate Bond Fund Regular Plan - Half yearly Income Distribution cum Capital Withdrawal (IDCW),INF903J01HZ9,INF903J01ID4
@@ -357,7 +357,7 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 100790,Sundaram Corporate Bond Fund Institutional - Monthly Dividend,,
 100791,Sundaram Corporate Bond Fund -Institutional - Quarterly Dividend,,
 100792,Sundaram Corporate Bond Fund Institutional - Growth,,
-100793,Sundaram Banking & PSU Fund (Formerly Known as Sundaram Banking & PSU Debt Fund) - Regular Plan - IDCW (Income Distribution CUM Capital Withdrawal),INF903J01IO1,INF903J01IR4
+100793,Sundaram Banking and PSU Debt Fund (Formerly Known as Sundaram Banking and PSU Fund) - Regular Plan - IDCW (Income Distribution CUM Capital Withdrawal),INF903J01IO1,INF903J01IR4
 100794,Sundaram Small Cap Fund - Regular Plan - GROWTH,INF903J01454,INF903J01462
 100795,Sundaram Small Cap Fund - Regular Plan - IDCW (Income Distribution CUM Capital Withdrawal),INF903J01470,
 100796,Sahara Midcap Fund-Growth Plan,,
@@ -14561,8 +14561,8 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 119622,Sundaram Corporate Bond Fund Direct Plan - Monthly Income Distribution cum Capital Withdrawal (IDCW),INF903J01NS2,INF903J01NT0
 119623,Sundaram Corporate Bond Fund Direct Plan - Bonus Option,,
 119624,Sundaram Corporate Bond Fund Direct Plan - Half yearly Income Distribution cum Capital Withdrawal (IDCW),INF903J01OW2,INF903J01OY8
-119625,Sundaram Banking & PSU Fund (Formerly Known as Sundaram Banking & PSU Debt Fund) - Direct Plan - GROWTH,INF903J01PA5,
-119626,Sundaram Banking & PSU Fund (Formerly Known as Sundaram Banking & PSU Debt Fund) - Direct Plan - IDCW (Income Distribution CUM Capital Withdrawal),INF903J01PB3,INF903J01PE7
+119625,Sundaram Banking and PSU Debt Fund (Formerly Known as Sundaram Banking and PSU Fund) - Direct Plan - GROWTH,INF903J01PA5,
+119626,Sundaram Banking and PSU Debt Fund (Formerly Known as Sundaram Banking and PSU Fund) - Direct Plan - IDCW (Income Distribution CUM Capital Withdrawal),INF903J01PB3,INF903J01PE7
 119627,Sundaram Banking & PSU Fund (Formerly Known as Sundaram Banking and PSU Debt Fund) Direct Plan - Daily Reinvestment of Income Distribution cum Capital Withdrawal (IDCW),,
 119628,Sundaram Banking and PSU Debt Fund Direct Plan - Weekly Reinvestment of Income Distribution cum Capital Withdrawal (IDCW),,
 119629,Sundaram Banking & PSU Fund (Formerly Known as Sundaram Banking and PSU Debt Fund) Direct Plan - Bonus,INF903J01RI4,
@@ -14607,10 +14607,10 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 119669,Sundaram Short Term Debt Fund Direct Plan - Annual Payout of Income Distribution cum Capital Withdrawal (IDCW),,
 119670,SBI DYNAMIC TERM FUND - Direct Plan - IDCW,INF200K01RB8,INF200K01RC6
 119671,SBI DYNAMIC TERM FUND - Direct Plan - Growth,INF200K01RD4,
-119672,Sundaram Medium Duration Fund (Formerly Known as Sundaram Medium Term Bond Fund) - Direct Plan - IDCW (Income Distribution CUM Capital Withdrawal),INF903J01PK4,INF903J01PL2
+119672,Sundaram Medium Term Fund (Formerly Known as Sundaram Medium Duration Fund) - Direct Plan - IDCW (Income Distribution CUM Capital Withdrawal),INF903J01PK4,INF903J01PL2
 119673,Sundaram Medium Term Bond Fund - Direct Plan - Bonus Option,,
 119674,Sundaram Medium Term Bond Fund - Direct Plan - Half Yearly Dividend Option,,
-119675,Sundaram Medium Duration Fund (Formerly Known as Sundaram Medium Term Bond Fund) - Direct Plan - GROWTH,INF903J01PO6,
+119675,Sundaram Medium Term Fund (Formerly Known as Sundaram Medium Duration Fund) - Direct Plan - GROWTH,INF903J01PO6,
 119676,Sundaram Medium Duration Fund (Formerly Known as Sundaram Medium Term Bond Fund) Direct Plan - Annual Income Distribution cum Capital Withdrawal (IDCW),INF903J01PH0,INF903J01PM0
 119677,Sundaram Low Duration Fund Direct Plan - Weekly Income Distribution cum Capital Withdrawal (IDCW),,
 119678,Sundaram Low Duration Fund Direct Plan - Quarterly Income Distribution cum Capital Withdrawal (IDCW),,
@@ -33750,24 +33750,24 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 149481,Sundaram Nifty 100 Equal Weight Fund (Formerly Known as Principal Nifty 100 Equal Weight Fund) - Regular Plan - GROWTH,INF173K01AG2,
 149482,Sundaram Nifty 100 Equal Weight Fund (Formerly Known as Principal Nifty 100 Equal Weight Fund) - Direct Plan - IDCW (Income Distribution CUM Capital Withdrawal),INF173K01EW1,INF173K01EX9
 149483,Sundaram Nifty 100 Equal Weight Fund (Formerly Known as Principal Nifty 100 Equal Weight Fund) - Direct Plan - GROWTH,INF173K01EZ4,
-149519,Sundaram Low Duration Fund (Formerly Known as Principal Low Duration Fund) - Regular Plan - GROWTH,INF173K01DG6,
+149519,Sundaram Ultra Short to Short Term Fund (Formerly Known as Sundaram Low Duration Fund) - Regular Plan - GROWTH,INF173K01DG6,
 149520,Sundaram Low Duration Fund (Formerly Known as Principal Low Duration Fund) - Weekly Income Distribution CUM Capital Withdrawal Option,,
-149521,Sundaram Low Duration Fund (Formerly Known as Principal Low Duration Fund) - Regular Plan - IDCW (Income Distribution CUM Capital Withdrawal),INF173K01DJ0,INF173K01DK8
+149521,Sundaram Ultra Short to Short Term Fund (Formerly Known as Sundaram Low Duration Fund) - Regular Plan - IDCW (Income Distribution CUM Capital Withdrawal),INF173K01DJ0,INF173K01DK8
 149522,Sundaram Low Duration Fund (Formerly Known as Principal Low Duration Fund) -Daily Income Distribution CUM Capital Withdrawal Option,,
 149523,Sundaram Low Duration Fund (Formerly Known as Principal Low Duration Fund) - Direct Plan - Daily Income Distribution CUM Capital Withdrawal Option,,
 149524,Sundaram Low Duration Fund (Formerly Known as Principal Low Duration Fund) - Direct Plan - Weekly Income Distribution CUM Capital Withdrawal Option,,
-149525,Sundaram Low Duration Fund (Formerly Known as Principal Low Duration Fund) - Direct Plan - IDCW (Income Distribution CUM Capital Withdrawal),INF173K01FT4,INF173K01FU2
-149526,Sundaram Low Duration Fund (Formerly Known as Principal Low Duration Fund) - Direct Plan - GROWTH,INF173K01FS6,
+149525,Sundaram Ultra Short to Short Term Fund (Formerly Known as Sundaram Low Duration Fund) - Direct Plan - IDCW (Income Distribution CUM Capital Withdrawal),INF173K01FT4,INF173K01FU2
+149526,Sundaram Ultra Short to Short Term Fund (Formerly Known as Sundaram Low Duration Fund) - Direct Plan - GROWTH,INF173K01FS6,
 149531,Sundaram Focused Fund (Formerly Known as Principal Focused Multicap Fund) - Regular Plan - IDCW (Income Distribution CUM Capital Withdrawal),INF173K01197,INF173K01205
 149532,Sundaram Focused Fund (Formerly Known as Principal Focused Multicap Fund) - Regular Plan - GROWTH,INF173K01189,
 149533,Sundaram Focused Fund (Formerly Known as Principal Focused Multicap Fund) - Direct Plan - GROWTH,INF173K01EK6,
 149534,Sundaram Focused Fund (Formerly Known as Principal Focused Multicap Fund) - Direct Plan - IDCW (Income Distribution CUM Capital Withdrawal),INF173K01EM2,INF173K01EL4
-149535,Sundaram Ultra Short Duration Fund (Formerly Known as Principal Ultra Short Term Fund) - Regular Plan - GROWTH,INF173K01CU9,
+149535,Sundaram Ultra Short Term Fund (Formerly Known as Sundaram Ultra Short Duration Fund) - Regular Plan - GROWTH,INF173K01CU9,
 149536,Sundaram Ultra Short Duration Fund (Formerly Known as Principal Ultra Short Term Fund)-Daily Income Distribution CUM Capital Withdrawal Option,,
-149537,Sundaram Ultra Short Duration Fund (Formerly Known as Principal Ultra Short Term Fund) - Regular Plan - IDCW (Income Distribution CUM Capital Withdrawal),INF173K01CX3,INF173K01CY1
+149537,Sundaram Ultra Short Term Fund (Formerly Known as Sundaram Ultra Short Duration Fund) - Regular Plan - IDCW (Income Distribution CUM Capital Withdrawal),INF173K01CX3,INF173K01CY1
 149538,Sundaram Ultra Short Duration Fund (Formerly Known as Principal Ultra Short Term Fund)-Weekly Income Distribution CUM Capital Withdrawal Option,,
-149539,Sundaram Ultra Short Duration Fund (Formerly Known as Principal Ultra Short Term Fund) - Direct Plan - GROWTH,INF173K01HI3,
-149540,Sundaram Ultra Short Duration Fund (Formerly Known as Principal Ultra Short Term Fund) - Direct Plan - IDCW (Income Distribution CUM Capital Withdrawal),INF173K01HK9,INF173K01HJ1
+149539,Sundaram Ultra Short Term Fund (Formerly Known as Sundaram Ultra Short Duration Fund) - Direct Plan - GROWTH,INF173K01HI3,
+149540,Sundaram Ultra Short Term Fund (Formerly Known as Sundaram Ultra Short Duration Fund) - Direct Plan - IDCW (Income Distribution CUM Capital Withdrawal),INF173K01HK9,INF173K01HJ1
 149549,Sundaram Arbitrage Fund(Formerly Known as Prinicpal Arbitrage Fund) - Direct Plan - IDCW (Income Distribution CUM Capital Withdrawal),INF173K01NC4,INF173K01NE0
 149550,Sundaram Arbitrage Fund(Formerly Known as Prinicpal Arbitrage Fund) - Direct Plan - GROWTH,INF173K01NF7,
 149551,Sundaram Arbitrage Fund(Formerly Known as Prinicpal Arbitrage Fund) - Regular Plan - IDCW (Income Distribution CUM Capital Withdrawal),INF173K01MY0,INF173K01NA8
@@ -33776,10 +33776,10 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 149570,Sundaram ELSS Tax Saver Fund - Direct Plan - GROWTH,INF173K01HZ7,
 149571,Sundaram ELSS Tax Saver Fund - Direct Plan - IDCW (Income Distribution CUM Capital Withdrawal),INF173K01NN1,
 149572,Sundaram ELSS Tax Saver Fund - Regular Plan - IDCW (Income Distribution CUM Capital Withdrawal),INF173K01NM3,
-149585,Sundaram Short Duration Fund (Formerly Known as Principal Short Term Debt Fund) - Regular Plan - GROWTH,INF173K01BA3,
-149586,Sundaram Short Duration Fund (Formerly Known as Principal Short Term Debt Fund) - Regular Plan - IDCW (Income Distribution CUM Capital Withdrawal),INF173K01BB1,INF173K01BC9
-149587,Sundaram Short Duration Fund (Formerly Known as Principal Short Term Debt Fund) - Direct Plan - GROWTH,INF173K01GP0,
-149588,Sundaram Short Duration Fund (Formerly Known as Principal Short Term Debt Fund) - Direct Plan - IDCW (Income Distribution CUM Capital Withdrawal),INF173K01GQ8,INF173K01GR6
+149585,Sundaram Short Term Fund (Formerly Known as Sundaram Short Duration Fund) - Regular Plan - GROWTH,INF173K01BA3,
+149586,Sundaram Short Term Fund (Formerly Known as Sundaram Short Duration Fund) - Regular Plan - IDCW (Income Distribution CUM Capital Withdrawal),INF173K01BB1,INF173K01BC9
+149587,Sundaram Short Term Fund (Formerly Known as Sundaram Short Duration Fund) - Direct Plan - GROWTH,INF173K01GP0,
+149588,Sundaram Short Term Fund (Formerly Known as Sundaram Short Duration Fund) - Direct Plan - IDCW (Income Distribution CUM Capital Withdrawal),INF173K01GQ8,INF173K01GR6
 149599,Sundaram Aggressive Hybrid Fund (Formerly Known as Principal Hybrid Equity Fund) - Regular Plan - GROWTH,INF173K01CL8,
 149600,Sundaram Aggressive Hybrid Fund (Formerly Known as Principal Hybrid Equity Fund) - Regular Plan - Monthly IDCW (Income Distribution CUM Capital Withdrawal),INF173K01CI4,INF173K01CJ2
 149601,Sundaram Aggressive Hybrid Fund (Formerly Known as Principal Hybrid Equity Fund) - Direct Plan - GROWTH,INF173K01FE6,
@@ -33806,10 +33806,10 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 149698,Sundaram Dividend Yield Fund (Formerly Known as Principal Dividend Yield Fund) - Regular Plan - IDCW (Income Distribution CUM Capital Withdrawal),INF173K01AD9,INF173K01AE7
 149699,Sundaram Dividend Yield Fund (Formerly Known as Principal Dividend Yield Fund) - Direct Plan - IDCW (Income Distribution CUM Capital Withdrawal),INF173K01ES9,INF173K01ET7
 149700,Sundaram Dividend Yield Fund (Formerly Known as Principal Dividend Yield Fund) - Direct Plan - GROWTH,INF173K01EV3,
-149715,Sundaram Balanced Advantage Fund (Formerly Known as Principal Balanced Advantage Fund) - Regular Plan - GROWTH,INF173K01585,
-149716,Sundaram Balanced Advantage Fund (Formerly Known as Principal Balanced Advantage Fund) - Regular Plan - Monthly IDCW (Income Distribution CUM Capital Withdrawal),INF173K01551,INF173K01569
-149717,Sundaram Balanced Advantage Fund (Formerly Known as Principal Balanced Advantage Fund) - Direct Plan - GROWTH,INF173K01FI7,
-149718,Sundaram Balanced Advantage Fund (Formerly Known as Principal Balanced Advantage Fund) - Direct Plan - Monthly IDCW (Income Distribution CUM Capital Withdrawal),INF173K01FF3,INF173K01FG1
+149715,Sundaram Dynamic Asset Allocation Fund (Formerly Known as Sundaram Balanced Advantage Fund) - Regular Plan - GROWTH,INF173K01585,
+149716,Sundaram Dynamic Asset Allocation Fund (Formerly Known as Sundaram Balanced Advantage Fund) - Regular Plan - Monthly IDCW (Income Distribution CUM Capital Withdrawal),INF173K01551,INF173K01569
+149717,Sundaram Dynamic Asset Allocation Fund (Formerly Known as Sundaram Balanced Advantage Fund) - Direct Plan - GROWTH,INF173K01FI7,
+149718,Sundaram Dynamic Asset Allocation Fund (Formerly Known as Sundaram Balanced Advantage Fund) - Direct Plan - Monthly IDCW (Income Distribution CUM Capital Withdrawal),INF173K01FF3,INF173K01FG1
 149719,Sundaram Ultra Short Duration Fund (Formerly Known as Principal Ultra Short Term Fund)- Direct Plan IDCW Weekly,,
 149720,Sundaram Ultra Short Duration Fund (Formerly Known as Principal Ultra Short Term Fund) Direct Plan Fortnightly IDCW,,
 149721,Sundaram Ultra Short Duration Fund (Formerly Known as Principal Ultra Short Term Fund) Direct Plan IDCW Daily,,
@@ -34312,7 +34312,7 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 150520,Motilal Oswal BSE Quality ETF,INF247L01BH8,
 150521,Motilal Oswal BSE Quality Index Fund,INF247L01BI6,
 150522,Motilal Oswal BSE Quality Index Fund,INF247L01BJ4,
-150523,DSP Silver ETF,INF740KA1RE3,
+150523,DSP Silver ETF,INF740KA1ZQ0,
 150525,ICICI Prudential Fixed Maturity Plan - Series 88 - 226 Days Plan E - Direct Plan - Half Yearly IDCW,,
 150526,ICICI Prudential Nifty Infrastructure ETF,INF109KC16E5,
 150531,Kotak Nifty MNC ETF,INF174KA1JF2,
@@ -35268,7 +35268,7 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 151734,Baroda BNP Paribas Floater Fund - Regular Plan - Growth option,,
 151735,Baroda BNP Paribas Floater Fund - Direct Plan - Growth Option,,
 151736,Baroda BNP Paribas Floater Fund - Direct Plan - Weekly IDCW Option,,
-151737,DSP Gold ETF,INF740KA1SW3,
+151737,DSP Gold ETF,INF740KA1ZP2,
 151738,UTI Nifty 500 Value 50 Index Fund - Regular Plan - Growth,INF789F1AYO8,
 151739,UTI Nifty 500 Value 50 Index Fund - Direct Plan - Growth,INF789F1AYN0,
 151741,Kotak FMP Series 311 - Regular Plan - Growth Option,,
@@ -37754,9 +37754,13 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 154539,Franklin India Short Term Fund - Regular Plan - IDCW,INF090I01YU3,INF090I01YV1
 154540,Franklin India Short Term Fund - Regular Plan - Growth,INF090I01YT5,
 154541,Franklin India Short Term Fund - Direct Plan - Growth,INF090I01YW9,
+154548,Edelweiss Nifty REITs & Realty Index Fund - Direct Plan - Growth,INF754K01XJ5,
+154549,Edelweiss Nifty REITs & Realty Index Fund - Direct Plan - IDCW,INF754K01XK3,INF754K01XL1
 154550,JioBlackRock Nifty 50 ETF,INF22M001184,
 154551,Motilal Oswal Nifty Metal ETF,INF247L01HG7,
 154552,Motilal Oswal Nifty Oil & Gas ETF,INF247L01HH5,
+154559,Edelweiss Nifty REITs & Realty Index Fund - Regular Plan - IDCW Payout,INF754K01XO5,INF754K01XP2
+154561,Edelweiss Nifty REITs & Realty Index Fund - Regular Plan - Growth,INF754K01XN7,
 154565,ALPHAGREP LIQUID OMNI FOF - Direct Plan - Growth,INF2VOA01137,
 154566,ALPHAGREP LIQUID OMNI FOF - Direct Plan - IDCW,INF2VOA01152,INF2VOA01145
 154567,ALPHAGREP LIQUID OMNI FOF - Regular Plan - Growth,INF2VOA01160,
@@ -37765,6 +37769,10 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 154570,Kotak Nifty Bank Index Fund - Regular Plan - Growth,INF174KA1C92,
 154571,Kotak Nifty Bank Index Fund - Direct Plan - Growth,INF174KA1C68,
 154572,Kotak Nifty Bank Index Fund - Regular Plan - IDCW,INF174KA1D00,INF174KA1D18
+154573,Kotak Diversified Equity All Cap Omni FOF - Regular Plan - IDCW,INF174KA1D67,INF174KA1D75
+154574,Kotak Diversified Equity All Cap Omni FOF - Direct Plan - Growth,INF174KA1D26,
+154575,Kotak Diversified Equity All Cap Omni FOF - Direct Plan - IDCW,INF174KA1D34,INF174KA1D42
+154576,Kotak Diversified Equity All Cap Omni FOF - Regular Plan - Growth,INF174KA1D59,
 154593,DSP NIFTY 10 YR BENCHMARK G-SEC ETF,INF740KA1ZI7,
 154602,UTI Nifty 500 Exchange Traded Fund,INF789F1AG76,
 154606,Kotak Liquid Fund - Direct Plan - IDCW,INF174KA1E09,INF174KA1D83
@@ -37784,6 +37792,7 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 154632,JioBlackRock Large Cap Fund - Regular Plan - Growth Option,INF22M001192,
 154633,JioBlackRock Nifty 50 Index Fund - Regular Plan - Growth Option,INF22M001200,
 154634,JioBlackRock Nifty Smallcap 250 Index Fund - Regular Plan - Growth Option,INF22M001218,
+154635,JioBlackRock Short Term Fund - Regular Plan - Growth Option,INF22M001226,
 154637,JioBlackRock Sector Rotation Fund - Regular Plan - Growth Option,INF22M001242,
 154638,JioBlackRock Arbitrage Fund - Regular Plan - Growth Option,INF22M001259,
 154639,JioBlackRock Money Market Fund - Regular Plan - Growth Option,INF22M001309,
@@ -37793,6 +37802,10 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 154643,JioBlackRock Nifty Midcap 150 Index Fund - Regular Plan - Growth Option,INF22M001341,
 154644,JioBlackRock Nifty Next 50 Index Fund - Regular Plan - Growth Option,INF22M001358,
 154645,JioBlackRock Liquid Fund - Regular Plan - Growth Option,INF22M001267,
+154652,DSP Financial Services Sectoral Debt Fund - Regular Plan - IDCW,INF740KA1ZK3,INF740KA1ZL1
+154653,DSP Financial Services Sectoral Debt Fund - Direct Plan - IDCW,INF740KA1ZN7,INF740KA1ZO5
+154654,DSP Financial Services Sectoral Debt Fund - Direct Plan - Growth,INF740KA1ZM9,
+154655,DSP Financial Services Sectoral Debt Fund - Regular Plan - Growth,INF740KA1ZJ5,
 154672,Baroda BNP Paribas Short Term Fund (the scheme has 2 segregated portfolios) - Direct Plan - Direct Monthly IDCW Payout and Re-investment,INF955L01IW0,INF955L01IX8
 154673,Baroda BNP Paribas Short Term Fund (the scheme has 2 segregated portfolios) - Direct Plan - SG1 Direct Growth,INF955L01IT6,
 154674,Baroda BNP Paribas Short Term Fund (the scheme has 2 segregated portfolios) - Direct Plan - Direct Quarterly IDCW Payout and Re-Investment,INF955L01IU4,INF955L01IV2
