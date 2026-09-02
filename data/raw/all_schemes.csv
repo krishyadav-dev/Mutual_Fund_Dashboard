@@ -9,8 +9,8 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 100034,Aditya Birla Sun Life Large & Mid Cap Fund - Regular Plan - IDCW,INF209K01157,INF209K01CE5
 100035,Birla Sun Life Freedom Fund-Plan A (Dividend),,
 100036,Birla Sun Life Freedom Fund-Plan B (Growth),,
-100037,Aditya Birla Sun Life Income Fund - Regular Plan - Quarterly IDCW,INF209K01587,INF209K01CY3
-100038,Aditya Birla Sun Life Income Fund - Regular Plan - GROWTH,INF209K01579,
+100037,Aditya Birla Sun Life Medium to Long Term Fund - Regular Plan - Quarterly IDCW,INF209K01587,INF209K01CY3
+100038,Aditya Birla Sun Life Medium to Long Term Fund - Regular Plan - GROWTH,INF209K01579,
 100041,Aditya Birla Sun Life Liquid Fund -Institutional - IDCW,,INF209K01KN9
 100042,Aditya Birla Sun Life Liquid Fund-Retail (Growth),INF209K01ME4,
 100043,Aditya Birla Sun Life Liquid Fund-Institutional (Growth),INF209K01RT1,
@@ -25,8 +25,8 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 100054,Aditya Birla Sun Life Gilt Plus - Liquid Plan - Quarterly Dividend - Regular Plan,,
 100055,Aditya Birla Sun Life Gilt Plus - Liquid Plan - Growth - Regular Plan,,
 100056,Aditya Birla Sun Life Gilt Plus - Liquid Plan - Annual Dividend - Regular Plan,,
-100057,Aditya Birla Sun Life Government Securities Fund - Regular Plan - Quarterly IDCW,INF209K01AF6,INF209K01DP9
-100058,Aditya Birla Sun Life Government Securities Fund - Regular Plan - GROWTH,INF209K01AC3,INF209K01AD1
+100057,Aditya Birla Sun Life Gilt Fund - Regular Plan - Quarterly IDCW,INF209K01AF6,INF209K01DP9
+100058,Aditya Birla Sun Life Gilt Fund - Regular Plan - GROWTH,INF209K01AC3,INF209K01AD1
 100059,Aditya Birla Sun Life Gilt Plus-PF Plan (Annual Dividend),,
 100060,Aditya Birla Sun Life Constant Maturity 10 Year Gilt Fund - Quarterly Dividend - Regular Plan,,
 100061,Aditya Birla Sun Life Constant Maturity 10 Year Gilt Fund - Growth - Regular Plan,,
@@ -592,7 +592,7 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 101314,Aditya Birla Sun Life Nifty 50 Index Fund - Regular Plan - GROWTH,INF209K01LB2,
 101315,Aditya Birla Sun Life Savings Fund-Insititutional Fortnightly Dividend,,
 101316,Aditya Birla Sun Life Savings Fund-Retail Growth,INF209K01MC8,
-101317,Aditya Birla Sun Life Savings Fund - Regular Plan - GROWTH,INF209K01LZ1,
+101317,Aditya Birla Sun Life Ultra Short Term Fund - Regular Plan - GROWTH,INF209K01LZ1,
 101318,Aditya Birla Sun Life Savings Fund-Retail Fortnightly Dividend,,
 101319,Grindlays Cash Fund - Dividend (Weekly),,
 101325,Nifty Benchmark Exchange Traded Scheme- Nifty BeES,,
@@ -828,9 +828,9 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 101807,JM Dynamic Debt Fund - Premium Plan - Dividend Option,,
 101808,JM Dynamic Debt Fund - Premium Plan - Growth Option,,
 101815,Principal Personal Tax Saver Fund,,
-101816,Aditya Birla Sun Life Regular Savings Fund - Regular Plan - Monthly IDCW,INF209K01769,INF209K01DF0
+101816,Aditya Birla Sun Life Conservative Hybrid Fund - Regular Plan - Monthly IDCW,INF209K01769,INF209K01DF0
 101817,Birla Sun Life Regular Savings Fund - Regular Plan - Monthly Payment,,
-101818,Aditya Birla Sun Life Regular Savings Fund - Regular Plan - GROWTH,INF209K01751,
+101818,Aditya Birla Sun Life Conservative Hybrid Fund - Regular Plan - GROWTH,INF209K01751,
 101823,Tata Large & Mid Cap Fund - Regular Plan - Payout of IDCW Option,INF277K01DH3,INF277K01410
 101824,Tata Large & Mid Cap Fund - Regular Plan - Growth Option,INF277K01428,
 101828,Tata Gilt Securities Short Maturity Fund -Regular Fund-Quarterly DIvidend,,
@@ -913,10 +913,10 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 101970,Aditya Birla Sun Life Money Manager Fund - RETAIL - WEEKLY IDCW,,INF209K01JY8
 101971,Aditya Birla Sun Life Money Manager Fund - Retail Growth,INF209K01MJ3,
 101972,Aditya Birla Sun Life Money Manager Fund - Retail - Daily IDCW,,INF209K01JZ5
-101973,Aditya Birla Sun Life Money Manager Fund - Regular Plan - Daily IDCW,,INF209K01SZ6
-101974,Aditya Birla Sun Life Money Manager Fund - Regular Plan - Weekly IDCW,,INF209K01SY9
+101973,Aditya Birla Sun Life Money Market Fund - Regular Plan - Daily IDCW,,INF209K01SZ6
+101974,Aditya Birla Sun Life Money Market Fund - Regular Plan - Weekly IDCW,,INF209K01SY9
 101975,Aditya Birla Sun Life Floating Rate Fund-Short Term Plan-Institutional Fortnightly Dividend,,
-101976,Aditya Birla Sun Life Money Manager Fund - Regular Plan - GROWTH,INF209K01RV7,
+101976,Aditya Birla Sun Life Money Market Fund - Regular Plan - GROWTH,INF209K01RV7,
 101977,HDFC Prudence Fund - Growth Option,,
 101978,HDFC Prudence Fund - Dividend Option,,
 101979,HDFC ELSS - Tax Saver Fund - Regular Plan - Growth Option,INF179K01BB8,
@@ -1346,8 +1346,8 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 102760,HDFC Focused Fund - Regular Plan - Growth Option,INF179K01574,
 102761,HDFC Focused Fund - Regular Plan - IDCW Option,INF179K01558,INF179K01566
 102765,SBI FOCUSED FUND - Regular Plan - IDCW,INF200K01388,INF200K01396
-102766,Aditya Birla Sun Life Dynamic Bond Fund - Regular Plan - Quarterly IDCW,INF209K01819,INF209K01DH6
-102767,Aditya Birla Sun Life Dynamic Bond Fund - Regular Plan - Growth,INF209K01793,
+102766,Aditya Birla Sun Life Dynamic Term Fund - Regular Plan - Quarterly IDCW,INF209K01819,INF209K01DH6
+102767,Aditya Birla Sun Life Dynamic Term Fund - Regular Plan - Growth,INF209K01793,
 102798,ING Treasury Management Fund-Growth Option,,
 102799,ING Treasury Management Fund-Weekly Dividend Option,,
 102800,ING Treasury Management Fund-Quarterly Dividend Option,,
@@ -1583,8 +1583,8 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 103151,Franklin India Opportunities Fund - Regular Plan - Growth,INF090I01841,
 103152,Standard Chartered Premier Equity Fund-Plan-Growth,,
 103153,Standard Chartered Premier Equity Fund-Plan-Dividend,,
-103154,Aditya Birla Sun Life Equity Hybrid '95 Fund - Regular Plan - IDCW,INF209K01BS7,INF209K01EE1
-103155,Aditya Birla Sun Life Equity Hybrid '95 Fund - Regular Plan - GROWTH,INF209K01BT5,
+103154,Aditya Birla Sun Life Aggressive Hybrid Fund - Regular Plan - IDCW,INF209K01BS7,INF209K01EE1
+103155,Aditya Birla Sun Life Aggressive Hybrid Fund - Regular Plan - GROWTH,INF209K01BT5,
 103156,JM Fixed Maturity Fund-YSA2-Dividend Option,,
 103157,JM Fixed Maturity Fund-YSA2-Growth Option,,
 103158,Tata Treasury Advantage Fund - Regular Plan - Weekly Payout of IDCW Option,INF277K01MD3,INF277K01MB7
@@ -1621,8 +1621,8 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 103189,"Aditya Birla Sun Life Govt, Securities Short Term Fund-Retail Plan A(Dividend)",,
 103190,Aditya Birla Sun Life Government Securities Fund - Short Term Plan - Growth - Regular Plan,,
 103191,Aditya Birla Sun Life Low Duration Fund -INSTITUTIONAL - DAILY IDCW,,INF209K01KD0
-103192,Aditya Birla Sun Life Low Duration Fund - Regular Plan - GROWTH,INF209K01LQ0,
-103193,Aditya Birla Sun Life Low Duration Fund - Regular Plan - Weekly IDCW,,INF209KA1LQ4
+103192,Aditya Birla Sun Life Ultra short to short term Fund - Regular Plan - GROWTH,INF209K01LQ0,
+103193,Aditya Birla Sun Life Ultra short to short term Fund - Regular Plan - Weekly IDCW,,INF209KA1LQ4
 103194,Aditya Birla Sun Life Low Duration Fund - Institutional Plan - Weekly Dividend,,
 103195,Aditya Birla Sun Life Low Duration Fund - Institutional Plan - Growth,INF209K01KE8,
 103196,Nippon India ELSS Tax Saver Fund - Regular Plan - Growth Option,INF204K01GK4,
@@ -3388,8 +3388,8 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 105500,ICICI Prudential FMP series 35 - 1 Year Plan - Institutional Growth Option,,
 105501,ICICI Prudential FMP series 35 - 1 Year Plan - Retail Growth Option,,
 105502,ICICI Prudential FMP series 35 - 1 Year Plan - Institutional Dividend Option,,
-105503,Invesco India Midcap Fund - Regular Plan - Growth,INF205K01BC9,
-105504,Invesco India Midcap Fund - Regular Plan - IDCW,INF205K01BD7,INF205K01BE5
+105503,Invesco India Mid Cap Fund - Regular Plan - Growth,INF205K01BC9,
+105504,Invesco India Mid Cap Fund - Regular Plan - IDCW,INF205K01BD7,INF205K01BE5
 105505,Birla Fixed Term Plan - Series Q - DIVIDEND,,
 105506,Birla Fixed Term Plan - Series Q - GROWTH,,
 105507,BIRLA FTP-QUARTERLY SERIES 13 - DIVIDEND,,
@@ -3752,8 +3752,8 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 105884,Nippon India Interval Fund-Quarterly Interval Fund-Series-III- Growth Option,INF204K01DT2,
 105885,NIPPON INDIA QUARTERLY INTERVAL FUND - SERIES III - IDCW Option,INF204K01DU0,INF204K01DV8
 105886,Aditya Birla Sun Life Savings Fund-Retail - Monthly Dividend,,
-105887,Aditya Birla Sun Life Savings Fund - Regular Plan - Weekly IDCW,INF209K01MA2,
-105888,Aditya Birla Sun Life Savings Fund - Regular Plan - Daily IDCW,INF209K01LY4,
+105887,Aditya Birla Sun Life Ultra Short Term Fund - Regular Plan - Weekly IDCW,INF209K01MA2,
+105888,Aditya Birla Sun Life Ultra Short Term Fund - Regular Plan - Daily IDCW,INF209K01LY4,
 105889,Aditya Birla Sun Life Savings Fund-Insititutional Plan - Monthly  Dividend,,
 105890,HSBC Fixed Term Series 30 - Inst. - Dividend,,
 105891,HSBC Fixed Term Series 30 - Inst. - Growth,,
@@ -5046,8 +5046,8 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 107349,JM Interval Fund - Quarterly plan 2 (JM QIF - 2) - Institutional plan - Dividend option,,
 107350,Sundaram Energy Opportunities Fund Dividend,,
 107351,Sundaram Energy Opportunities Fund Growth,,
-107352,Invesco India Multicap Fund - Regular Plan - IDCW,INF205K01DO0,INF205K01DP7
-107353,Invesco India Multicap Fund - Regular Plan - Growth,INF205K01DN2,
+107352,Invesco India Multi Cap Fund - Regular Plan - IDCW,INF205K01DO0,INF205K01DP7
+107353,Invesco India Multi Cap Fund - Regular Plan - Growth,INF205K01DN2,
 107354,DSP BlackRock Technology.com   Fund - Regular Plan - Dividend,,
 107355,ICICI Prudential FMP series 42 - 13 Mths Plan C - Retail Dividend Option,,
 107356,ICICI Prudential FMP series 42 - 13 Mths Plan C - Retail Growth Option,,
@@ -8362,7 +8362,7 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 111518,ICICI Prudential Fixed Maturity Plan - Series 47 - One Year Plan D - Institutional Dividend,,
 111519,ICICI Prudential Fixed Maturity Plan - Series 47 - One Year Plan D - Institutional Growth,,
 111520,ICICI Prudential Fixed Maturity Plan - Series 47 - One Year Plan D - Retail Dividend,,
-111521,Aditya Birla Sun Life Dynamic Bond Fund - Regular Plan - Monthly-IDCW,INF209K01801,INF209K01DG8
+111521,Aditya Birla Sun Life Dynamic Term Fund - Regular Plan - Monthly-IDCW,INF209K01801,INF209K01DG8
 111523,BANDHAN Dynamic Term Fund - Regular Plan - IDCW,INF194K01QO8,INF194K01QN0
 111524,BANDHAN Dynamic Term Fund - Regular Plan - Growth,INF194K01QG4,
 111525,Bandhan Gilt   Fund - Regular Plan - Growth,INF194K01DZ2,
@@ -8557,16 +8557,16 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 111800,IDFC Fixed Maturity Plan-Thirteen Months Series 1-Plan B Dividend,,
 111801,Birla Sun Life Fixed Term Plan - Series BK - Institutional - Growth Plan,,
 111802,Birla Sun Life Fixed Term Plan - Series BK - Retail - Growth Plan,,
-111803,Aditya Birla Sun Life Medium Term Plan - Regular Plan - GROWTH,INF209K01603,
+111803,Aditya Birla Sun Life Medium Term Fund - Regular Plan - GROWTH,INF209K01603,
 111804,Aditya Birla Sun Life Medium Term Plan - Institutional - Growth Plan,,
 111805,Aditya Birla Sun Life Medium Term Plan - Institutional - Daily Dividend Plan,,
 111806,Aditya Birla Sun Life Medium Term Plan - Retail - Daily Dividend Plan,,
 111807,Birla Sun Life Floating Rate - Long Term - Weekly Dividend,,
 111808,Birla Sun Life Floating Rate - Long Term - Growth,,
-111809,Aditya Birla Sun Life Medium Term Plan - Regular Plan - Quarterly IDCW,INF209K01637,INF209KB1OJ2
+111809,Aditya Birla Sun Life Medium Term Fund - Regular Plan - Quarterly IDCW,INF209K01637,INF209KB1OJ2
 111810,Aditya Birla Sun Life Medium Term Plan - Institutional - Quarterly Dividend Plan,,
-111811,Aditya Birla Sun Life Medium Term Plan,INF209K01595,INF209K01CZ0
-111812,Aditya Birla Sun Life Medium Term Plan - Regular Plan - Half Yearly IDCW,INF209K01611,INF209K01DA1
+111811,Aditya Birla Sun Life Medium Term Fund,INF209K01595,INF209K01CZ0
+111812,Aditya Birla Sun Life Medium Term Fund - Regular Plan - Half Yearly IDCW,INF209K01611,INF209K01DA1
 111813,Aditya Birla Sun Life Medium Term Plan - Institutional - Dividend Plan,,
 111814,Aditya Birla Sun Life Medium Term Plan - Retail - Qrtly Dividend Plan,,
 111815,Aditya Birla Sun Life Medium Term Plan - Institutional - Qrtly Dividend Plan,,
@@ -8806,8 +8806,8 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 112095,ICICI Prudential All Seasons Bond Fund - Premium Dividend Option,,
 112096,ICICI Prudential Dynamic Term Fund - Regular Plan - Growth,INF109K01GN9,
 112097,ICICI Prudential Dynamic Term Fund - Regular Plan - IDCW,INF109K01GK5,INF109K01GL3
-112098,Invesco India Largecap Fund - Regular Plan - Growth,INF205K01304,
-112099,Invesco India Largecap Fund - Regular Plan - IDCW,INF205K01320,INF205K01312
+112098,Invesco India Large Cap Fund - Regular Plan - Growth,INF205K01304,
+112099,Invesco India Large Cap Fund - Regular Plan - IDCW,INF205K01320,INF205K01312
 112100,ICICI Prudential R.I.G.H.T. Fund Growth,,
 112101,ICICI Prudential R.I.G.H.T. Fund Dividend,,
 112102,Fortis Flexi Debt Fund-Regular Plan - Monthly Dividend Option,,
@@ -9654,7 +9654,7 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 113304,Kotak FMP 24M Series 2 - Growth,,
 113305,IDFC FMP - QS - 60 Growth,,
 113306,IDFC FMP - QS - 60 Dividend,,
-113307,Aditya Birla Sun Life Low Duration Fund - Regular Plan - Daily IDCW,,INF209KA1LP6
+113307,Aditya Birla Sun Life Ultra short to short term Fund - Regular Plan - Daily IDCW,,INF209KA1LP6
 113308,IDFC FMP MS 25  Growth,,
 113309,IDFC FMP MS 25  Dividend,,
 113313,Reliance Fixed Horizon Fund - XV - Series 9 - Growth Option,,
@@ -14441,20 +14441,20 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 119496,Aditya Birla Sun Life Short Term Fund - Direct Plan - IDCW,INF209KA1KQ6,INF209K01XL6
 119497,Aditya Birla Sun Life Short Term Fund - Direct Plan - Quarterly IDCW,INF209K01R96,INF209KA1KR4
 119498,Aditya Birla Sun Life Short Term Fund - Direct Plan - GROWTH,INF209K01XK8,
-119499,Aditya Birla Sun Life Savings Fund - Direct Plan - Weekly IDCW,INF209K01US7,
-119500,Aditya Birla Sun Life Savings Fund - Direct Plan - Daily IDCW,INF209K01UQ1,
-119501,Aditya Birla Sun Life Savings Fund - Direct Plan - GROWTH,INF209K01UR9,
-119502,Aditya Birla Sun Life Dynamic Bond Fund - Direct Plan - Quarterly IDCW,INF209K01R88,
-119503,Aditya Birla Sun Life Dynamic Bond Fund - Direct Plan - Monthly IDCW,INF209K01R62,
-119505,Aditya Birla Sun Life Dynamic Bond Fund - Direct Plan - GROWTH,INF209K01N82,
+119499,Aditya Birla Sun Life Ultra Short Term Fund - Direct Plan - Weekly IDCW,INF209K01US7,
+119500,Aditya Birla Sun Life Ultra Short Term Fund - Direct Plan - Daily IDCW,INF209K01UQ1,
+119501,Aditya Birla Sun Life Ultra Short Term Fund - Direct Plan - GROWTH,INF209K01UR9,
+119502,Aditya Birla Sun Life Dynamic Term Fund - Direct Plan - Quarterly IDCW,INF209K01R88,
+119503,Aditya Birla Sun Life Dynamic Term Fund - Direct Plan - Monthly IDCW,INF209K01R62,
+119505,Aditya Birla Sun Life Dynamic Term Fund - Direct Plan - GROWTH,INF209K01N82,
 119506,Aditya Birla Sun Life Dividend Yield Fund - Direct Plan - IDCW Payout,INF209K01Q55,INF209K01WB9
 119507,Aditya Birla Sun Life Dividend Yield Fund - Direct Plan - GROWTH,INF209K01WA1,
 119508,Birla Sun Life Floating Rate - Long Term - Weekly Dividend - Direct Plan,,
 119509,Birla Sun Life Floating Rate - Long Term - Growth - Direct Plan,,
 119510,Birla Sun Life Floating Rate - Long Term - Daily Dividend - Direct Plan,,
-119511,Aditya Birla Sun Life Money Manager Fund - Direct Plan - GROWTH,INF209K01UU3,
-119512,Aditya Birla Sun Life Money Manager Fund - Direct Plan - Weekly IDCW,INF209K01UV1,INF209KA1LM3
-119513,Aditya Birla Sun Life Money Manager Fund - Direct Plan - Daily IDCW,,INF209K01UT5
+119511,Aditya Birla Sun Life Money Market Fund - Direct Plan - GROWTH,INF209K01UU3,
+119512,Aditya Birla Sun Life Money Market Fund - Direct Plan - Weekly IDCW,INF209K01UV1,INF209KA1LM3
+119513,Aditya Birla Sun Life Money Market Fund - Direct Plan - Daily IDCW,,INF209K01UT5
 119514,Aditya Birla Sun Life Infrastructure Fund - Direct Plan - GROWTH,INF209K01WH6,
 119515,Aditya Birla Sun Life Infrastructure Fund - Direct Plan - IDCW,INF209K01WG8,
 119516,Aditya Birla Sun Life International Equity Fund - Direct Plan - IDCW,INF209K01Q89,INF209K01WT1
@@ -14463,9 +14463,9 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 119519,Aditya Birla Sun Life International Equity Fund - Plan B - Direct - IDCW,,
 119520,Aditya Birla Sun Life Long Term Advantage - Growth - Direct Plan,,
 119521,Aditya Birla Sun Life Long Term Advantage - Dividend - Direct Plan,,
-119522,Aditya Birla Sun Life Low Duration Fund - Direct Plan - Weekly IDCW,,INF209K01XV5
-119523,Aditya Birla Sun Life Low Duration Fund - Direct Plan - GROWTH,INF209K01XU7,
-119524,Aditya Birla Sun Life Low Duration Fund - Direct Plan - Daily IDCW,INF209K01XW3,
+119522,Aditya Birla Sun Life Ultra short to short term Fund - Direct Plan - Weekly IDCW,,INF209K01XV5
+119523,Aditya Birla Sun Life Ultra short to short term Fund - Direct Plan - GROWTH,INF209K01XU7,
+119524,Aditya Birla Sun Life Ultra short to short term Fund - Direct Plan - Daily IDCW,INF209K01XW3,
 119525,ADITYA BIRLA SUN LIFE ARBITRAGE FUND - Direct Plan - IDCW-Re-investment,INF209K01P80,INF209K01VQ9
 119526,ADITYA BIRLA SUN LIFE ARBITRAGE FUND - Direct Plan - GROWTH,INF209K01VP1,
 119527,Aditya Birla Sun Life Large Cap Fund,INF209K01YX9,INF209K01YW1
@@ -14478,10 +14478,10 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 119535,Aditya Birla Sun Life Interval Income Fund - Quarterly Series I - Growth - Direct Plan,INF209K01YQ3,
 119536,Aditya Birla Sun Life India Reforms Fund - Growth - Direct Plan,,
 119537,Aditya Birla Sun Life India Reforms Fund - Dividend - Direct Plan,,
-119538,Aditya Birla Sun Life Medium Term Plan - Direct Plan - IDCW,INF209KA1KO1,
-119539,Aditya Birla Sun Life Medium Term Plan - Direct Plan - GROWTH,INF209K01XA9,
-119540,Aditya Birla Sun Life Medium Term Plan - Direct Plan - Half Yearly IDCW,INF209KA1KN3,
-119541,Aditya Birla Sun Life Medium Term Plan - Direct Plan - Quarterly IDCW,INF209KA1KP8,
+119538,Aditya Birla Sun Life Medium Term Fund - Direct Plan - IDCW,INF209KA1KO1,
+119539,Aditya Birla Sun Life Medium Term Fund - Direct Plan - GROWTH,INF209K01XA9,
+119540,Aditya Birla Sun Life Medium Term Fund - Direct Plan - Half Yearly IDCW,INF209KA1KN3,
+119541,Aditya Birla Sun Life Medium Term Fund - Direct Plan - Quarterly IDCW,INF209KA1KP8,
 119542,Sundaram Equity Hybrid Fund Direct Plan - Growth,,
 119543,Aditya Birla Sun Life ELSS Tax Saver Fund - Direct Plan - IDCW,INF209K01P23,INF209K01UM0
 119544,Aditya Birla Sun Life ELSS Tax Saver Fund - Direct Plan - GROWTH,INF209K01UN8,
@@ -14542,8 +14542,8 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 119602,Sundaram Global Brand Theme-Equity Active FOF - Direct Plan - GROWTH,INF903J01OB6,
 119603,Sundaram Gilt Fund - Direct Plan - Growth Option,,
 119604,SBI AGGRESSIVE HYBRID FUND - Direct Plan - IDCW,INF200K01RW4,INF200K01RX2
-119605,Aditya Birla Sun Life Government Securities Fund - Direct Plan - GROWTH,INF209K01XP7,
-119606,Aditya Birla Sun Life Government Securities Fund - Direct Plan - Quarterly IDCW,INF209KA1LC4,INF209K01XR3
+119605,Aditya Birla Sun Life Gilt Fund - Direct Plan - GROWTH,INF209K01XP7,
+119606,Aditya Birla Sun Life Gilt Fund - Direct Plan - Quarterly IDCW,INF209KA1LC4,INF209K01XR3
 119607,Sundaram Gilt Fund - Direct Plan - Bonus Option,,
 119608,Sundaram Gilt Fund - Direct Plan - Dividend Option,,
 119609,SBI AGGRESSIVE HYBRID FUND - Direct Plan - Growth,INF200K01RY0,
@@ -14591,8 +14591,8 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 119652,Sundaram Monthly Income Plan - Moderate Plan - Direct Plan - Half Yearly Dividend Option,,
 119653,Sundaram Monthly Income Plan - Moderate Plan - Direct Plan - Bonus  Option,,
 119654,Sundaram Monthly Income Plan - Moderate Plan - Direct Plan - Growth Option,,
-119655,Aditya Birla Sun Life Income Fund - Direct Plan - Quarterly IDCW,INF209K01R13,INF209K01WZ8
-119657,Aditya Birla Sun Life Income Fund - Direct Plan - GROWTH,INF209K01WY1,
+119655,Aditya Birla Sun Life Medium to Long Term Fund - Direct Plan - Quarterly IDCW,INF209K01R13,INF209K01WZ8
+119657,Aditya Birla Sun Life Medium to Long Term Fund - Direct Plan - GROWTH,INF209K01WY1,
 119658,Aditya Birla Sun Life Value Fund - Direct Plan - IDCW,INF209K01WP9,INF209K01WR5
 119659,Aditya Birla Sun Life Value Fund,INF209K01WQ7,
 119660,Aditya Birla Sun Life Tax Plan -DIRECT - IDCW,,
@@ -15278,8 +15278,8 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 120389,Axis Liquid Fund - Direct Plan - Growth Option,INF846K01CX4,
 120390,Axis Liquid Fund - Direct Plan - Weekly IDCW Option,INF846K01DB8,INF846K01DC6
 120391,Axis Liquid Fund - Direct Plan - Monthly IDCW Option,INF846K01CY2,INF846K01CZ9
-120392,Invesco India Largecap Fund - Direct Plan - Growth,INF205K01LB0,
-120393,Invesco India Largecap Fund - Direct Plan - IDCW,INF205K01KZ1,INF205K01LA2
+120392,Invesco India Large Cap Fund - Direct Plan - Growth,INF205K01LB0,
+120393,Invesco India Large Cap Fund - Direct Plan - IDCW,INF205K01KZ1,INF205K01LA2
 120394,Invesco India PSU Equity Fund - Direct Plan - IDCW,INF205K01NE0,INF205K01NF7
 120395,Invesco India PSU Equity Fund - Direct Plan - Growth,INF205K01NG5,
 120396,ICICI Prudential Ultra Short to Short Term Fund - Direct Plan - Weekly IDCW,INF109K01P08,INF109K01P16
@@ -15288,8 +15288,8 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 120399,ICICI Prudential Ultra Short to Short Term Fund - Direct Plan - IDCW Others,INF109K01O90,INF109K01O74
 120400,Invesco India Arbitrage Fund - Direct Plan - IDCW,INF205K01KP2,INF205K01KQ0
 120401,Invesco India Arbitrage Fund - Direct Plan - Growth,INF205K01KR8,
-120402,Invesco India Midcap Fund - Direct Plan - IDCW,INF205K01MT0,INF205K01MU8
-120403,Invesco India Midcap Fund - Direct Plan - Growth,INF205K01MV6,
+120402,Invesco India Mid Cap Fund - Direct Plan - IDCW,INF205K01MT0,INF205K01MU8
+120403,Invesco India Mid Cap Fund - Direct Plan - Growth,INF205K01MV6,
 120404,Invesco India Infrastructure Fund - Direct Plan - IDCW,INF205K01MB8,INF205K01MC6
 120405,Invesco India Infrastructure Fund - Direct Plan - Growth,INF205K01MD4,
 120406,JM Liquid Fund - Direct Plan - Growth Option,INF192K01CM6,
@@ -15298,8 +15298,8 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 120409,JM Liquid Fund (Direct) - Bonus Option - Principal Units,,
 120410,JM Liquid Fund (Direct) - Bonus Option - Bonus Option - Principal units,INF192K01CN4,
 120411,JM Liquid Fund - Direct Plan - Daily IDCW Option,,INF192K01CH6
-120412,Invesco India Multicap Fund - Direct Plan - IDCW,INF205K01MQ6,INF205K01MR4
-120413,Invesco India Multicap Fund - Direct Plan - Growth,INF205K01MS2,
+120412,Invesco India Multi Cap Fund - Direct Plan - IDCW,INF205K01MQ6,INF205K01MR4
+120413,Invesco India Multi Cap Fund - Direct Plan - Growth,INF205K01MS2,
 120414,JM Floater Short Term Fund (Direct) - Daily Dividend Option,,
 120415,JM Floater Short Term Fund (Direct) - Growth Option,,
 120416,Invesco India ELSS Tax Saver Fund - Direct Plan - Growth,INF205K01NT8,
@@ -15399,8 +15399,8 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 120514,Axis Ultra Short to Short Term Fund - Direct Plan - Weekly IDCW Option,INF846K01ER2,INF846K01ES0
 120515,Axis Ultra Short to Short Term Fund - Direct Plan - Daily IDCW Option,,INF846K01EQ4
 120516,Axis Ultra Short to Short Term Fund - Direct Plan - Monthly IDCW Option,INF846K01EO9,INF846K01EP6
-120517,Aditya Birla Sun Life Equity Hybrid '95 Fund - Direct Plan - GROWTH,INF209K01ZC0,
-120518,Aditya Birla Sun Life Equity Hybrid '95 Fund - Direct Plan - IDCW,INF209KA1LH3,INF209K01ZB2
+120517,Aditya Birla Sun Life Aggressive Hybrid Fund - Direct Plan - GROWTH,INF209K01ZC0,
+120518,Aditya Birla Sun Life Aggressive Hybrid Fund - Direct Plan - IDCW,INF209KA1LH3,INF209K01ZB2
 120519,Invesco India Gilt Fund - Direct Plan - Annual IDCW,INF205K01SL4,INF205K01SM2
 120520,Invesco India Gilt Fund - Direct Plan - Growth,INF205K01SN0,
 120521,Invesco India Gilt Fund - Direct Plan - Monthly IDCW,,INF205K01SO8
@@ -15431,7 +15431,7 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 120547,Aditya Birla Sun Life MIP - Direct Plan - Monthly Payment,,
 120548,Aditya Birla Sun Life MIP II - Savings 5 Plan - Monthly Growth /Payment - Direct Plan,,
 120549,Aditya Birla Sun Life MIP II - Savings 5 Plan - Monthly Dividend - Direct Plan,,
-120550,Aditya Birla Sun Life Regular Savings Fund - Direct Plan - Monthly IDCW,INF209K01R47,INF209K01XI2
+120550,Aditya Birla Sun Life Conservative Hybrid Fund - Direct Plan - Monthly IDCW,INF209K01R47,INF209K01XI2
 120551,Birla Sun Life Regular Savings Fund - Direct Plan - Monthly Payment,,
 120552,Religare Invesco Monthly Income Plan - Direct Plan - Growth Option,,
 120553,Religare Invesco Monthly Income Plan -  Direct Plan - Monthly Dividend,,
@@ -15577,7 +15577,7 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 120702,ICICI Prudential Diversified Debt Strategy Active FOF - Direct Plan - Growth,INF109K01X73,
 120703,ICICI Prudential Diversified Debt Strategy Active FOF - Direct Plan - IDCW,INF109K01X57,INF109K01X65
 120704,Aditya Birla Sun Life MIP - Direct Plan - Growth,,
-120705,Aditya Birla Sun Life Regular Savings Fund - Direct Plan - GROWTH,INF209K01XH4,
+120705,Aditya Birla Sun Life Conservative Hybrid Fund - Direct Plan - GROWTH,INF209K01XH4,
 120706,Aditya Birla Sun Life MIP II - Savings 5 Plan - Growth / Payment - Direct Plan,,
 120707,Aditya Birla Sun Life Quarterly Interval Fund -  Series 4 - Dividend - Direct Plan,,
 120708,Aditya Birla Sun Life Quarterly Interval Fund -  Series 4 - Growth - Direct Plan,,
@@ -16893,12 +16893,12 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 122640,Parag Parikh Flexi Cap Fund - Regular Plan - Growth,INF879O01019,
 122641,UTI FIIF Half Yearly Plan I - Direct Plan - IDCW,,
 122642,UTI Fixed  Income Interval Fund ( Half Yearly Plan - I) - Direct Plan - Growth Option,,
-122643,Aditya Birla Sun Life Floating Rate Fund - Regular Plan - Daily IDCW,,INF209KA1LN1
-122644,Aditya Birla Sun Life Floating Rate Fund - Regular Plan - GROWTH,INF209K01MG9,
-122645,Aditya Birla Sun Life Floating Rate Fund - Direct Plan - Daily IDCW,INF209K01UW9,
-122646,Aditya Birla Sun Life Floating Rate Fund - Direct Plan - GROWTH,INF209K01UX7,
-122647,Aditya Birla Sun Life Floating Rate Fund - Regular Plan - Weekly IDCW Payout,,INF209K01MH7
-122648,Aditya Birla Sun Life Floating Rate Fund - Direct Plan - Weekly IDCW Payout,INF209K01UY5,
+122643,Aditya Birla Sun Life Floating Interest Rate Fund - Regular Plan - Daily IDCW,,INF209KA1LN1
+122644,Aditya Birla Sun Life Floating Interest Rate Fund - Regular Plan - GROWTH,INF209K01MG9,
+122645,Aditya Birla Sun Life Floating Interest Rate Fund - Direct Plan - Daily IDCW,INF209K01UW9,
+122646,Aditya Birla Sun Life Floating Interest Rate Fund - Direct Plan - GROWTH,INF209K01UX7,
+122647,Aditya Birla Sun Life Floating Interest Rate Fund - Regular Plan - Weekly IDCW Payout,,INF209K01MH7
+122648,Aditya Birla Sun Life Floating Interest Rate Fund - Direct Plan - Weekly IDCW Payout,INF209K01UY5,
 122649,Aditya Birla Sun Life Floating Rate Fund-RETAIL - WEEKLY IDCW,,INF209K01MI5
 122650,Aditya Birla Sun Life Floating Rate Fund-Retail Plan-Growth,INF209K01MF1,
 122651,ICICI Prudential Ultra Short to Short Term Fund - Direct Plan - Monthly IDCW,INF109K018Y9,INF109K017Y1
@@ -23252,8 +23252,8 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 132914,LIC MF Diversified Equity Fund-Series 2-Regular Plan-Dividend Payout,,
 132915,LIC MF Diversified Equity Fund-Series 2-Regular Plan-Growth,,
 132916,LIC MF Diversified Equity Fund-Series 2-Direct Plan-Growth,,
-132917,Aditya Birla Sun Life Dynamic Bond Fund - Regular Plan - IDCW,INF209KA1TV7,
-132918,Aditya Birla Sun Life Dynamic Bond Fund - Direct Plan - IDCW,INF209KA1TX3,
+132917,Aditya Birla Sun Life Dynamic Term Fund - Regular Plan - IDCW,INF209KA1TV7,
+132918,Aditya Birla Sun Life Dynamic Term Fund - Direct Plan - IDCW,INF209KA1TX3,
 132919,SBI DUAL ADVANTAGE FUND - SERIES V - DIRECT PLAN - GROWTH,,
 132920,SBI DUAL ADVANTAGE FUND - SERIES V - DIRECT PLAN - DIVIDEND,,
 132921,SBI DUAL ADVANTAGE FUND - SERIES V - REGULAR PLAN - GROWTH,,
@@ -23603,8 +23603,8 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 133438,ICICI Prudential Capital Protection Oriented Fund - Series VII - 1288 Days Plan F Cumulative Option,,
 133439,Aditya Birla Sun Life Banking & PSU Debt Fund - Monthly Dividend - Regular Plan,,
 133440,Aditya Birla Sun Life Banking & PSU Debt Fund - Monthly Dividend - Direct Plan,,
-133445,Aditya Birla Sun Life Income Fund - Regular Plan - IDCW,INF209KA1WJ6,INF209KA1WK4
-133446,Aditya Birla Sun Life Income Fund - Direct Plan - IDCW,INF209KA1WL2,INF209KA1WM0
+133445,Aditya Birla Sun Life Medium to Long Term Fund - Regular Plan - IDCW,INF209KA1WJ6,INF209KA1WK4
+133446,Aditya Birla Sun Life Medium to Long Term Fund - Direct Plan - IDCW,INF209KA1WL2,INF209KA1WM0
 133447,UTI FTIF Series XX - XVI (1100 days) Annual Div Option - Direct,,
 133448,UTI FTIF Series XX - XVI (1100 days) Quarterly Div Option,,
 133449,UTI FTIF Series XX - XVI (1100 Days) Growth Option,,
@@ -30543,10 +30543,10 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 145129,ICICI Prudential Fixed Maturity Plan - Series 84 - 168 Days Plan G - Direct Plan Cumulative Option,,
 145131,ICICI Prudential Fixed Maturity Plan - Series 84 - 168 Days Plan G - Dividend Option,,
 145132,ICICI Prudential Fixed Maturity Plan - Series 84 - 168 Days Plan G - Cumulative Option,,
-145137,Invesco India Smallcap Fund - Direct Plan - Growth,INF205K013T3,
-145138,Invesco India Smallcap Fund - Direct Plan - IDCW,INF205K012T5,INF205K015T8
-145139,Invesco India Smallcap Fund - Regular Plan - Growth,INF205K011T7,
-145140,Invesco India Smallcap Fund - Regular Plan - IDCW,INF205K010T9,INF205K014T1
+145137,Invesco India Small Cap Fund - Direct Plan - Growth,INF205K013T3,
+145138,Invesco India Small Cap Fund - Direct Plan - IDCW,INF205K012T5,INF205K015T8
+145139,Invesco India Small Cap Fund - Regular Plan - Growth,INF205K011T7,
+145140,Invesco India Small Cap Fund - Regular Plan - IDCW,INF205K010T9,INF205K014T1
 145141,Nippon India Fixed Horizon Fund XXXIX- Series 9- Direct Plan- Growth Option,,
 145142,NIPPON INDIA FIXED HORIZON FUND - XXXIX - SERIES 9 - DIRECT Plan - IDCW Option,,
 145143,Nippon India Fixed Horizon Fund XXXIX- Series 9- Growth Option,,
@@ -34281,10 +34281,10 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 150479,Franklin India Balanced Advantage Fund - Direct Plan - IDCW,INF090I01WR3,INF090I01WS1
 150480,Franklin India Balanced Advantage Fund - Regular Plan - Growth,INF090I01WN2,
 150481,Franklin India Balanced Advantage Fund - Direct Plan - Growth,INF090I01WQ5,
-150482,Aditya Birla Sun Life Long Duration Fund - Regular Plan - GROWTH,INF209KB14J9,
-150483,Aditya Birla Sun Life Long Duration Fund - Regular Plan - IDCW,INF209KB15J6,INF209KB16J4
-150484,Aditya Birla Sun Life Long Duration Fund - Direct Plan - GROWTH,INF209KB17J2,
-150485,Aditya Birla Sun Life Long Duration Fund - Direct Plan - IDCW,INF209KB18J0,INF209KB19J8
+150482,Aditya Birla Sun Life Long Term Fund - Regular Plan - GROWTH,INF209KB14J9,
+150483,Aditya Birla Sun Life Long Term Fund - Regular Plan - IDCW,INF209KB15J6,INF209KB16J4
+150484,Aditya Birla Sun Life Long Term Fund - Direct Plan - GROWTH,INF209KB17J2,
+150485,Aditya Birla Sun Life Long Term Fund - Direct Plan - IDCW,INF209KB18J0,INF209KB19J8
 150487,Nippon India Nifty Alpha Low Volatility 30 Index Fund - Direct Plan - Growth Option,INF204KC1584,
 150488,Nippon India Nifty Alpha Low Volatility 30 Index Fund - Direct Plan - IDCW Option,INF204KC1592,
 150490,Nippon India Nifty Alpha Low Volatility 30 Index Fund - Regular Plan - Growth Option,INF204KC1550,
@@ -37615,6 +37615,8 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 154352,Groww Nifty Private Bank Index Fund - Direct Plan - Income Distribution cum capital withdrawal,INF666M01OV1,INF666M01OW9
 154353,SBI Nifty Smallcap 250 ETF - Regular Plan - IDCW,INF200KB1AY9,
 154354,SBI Nifty200 Value 30 ETF - Regular Plan - IDCW,INF200KB1AX1,
+154355,HDFC GOLD SILVER PASSIVE FOF - Direct Plan - GROWTH OPTION,INF179KC1KO5,
+154356,HDFC GOLD SILVER PASSIVE FOF - Regular Plan - GROWTH OPTION,INF179KC1KN7,
 154357,DSP Nifty FMCG ETF,INF740KA1ZA4,
 154358,Kotak Ultra Short to Short Term Fund - Direct Plan - Weekly - Reinvestment & Payout of Income Distribution cum Capital Withdrawal Option,INF174KA1ZW3,INF174KA1ZU7
 154359,Kotak Ultra Short to Short Term Fund - Regular Plan - Monthly - Reinvestment & Payout of Income Distribution cum Capital Withdrawal Option,INF174KA1ZZ6,INF174KA1A11
@@ -37679,8 +37681,8 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 154432,Invesco India Ultra Short Term Fund - Direct Plan - Weekly IDCW,INF205KA1BS5,INF205KA1BT3
 154433,TRUSTMF LARGE & MIDCAP FUND - Direct Plan - Growth,INF0GCD01891,
 154434,TRUSTMF LARGE & MIDCAP FUND - Regular Plan - Growth,INF0GCD01909,
-154436,Zerodha Life Cycle Fund 2036 - Direct Plan - Growth Option,,
-154437,Zerodha Life Cycle Fund 2041 - Direct Plan - Growth Option,,
+154436,Zerodha Life Cycle Fund 2036 - Direct Plan - Growth Option,INF0R8F01224,
+154437,Zerodha Life Cycle Fund 2041 - Direct Plan - Growth Option,INF0R8F01216,
 154438,AlphaGrep Multi Asset Allocation Fund - Direct Plan - Growth,INF2VOA01012,
 154440,AlphaGrep Multi Asset Allocation Fund - Regular Plan - Growth,INF2VOA01046,
 154442,AlphaGrep Multi Asset Allocation Fund - Regular Plan - IDCW,INF2VOA01061,INF2VOA01053
@@ -37727,8 +37729,8 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 154497,Mirae Asset Nifty200 Momentum 30 Plus 8-13 yr G-Sec 50:50 ETF,INF769K01RJ5,
 154503,ICICI Prudential BSE Insurance ETF,INF109K1A567,
 154504,HDFC Nifty Metal ETF - Growth Option,,
-154505,HDFC Nifty Metal ETF FOF - Direct Plan - Growth Option,,
-154506,HDFC Nifty Metal ETF FOF - Regular Plan - Growth Option,,
+154505,HDFC Nifty Metal ETF FOF - Direct Plan - Growth Option,INF179KC1KS6,
+154506,HDFC Nifty Metal ETF FOF - Regular Plan - Growth Option,INF179KC1KR8,
 154507,Kotak Money Market Fund - Direct Plan - IDCW Weekly,INF174KA1B28,INF174KA1B02
 154508,Kotak Money Market Fund - Regular Plan - IDCW Weekly,INF174KA1B10,INF174KA1B36
 154509,Kotak Short Term Fund - Regular Plan - IDCW Weekly,INF174KA1B51,INF174KA1B77
@@ -37759,6 +37761,10 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 154550,JioBlackRock Nifty 50 ETF,INF22M001184,
 154551,Motilal Oswal Nifty Metal ETF,INF247L01HG7,
 154552,Motilal Oswal Nifty Oil & Gas ETF,INF247L01HH5,
+154553,WhiteOak Capital Dividend Yield Fund - Regular Plan - Growth Option,INF03VN01AI2,
+154554,WhiteOak Capital Dividend Yield Fund - Direct Plan - IDCW Option,INF03VN01AJ0,INF03VN01AK8
+154555,WhiteOak Capital Dividend Yield Fund - Regular Plan - IDCW Option,INF03VN01AL6,INF03VN01AM4
+154556,WhiteOak Capital Dividend Yield Fund - Direct Plan - Growth Option,INF03VN01AH4,
 154559,Edelweiss Nifty REITs & Realty Index Fund - Regular Plan - IDCW Payout,INF754K01XO5,INF754K01XP2
 154561,Edelweiss Nifty REITs & Realty Index Fund - Regular Plan - Growth,INF754K01XN7,
 154565,ALPHAGREP LIQUID OMNI FOF - Direct Plan - Growth,INF2VOA01137,
@@ -37775,6 +37781,8 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 154576,Kotak Diversified Equity All Cap Omni FOF - Regular Plan - Growth,INF174KA1D59,
 154593,DSP NIFTY 10 YR BENCHMARK G-SEC ETF,INF740KA1ZI7,
 154602,UTI Nifty 500 Exchange Traded Fund,INF789F1AG76,
+154603,UTI Nifty 500 Index Fund,INF789F1AG84,
+154604,UTI Nifty 500 Index Fund,INF789F1AG92,
 154606,Kotak Liquid Fund - Direct Plan - IDCW,INF174KA1E09,INF174KA1D83
 154608,Kotak Ultra Short Term Fund - Direct Plan - IDCW,INF174KA1E41,INF174KA1E25
 154609,Kotak Corporate Bond Fund - Direct Plan - IDCW,INF174KA1E82,INF174KA1E66
