@@ -506,6 +506,7 @@ scheme_code,isin_growth,isin_idcw,scheme_name,nav,nav_date,amc_name,broad_catego
 151585,INF846K010Q0,-,Axis BSE Sensex ETF,,,Axis Mutual Fund,Open Ended Schemes(Exchange Traded Funds (ETFs) - Equity ETF)
 141545,INF846K01W98,-,Axis Nifty 50 ETF,,,Axis Mutual Fund,Open Ended Schemes(Exchange Traded Funds (ETFs) - Equity ETF)
 148559,INF846K01X63,-,Axis NIFTY Bank ETF,,,Axis Mutual Fund,Open Ended Schemes(Exchange Traded Funds (ETFs) - Equity ETF)
+154627,INF846KA1598,-,Axis Nifty Energy ETF,,,Axis Mutual Fund,Open Ended Schemes(Exchange Traded Funds (ETFs) - Equity ETF)
 148934,INF846K01Z12,-,Axis NIFTY Healthcare ETF,,,Axis Mutual Fund,Open Ended Schemes(Exchange Traded Funds (ETFs) - Equity ETF)
 149156,INF846K016C7,-,Axis NIFTY India Consumption ETF,,,Axis Mutual Fund,Open Ended Schemes(Exchange Traded Funds (ETFs) - Equity ETF)
 148799,INF846K01Y96,-,Axis NIFTY IT ETF,,,Axis Mutual Fund,Open Ended Schemes(Exchange Traded Funds (ETFs) - Equity ETF)
@@ -884,18 +885,18 @@ scheme_code,isin_growth,isin_idcw,scheme_name,nav,nav_date,amc_name,broad_catego
 111546,INF109K01EM6,INF109K01AC5,ICICI Prudential Floating Interest Rates Fund,,,ICICI Prudential Mutual Fund,Open Ended Schemes(Income/Debt Oriented Schemes - Floating Interest Rates Fund)
 100319,INF767K01733,-,LIC MF Gilt Fund,,,LIC Mutual Fund,Open Ended Schemes(Income/Debt Oriented Schemes - Gilt Fund)
 100318,INF767K01717,INF767K01725,LIC MF Gilt Fund,,,LIC Mutual Fund,Open Ended Schemes(Income/Debt Oriented Schemes - Gilt Fund)
-112712,-,INF846K01362,Axis Liquid Fund,,,Axis Mutual Fund,Open Ended Schemes(Income/Debt Oriented Schemes - Liquid Fund)
-112713,INF846K01354,-,Axis Liquid Fund,,,Axis Mutual Fund,Open Ended Schemes(Income/Debt Oriented Schemes - Liquid Fund)
-112714,INF846K01396,INF846K01404,Axis Liquid Fund,,,Axis Mutual Fund,Open Ended Schemes(Income/Debt Oriented Schemes - Liquid Fund)
-112715,INF846K01370,INF846K01388,Axis Liquid Fund,,,Axis Mutual Fund,Open Ended Schemes(Income/Debt Oriented Schemes - Liquid Fund)
-120410,INF192K01CN4,-,JM Liquid Fund,,,JM Financial Mutual Fund,Open Ended Schemes(Income/Debt Oriented Schemes - Liquid Fund)
-148415,-,-,JM Liquid Fund,,,JM Financial Mutual Fund,Open Ended Schemes(Income/Debt Oriented Schemes - Liquid Fund)
-139258,INF192K01LB0,-,JM Liquid Fund,,,JM Financial Mutual Fund,Open Ended Schemes(Income/Debt Oriented Schemes - Liquid Fund)
-139260,INF192K01LD6,-,JM Liquid Fund,,,JM Financial Mutual Fund,Open Ended Schemes(Income/Debt Oriented Schemes - Liquid Fund)
-139257,INF192K01LA2,-,JM Liquid Fund,,,JM Financial Mutual Fund,Open Ended Schemes(Income/Debt Oriented Schemes - Liquid Fund)
-139259,INF192K01LC8,-,JM Liquid Fund,,,JM Financial Mutual Fund,Open Ended Schemes(Income/Debt Oriented Schemes - Liquid Fund)
-139540,-,-,Mahindra Manulife Liquid Fund,,,Mahindra Manulife Mutual Fund,Open Ended Schemes(Income/Debt Oriented Schemes - Liquid Fund)
-139539,-,-,Mahindra Manulife Liquid Fund,,,Mahindra Manulife Mutual Fund,Open Ended Schemes(Income/Debt Oriented Schemes - Liquid Fund)
+112712,-,INF846K01362,Axis Liquid Fund,,,Axis Mutual Fund,ASK MUTUAL FUND
+112713,INF846K01354,-,Axis Liquid Fund,,,Axis Mutual Fund,ASK MUTUAL FUND
+112714,INF846K01396,INF846K01404,Axis Liquid Fund,,,Axis Mutual Fund,ASK MUTUAL FUND
+112715,INF846K01370,INF846K01388,Axis Liquid Fund,,,Axis Mutual Fund,ASK MUTUAL FUND
+120410,INF192K01CN4,-,JM Liquid Fund,,,JM Financial Mutual Fund,ASK MUTUAL FUND
+148415,-,-,JM Liquid Fund,,,JM Financial Mutual Fund,ASK MUTUAL FUND
+139258,INF192K01LB0,-,JM Liquid Fund,,,JM Financial Mutual Fund,ASK MUTUAL FUND
+139260,INF192K01LD6,-,JM Liquid Fund,,,JM Financial Mutual Fund,ASK MUTUAL FUND
+139257,INF192K01LA2,-,JM Liquid Fund,,,JM Financial Mutual Fund,ASK MUTUAL FUND
+139259,INF192K01LC8,-,JM Liquid Fund,,,JM Financial Mutual Fund,ASK MUTUAL FUND
+139540,-,-,Mahindra Manulife Liquid Fund,,,Mahindra Manulife Mutual Fund,ASK MUTUAL FUND
+139539,-,-,Mahindra Manulife Liquid Fund,,,Mahindra Manulife Mutual Fund,ASK MUTUAL FUND
 131623,INF109KA11C4,INF109KA10C6,ICICI Prudential Long Term Fund,,,ICICI Prudential Mutual Fund,Open Ended Schemes(Income/Debt Oriented Schemes - Long Term Fund)
 122673,INF109KA1335,-,ICICI Prudential Long Term Fund,,,ICICI Prudential Mutual Fund,Open Ended Schemes(Income/Debt Oriented Schemes - Long Term Fund)
 120748,INF109K018L6,INF109K019L4,ICICI Prudential Long Term Fund,,,ICICI Prudential Mutual Fund,Open Ended Schemes(Income/Debt Oriented Schemes - Long Term Fund)

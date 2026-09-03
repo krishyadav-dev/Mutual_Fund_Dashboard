@@ -358,8 +358,8 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 100791,Sundaram Corporate Bond Fund -Institutional - Quarterly Dividend,,
 100792,Sundaram Corporate Bond Fund Institutional - Growth,,
 100793,Sundaram Banking and PSU Debt Fund (Formerly Known as Sundaram Banking and PSU Fund) - Regular Plan - IDCW (Income Distribution CUM Capital Withdrawal),INF903J01IO1,INF903J01IR4
-100794,Sundaram Small Cap Fund - Regular Plan - GROWTH,INF903J01454,INF903J01462
-100795,Sundaram Small Cap Fund - Regular Plan - IDCW (Income Distribution CUM Capital Withdrawal),INF903J01470,
+100794,Sundaram Small Cap Fund - Regular Plan - IDCW (Income Distribution CUM Capital Withdrawal),INF903J01454,INF903J01462
+100795,Sundaram Small Cap Fund - Regular Plan - GROWTH,INF903J01470,
 100796,Sahara Midcap Fund-Growth Plan,,
 100797,Sahara Midcap Fund-Dividend Plan,,
 100798,Sahara Midcap Fund-Auto Payout,,
@@ -37779,7 +37779,21 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 154574,Kotak Diversified Equity All Cap Omni FOF - Direct Plan - Growth,INF174KA1D26,
 154575,Kotak Diversified Equity All Cap Omni FOF - Direct Plan - IDCW,INF174KA1D34,INF174KA1D42
 154576,Kotak Diversified Equity All Cap Omni FOF - Regular Plan - Growth,INF174KA1D59,
+154581,ASK Liquid Fund - Regular Plan - Growth,INF2XUU01021,
+154583,ASK Liquid Fund - Direct Plan - Weekly IDCW,INF2XUU01070,INF2XUU01088
+154586,ASK Liquid Fund - Regular Plan - Daily IDCW,,INF2XUU01047
+154587,ASK Liquid Fund - Regular Plan - Weekly IDCW,INF2XUU01054,INF2XUU01062
+154589,ASK Liquid Fund - Direct Plan - Growth,INF2XUU01013,
+154590,ASK Liquid Fund - Regular Plan - Monthly IDCW,INF2XUU01096,INF2XUU01104
+154591,ASK Liquid Fund - Direct Plan - Daily IDCW,,INF2XUU01039
+154592,ASK Liquid Fund - Direct Plan - Monthly IDCW,INF2XUU01112,INF2XUU01120
 154593,DSP NIFTY 10 YR BENCHMARK G-SEC ETF,INF740KA1ZI7,
+154594,Axis Nifty Energy Index Fund - Direct Plan - Growth Option,INF846KA1580,
+154597,Axis Nifty Energy Index Fund - Regular Plan - Growth Option,INF846KA1572,
+154598,Bandhan Contra Fund - Regular Plan - Growth,INF194KB1KU4,
+154599,Bandhan Contra Fund - Direct Plan - Annual IDCW,INF194KB1LC0,INF194KB1LD8
+154600,Bandhan Contra Fund - Direct Plan - Growth,INF194KB1KX8,
+154601,Bandhan Contra Fund - Regular Plan - Annual IDCW,INF194KB1LA4,INF194KB1LB2
 154602,UTI Nifty 500 Exchange Traded Fund,INF789F1AG76,
 154603,UTI Nifty 500 Index Fund,INF789F1AG84,
 154604,UTI Nifty 500 Index Fund,INF789F1AG92,
@@ -37797,10 +37811,12 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 154624,Choice Overnight Fund - Direct Plan - Unclaimed Less than 3 years Redemption,,
 154625,quant Silver ETF - Direct Plan,,
 154626,Mirae Asset BSE LargeMid (60:40) Stable Dividend 50 ETF,INF769K01RK3,
+154627,Axis Nifty Energy ETF,INF846KA1598,
 154632,JioBlackRock Large Cap Fund - Regular Plan - Growth Option,INF22M001192,
 154633,JioBlackRock Nifty 50 Index Fund - Regular Plan - Growth Option,INF22M001200,
 154634,JioBlackRock Nifty Smallcap 250 Index Fund - Regular Plan - Growth Option,INF22M001218,
 154635,JioBlackRock Short Term Fund - Regular Plan - Growth Option,INF22M001226,
+154636,JioBlackRock Ultra Short to Short Term Fund - Regular Plan - Growth Option,INF22M001234,
 154637,JioBlackRock Sector Rotation Fund - Regular Plan - Growth Option,INF22M001242,
 154638,JioBlackRock Arbitrage Fund - Regular Plan - Growth Option,INF22M001259,
 154639,JioBlackRock Money Market Fund - Regular Plan - Growth Option,INF22M001309,
