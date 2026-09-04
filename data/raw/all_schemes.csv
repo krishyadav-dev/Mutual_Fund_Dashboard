@@ -37797,6 +37797,7 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 154602,UTI Nifty 500 Exchange Traded Fund,INF789F1AG76,
 154603,UTI Nifty 500 Index Fund,INF789F1AG84,
 154604,UTI Nifty 500 Index Fund,INF789F1AG92,
+154605,Kotak Liquid Fund,INF174KA1D91,INF174KA1E17
 154606,Kotak Liquid Fund - Direct Plan - IDCW,INF174KA1E09,INF174KA1D83
 154608,Kotak Ultra Short Term Fund - Direct Plan - IDCW,INF174KA1E41,INF174KA1E25
 154609,Kotak Corporate Bond Fund - Direct Plan - IDCW,INF174KA1E82,INF174KA1E66
@@ -37826,6 +37827,10 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 154643,JioBlackRock Nifty Midcap 150 Index Fund - Regular Plan - Growth Option,INF22M001341,
 154644,JioBlackRock Nifty Next 50 Index Fund - Regular Plan - Growth Option,INF22M001358,
 154645,JioBlackRock Liquid Fund - Regular Plan - Growth Option,INF22M001267,
+154646,Nippon India Income Plus Arbitrage Omni Fund of Fund - Direct Plan - Growth Option,INF204KC1HO0,
+154647,Nippon India Income Plus Arbitrage Omni Fund of Fund - Direct Plan - IDCW Option,INF204KC1HP7,INF204KC1HQ5
+154648,Nippon India Income Plus Arbitrage Omni Fund of Fund - Regular Plan - IDCW Option,INF204KC1HN2,INF204KC1HR3
+154649,Nippon India Income Plus Arbitrage Omni Fund of Fund - Regular Plan - Growth Option,INF204KC1HM4,
 154652,DSP Financial Services Sectoral Debt Fund - Regular Plan - IDCW,INF740KA1ZK3,INF740KA1ZL1
 154653,DSP Financial Services Sectoral Debt Fund - Direct Plan - IDCW,INF740KA1ZN7,INF740KA1ZO5
 154654,DSP Financial Services Sectoral Debt Fund - Direct Plan - Growth,INF740KA1ZM9,
