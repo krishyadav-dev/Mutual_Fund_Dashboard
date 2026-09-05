@@ -125,8 +125,6 @@ scheme_code,isin_growth,isin_idcw,scheme_name,nav,nav_date,amc_name,broad_catego
 138471,INF223J01AR4,,PGIM India Gilt Fund,,,PGIM India Mutual Fund,Open Ended Schemes(Debt Scheme - Gilt Fund)
 138476,INF223J01VM1,,PGIM India Gilt Fund,,,PGIM India Mutual Fund,Open Ended Schemes(Debt Scheme - Gilt Fund)
 138475,INF223J01VL3,,PGIM India Gilt Fund,,,PGIM India Mutual Fund,Open Ended Schemes(Debt Scheme - Gilt Fund)
-102046,,,Tata Gilt Securities Fund,,,Tata Mutual Fund,Open Ended Schemes(Debt Scheme - Gilt Fund)
-101945,,,Tata Gilt Securities Fund,,,Tata Mutual Fund,Open Ended Schemes(Debt Scheme - Gilt Fund)
 100041,,INF209K01KN9,Aditya Birla Sun Life Liquid Fund,,,Aditya Birla Sun Life Mutual Fund,Open Ended Schemes(Debt Scheme - Liquid Fund)
 100048,INF209KA1LK7,INF209K01KY6,Aditya Birla Sun Life Liquid Fund,,,Aditya Birla Sun Life Mutual Fund,Open Ended Schemes(Debt Scheme - Liquid Fund)
 100044,,INF209K01KP4,Aditya Birla Sun Life Liquid Fund,,,Aditya Birla Sun Life Mutual Fund,Open Ended Schemes(Debt Scheme - Liquid Fund)
@@ -669,6 +667,10 @@ scheme_code,isin_growth,isin_idcw,scheme_name,nav,nav_date,amc_name,broad_catego
 133394,INF192K01GV8,,JM Arbitrage Fund,,,JM Financial Mutual Fund,Open Ended Schemes(Hybrid Schemes - Arbitrage Fund)
 133399,INF192K01IB6,,JM Arbitrage Fund,,,JM Financial Mutual Fund,Open Ended Schemes(Hybrid Schemes - Arbitrage Fund)
 133396,INF192K01IF7,,JM Arbitrage Fund,,,JM Financial Mutual Fund,Open Ended Schemes(Hybrid Schemes - Arbitrage Fund)
+154618,,,SBI Balanced Hybrid Fund,,,SBI Mutual Fund,Open Ended Schemes(Hybrid Schemes - Balanced Hybrid Fund)
+154617,,,SBI Balanced Hybrid Fund,,,SBI Mutual Fund,Open Ended Schemes(Hybrid Schemes - Balanced Hybrid Fund)
+154616,,,SBI Balanced Hybrid Fund,,,SBI Mutual Fund,Open Ended Schemes(Hybrid Schemes - Balanced Hybrid Fund)
+154615,,,SBI Balanced Hybrid Fund,,,SBI Mutual Fund,Open Ended Schemes(Hybrid Schemes - Balanced Hybrid Fund)
 123183,INF109KA1301,,ICICI Prudential Conservative Hybrid Fund,,,ICICI Prudential Mutual Fund,Open Ended Schemes(Hybrid Schemes - Conservative Hybrid Fund)
 128110,INF109KA1319,,ICICI Prudential Conservative Hybrid Fund,,,ICICI Prudential Mutual Fund,Open Ended Schemes(Hybrid Schemes - Conservative Hybrid Fund)
 115269,INF109K01TN2,,ICICI Prudential Multi Asset Allocation Fund,,,ICICI Prudential Mutual Fund,Open Ended Schemes(Hybrid Schemes - Multi Asset Allocation Fund)
@@ -885,6 +887,8 @@ scheme_code,isin_growth,isin_idcw,scheme_name,nav,nav_date,amc_name,broad_catego
 111546,INF109K01EM6,INF109K01AC5,ICICI Prudential Floating Interest Rates Fund,,,ICICI Prudential Mutual Fund,Open Ended Schemes(Income/Debt Oriented Schemes - Floating Interest Rates Fund)
 100319,INF767K01733,,LIC MF Gilt Fund,,,LIC Mutual Fund,Open Ended Schemes(Income/Debt Oriented Schemes - Gilt Fund)
 100318,INF767K01717,INF767K01725,LIC MF Gilt Fund,,,LIC Mutual Fund,Open Ended Schemes(Income/Debt Oriented Schemes - Gilt Fund)
+102046,,,Tata Gilt Fund,,,Tata Mutual Fund,Open Ended Schemes(Income/Debt Oriented Schemes - Gilt Fund)
+101945,,,Tata Gilt Fund,,,Tata Mutual Fund,Open Ended Schemes(Income/Debt Oriented Schemes - Gilt Fund)
 112712,,INF846K01362,Axis Liquid Fund,,,Axis Mutual Fund,ASK MUTUAL FUND
 112713,INF846K01354,,Axis Liquid Fund,,,Axis Mutual Fund,ASK MUTUAL FUND
 112714,INF846K01396,INF846K01404,Axis Liquid Fund,,,Axis Mutual Fund,ASK MUTUAL FUND

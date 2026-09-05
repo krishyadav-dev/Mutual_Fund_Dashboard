@@ -204,7 +204,7 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 100471,Franklin India Large Cap Fund - Regular Plan - Growth,INF090I01171,
 100472,Franklin India Mid Cap Fund - Regular Plan - IDCW,INF090I01726,INF090I01734
 100473,Franklin India Mid Cap Fund - Regular Plan - Growth,INF090I01809,
-100474,Tata ELSS Fund - Regular Plan - Payout of IDCW Option,INF277K01I60,
+100474,Tata ELSS - Tax Saver Fund - Regular Plan - Payout of IDCW Option,INF277K01I60,
 100475,Tata Large Cap Fund - Regular Plan - Growth Option,INF277K01931,
 100476,Taurus Flexi Cap Fund - Regular Plan - Growth,INF044D01989,
 100477,Taurus Mid Cap Fund - Regular Plan - Growth,INF044D01815,
@@ -339,7 +339,7 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 100739,UTI - MNC Fund - Regular Plan - IDCW,INF789F01828,INF789F01836
 100740,UTI - MNC Fund - Regular Plan - Growth,INF789F01844,
 100741,UTI Medium to Long Term Fund - Regular Plan - Growth,INF789F01406,
-100742,UTI Medium to Long Term Fund - Regular Plan - Quarterly IDCW,INF789F01380,INF789F01398
+100742,UTI Medium to Long Term Fund - Regular Plan - Discontinued Quarterly IDCW,INF789F01380,INF789F01398
 100748,UTI - Master Index Fund-Income Option,,
 100749,UTI - Master Index Fund-Growth Option,,
 100750,UTI - Master Value Fund-Income Option,,
@@ -480,10 +480,10 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 101002,SBI 10 YEAR CONSTANT MATURITY GILT FUND - Regular Plan - Growth,INF200K01AN9,
 101003,SBI 10 YEAR CONSTANT MATURITY GILT FUND - Regular Plan - IDCW,INF200K01AO7,INF200K01AP4
 101037,Franklin India Index Tax Fund,,
-101042,Tata Gilt Securities Fund - Regular Plan - Growth Option,INF277K01519,
+101042,Tata Gilt Fund - Regular Plan - Growth Option,INF277K01519,
 101044,Franklin India Floating Interest Rates Fund - Regular Plan - Daily IDCW,INF090I01LN5,
 101048,Franklin India Floating Interest Rates Fund - Regular Plan - Growth,INF090I01LM7,
-101049,Tata Gilt Securities Fund - Regular Plan - Payout of IDCW Option,INF277K01DN1,INF277K01535
+101049,Tata Gilt Fund - Regular Plan - Payout of IDCW Option,INF277K01DN1,INF277K01535
 101059,SUNDARAM GILT FUND (DIV. OPTION),,
 101065,Quant Mid Cap Fund - Regular Plan - Growth Option,INF966L01176,
 101066,Quant Mid Cap Fund - Regular Plan - IDCW Option,INF966L01150,INF966L01168
@@ -672,8 +672,8 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 101539,Sundaram Mid Cap Fund - Regular Plan - GROWTH,INF903J01173,
 101544,Sundaram Short Term Credit Risk Fund -Dividend,,
 101545,Sundaram Short Term Credit Risk Fund-Appreciation,,
-101547,Tata Short Term Bond Fund - Regular Plan - Monthly Payout of IDCW Option,INF277K01EI9,INF277K01964
-101548,Tata Short Term Bond Fund - Regular Plan - Growth Option,INF277K01972,
+101547,Tata Short Term Fund - Regular Plan - Monthly Payout of IDCW Option,INF277K01EI9,INF277K01964
+101548,Tata Short Term Fund - Regular Plan - Growth Option,INF277K01972,
 101549,JM Liquid Fund - Bonus Option - Regular Plan - Bonus Option - Principal Units,INF192K01890,
 101550,ING Short Term Income Fund -Dividend Option,,
 101551,SBI AGGRESSIVE HYBRID FUND - Regular Plan - IDCW,INF200K01115,INF200K01123
@@ -1587,9 +1587,9 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 103155,Aditya Birla Sun Life Aggressive Hybrid Fund - Regular Plan - GROWTH,INF209K01BT5,
 103156,JM Fixed Maturity Fund-YSA2-Dividend Option,,
 103157,JM Fixed Maturity Fund-YSA2-Growth Option,,
-103158,Tata Treasury Advantage Fund - Regular Plan - Weekly Payout of IDCW Option,INF277K01MD3,INF277K01MB7
-103159,Tata Treasury Advantage Fund - Regular Plan - Growth Option,INF277K01MA9,
-103160,Tata Treasury Advantage Fund - Regular Plan - Daily Reinvestment of IDCW Option,,INF277K01LZ8
+103158,Tata Ultra Short to Short Term Fund - Regular Plan - Weekly Payout of IDCW Option,INF277K01MD3,INF277K01MB7
+103159,Tata Ultra Short to Short Term Fund - Regular Plan - Growth Option,INF277K01MA9,
+103160,Tata Ultra Short to Short Term Fund - Regular Plan - Daily Reinvestment of IDCW Option,,INF277K01LZ8
 103161,ING Dividend Yield Fund-Growth Option,,
 103162,ING Dividend Yield Fund-Dividend Option,,
 103163,ING Dividend Yield Fund-Bonus Option,,
@@ -4725,7 +4725,7 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 106977,ICICI Prudential Interval Fund II - Quarterly Interval Plan C - Retail Dividend,,
 106978,Franklin Asian Equity Fund - Regular Plan - IDCW,INF090I01999,INF090I01AA5
 106979,Franklin Asian Equity Fund - Regular Plan - Growth,INF090I01AB3,
-106980,UTI Short Term Fund - Regular Plan - Quarterly IDCW,INF789FC1GD5,INF789FA1R58
+106980,UTI Short Term Fund - Regular Plan - Discontinued Quarterly IDCW,INF789FC1GD5,INF789FA1R58
 106981,Kotak FMP 3M Series 26 - Dividend,,
 106982,Kotak FMP 3M Series 26 - Growth,,
 106983,Birla Sun Life Fixed Term Plan - Series AD- INSTITUTIONAL GROWTH,,
@@ -9441,7 +9441,7 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 113075,Reliance Fixed Horizon Fund - XV - Series 6 - Dividend Payout Option,,
 113076,ICICI Prudential Gold ETF,INF109KC1NT3,
 113077,UTI Dynamic Term Fund - Regular Plan - Growth,INF789F01JQ5,
-113078,UTI Dynamic Term Fund - Regular Plan - Quarterly IDCW,INF789F01JO0,INF789F01JP7
+113078,UTI Dynamic Term Fund - Regular Plan - Discontinued Quarterly IDCW,INF789F01JO0,INF789F01JP7
 113079,ICICI Prudential Medium Term Bond Fund Plan C - Weekly Dividend,,
 113080,ICICI Prudential Medium Term Bond Fund Plan A - Weekly Dividend,,
 113081,ICICI Prudential Medium Term Bond Fund-Plan B-Weekly Dividend,,
@@ -10966,7 +10966,7 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 115461,HDFC FMP 370D June 2011 (4) - Dividend Option,,
 115462,HDFC FMP 92D June 2011 (3) - Dividend Option,,
 115463,HDFC FMP 92D June 2011 (3) - Growth Option,,
-115464,Tata Treasury Advantage Fund - Regular Plan - Periodic Payout of IDCW Option,INF277K01MC5,INF277K01ME1
+115464,Tata Ultra Short to Short Term Fund - Regular Plan - Periodic Payout of IDCW Option,INF277K01MC5,INF277K01ME1
 115465,Tata Fixed Tenure Fund Series 2 Scheme A Growth,,
 115466,Tata Fixed Tenure Fund Series 2 Scheme A Dividend Payout,,
 115471,TFMP 32- Growth Option,,
@@ -13192,7 +13192,7 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 117979,Axis Capital Protection Oriented Fund - Series 5 - Growth Option,,
 117980,Axis Capital Protection Oriented Fund - Series 5 - Dividend option,,
 117981,UTI - Credit Risk Fund. - Regular Plan - Growth,INF789F01QZ1,
-117982,UTI - Credit Risk Fund. - Regular Plan - Quarterly IDCW,INF789F01RA2,INF789F01RB0
+117982,UTI - Credit Risk Fund. - Regular Plan - Discontinued Quarterly IDCW,INF789F01RA2,INF789F01RB0
 117983,SBI DEBT FUND SERIES - 18 MONTHS - 11 - DIVIDEND,,
 117984,SBI DEBT FUND SERIES - 18 MONTHS - 11 - GROWTH,,
 117985,Aditya Birla Sun Life Capital Protection Oriented Fund - Series 13 - Growth,,
@@ -14230,7 +14230,7 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 119278,DSP World Gold Mining Overseas Equity Omni FoF - Direct Plan - IDCW,INF740K01PA9,INF740K01PB7
 119279,DSP World Mining Overseas Equity Omni FoF - Direct Plan - Growth,INF740K01PF8,
 119280,DSP World Mining Overseas Equity Omni FoF - Direct Plan - IDCW,INF740K01PG6,INF740K01PH4
-119281,Tata ELSS Fund - Direct Plan - Payout of IDCW Option,INF277K01I94,
+119281,Tata ELSS - Tax Saver Fund - Direct Plan - Payout of IDCW Option,INF277K01I94,
 119282,L&T Overnight Fund - Direct Plan- Monthly IDCW,,
 119283,L&T Overnight Fund - Direct Plan - Growth,,
 119284,L&T Overnight Fund - Direct Plan- Daily IDCW,,
@@ -14789,9 +14789,9 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 119860,MOSt 10 Year Gilt Fund - Direct Plan - Dividend,,
 119861,Tata Liquid Fund - Direct Plan - Growth Option,INF277K01YE6,
 119862,Tata Liquid Fund - Direct Plan - Daily Reinvestment of IDCW Option,,INF277K012D2
-119863,Tata Treasury Advantage Fund - Direct Plan - Growth Option,INF277K01OK4,
-119864,Tata Treasury Advantage Fund - Direct Plan - Daily Reinvestment of IDCW Option,,INF277K018B3
-119865,Tata Treasury Advantage Fund - Direct Plan - Weekly Payout of IDCW Option,INF277K019B1,INF277K010C8
+119863,Tata Ultra Short to Short Term Fund - Direct Plan - Growth Option,INF277K01OK4,
+119864,Tata Ultra Short to Short Term Fund - Direct Plan - Daily Reinvestment of IDCW Option,,INF277K018B3
+119865,Tata Ultra Short to Short Term Fund - Direct Plan - Weekly Payout of IDCW Option,INF277K019B1,INF277K010C8
 119866,JPMorgan India Equity Fund - Direct Plan - Dividend Option,,
 119867,JPMorgan India Equity Fund - Direct Plan - Growth Option,,
 119868,JPMorgan India Mid and Small Cap Fund - Direct Plan - Dividend Option,,
@@ -14871,15 +14871,15 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 119946,Tata Gilt Mid Term Fund - Direct Plan - Quarterly Dividend,,
 119947,DHFL Pramerica Credit Opportunities Fund - Direct Plan- Growth Option,,
 119948,DHFL Pramerica Credit Opportunities Fund - Direct Plan-Dividend Option,,
-119949,Tata Short Term Bond Fund - Direct Plan - Growth Option,INF277K01QR4,
-119950,Tata Short Term Bond Fund - Direct Plan - Monthly Payout of IDCW Option,INF277K01QP8,INF277K01QQ6
+119949,Tata Short Term Fund - Direct Plan - Growth Option,INF277K01QR4,
+119950,Tata Short Term Fund - Direct Plan - Monthly Payout of IDCW Option,INF277K01QP8,INF277K01QQ6
 119951,Tata Floating Rate Fund - Long Term Plan - Direct Plan - Bonus/Dividend,,
 119952,Tata Floating Rate Fund - Long Term Plan - Direct Plan- Growth,,
-119953,Tata Gilt Securities Fund - Direct Plan - Growth Option,INF277K01OX7,
-119954,Tata Gilt Securities Fund - Direct Plan - Payout of IDCW Option,INF277K01OV1,INF277K01OW9
+119953,Tata Gilt Fund - Direct Plan - Growth Option,INF277K01OX7,
+119954,Tata Gilt Fund - Direct Plan - Payout of IDCW Option,INF277K01OV1,INF277K01OW9
 119955,Tata Gilt Short Maturity Fund - Direct Plan - Growth,,
 119956,Tata Gilt Short Maturity Fund - Direct Plan - Dividend,,
-119957,Tata Treasury Advantage Fund - Direct Plan - Periodic Payout of IDCW Option,INF277K01OL2,INF277K01OM0
+119957,Tata Ultra Short to Short Term Fund - Direct Plan - Periodic Payout of IDCW Option,INF277K01OL2,INF277K01OM0
 119958,Tata Equity Savings Fund-Direct Plan - Monthly Payout of IDCW Option,INF277K01QI3,INF277K01QJ1
 119959,Tata Equity Savings Fund-Direct Plan - Periodic Payout of IDCWS Option,INF277K01QK9,INF277K01QL7
 119960,Tata Equity Savings Fund- Direct Plan- Growth Option,INF277K01QH5,
@@ -15563,7 +15563,7 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 120687,ICICI Prudential Exports & Services Fund - Direct Plan - IDCW,INF109K01W09,INF109K01W17
 120688,ICICI Prudential Exports & Services Fund - Direct Plan - Growth,INF109K01W25,
 120689,UTI Medium to Long Term Fund - Direct Plan - Growth,INF789F01SQ6,
-120690,UTI Medium to Long Term Fund - Direct Plan - Quarterly IDCW,INF789F01SO1,INF789F01SP8
+120690,UTI Medium to Long Term Fund - Direct Plan - Discontinued Quarterly IDCW,INF789F01SO1,INF789F01SP8
 120691,ICICI Prudential Child Care Plan Study - Direct Plan- Cumulative,,
 120692,ICICI Prudential Corporate Bond Fund - Direct Plan - Growth,INF109K016B1,
 120693,ICICI Prudential Corporate Bond Fund - Direct Plan - Weekly IDCW,,
@@ -15589,7 +15589,7 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 120716,UTI Nifty 50 Index Fund - Direct Plan - Growth,INF789F01XA0,
 120717,UTI Nifty 50 Index Fund - Direct Plan - IDCW,INF789F01WY2,INF789F01WZ9
 120718,UTI Short Term Fund - Direct Plan - Growth,INF789F01XY0,
-120719,UTI Short Term Fund - Direct Plan - Quarterly IDCW,INF789FA1R66,INF789FA1R74
+120719,UTI Short Term Fund - Direct Plan - Discontinued Quarterly IDCW,INF789FA1R66,INF789FA1R74
 120722,ICICI Prudential Focused Fund - Direct Plan - Growth,INF109K018N2,
 120723,ICICI Prudential Focused Fund - Direct Plan - IDCW,INF109K016N6,INF109K017N4
 120724,UTI Children's Equity Fund - Direct Plan - Growth,INF789F1AZV0,
@@ -15628,9 +15628,9 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 120760,UTI Multi Asset Allocation Fund - Direct Plan - Growth,INF789F01VE6,
 120761,UTI Multi Asset Allocation Fund - Direct Plan - IDCW,INF789F01VC0,INF789F01VD8
 120762,UTI Dynamic Term Fund - Direct Plan - Growth,INF789F01XD4,
-120763,UTI Dynamic Term Fund - Direct Plan - Quarterly IDCW,INF789F01XB8,INF789F01XC6
+120763,UTI Dynamic Term Fund - Direct Plan - Discontinued Quarterly IDCW,INF789F01XB8,INF789F01XC6
 120764,UTI - Credit Risk Fund. - Direct Plan - Growth,INF789F01YB6,
-120765,UTI - Credit Risk Fund. - Direct Plan - Quarterly IDCW,INF789F01YC4,INF789F01YD2
+120765,UTI - Credit Risk Fund. - Direct Plan - Discontinued Quarterly IDCW,INF789F01YC4,INF789F01YD2
 120766,UTI Retirement Fund - Direct Plan - Growth,INF789F1AA64,
 120767,UTI Services Industries Fund-Growth Option- Direct,,
 120768,UTI Services Industries Fund-Income Option-Direct,,
@@ -18623,7 +18623,7 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 124947,UTI FTIF Series XVI - VIII (368 DAYS)-Flexi Div Option,,
 124949,UTI FTIF Series XVI - VIII (368 DAYS)- Growth Option - Direct,,
 124950,UTI FTIF Series XVI - VIII (368 DAYS)- Maturity Div Option - Direct,,
-124962,UTI Short Term Fund - Direct Plan - Flexi IDCW,INF789FB1T70,INF789FB1T62
+124962,UTI Short Term Fund - Direct Plan - Discontinued Flexi IDCW,INF789FB1T70,INF789FB1T62
 124963,HDFC FMP 372D October 2013 (1) - Direct Option - Dividend Option,,
 124964,HDFC FMP 372D October 2013 (1) - Regular Option - Dividend Option,,
 124965,HDFC FMP 372D October 2013 (1) - Regular Option - Flexi Option,,
@@ -18679,7 +18679,7 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 125036,HDFC CPO - I - 36M October 2013 - Regular Option - Dividend Option,,
 125037,HDFC CPO - I - 36M October 2013 - Direct Option - Growth Option,,
 125038,HDFC CPO - I - 36M October 2013 - Direct Option - Dividend Option,,
-125045,UTI Short Term Fund - Regular Plan - Flexi IDCW,INF789FB1T54,INF789FB1T47
+125045,UTI Short Term Fund - Regular Plan - Discontinued Flexi IDCW,INF789FB1T54,INF789FB1T47
 125050,Aditya Birla Sun Life Fixed Term Plan - Series IO (1097 days) - Direct Plan-Normal Dividend,,
 125051,Aditya Birla Sun Life Fixed Term Plan - Series IO (1097 days) - Regular Plan-Quarterly Dividend,,
 125052,Aditya Birla Sun Life Fixed Term Plan - Series IO (1097 days) - Direct Plan-Quarterly Dividend,,
@@ -19920,8 +19920,8 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 126936,Invesco India Fixed Maturity Plan - Series 22 - Plan H (427 Days) - Direct Plan - Growth Option,,
 126939,UTI Banking & PSU Debt Fund - Regular Plan - Growth,INF789F014Z9,
 126940,UTI Banking & PSU Debt Fund - Direct Plan - Growth,INF789F015Z6,
-126941,UTI Banking & PSU Debt Fund - Regular Plan - Quarterly IDCW,INF789F012Z3,INF789F013Z1
-126942,UTI Banking & PSU Debt Fund - Direct Plan - Quarterly IDCW,INF789F016Z4,INF789F017Z2
+126941,UTI Banking & PSU Debt Fund - Regular Plan - Discontinued Quarterly IDCW,INF789F012Z3,INF789F013Z1
+126942,UTI Banking & PSU Debt Fund - Direct Plan - Discontinued Quarterly IDCW,INF789F016Z4,INF789F017Z2
 126943,IDFC FTP - S72 (419 Days)_Regular Plan_Growth,,
 126946,IDFC FTP - S72 (419 Days)_Direct Plan_Growth,,
 126949,IDFC FTP - S72 (419 Days)_Regular Plan_Half Yearly Dividend,,
@@ -23165,8 +23165,8 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 132186,Aditya Birla Sun Life Dynamic Asset Allocation Omni FOF - Direct Plan - GROWTH,INF084M01EW6,
 132187,Aditya Birla Sun Life Dynamic Asset Allocation Omni FOF - Direct Plan - IDCW Payout,INF084M01EX4,INF084M01EY2
 132189,Aditya Birla Sun Life Aggressive Hybrid Omni FOF - Direct Plan - IDCW,INF084M01EU0,INF084M01EV8
-132756,Tata ELSS Fund - Direct Plan - Growth Option,INF277K01I86,
-132757,Tata ELSS Fund - Regular Plan - Growth Option,INF277K01I52,
+132756,Tata ELSS - Tax Saver Fund - Direct Plan - Growth Option,INF277K01I86,
+132757,Tata ELSS - Tax Saver Fund - Regular Plan - Growth Option,INF277K01I52,
 132762,Reliance Dual Advantage Fixed Tenure Fund VI- Plan F- Growth Option,,
 132763,Reliance Dual Advantage Fixed Tenure Fund VI- Plan F- Direct Plan - Growth Option,,
 132764,Reliance Dual Advantage Fixed Tenure Fund VI- Plan F- Direct Plan - Dividend Payout Option,,
@@ -23415,7 +23415,7 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 133172,ICICI Prudential Multiple Yield Fund - Series 8 -1101 Days Plan E Cumulative Option,,
 133173,ICICI Prudential Multiple Yield Fund - Series 8 -1101 Days Plan E Dividend Option,,
 133174,ICICI Prudential Multiple Yield Fund - Series 8 -1101 Days Plan E Direct Plan Cumulative Option,,
-133180,UTI Dynamic Term Fund - Direct Plan - Flexi IDCW,INF789FA1S81,INF789FA1S99
+133180,UTI Dynamic Term Fund - Direct Plan - Discontinued Flexi IDCW,INF789FA1S81,INF789FA1S99
 133181,Groww Arbitrage Fund (formerly known as Indiabulls Arbitrage Fund) - Direct Plan - Growth Option,,
 133182,Indiabulls Arbitrage Fund - Direct Plan - Dividend Option,,
 133184,Groww Arbitrage Fund (formerly known as Indiabulls Arbitrage Fund) - Regular Plan - Growth Option,,
@@ -23466,7 +23466,7 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 133265,Nippon India Gilt Fund - Direct Plan - Bonus Option,INF204KA1YV2,
 133274,ICICI Prudential Growth Fund - Series 6  Dividend,,
 133275,ICICI Prudential Growth Fund - Series 6 Direct Dividend,,
-133280,UTI Medium to Long Term Fund - Direct Plan - Flexi IDCW,INF789FA1U04,INF789FA1U12
+133280,UTI Medium to Long Term Fund - Direct Plan - Discontinued Flexi IDCW,INF789FA1U04,INF789FA1U12
 133281,SBI DUAL ADVANTAGE FUND - SERIES VI - REGULAR PLAN - GROWTH,,
 133282,SBI DUAL ADVANTAGE FUND - SERIES VI - DIRECT PLAN - GROWTH,,
 133283,SBI DUAL ADVANTAGE FUND - SERIES VI - DIRECT PLAN - DIVIDEND,,
@@ -23866,7 +23866,7 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 133869,UTI Medium to Long Term Fund - Regular Plan - Annual IDCW,INF789FA1T23,INF789FA1T31
 133870,L&T Hybrid Equity Fund - Regular Plan- Annual IDCW,,
 133871,L&T Hybrid Equity Fund - Direct Plan - Annual IDCW,,
-133872,UTI Medium to Long Term Fund - Regular Plan - Flexi IDCW,INF789FA1T49,INF789FA1T56
+133872,UTI Medium to Long Term Fund - Regular Plan - Discontinued Flexi IDCW,INF789FA1T49,INF789FA1T56
 133873,UTI Ultra Short Term Fund - Regular Plan - Quarterly IDCW,INF789FA1P01,INF789FA1P19
 133874,ICICI Prudential Fixed Maturity Plan - Series 76 - 1142 Days Plan M Cumulative Option,,
 133875,ICICI Prudential Fixed Maturity Plan - Series 76 - 1142 Days Plan M Direct Plan Cumulative Option,,
@@ -23922,11 +23922,11 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 133952,HDFC FMP 91D February 2015 (1)-Regular Option-Growth Option,,
 133965,ICICI Prudential India Recovery Fund - Series 1 Direct Dividend,,
 133966,ICICI Prudential India Recovery Fund - Series 1 Dividend,,
-133971,UTI Banking & PSU Debt Fund - Regular Plan - Flexi IDCW,INF789FA1U61,INF789FA1U79
-133972,UTI Banking & PSU Debt Fund - Direct Plan - Flexi IDCW,INF789FA1V29,INF789FA1V37
+133971,UTI Banking & PSU Debt Fund - Regular Plan - Discontinued Flexi IDCW,INF789FA1U61,INF789FA1U79
+133972,UTI Banking & PSU Debt Fund - Direct Plan - Discontinued Flexi IDCW,INF789FA1V29,INF789FA1V37
 133973,UTI - Liquid Fund - Regular Plan - Annual IDCW,INF789F1AD12,INF789F1AD20
-133974,Tata Short Term Bond Fund - Direct Plan - Periodic Payout of IDCW Option,INF277K01P38,INF277K01P46
-133975,Tata Short Term Bond Fund - Regular Plan - Periodic Payout of IDCW Option,INF277K01P12,INF277K01P20
+133974,Tata Short Term Fund - Direct Plan - Periodic Payout of IDCW Option,INF277K01P38,INF277K01P46
+133975,Tata Short Term Fund - Regular Plan - Periodic Payout of IDCW Option,INF277K01P12,INF277K01P20
 133984,Reliance Dual Advantage Fixed Tenure Fund VII- Plan D- Growth Option,,
 133985,Reliance Dual Advantage Fixed Tenure Fund VII- Plan D- Dividend Payout Option,,
 133986,Reliance Dual Advantage Fixed Tenure Fund VII- Plan D- Direct Plan- Growth Option,,
@@ -24221,11 +24221,11 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 134495,UTI Medium Term Fund - Regular Plan - Monthly IDCW,INF789FB1JV2,INF789FB1KP2
 134496,UTI Medium Duration Fund - Regular Plan - Quarterly IDCW,INF789FB1JW0,INF789FB1JX8
 134497,UTI Medium Term Fund - Regular Plan - Half yearly IDCW,INF789FB1JY6,INF789FB1JZ3
-134498,UTI Medium Term Fund - Regular Plan - Flexi IDCW,INF789FB1KC0,INF789FB1KD8
+134498,UTI Medium Term Fund - Regular Plan - Discontinued Flexi IDCW,INF789FB1KC0,INF789FB1KD8
 134499,UTI Medium Term Fund - Regular Plan - Growth,INF789FB1JU4,
 134500,UTI Medium Term Fund - Regular Plan - Annual IDCW,INF789FB1KA4,INF789FB1KB2
 134501,UTI Medium Term Fund - Direct Plan - Monthly IDCW,INF789FB1KF3,INF789FB1KG1
-134502,UTI Medium Term Fund - Direct Plan - Quarterly IDCW,INF789FB1KH9,INF789FB1KI7
+134502,UTI Medium Term Fund - Direct Plan - Discontinued Quarterly IDCW,INF789FB1KH9,INF789FB1KI7
 134503,UTI Medium Term Fund - Direct Plan - Growth,INF789FB1KE6,
 134504,UTI Medium Term Fund - Direct Plan - Half yearly IDCW,INF789FB1KJ5,INF789FB1KK3
 134505,UTI Medium Term Fund - Direct Plan - Annual IDCW,INF789FB1KL1,INF789FB1KM9
@@ -24604,7 +24604,7 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 135047,Kotak FMP Series 176 - Regular Plan - Growth,,
 135048,Kotak FMP Series 176 - Direct Plan - Growth,,
 135050,Kotak FMP Series 176 - Regular Plan - Dividend,,
-135051,UTI - Credit Risk Fund. - Regular Plan - Flexi IDCW,INF789FA1V86,INF789FA1V94
+135051,UTI - Credit Risk Fund. - Regular Plan - Discontinued Flexi IDCW,INF789FA1V86,INF789FA1V94
 135052,Invesco India Fixed Maturity Plan - Series 26 - Plan C - Direct Sub Plan - Dividend Payout,,
 135053,Invesco India Fixed Maturity Plan - Series 26 - Plan C - Regular Sub Plan - Growth,,
 135054,Invesco India Fixed Maturity Plan - Series 26 - Plan C - Direct Sub Plan - Growth,,
@@ -24771,7 +24771,7 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 135332,Reliance Fixed Horizon Fund XXIX- Series 6- Growth Option,,
 135333,Reliance Fixed Horizon Fund XXIX- Series 6- Dividend Payout Option,,
 135334,Reliance Fixed Horizon Fund XXIX- Series 6- Direct Plan - Growth Option,,
-135336,UTI Dynamic Term Fund - Regular Plan - Flexi IDCW,INF789FA1S24,INF789FA1S32
+135336,UTI Dynamic Term Fund - Regular Plan - Discontinued Flexi IDCW,INF789FA1S24,INF789FA1S32
 135337,DSP  Dual Advantage Fund - Series 39 - 36M - Regular Plan - Growth,,
 135338,DSP  Dual Advantage Fund - Series 39 - 36M - Regular Plan - Dividend Payout Option,,
 135339,DSP  Dual Advantage Fund - Series 39 - 36M - Direct Plan - Dividend Payout Option,,
@@ -25440,7 +25440,7 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 136299,ICICI Prudential Fixed Maturity Plan - Series 78 -95 Days Plan M Cumulative Option,,
 136300,ICICI Prudential Fixed Maturity Plan - Series 78 -95 Days Plan M Direct Plan Cumulative Option,,
 136301,ICICI Prudential Fixed Maturity Plan - Series 78 - 95 Days Plan M Dividend Option,,
-136302,UTI - Credit Risk Fund. - Direct Plan - Flexi IDCW,INF789FB1U44,INF789FB1U51
+136302,UTI - Credit Risk Fund. - Direct Plan - Discontinued Flexi IDCW,INF789FB1U44,INF789FB1U51
 136305,Kotak FMP Series 189 - Regular - Dividend Payout,,
 136306,Kotak FMP Series 189 - Direct - Dividend Payout,,
 136307,Kotak FMP Series 189 - Direct - Growth,,
@@ -29938,15 +29938,15 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 144335,Kotak Balanced Advantage Fund - Direct Plan - Growth Option,INF174KA1210,
 144336,Kotak Balanced Advantage Fund - Regular Plan - Payout of Income Distribution cum capital withdrawal option Option,INF174KA1160,INF174KA1178
 144337,UTI - Corporate Bond Fund - Regular Plan - Annual IDCW,INF789F1A496,INF789F1A504
-144338,UTI - Corporate Bond Fund - Regular Plan - Flexi IDCW,INF789F1A512,INF789F1A520
+144338,UTI - Corporate Bond Fund - Regular Plan - Discontinued Flexi IDCW,INF789F1A512,INF789F1A520
 144339,UTI - Corporate Bond Fund - Direct Plan - Growth,INF789F1A538,
 144340,UTI - Corporate Bond Fund - Direct Plan - Half yearly IDCW,INF789F1A561,INF789F1A579
-144341,UTI - Corporate Bond Fund - Direct Plan - Flexi IDCW,INF789F1A603,INF789F1A611
-144342,UTI - Corporate Bond Fund - Regular Plan - Quarterly IDCW,INF789F1A454,INF789F1A462
+144341,UTI - Corporate Bond Fund - Direct Plan - Discontinued Flexi IDCW,INF789F1A603,INF789F1A611
+144342,UTI - Corporate Bond Fund - Regular Plan - Discontinued Quarterly IDCW,INF789F1A454,INF789F1A462
 144343,UTI - Corporate Bond Fund - Regular Plan - Half yearly IDCW,INF789F1A470,INF789F1A488
 144344,UTI - Corporate Bond Fund - Direct Plan - Annual IDCW,INF789F1A587,INF789F1A595
 144345,UTI - Corporate Bond Fund - Regular Plan - Growth,INF789F1A447,
-144346,UTI - Corporate Bond Fund - Direct Plan - Quarterly IDCW,INF789F1A546,INF789F1A553
+144346,UTI - Corporate Bond Fund - Direct Plan - Discontinued Quarterly IDCW,INF789F1A546,INF789F1A553
 144347,SBI Debt Fund Series C - 20 - (1100 Days) - Regular Plan - Growth,,
 144348,SBI Debt Fund Series - C - 20 (1100 Days) - Regular Plan - Income Distribution cum Capital Withdrawal Option (IDCW),,
 144349,SBI Debt Fund Series C - 20 - (1100 Days) - Direct Plan - Growth,,
@@ -33337,14 +33337,14 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 148997,SBI Fixed Maturity Plan (FMP) Series 45 (1840Days) - Regular Plan - Income Distribution cum Capital Withdrawal Option (IDCW),INF200KA1W83,
 148998,SBI Fixed Maturity Plan (FMP) Series 45 (1840 Days) - Direct Plan - Income Distribution cum Capital Withdrawal Option (IDCW),INF200KA1X09,
 148999,SBI Fixed Maturity Plan (FMP) Series 45 (1840 Days) - Direct Plan - Growth,INF200KA1W91,
-149000,Tata Floating Rate Fund - Direct Plan - IDCW Monthly Payout Option,INF277KA1042,
-149001,Tata Floating Rate Fund - Direct Plan - IDCW Quarterly Payout Option,INF277KA1059,
-149002,Tata Floating Rate Fund - Direct Plan - IDCW Periodic Payout Option,INF277KA1034,
-149003,Tata Floating Rate Fund - Regular Plan - Growth Option,INF277KA1091,
-149004,Tata Floating Rate Fund - Regular Plan - IDCW Monthly Payout Option,INF277KA1117,
-149005,Tata Floating Rate Fund - Regular Plan - IDCW Quarterly Payout Option,INF277KA1125,
-149006,Tata Floating Rate Fund - Regular Plan - IDCW Periodic Payout Option,INF277KA1109,
-149007,Tata Floating Rate Fund - Direct Plan - Growth Option,INF277KA1026,
+149000,Tata Floating Interest Rates Fund - Direct Plan - IDCW Monthly Payout Option,INF277KA1042,
+149001,Tata Floating Interest Rates Fund - Direct Plan - IDCW Quarterly Payout Option,INF277KA1059,
+149002,Tata Floating Interest Rates Fund - Direct Plan - IDCW Periodic Payout Option,INF277KA1034,
+149003,Tata Floating Interest Rates Fund - Regular Plan - Growth Option,INF277KA1091,
+149004,Tata Floating Interest Rates Fund - Regular Plan - IDCW Monthly Payout Option,INF277KA1117,
+149005,Tata Floating Interest Rates Fund - Regular Plan - IDCW Quarterly Payout Option,INF277KA1125,
+149006,Tata Floating Interest Rates Fund - Regular Plan - IDCW Periodic Payout Option,INF277KA1109,
+149007,Tata Floating Interest Rates Fund - Direct Plan - Growth Option,INF277KA1026,
 149008,Nippon India Nifty Pharma ETF - Direct Plan,INF204KC1089,
 149009,Invesco India Medium Term Fund - Regular Plan - Quarterly IDCW,INF205KA1353,INF205KA1387
 149010,Invesco India Medium Term Fund - Regular Plan - Discretionary IDCW,INF205KA1361,INF205KA1395
@@ -33370,12 +33370,12 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 149030,ITI Dynamic Term Fund - Direct Plan - Annually IDCW Option,INF00XX01BK7,INF00XX01BG5
 149031,PGIM India Small Cap Fund - Direct Plan - Direct IDCW,INF663L01W14,INF663L01W22
 149032,PGIM India Small Cap Fund - Regular Plan - Regular IDCW,INF663L01W48,INF663L01W55
-149033,Tata Floating Rate Fund - Direct Plan - IDCW Periodic Dividend Reinvestment Option,,INF277KA1067
-149034,Tata Floating Rate Fund - Direct Plan - IDCW Quarterly Dividend Reinvestment Option,,INF277KA1083
-149035,Tata Floating Rate Fund - Regular Plan - IDCW Monthly Dividend Reinvestment Option,,INF277KA1141
-149036,Tata Floating Rate Fund - Regular Plan - IDCW Periodic Dividend Reinvestment Option,,INF277KA1133
-149037,Tata Floating Rate Fund - Direct Plan - IDCW Monthly Dividend Reinvestment Option,,INF277KA1075
-149038,Tata Floating Rate Fund - Regular Plan - IDCW Quarterly Dividend Reinvestment Option,,INF277KA1158
+149033,Tata Floating Interest Rates Fund - Direct Plan - IDCW Periodic Dividend Reinvestment Option,,INF277KA1067
+149034,Tata Floating Interest Rates Fund - Direct Plan - IDCW Quarterly Dividend Reinvestment Option,,INF277KA1083
+149035,Tata Floating Interest Rates Fund - Regular Plan - IDCW Monthly Dividend Reinvestment Option,,INF277KA1141
+149036,Tata Floating Interest Rates Fund - Regular Plan - IDCW Periodic Dividend Reinvestment Option,,INF277KA1133
+149037,Tata Floating Interest Rates Fund - Direct Plan - IDCW Monthly Dividend Reinvestment Option,,INF277KA1075
+149038,Tata Floating Interest Rates Fund - Regular Plan - IDCW Quarterly Dividend Reinvestment Option,,INF277KA1158
 149039,Navi Nifty 50 Index Fund - Direct Plan - Growth,INF959L01FP2,
 149040,Navi Nifty 50 Index Fund - Regular Plan - Growth,INF959L01FQ0,
 149041,SBI Nifty Consumption ETF - Regular Plan - IDCW,INF200KA1X17,
@@ -34225,14 +34225,14 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 150408,Union Gilt Fund - Direct Plan - Annual IDCW Option,INF582M01IA6,INF582M01IB4
 150409,UTI 10 year Constant Maturity Gilt Fund - Regular Plan - Growth,INF789F1AVI6,
 150410,UTI 10 year Constant Maturity Gilt Fund - Direct Plan - Growth,INF789F1AVR7,
-150411,UTI 10 year Constant Maturity Gilt Fund - Regular Plan - Quarterly IDCW,INF789F1AVJ4,INF789F1AVK2
-150412,UTI 10 year Constant Maturity Gilt Fund - Direct Plan - Quarterly IDCW,INF789F1AVS5,INF789F1AVT3
+150411,UTI 10 year Constant Maturity Gilt Fund - Regular Plan - Discontinued Quarterly IDCW,INF789F1AVJ4,INF789F1AVK2
+150412,UTI 10 year Constant Maturity Gilt Fund - Direct Plan - Discontinued Quarterly IDCW,INF789F1AVS5,INF789F1AVT3
 150415,UTI 10 year Constant Maturity Gilt Fund - Direct Plan - Half yearly IDCW,INF789F1AVU1,INF789F1AVV9
 150416,UTI 10 year Constant Maturity Gilt Fund - Regular Plan - Half Yearly IDCW,INF789F1AVL0,INF789F1AVM8
 150419,UTI 10 year Constant Maturity Gilt Fund - Regular Plan - Annual IDCW,INF789F1AVN6,INF789F1AVO4
-150420,UTI 10 year Constant Maturity Gilt Fund - Regular Plan - Flexi IDCW,INF789F1AVP1,INF789F1AVQ9
+150420,UTI 10 year Constant Maturity Gilt Fund - Regular Plan - Discontinued Flexi IDCW,INF789F1AVP1,INF789F1AVQ9
 150423,UTI 10 year Constant Maturity Gilt Fund - Direct Plan - Annual IDCW,INF789F1AVW7,INF789F1AVX5
-150424,UTI 10 year Constant Maturity Gilt Fund - Direct Plan - Flexi IDCW,INF789F1AVY3,INF789F1AVZ0
+150424,UTI 10 year Constant Maturity Gilt Fund - Direct Plan - Discontinued Flexi IDCW,INF789F1AVY3,INF789F1AVZ0
 150427,DSP Nifty Midcap 150 Quality 50 Index Fund - Regular Plan - Growth,INF740KA1QY3,
 150428,DSP Nifty Midcap 150 Quality 50 Index Fund - Direct Plan - Growth,INF740KA1RB9,
 150429,DSP Nifty Midcap 150 Quality 50 Index Fund - Direct Plan - IDCW,INF740KA1RC7,INF740KA1RD5
@@ -37804,6 +37804,10 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 154612,Kotak Money Market Fund - Direct Plan - IDCW,INF174KA1F24,INF174KA1F08
 154613,Bajaj Finserv Money Market Fund - Regular Plan - Weekly-IDCW,INF0QA701CJ8,
 154614,Bajaj Finserv Money Market Fund - Direct Plan - Weekly-IDCW,INF0QA701CK6,
+154615,SBI Balanced Hybrid Fund,,
+154616,SBI Balanced Hybrid Fund,,
+154617,SBI Balanced Hybrid Fund,,
+154618,SBI Balanced Hybrid Fund,,
 154619,Zerodha Arbitrage Fund - Direct Plan - Growth Option,INF0R8F01232,
 154620,Edelweiss Ultra Short Term Fund - Regular Plan - IDCW,INF754K01XW8,INF754K01XX6
 154621,Edelweiss Ultra Short Term Fund - Direct Plan - Growth,INF754K01XR8,
