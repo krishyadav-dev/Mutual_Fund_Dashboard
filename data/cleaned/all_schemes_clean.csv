@@ -8565,8 +8565,8 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 111808,Birla Sun Life Floating Rate - Long Term - Growth,,
 111809,Aditya Birla Sun Life Medium Term Fund - Regular Plan - Quarterly IDCW,INF209K01637,INF209KB1OJ2
 111810,Aditya Birla Sun Life Medium Term Plan - Institutional - Quarterly Dividend Plan,,
-111811,Aditya Birla Sun Life Medium Term Fund,INF209K01595,INF209K01CZ0
-111812,Aditya Birla Sun Life Medium Term Fund - Regular Plan - Half Yearly IDCW,INF209K01611,INF209K01DA1
+111811,Aditya Birla Sun Life Medium Term Fund - Regular Plan - Half Yearly IDCW,INF209K01595,INF209K01CZ0
+111812,Aditya Birla Sun Life Medium Term Fund - Regular Plan - IDCW,INF209K01611,INF209K01DA1
 111813,Aditya Birla Sun Life Medium Term Plan - Institutional - Dividend Plan,,
 111814,Aditya Birla Sun Life Medium Term Plan - Retail - Qrtly Dividend Plan,,
 111815,Aditya Birla Sun Life Medium Term Plan - Institutional - Qrtly Dividend Plan,,
@@ -37868,3 +37868,6 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 154689,Baroda BNP Paribas Short Term Fund (the scheme has 2 segregated portfolios) - Regular Plan - Defunct Growth,INF955L01JM9,
 154690,Baroda BNP Paribas Short Term Fund (the scheme has 2 segregated portfolios) - Regular Plan - Defunct Monthly IDCW Payout,INF955L01JP2,INF955L01JQ0
 154691,Baroda BNP Paribas Short Term Fund (the scheme has 2 segregated portfolios) - Regular Plan - Defunct Weekly IDCW Reinvestment,,INF955L01JO5
+154705,Monarch Overnight Fund - Direct Plan - Monthly IDCW,INF2ZSC01085,INF2ZSC01069
+154706,Monarch Overnight Fund - Direct Plan - Growth,INF2ZSC01028,
+154711,Monarch Overnight Fund - Regular Plan - Growth,INF2ZSC01010,
