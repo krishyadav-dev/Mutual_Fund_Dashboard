@@ -37939,6 +37939,10 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 154737,LAKSHYA OVERNIGHT FUND - Regular Plan - GROWTH,INF2ZPR01022,
 154738,Axis Nifty500 Low Volatility 50 Index Fund - Direct Plan - Growth,INF846KA1614,
 154739,Axis Nifty500 Low Volatility 50 Index Fund - Regular Plan - Growth,INF846KA1606,
+154740,ICICI Prudential Contra Fund - Direct Plan - Growth,INF109K1A682,
+154741,ICICI Prudential Contra Fund - Regular Plan - Growth,INF109K1A658,
+154742,ICICI Prudential Contra Fund - Regular Plan - IDCW,INF109K1A674,INF109K1A666
+154743,ICICI Prudential Contra Fund - Direct Plan - IDCW,INF109K1A708,INF109K1A690
 154744,Tata CRISIL-IBX Financial Services 3-6 Months Debt Index Fund - Regular Plan - Growth Option,INF277KA1EY0,
 154745,Tata CRISIL-IBX Financial Services 3-6 Months Debt Index Fund - Regular Plan - IDCW Payout,INF277KA1EZ7,
 154746,Tata CRISIL-IBX Financial Services 3-6 Months Debt Index Fund - Regular Plan - IDCW Reinvestment,,INF277KA1FA7
@@ -37960,4 +37964,13 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 154764,Zerodha Nifty Next 100 ETF - Growth,INF0R8F01257,
 154765,HDFC FTSE India Equity ETF - Direct Plan - Growth Option,INF179KC1LA2,
 154768,DSP BSE Insurance ETF,INF740KA1ZR8,
-154789,Nippon India CRISIL-IBX FAR Gilt ETF - Growth,,
+154789,Nippon India CRISIL-IBX FAR Gilt ETF - Growth,INF204KC1HS1,
+154805,Aditya Birla Sun Life Financial Services Sectoral Debt Fund - Direct Plan - Growth,INF209KC1779,
+154810,Aditya Birla Sun Life Financial Services Sectoral Debt Fund - Regular Plan - Growth,INF209KC1803,
+154811,Aditya Birla Sun Life Financial Services Sectoral Debt Fund - Direct Plan - IDCW,INF209KC1787,INF209KC1795
+154812,Aditya Birla Sun Life Financial Services Sectoral Debt Fund - Regular Plan - IDCW,INF209KC1811,INF209KC1829
+154844,WhiteOak Capital Balanced Advantage Fund - Direct Plan - IDCW Option,INF03VN01AT9,INF03VN01AU7
+154845,WhiteOak Capital Balanced Advantage Fund - Regular Plan - IDCW Option,INF03VN01AV5,INF03VN01AW3
+154846,WhiteOak Capital Balanced Hybrid Fund - Direct Plan - IDCW Option,INF03VN01AX1,INF03VN01AY9
+154848,WhiteOak Capital Aggressive Hybrid Fund - Direct Plan - IDCW Option,INF03VN01BB5,INF03VN01BC3
+154849,WhiteOak Capital Aggressive Hybrid Fund - Regular Plan - IDCW Option,INF03VN01BD1,INF03VN01BE9
