@@ -37961,9 +37961,14 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 154759,SBI Nifty200 Value 30 ETF FOF - Regular Plan - IDCW,INF200KB1CE7,INF200KB1CF4
 154760,SBI Nifty200 Value 30 ETF FOF - Direct Plan - Growth,INF200KB1CG2,
 154761,SBI Nifty200 Value 30 ETF FOF - Direct Plan - IDCW,INF200KB1CH0,INF200KB1CI8
-154764,Zerodha Nifty Next 100 ETF - Growth,INF0R8F01257,
+154764,Zerodha Nifty Next 100 ETF - Direct Plan - Growth,INF0R8F01257,
 154765,HDFC FTSE India Equity ETF - Direct Plan - Growth Option,INF179KC1LA2,
 154768,DSP BSE Insurance ETF,INF740KA1ZR8,
+154780,Carnelian Liquid Fund - Regular Plan - Growth,INF30CN01061,
+154781,Carnelian Liquid Fund - Regular Plan - Daily IDCW Reinvest,,INF30CN01079
+154782,Carnelian Liquid Fund - Direct Plan - Growth,INF30CN01038,
+154783,Carnelian Liquid Fund - Direct Plan - Weekly IDCW Reinvest,,INF30CN01053
+154784,Carnelian Liquid Fund - Direct Plan - Daily IDCW Reinvest,,INF30CN01046
 154789,Nippon India CRISIL-IBX FAR Gilt ETF - Growth,INF204KC1HS1,
 154805,Aditya Birla Sun Life Financial Services Sectoral Debt Fund - Direct Plan - Growth,INF209KC1779,
 154810,Aditya Birla Sun Life Financial Services Sectoral Debt Fund - Regular Plan - Growth,INF209KC1803,
@@ -37974,3 +37979,5 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 154846,WhiteOak Capital Balanced Hybrid Fund - Direct Plan - IDCW Option,INF03VN01AX1,INF03VN01AY9
 154848,WhiteOak Capital Aggressive Hybrid Fund - Direct Plan - IDCW Option,INF03VN01BB5,INF03VN01BC3
 154849,WhiteOak Capital Aggressive Hybrid Fund - Regular Plan - IDCW Option,INF03VN01BD1,INF03VN01BE9
+154850,WhiteOak Capital Multi Asset Allocation Fund - Direct Plan - IDCW Option,INF03VN01BF6,INF03VN01BG4
+154851,WhiteOak Capital Multi Asset Allocation Fund - Regular Plan - IDCW Option,INF03VN01BH2,INF03VN01BI0
