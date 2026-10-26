@@ -1,7 +1,7 @@
 scheme_code,fund_name,inception_date,fund_age_years,latest_nav,latest_nav_date,nav_52w_high,nav_52w_low,nav_52w_change_pct,total_nav_days
 120465,Axis Large Cap Fund - Direct Plan - Growth,2019-10-29,7.0,65.93,2026-10-23,72.38,62.24,5.93,1733
 118825,Mirae Asset Large Cap Fund - Direct Plan - Growth,2019-10-29,7.0,119.015,2026-10-23,134.234,113.121,5.21,1725
-122639,Parag Parikh Flexi Cap Fund - Direct Plan - Growth,2019-10-29,7.0,88.9695,2026-10-23,95.7732,85.2599,4.35,1724
+122639,Parag Parikh Flexi Cap Fund - Direct Plan - Growth,2019-10-29,7.0,88.9695,2026-10-23,95.6324,85.2599,4.35,1724
 118275,CANARA ROBECO FLEXICAP FUND - DIRECT PLAN - GROWTH OPTION,2019-10-29,7.0,362.38,2026-10-23,397.81,340.57,6.4,1725
 120505,Axis Midcap Fund - Direct Plan - Growth,2019-10-29,7.0,131.67,2026-10-23,145.91,119.92,9.8,1733
 119775,Kotak Midcap Fund - Direct Plan - Growth,2019-10-29,7.0,150.905,2026-10-23,174.203,141.582,6.58,1725
@@ -11,5 +11,5 @@ scheme_code,fund_name,inception_date,fund_age_years,latest_nav,latest_nav_date,n
 119063,HDFC Nifty 50 Index Fund - Direct Plan,2019-10-29,7.0,221.2213,2026-10-23,255.8052,217.1184,1.89,1725
 133035,Kotak Aggressive Hybrid Fund - Direct Plan - Growth,2019-10-29,7.0,72.305,2026-10-23,79.055,68.124,6.14,1725
 120251,ICICI Prudential Equity & Debt Fund - Direct Plan - Growth,2019-10-29,7.0,426.79,2026-10-23,461.48,417.86,2.14,1725
-119016,HDFC Short Term Debt Fund - Growth Option - Direct Plan,2019-10-29,7.0,35.2517,2026-10-23,35.4714,33.8357,4.18,1695
-120692,ICICI Prudential Corporate Bond Fund - Direct Plan - Growth,2019-10-29,7.0,33.2878,2026-10-23,33.626,32.0005,4.02,1694
+119016,HDFC Short Term Debt Fund - Growth Option - Direct Plan,2019-10-29,7.0,35.2517,2026-10-23,35.4714,33.8467,4.15,1695
+120692,ICICI Prudential Corporate Bond Fund - Direct Plan - Growth,2019-10-29,7.0,33.2878,2026-10-23,33.626,32.0059,4.01,1694
