@@ -35590,8 +35590,8 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 152153,Helios Overnight Fund - Regular Plan - Growth,INF0R8701095,
 152154,Helios Overnight Fund - Regular Plan - Daily IDCW,INF0R8701103,
 152155,Mirae Asset Nifty IT ETF,INF769K01KV5,
-152156,Zerodha Nifty LargeMidcap 250 Index Fund - Direct Plan - Growth Option,INF0R8F01018,
-152157,Zerodha ELSS Tax Saver Nifty LargeMidcap 250 Index Fund - Direct Plan - Growth Option,INF0R8F01026,
+152156,Zerodha CASE Nifty LargeMidcap 250 Index Fund - Direct Plan - Growth Option,INF0R8F01018,
+152157,Zerodha CASE ELSS Tax Saver Nifty LargeMidcap 250 Index Fund - Direct Plan - Growth Option,INF0R8F01026,
 152158,Aditya Birla Sun Life Transportation and Logistics Fund - Direct Plan - GROWTH,INF209KB15X7,
 152159,Aditya Birla Sun Life Transportation and Logistics Fund - Direct Plan - IDCW,INF209KB16X5,
 152160,Aditya Birla Sun Life Transportation and Logistics Fund - Regular Plan - IDCW,INF209KB18X1,
@@ -35749,7 +35749,7 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 152324,BANDHAN MULTI ASSET ALLOCATION FUND - Direct Plan - Growth,INF194KB1HM7,
 152325,BANDHAN MULTI ASSET ALLOCATION FUND - Regular Plan - IDCW,INF194KB1HK1,INF194KB1HL9
 152326,BANDHAN MULTI ASSET ALLOCATION FUND - Regular Plan - Growth,INF194KB1HJ3,
-152327,Zerodha Nifty 1D Rate Liquid ETF - Direct Plan - Growth Option,INF0R8F01034,
+152327,Zerodha CASE Nifty 1D Rate Liquid ETF - Direct Plan - Growth Option,INF0R8F01034,
 152328,Baroda BNP Paribas Nifty 50 Index Fund - Regular Plan - IDCW Option,INF251K01SW5,INF251K01SX3
 152329,Baroda BNP Paribas Nifty 50 Index Fund - Direct Plan - Growth Option,INF251K01SY1,
 152330,Baroda BNP Paribas Nifty 50 Index Fund - Direct Plan - IDCW Option,INF251K01SZ8,INF251K01TA9
@@ -36037,8 +36037,8 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 152664,Kotak NIFTY 100 Low Volatility 30 Index Fund - Regular Plan - Growth,INF174KA1RW0,
 152665,Kotak NIFTY 100 Low Volatility 30 Index Fund - Direct Plan - IDCW,INF174KA1SA4,INF174KA1SB2
 152666,Kotak NIFTY 100 Low Volatility 30 Index Fund - Regular Plan - IDCW,INF174KA1RX8,INF174KA1RY6
-152667,Zerodha Nifty 100 ETF - Direct Plan,INF0R8F01067,
-152668,Zerodha Nifty Midcap 150 ETF - Direct Plan,INF0R8F01059,
+152667,Zerodha CASE Nifty 100 ETF - Direct Plan,INF0R8F01067,
+152668,Zerodha CASE Nifty Midcap 150 ETF - Direct Plan,INF0R8F01059,
 152669,Mahindra Manulife Manufacturing Fund - Regular Plan - IDCW,INF174V01CA6,INF174V01CB4
 152670,Mahindra Manulife Manufacturing Fund - Direct Plan - IDCW,INF174V01CD0,INF174V01CE8
 152671,Mahindra Manulife Manufacturing Fund - Regular Plan - Growth,INF174V01BZ5,
@@ -36369,7 +36369,7 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 153008,Mirae Asset Gold ETF Fund of Fund - Direct Plan - IDCW,INF769K01MW9,INF769K01MX7
 153009,Mirae Asset Gold ETF Fund of Fund - Regular Plan - Growth,INF769K01MS7,
 153010,Mirae Asset Gold ETF Fund of Fund - Regular Plan - IDCW,INF769K01MT5,INF769K01MU3
-153011,Zerodha Gold ETF FoF - Direct Plan - Growth Option,INF0R8F01083,
+153011,Zerodha CASE Gold ETF FoF - Direct Plan - Growth Option,INF0R8F01083,
 153012,SBI Nifty India Consumption Index Fund - Regular Plan - Growth,INF200KB1415,
 153013,SBI Nifty India Consumption Index Fund - Regular Plan - IDCW,INF200KB1423,INF200KB1431
 153014,SBI Nifty India Consumption Index Fund - Direct Plan - IDCW,INF200KB1456,INF200KB1464
@@ -36776,7 +36776,7 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 153433,SBI BSE PSU BANK INDEX FUND - Direct Plan - IDCW,INF200KB1704,INF200KB1696
 153434,SBI BSE PSU BANK INDEX FUND - Regular Plan - Growth,INF200KB1654,
 153435,SBI BSE PSU BANK ETF - Regular Plan - IDCW,INF200KB1712,
-153436,Zerodha Overnight Fund - Direct Plan - Growth Option,INF0R8F01075,
+153436,Zerodha CASE Overnight Fund - Direct Plan - Growth Option,INF0R8F01075,
 153437,Bajaj Finserv Overnight Fund - Direct Plan - Unclaimed less than 3 years IDCW Plan,INF0QA701AE3,
 153438,Bajaj Finserv Overnight Fund - Direct Plan - Unclaimed less than 3 years Redemption Plan,INF0QA701AF0,
 153441,UTI Income Plus Arbitrage Active Fund of Fund - Regular Plan - Growth,INF789F1AB63,
@@ -36974,7 +36974,7 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 153653,Union Ultra Short to Short Term Fund - Regular Plan - IDCW Option,INF582M01LN3,INF582M01LO1
 153654,Union Ultra Short to Short Term Fund - Direct Plan - Growth Option,INF582M01LQ6,
 153655,Union Ultra Short to Short Term Fund - Direct Plan - IDCW Option,INF582M01LR4,INF582M01LS2
-153656,Zerodha Silver ETF FoF - Direct Plan - Growth Option,INF0R8F01109,
+153656,Zerodha CASE Silver ETF FoF - Direct Plan - Growth Option,INF0R8F01109,
 153657,Kotak Nifty200 Quality 30 ETF,INF174KA1WT6,
 153658,KOTAK NIFTY 200 QUALITY 30 INDEX FUND - Direct Plan - IDCW - PAYOUT AND REINVESTMENT,INF174KA1WO7,INF174KA1WP4
 153659,KOTAK NIFTY 200 QUALITY 30 INDEX FUND - Regular Plan - GROWTH,INF174KA1WQ2,
@@ -37071,7 +37071,7 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 153754,Kotak Active Momentum Fund - Direct Plan - Dividend Reinvestment Option,INF174KA1XB2,INF174KA1XC0
 153755,Kotak Active Momentum Fund - Regular Plan - Payout of Income Distribution cum capital withdrawal option- Direct,INF174KA1XD8,
 153756,Kotak Active Momentum Fund - Regular Plan - Growth,INF174KA1XE6,INF174KA1XF3
-153757,Zerodha Multi Asset Passive FoF - Direct Plan - Growth Option,INF0R8F01117,
+153757,Zerodha CASE Multi Asset Passive FoF - Direct Plan - Growth Option,INF0R8F01117,
 153758,Bajaj Finserv Equity Savings Fund - Direct Plan - Growth,INF0QA701BT9,
 153769,Bajaj Finserv Equity Savings Fund - Regular Plan - Growth,INF0QA701BQ5,
 153770,Bajaj Finserv Equity Savings Fund - Direct Plan - IDCW,INF0QA701BU7,INF0QA701BV5
@@ -37113,7 +37113,7 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 153808,Nippon India Nifty India Manufacturing Index Fund - Regular Plan - IDCW Option,INF204KC1GJ2,INF204KC1GK0
 153809,Nippon India Nifty India Manufacturing Index Fund - Regular Plan - Growth Option,INF204KC1GI4,
 153810,Nippon India Nifty India Manufacturing ETF - Direct Plan,INF204KC1GH6,
-153811,Zerodha Nifty 8-13 Yr G-Sec ETF - Direct Plan,INF0R8F01133,
+153811,Zerodha CASE Nifty 8-13 Yr G-Sec ETF - Direct Plan,INF0R8F01133,
 153812,Mirae Asset Gold Silver Passive FoF - Direct Plan - Growth,INF769K01PM3,
 153813,Mirae Asset Gold Silver Passive FoF - Direct Plan - IDCW,INF769K01PO9,INF769K01PN1
 153814,Mirae Asset Gold Silver Passive FoF - Regular Plan - Growth,INF769K01PP6,
@@ -37137,7 +37137,7 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 153832,SBI Dynamic Asset Allocation Active FoF - Direct Plan - Growth,INF200KB1AA9,
 153833,SBI Dynamic Asset Allocation Active FoF - Direct Plan - IDCW,INF200KB1AB7,INF200KB1AC5
 153834,SBI Dynamic Asset Allocation Active FoF - Regular Plan - IDCW,INF200KB1985,INF200KB1993
-153837,Zerodha Nifty Smallcap 100 ETF - Direct Plan,INF0R8F01141,
+153837,Zerodha CASE Nifty Smallcap 100 ETF - Direct Plan,INF0R8F01141,
 153838,Bandhan BSE India Sector Leaders Index Fund - Direct Plan - Growth,INF194KB1KB4,
 153839,Bandhan BSE India Sector Leaders Index Fund - Regular Plan - Growth,INF194KB1KA6,
 153841,Edelweiss Nifty LargeMidcap 250 ETF,INF754K01VV4,
@@ -37200,8 +37200,8 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 153902,Invesco India Consumption Fund - Regular Plan - Growth,INF205KA1BF2,
 153903,Invesco India Consumption Fund - Regular Plan - IDCW,INF205KA1BG0,INF205KA1BH8
 153904,Kotak Nifty 200 Momentum 30 ETF,INF174KA1XS6,
-153905,Zerodha Nifty 50 ETF - Direct Plan,INF0R8F01166,
-153906,Zerodha Nifty 50 Index Fund - Direct Plan - Growth Option,INF0R8F01158,
+153905,Zerodha CASE Nifty 50 ETF - Direct Plan,INF0R8F01166,
+153906,Zerodha CASE Nifty 50 Index Fund - Direct Plan - Growth Option,INF0R8F01158,
 153907,Groww Nifty Capital Markets ETF,INF666M01MM4,
 153908,Groww Nifty Capital Markets ETF FOF - Direct Plan - Growth,INF666M01MG6,
 153909,Helios Small Cap Fund - Regular Plan - Growth,INF0R8701350,
@@ -37227,7 +37227,7 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 153929,Bandhan Silver ETF - Regular Plan - Growth,INF194KB1KI9,
 153930,Bandhan Gold ETF - Regular Plan - Growth,INF194KB1KJ7,
 153931,Motilal Oswal Nifty Energy ETF,INF247L01GH7,
-153932,Zerodha BSE SENSEX Index Fund - Direct Plan - Growth Option,INF0R8F01174,
+153932,Zerodha CASE BSE SENSEX Index Fund - Direct Plan - Growth Option,INF0R8F01174,
 153933,Choice Gold ETF - Direct Plan - Growth,INF2KCX01012,
 153934,Kotak Nifty Chemicals ETF,INF174KA1XV0,
 153935,Bajaj Finserv Banking and Financial Services Fund - Regular Plan - Growth,INF0QA701BW3,
@@ -37383,7 +37383,7 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 154106,Edelweiss Financial Services Fund - Regular Plan - IDCW,INF754K01WM1,INF754K01WN9
 154107,Edelweiss Financial Services Fund - Regular Plan - Growth,INF754K01WL3,
 154108,Edelweiss Financial Services Fund - Direct Plan - Growth,INF754K01WH1,
-154109,Zerodha Nifty Short Duration G-Sec Index Fund - Direct Plan - Growth Option,INF0R8F01182,
+154109,Zerodha CASE Nifty Short Duration G-Sec Index Fund - Direct Plan - Growth Option,INF0R8F01182,
 154111,Groww Nifty Chemicals ETF,INF666M01NP5,
 154112,Motilal Oswal Diversified Equity Flexicap Passive Fund of Funds - Direct Plan - Growth,INF247L01GL9,
 154113,Motilal Oswal Diversified Equity Flexicap Passive Fund of Funds - Regular Plan - Growth,INF247L01GM7,
@@ -37568,7 +37568,7 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 154303,Choice Nifty Next 50 Index Fund - Regular Plan - Growth,INF2KCX01053,
 154304,Choice Nifty Next 50 Index Fund - Direct Plan - Growth,INF2KCX01046,
 154305,SBI Nifty Midcap 150 ETF - Regular Plan - IDCW,INF200KB1AK8,
-154306,Zerodha Nifty MidSmallcap400 50:50 Index Fund - Direct Plan - Growth Option,INF0R8F01190,
+154306,Zerodha CASE Nifty MidSmallcap400 50:50 Index Fund - Direct Plan - Growth Option,INF0R8F01190,
 154307,JioBlackRock Large Cap Fund - Direct Plan - Growth Option,INF22M001176,
 154308,HDFC CRISIL-IBX Financial Services 9-12 Months Debt Index Fund - Direct Plan - Growth Option,INF179KC1KI7,
 154309,HDFC CRISIL-IBX Financial Services 9-12 Months Debt Index Fund - Regular Plan - Growth Option,INF179KC1KH9,
@@ -37583,7 +37583,7 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 154318,Kotak Multi Asset Active FOF - Regular Plan - IDCW,INF174KA1ZS1,INF174KA1ZT9
 154319,Kotak Multi Asset Active FOF - Regular Plan - Growth,INF174KA1ZR3,
 154320,Groww Arbitrage Fund - Direct Plan - Growth,INF666M01ON8,
-154321,Zerodha Nifty LargeMidcap250 Plus 8-13 Yr G-Sec 70:30 Index Fund - Direct Plan - Growth Option,INF0R8F01208,
+154321,Zerodha CASE Nifty LargeMidcap250 Plus 8-13 Yr G-Sec 70:30 Index Fund - Direct Plan - Growth Option,INF0R8F01208,
 154322,Motilal Oswal BSE Top 10 Banks ETF,INF247L01GV8,
 154323,Groww Arbitrage Fund - Direct Plan - Income Distribution cum capital withdrawal,INF666M01OO6,INF666M01OP3
 154324,Groww Arbitrage Fund - Regular Plan - Income Distribution cum capital withdrawal,INF666M01OR9,INF666M01OS7
@@ -37684,8 +37684,8 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 154432,Invesco India Ultra Short Term Fund - Direct Plan - Weekly IDCW,INF205KA1BS5,INF205KA1BT3
 154433,TRUSTMF LARGE & MIDCAP FUND - Direct Plan - Growth,INF0GCD01891,
 154434,TRUSTMF LARGE & MIDCAP FUND - Regular Plan - Growth,INF0GCD01909,
-154436,Zerodha Life Cycle Fund 2036 - Direct Plan - Growth Option,INF0R8F01224,
-154437,Zerodha Life Cycle Fund 2041 - Direct Plan - Growth Option,INF0R8F01216,
+154436,Zerodha CASE Life Cycle Fund 2036 - Direct Plan - Growth Option,INF0R8F01224,
+154437,Zerodha CASE Life Cycle Fund 2041 - Direct Plan - Growth Option,INF0R8F01216,
 154438,AlphaGrep Multi Asset Allocation Fund - Direct Plan - Growth,INF2VOA01012,
 154440,AlphaGrep Multi Asset Allocation Fund - Regular Plan - Growth,INF2VOA01046,
 154442,AlphaGrep Multi Asset Allocation Fund - Regular Plan - IDCW,INF2VOA01061,INF2VOA01053
@@ -37828,7 +37828,7 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 154616,SBI Balanced Hybrid Fund - Regular Plan - IDCW,INF200KB1BY7,INF200KB1BZ4
 154617,SBI Balanced Hybrid Fund - Direct Plan - IDCW,INF200KB1CB3,INF200KB1CC1
 154618,SBI Balanced Hybrid Fund - Direct Plan - Growth,INF200KB1CA5,
-154619,Zerodha Arbitrage Fund - Direct Plan - Growth Option,INF0R8F01232,
+154619,Zerodha CASE Arbitrage Fund - Direct Plan - Growth Option,INF0R8F01232,
 154620,Edelweiss Ultra Short Term Fund - Regular Plan - IDCW,INF754K01XW8,INF754K01XX6
 154621,Edelweiss Ultra Short Term Fund - Direct Plan - Growth,INF754K01XR8,
 154622,Edelweiss Ultra Short Term Fund - Regular Plan - Growth,INF754K01XV0,
@@ -37901,7 +37901,7 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 154694,BANK OF INDIA VALUE FUND - Direct Plan - IDCW,INF761K01HL9,INF761K01HM7
 154695,BANK OF INDIA VALUE FUND - Regular Plan - Growth,INF761K01HN5,
 154696,BANK OF INDIA VALUE FUND - Regular Plan - IDCW,INF761K01HO3,INF761K01HP0
-154697,Zerodha Life Cycle Fund 2031 - Direct Plan - Growth,INF0R8F01240,
+154697,Zerodha CASE Life Cycle Fund 2031 - Direct Plan - Growth,INF0R8F01240,
 154698,UTI BSE India Sector Leaders Exchange Traded Fund - Growth,INF789F1AH42,
 154699,UTI BSE India Sector Leaders Index Fund - Direct Plan - Growth,INF789F1AH67,
 154700,UTI BSE India Sector Leaders Index Fund - Regular Plan - Growth,INF789F1AH59,
@@ -37963,7 +37963,7 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 154761,SBI Nifty200 Value 30 ETF FOF - Direct Plan - IDCW,INF200KB1CH0,INF200KB1CI8
 154762,Motilal Oswal Nifty REITs & Realty Index Fund - Direct Plan - Growth,INF247L01HO1,
 154763,Motilal Oswal Nifty REITs & Realty Index Fund - Regular Plan - Growth,INF247L01HP8,
-154764,Zerodha Nifty Next 100 ETF - Direct Plan - Growth,INF0R8F01257,
+154764,Zerodha CASE Nifty Next 100 ETF - Direct Plan - Growth,INF0R8F01257,
 154765,HDFC FTSE India Equity ETF - Direct Plan - Growth Option,INF179KC1LA2,
 154768,DSP BSE Insurance ETF,INF740KA1ZR8,
 154769,WhiteOak Capital Diversified Equity Small Cap Active FOF - Regular Plan - Growth,INF03VN01AO0,
@@ -37985,6 +37985,8 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 154791,HDFC Nifty LargeMidcap250 Plus 8-13 yr G-sec 70:30 Index Fund - Regular Plan - IDCW Option,INF179KC1LF1,
 154792,HDFC Nifty LargeMidcap250 Plus 8-13 yr G-sec 70:30 Index Fund - Regular Plan - Growth Option,INF179KC1LE4,
 154793,HDFC Nifty LargeMidcap250 Plus 8-13 yr G-sec 70:30 Index Fund - Direct Plan - Growth Option,INF179KC1LB0,
+154794,Motilal Oswal Nifty Midcap150 Plus 8-13 yr G-Sec 70:30 Index Fund - Regular Plan - GROWTH,INF247L01HR4,
+154795,Motilal Oswal Nifty Midcap150 Plus 8-13 yr G-Sec 70:30 Index Fund - Direct Plan - GROWTH,INF247L01HQ6,
 154798,Kotak Nifty 500 Index Fund - Direct Plan - Growth,INF174KA1G64,
 154799,Kotak Nifty 500 Index Fund - Regular Plan - Growth,INF174KA1G98,
 154800,Kotak Nifty 500 Index Fund - Regular Plan - IDCW - Dividend Payout & Reinvestment,INF174KA1H06,INF174KA1H14
@@ -37996,7 +37998,7 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 154810,Aditya Birla Sun Life Financial Services Sectoral Debt Fund - Regular Plan - Growth,INF209KC1803,
 154811,Aditya Birla Sun Life Financial Services Sectoral Debt Fund - Direct Plan - IDCW,INF209KC1787,INF209KC1795
 154812,Aditya Birla Sun Life Financial Services Sectoral Debt Fund - Regular Plan - IDCW,INF209KC1811,INF209KC1829
-154813,Zerodha BSE TOP 10 BANKS ETF - Direct Plan - Growth,INF0R8F01265,
+154813,Zerodha CASE BSE TOP 10 BANKS ETF - Direct Plan - Growth,INF0R8F01265,
 154814,quant Nifty 50 Index Fund - Direct Plan - Growth Option,INF966L01EV8,
 154815,quant Nifty 50 Index Fund - Direct Plan - IDCW Option,INF966L01EW6,INF966L01EX4
 154816,quant Nifty 50 Index Fund - Regular Plan - Growth Option,INF966L01EY2,
@@ -38022,7 +38024,12 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 154849,WhiteOak Capital Aggressive Hybrid Fund - Regular Plan - IDCW Option,INF03VN01BD1,INF03VN01BE9
 154850,WhiteOak Capital Multi Asset Allocation Fund - Direct Plan - IDCW Option,INF03VN01BF6,INF03VN01BG4
 154851,WhiteOak Capital Multi Asset Allocation Fund - Regular Plan - IDCW Option,INF03VN01BH2,INF03VN01BI0
+154852,ICICI Prudential BSE Power ETF,INF109K1A724,
 154858,Aditya Birla Sun Life Fixed Maturity Plan-Series VB (136 Days) - Direct Plan - IDCW,INF209KC1852,INF209KC1845
 154859,Aditya Birla Sun Life Fixed Maturity Plan-Series VB (136 Days) - Direct Plan - Growth,INF209KC1837,
 154860,Aditya Birla Sun Life Fixed Maturity Plan-Series VB (136 Days) - Regular Plan - Growth,INF209KC1860,
 154861,Aditya Birla Sun Life Fixed Maturity Plan-Series VB (136 Days) - Regular Plan - IDCW,INF209KC1886,INF209KC1878
+154866,UTI Financial Services Debt Fund - Direct Plan - Growth Option,,
+154867,UTI Financial Services Debt Fund - Regular Plan - Growth Option,,
+154868,UTI Financial Services Debt Fund - Direct Plan - Payout of IDCW Option,,
+154869,UTI Financial Services Debt Fund - Regular Plan - Payout of IDCW Option,,
