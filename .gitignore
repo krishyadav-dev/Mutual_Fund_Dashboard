@@ -8,6 +8,9 @@
 # data/raw/
 # data/cleaned/
 # data/output/
+data/cleaned/
+data/raw/
+data/output/
 
 # Exclude pipeline log files
 logs/
