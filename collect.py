@@ -67,7 +67,7 @@ SAMPLE_FUNDS = {
 
     # Small Cap
     125497: "SBI Small Cap Fund - Direct Plan - Growth",          # code confirmed ✓
-    118777: "Nippon India Small Cap Fund - Direct Plan Growth",   # code updated: 125497 → 118777
+    118778: "Nippon India Small Cap Fund - Direct Plan Growth",   # code updated: 118777 (Bonus Option) → 118778 (Growth Option)
 
     # Index Funds
     120716: "UTI Nifty 50 Index Fund - Growth Option - Direct",   # code confirmed ✓
@@ -442,8 +442,9 @@ def get_amfi_master_data():
                     "isin_growth":    parts[1].strip(),
                     "isin_idcw":      parts[2].strip(),
                     "scheme_name":    parts[3].strip(),
-                    "nav":            float(parts[4].strip()) if parts[4].strip() not in ["", "N.A."] else None,
-                    "nav_date":       parts[5].strip(),
+                    # NAV and date are always the last two fields (AMFI added Plan;Option columns before them)
+                    "nav":            float(parts[-2].strip()) if parts[-2].strip() not in ["", "N.A."] else None,
+                    "nav_date":       parts[-1].strip(),
                     "amc_name":       current_amc,
                     "broad_category": current_category,
                 })
@@ -572,7 +573,7 @@ def get_aum_and_ter(fund_dict=SAMPLE_FUNDS):
                         data = res_list[0]
                         
                         raw_aum = data.get("aum")
-                        aum_cr = round(float(raw_aum) / 100, 2) if raw_aum is not None else None
+                        aum_cr = round(float(raw_aum) / 10, 2) if raw_aum is not None else None  # Kuvera reports AUM in ₹ million
                         
                         raw_ter = data.get("expense_ratio")
                         expense_ratio_pct = float(raw_ter) if raw_ter is not None else None

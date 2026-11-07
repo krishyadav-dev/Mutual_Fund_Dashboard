@@ -329,7 +329,7 @@ body {
 .table-container {
   border: 1px solid var(--border-subtle);
   border-radius: 12px;
-  overflow: hidden;
+  overflow-x: auto;
   background: rgba(18, 18, 24, 0.4);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
