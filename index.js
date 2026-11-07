@@ -1187,8 +1187,15 @@ document.addEventListener("DOMContentLoaded", () => {
       try {
         const res = await fetch("/run-pipeline", { method: "POST" });
         if (res.ok) {
-          alert("AMFI data sync completed successfully! Reloading dashboard...");
-          await loadData();
+          const data = await res.json().catch(() => ({}));
+          if (data.status === "dispatched") {
+            // Hosted (Vercel): the pipeline runs on GitHub Actions, then the site redeploys.
+            alert("Data sync started on GitHub Actions. Fresh data will appear after the run finishes and the site redeploys (usually a few minutes).");
+          } else {
+            // Local (run_dashboard.py): the pipeline already finished.
+            alert("AMFI data sync completed successfully! Reloading dashboard...");
+            await loadData();
+          }
         } else {
           const errData = await res.json();
           console.error("Pipeline failure details:", errData);
@@ -1196,7 +1203,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       } catch (e) {
         console.error("POST connection error:", e);
-        alert("Failed to connect to local server endpoint. Make sure python run_dashboard.py is running.");
+        alert("Failed to reach the sync endpoint. If running locally, make sure python run_dashboard.py is running.");
       } finally {
         icon.classList.remove("fa-spin");
         textSpan.innerText = "Sync Data";

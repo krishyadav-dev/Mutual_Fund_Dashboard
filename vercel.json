@@ -1,0 +1,5 @@
+{
+  "rewrites": [
+    { "source": "/run-pipeline", "destination": "/api/run-pipeline" }
+  ]
+}
