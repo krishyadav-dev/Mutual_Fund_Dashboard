@@ -35884,7 +35884,7 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 152473,Baroda BNP Paribas Innovation Fund - Regular Plan - IDCW Option,INF251K01TC5,INF251K01TD3
 152474,Quantum Multi Asset Allocation Fund - Direct Plan - Growth Option,INF082J01457,
 152475,Quantum Multi Asset Allocation Fund - Regular Plan - Growth Option,INF082J01465,
-152476,Zerodha Gold ETF - Direct Plan,INF0R8F01042,
+152476,Zerodha CASE Gold ETF - Direct Plan,INF0R8F01042,
 152481,ICICI Prudential Nifty LargeMidcap 250 Index Fund - Regular Plan - Growth,INF109KC15U3,
 152482,ICICI Prudential Nifty LargeMidcap 250 Index Fund - Direct Plan - Growth,INF109KC12U0,
 152483,ICICI Prudential Nifty LargeMidcap 250 Index Fund - Direct Plan - IDCW,INF109KC13U8,INF109KC14U6
@@ -36754,7 +36754,7 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 153410,ICICI Prudential CRISIL-IBX Financial Services 3-6 Months Debt Index Fund - Direct Plan - Annual IDCW,INF109K1A070,INF109K1A088
 153411,ICICI Prudential CRISIL-IBX Financial Services 3-6 Months Debt Index Fund - Direct Plan - Growth,INF109K1A062,
 153412,ICICI Prudential CRISIL-IBX Financial Services 3-6 Months Debt Index Fund - Regular Plan - Annual IDCW,INF109K1A054,INF109K1A047
-153413,Zerodha Silver ETF - Direct Plan,INF0R8F01091,
+153413,Zerodha CASE Silver ETF - Direct Plan,INF0R8F01091,
 153414,Axis Nifty500 Value 50 ETF,INF846KA1119,
 153415,360 ONE Silver ETF - Direct Plan - GROWTH Option,INF579M01BC3,
 153416,Edelweiss Ultra Short to Short Term Fund - Direct Plan - Growth,INF754K01UP8,
@@ -38016,6 +38016,8 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 154835,Mirae Asset Fixed Maturity Plan – Series VI– 3 to 6 Months - Direct Plan - IDCW,INF769K01SA2,
 154836,Mirae Asset Fixed Maturity Plan – Series VI– 3 to 6 Months - Regular Plan - Growth,INF769K01RX6,
 154837,Mirae Asset Fixed Maturity Plan – Series VI– 3 to 6 Months - Regular Plan - IDCW,INF769K01RY4,
+154840,Choice Large & Mid Cap Fund - Regular Plan - Growth,INF2KCX01111,
+154841,Choice Large & Mid Cap Fund - Direct Plan - Growth,INF2KCX01103,
 154842,WhiteOak Capital Equity Savings Fund - Direct Plan - IDCW Option,INF03VN01AP7,INF03VN01AQ5
 154844,WhiteOak Capital Balanced Advantage Fund - Direct Plan - IDCW Option,INF03VN01AT9,INF03VN01AU7
 154845,WhiteOak Capital Balanced Advantage Fund - Regular Plan - IDCW Option,INF03VN01AV5,INF03VN01AW3
@@ -38025,6 +38027,8 @@ scheme_code,scheme_name,isin_growth,isin_div_reinvestment
 154850,WhiteOak Capital Multi Asset Allocation Fund - Direct Plan - IDCW Option,INF03VN01BF6,INF03VN01BG4
 154851,WhiteOak Capital Multi Asset Allocation Fund - Regular Plan - IDCW Option,INF03VN01BH2,INF03VN01BI0
 154852,ICICI Prudential BSE Power ETF,INF109K1A724,
+154853,Navi Multi Asset Omni FoF - Growth,INF959L01HV6,
+154854,Navi Multi Asset Omni FoF - Growth,INF959L01HW4,
 154858,Aditya Birla Sun Life Fixed Maturity Plan-Series VB (136 Days) - Direct Plan - IDCW,INF209KC1852,INF209KC1845
 154859,Aditya Birla Sun Life Fixed Maturity Plan-Series VB (136 Days) - Direct Plan - Growth,INF209KC1837,
 154860,Aditya Birla Sun Life Fixed Maturity Plan-Series VB (136 Days) - Regular Plan - Growth,INF209KC1860,
