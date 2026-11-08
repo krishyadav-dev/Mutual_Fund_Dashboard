@@ -36,6 +36,11 @@ NAV_YEARS    = 7                                        # How many years of NAV 
 API_DELAY    = 0.5                                      # Seconds to wait between API calls (be polite)
 API_BASE_URL = "https://api.mfapi.in/mf"
 
+# In-memory cache of mfapi.in per-scheme responses for this run.
+# Steps 2, 3, 4 and 10 all request the same /mf/{code} URL, so each fund
+# is downloaded once instead of four times.
+_MFAPI_CACHE = {}
+
 # Benchmark indices — these are Yahoo Finance tickers
 # Used later in calculate.py for Beta, Alpha, and category comparisons
 BENCHMARKS = {
@@ -51,35 +56,83 @@ BENCHMARKS = {
 
 # A focused list of well-known funds to start with.
 # scheme_code : AMFI scheme code (get the full list from get_all_schemes())
+#
+# Funds marked "top AUM" were added in Nov 2026 by ranking Direct-Growth schemes
+# within each SEBI category by AUM (Kuvera), keeping only funds with 3Y+ history
+# (needed for CAGR 3Y / composite score) and, where available, a Morningstar rating.
 SAMPLE_FUNDS = {
     # Large Cap
     120465: "Axis Large Cap Fund - Direct Plan - Growth",         # was "Axis Bluechip" (120503 → not found)
     118825: "Mirae Asset Large Cap Fund - Direct Plan - Growth",  # code updated: 119598 → 118825
     # (HDFC Top 100 not present in file; replaced with HDFC Nifty 50 Index below)
+    120586: "ICICI Prudential Large Cap Fund - Direct Plan - Growth",  # top AUM
+    119598: "SBI Large Cap Fund - Direct Plan - Growth",               # top AUM
 
     # Flexi Cap
     122639: "Parag Parikh Flexi Cap Fund - Direct Plan - Growth", # code updated: 125354 → 122639
     118275: "CANARA ROBECO FLEXICAP FUND - DIRECT PLAN - GROWTH OPTION",  # code updated: 120594 → 118275
+    118955: "HDFC Flexi Cap Fund - Direct Plan - Growth",         # top AUM
+    120166: "Kotak Flexi Cap Fund - Direct Plan - Growth",        # top AUM
 
     # Mid Cap
     120505: "Axis Midcap Fund - Direct Plan - Growth",            # code confirmed ✓
     119775: "Kotak Midcap Fund - Direct Plan - Growth",           # code confirmed ✓ (was mislabeled as "Kotak Emerging Equity")
+    118989: "HDFC Mid Cap Fund - Direct Plan - Growth",           # top AUM
+    118668: "Nippon India Growth Mid Cap Fund - Direct Plan - Growth",  # top AUM
 
     # Small Cap
     125497: "SBI Small Cap Fund - Direct Plan - Growth",          # code confirmed ✓
     118778: "Nippon India Small Cap Fund - Direct Plan Growth",   # code updated: 118777 (Bonus Option) → 118778 (Growth Option)
+    130503: "HDFC Small Cap Fund - Direct Plan - Growth",         # top AUM
+    147946: "Bandhan Small Cap Fund - Direct Plan - Growth",      # top AUM
+
+    # Large & Mid Cap
+    118834: "Mirae Asset Large & Midcap Fund - Direct Plan - Growth",    # top AUM
+    119721: "SBI Large & Midcap Fund - Direct Plan - Growth",            # top AUM
+    120596: "ICICI Prudential Large & Mid Cap Fund - Direct Plan - Growth",  # top AUM
+
+    # Multi Cap
+    118650: "Nippon India Multi Cap Fund - Direct Plan - Growth",  # top AUM
+    149185: "Kotak Multi Cap Fund - Direct Plan - Growth",         # top AUM
+    149882: "SBI MultiCap Fund - Direct Plan - Growth",            # top AUM
+
+    # Focused
+    119727: "SBI Focused Fund - Direct Plan - Growth",             # top AUM
+    118950: "HDFC Focused Fund - Direct Plan - Growth",            # top AUM
+
+    # Value / Contra
+    120323: "ICICI Prudential Value Fund - Direct Plan - Growth",  # top AUM
+    119835: "SBI Contra Fund - Direct Plan - Growth",              # top AUM
+
+    # ELSS (Tax Saver)
+    120503: "Axis ELSS Tax Saver Fund - Direct Plan - Growth",     # top AUM
+    119723: "SBI ELSS Tax Saver Fund - Direct Plan - Growth",      # top AUM
+    135781: "Mirae Asset ELSS Tax Saver Fund - Direct Plan - Growth",  # top AUM
 
     # Index Funds
     120716: "UTI Nifty 50 Index Fund - Growth Option - Direct",   # code confirmed ✓
     119063: "HDFC Nifty 50 Index Fund - Direct Plan",             # code updated: 120841 → 119063 (renamed in file)
+    118741: "Nippon India Index Fund - Nifty 50 Plan - Direct Plan - Growth",  # top AUM among rated Nifty 50 funds
+    120684: "ICICI Prudential Nifty Next 50 Index Fund - Direct Plan - Growth",  # top AUM (Nifty Next 50)
+    119065: "HDFC BSE Sensex Index Fund - Direct Plan - Growth",  # top AUM (Sensex)
 
     # Hybrid
     133035: "Kotak Aggressive Hybrid Fund - Direct Plan - Growth", # code updated: 119775 → 133035 (was duplicate key!)
     120251: "ICICI Prudential Equity & Debt Fund - Direct Plan - Growth",  # code updated: 120838 → 120251
+    119609: "SBI Aggressive Hybrid Fund - Direct Plan - Growth",   # top AUM
+    118968: "HDFC Balanced Advantage Fund - Direct Plan - Growth", # top AUM
+    120377: "ICICI Prudential Balanced Advantage Fund - Direct Plan - Growth",  # top AUM
+    149134: "SBI Balanced Advantage Fund - Direct Plan - Growth",  # top AUM
 
     # Debt
     119016: "HDFC Short Term Debt Fund - Growth Option - Direct Plan",  # code updated: 119260 → 119016
     120692: "ICICI Prudential Corporate Bond Fund - Direct Plan - Growth",  # code updated: 120828 → 120692
+    120754: "ICICI Prudential Short Term Fund - Direct Plan - Growth",  # top AUM
+    118987: "HDFC Corporate Bond Fund - Direct Plan - Growth",     # top AUM
+    119800: "SBI Liquid Fund - Direct Plan - Growth",              # top AUM (Morningstar doesn't rate liquid funds)
+    119091: "HDFC Liquid Fund - Direct Plan - Growth",             # top AUM (Morningstar doesn't rate liquid funds)
+    120590: "ICICI Prudential Gilt Fund - Direct Plan - Growth",   # top AUM
+    119707: "SBI Gilt Fund - Direct Plan - Growth",                # top AUM
 }
 
 
@@ -96,7 +149,18 @@ def safe_get(url, retries=3, delay=2):
     """
     GET request with automatic retry on failure, adding browser headers
     to avoid being blocked by anti-bot systems.
+
+    mfapi.in per-scheme responses are cached for the run, and the polite
+    API_DELAY is applied here before every real network request (never on
+    a cache hit), so callers don't need their own sleeps.
     """
+    # 0. Serve repeated mfapi.in per-scheme requests from the cache
+    cacheable = url.startswith(f"{API_BASE_URL}/")
+    if cacheable and url in _MFAPI_CACHE:
+        return _MFAPI_CACHE[url]
+
+    time.sleep(API_DELAY)
+
     # 1. Add headers to masquerade as a standard Google Chrome browser
     headers = {
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
@@ -114,6 +178,8 @@ def safe_get(url, retries=3, delay=2):
                 return None
 
             response.raise_for_status()
+            if cacheable:
+                _MFAPI_CACHE[url] = response
             return response
 
         except requests.RequestException as e:
@@ -235,7 +301,6 @@ def get_metadata_for_all(fund_dict=SAMPLE_FUNDS):
             print(f"  ✓ {name}")
         else:
             print(f"  ✗ Failed: {code}")
-        time.sleep(API_DELAY)
 
     df = pd.DataFrame(records)
     out_path = os.path.join(OUTPUT_DIR, "scheme_metadata.csv")
@@ -301,7 +366,6 @@ def get_nav_history_for_all(fund_dict=SAMPLE_FUNDS):
         if not nav_df.empty:
             nav_df["fund_name"] = name
             all_nav.append(nav_df)
-        time.sleep(API_DELAY)
 
     combined = pd.concat(all_nav, ignore_index=True)
     out_path = os.path.join(OUTPUT_DIR, "nav_history_raw.csv")
@@ -376,7 +440,6 @@ def get_scheme_profiles_for_all(fund_dict=SAMPLE_FUNDS):
         profile = get_scheme_profile(code, name)
         if profile:
             profiles.append(profile)
-        time.sleep(API_DELAY)
 
     df = pd.DataFrame(profiles)
     out_path = os.path.join(OUTPUT_DIR, "scheme_profiles.csv")
@@ -636,8 +699,6 @@ def get_aum_and_ter(fund_dict=SAMPLE_FUNDS):
             else:
                 print(f"  [FAIL] Both sources failed for {name}")
 
-        time.sleep(API_DELAY)
-
     df = pd.DataFrame(records)
     out_path = os.path.join(OUTPUT_DIR, "aum_and_ter.csv")
     df.to_csv(out_path, index=False)
@@ -853,7 +914,6 @@ def get_nav_snapshots(fund_dict=SAMPLE_FUNDS):
 
         records.append(record)
         print(f"  ✓ {name}")
-        time.sleep(API_DELAY)
 
     df = pd.DataFrame(records)
     out_path = os.path.join(OUTPUT_DIR, "nav_snapshots.csv")
