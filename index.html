@@ -153,6 +153,7 @@
             <div class="chart-container">
               <canvas id="riskReturnChart"></canvas>
             </div>
+            <div class="chart-legend" id="riskReturnLegend"></div>
           </div>
 
           <!-- AUM Distribution Chart -->
@@ -166,6 +167,7 @@
           <!-- Rolling Returns Chart -->
           <div class="chart-card full-width-chart">
             <div class="chart-title">Performance Consistency: 1-Year Rolling Returns Trend</div>
+            <input type="text" id="rolling-search" class="search-input rolling-search" placeholder="Search funds to compare (up to 5)..." autocomplete="off">
             <div class="line-chart-selectors" id="rolling-selectors-container">
               <!-- Checkboxes / Selector buttons will be dynamically rendered here -->
             </div>

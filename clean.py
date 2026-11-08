@@ -33,6 +33,36 @@ BASE_DIR   = os.path.dirname(os.path.abspath(__file__))
 INPUT_DIR  = os.path.join(BASE_DIR, "data", "raw")
 OUTPUT_DIR = os.path.join(BASE_DIR, "data", "cleaned")
 
+# AMFI / mfapi.in category labels are inconsistent (singular vs plural, and
+# pre-2017 legacy names). These maps collapse them to one canonical label each:
+#  - broad_category → the 4 labels the dashboard filters and colours on
+#  - sub_category   → the SEBI names used as keys in calculate.CATEGORY_BENCHMARK_MAP
+BROAD_CATEGORY_MAP = {
+    "Equity Schemes":               "Equity Scheme",
+    "Hybrid Schemes":               "Hybrid Scheme",
+    "Debt Schemes":                 "Debt Scheme",
+    "Income/Debt Oriented Schemes": "Debt Scheme",
+    "Other Schemes":                "Other Scheme",
+    "Index Funds":                  "Other Scheme",
+}
+
+SUB_CATEGORY_MAP = {
+    "Short Term Fund":                                 "Short Duration Fund",
+    "Ultra Short Term Fund":                           "Ultra Short Duration Fund",
+    "Medium Term Fund":                                "Medium Duration Fund",
+    "Medium to Long Term Fund":                        "Medium to Long Duration Fund",
+    "Dynamic Term Fund":                               "Dynamic Bond Fund",
+    "Banking and PSU Debt Fund":                       "Banking & PSU Fund",
+    "Floating Interest Rates Fund":                    "Floater Fund",
+    "ELSS- Tax Saver Fund":                            "ELSS",
+    "ELSS - Tax Saver Fund":                           "ELSS",
+    "Dynamic Asset Allocation or Balanced Advantage":  "Balanced Advantage Fund",
+    "Sectoral/ Thematic":                              "Sectoral / Thematic Fund",
+    "Thematic Fund":                                   "Sectoral / Thematic Fund",
+}
+
+INDEX_SUB_CATEGORIES = {"Index Funds", "Index Fund"}
+
 # -----------------------------------------------------------------------------
 # UTILITY HELPERS
 # -----------------------------------------------------------------------------
@@ -46,6 +76,43 @@ def check_file_exists(filename):
     """Checks if a file exists in the raw data folder."""
     path = os.path.join(INPUT_DIR, filename)
     return os.path.exists(path)
+
+def _index_sub_category(scheme_name):
+    """Labels an index fund by the index it tracks, based on its name."""
+    name = str(scheme_name).lower()
+    if "next 50" in name:
+        return "Index Fund - Nifty Next 50"
+    if "sensex" in name:
+        return "Index Fund - Sensex"
+    return "Index Fund - Nifty 50"
+
+def normalise_categories(df):
+    """
+    Returns a copy of a scheme metadata frame with canonical category labels.
+    - broad_category: plural / legacy variants → the 4 dashboard labels.
+    - sub_category:   legacy / variant names → SEBI names (benchmark map keys).
+    - Index funds get a sub_category naming the index they track, so each one
+      is benchmarked against the right index.
+    - full_category is rebuilt as "broad - sub".
+    """
+    df = df.copy()
+    # Index funds appear as "Other Scheme - Index Funds" or "Index Funds - Equity Funds"
+    is_index = (df['sub_category'].isin(INDEX_SUB_CATEGORIES)
+                | (df['broad_category'] == "Index Funds"))
+
+    df['broad_category'] = df['broad_category'].replace(BROAD_CATEGORY_MAP)
+    df['sub_category'] = df['sub_category'].replace(SUB_CATEGORY_MAP)
+
+    df.loc[is_index, 'broad_category'] = "Other Scheme"
+    df.loc[is_index, 'sub_category'] = df.loc[is_index, 'scheme_name'].map(_index_sub_category)
+
+    has_sub = df['sub_category'].notna() & (df['sub_category'] != "")
+    df['full_category'] = np.where(
+        has_sub,
+        df['broad_category'].astype(str) + " - " + df['sub_category'].astype(str),
+        df['broad_category'],
+    )
+    return df
 
 # -----------------------------------------------------------------------------
 # MODULE CLEANING FUNCTIONS
@@ -388,6 +455,10 @@ def clean_scheme_metadata():
         if col in df.columns:
             df[col] = df[col].astype(str).str.strip()
             df[col] = df[col].replace('nan', np.nan)
+
+    # 8b-2. Normalise category labels (plural/legacy variants → canonical)
+    df = normalise_categories(df)
+    print(f"  [OK] Categories normalised: {sorted(df['broad_category'].dropna().unique())}")
 
     # 8c. Check duplicate scheme_codes
     dups = df.duplicated(subset=['scheme_code']).sum()

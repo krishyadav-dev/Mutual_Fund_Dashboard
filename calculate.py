@@ -469,12 +469,17 @@ def calc_rolling_returns(nav_history_df, window=252):
         nav_history_df : the full nav_history_clean DataFrame
         window         : rolling window in trading days (252 = 1 year)
 
+    Returns are computed on daily NAVs, then thinned to one point per week
+    (each fund's last trading day of the week) and rounded to 2 decimals.
+    A rolling 1Y return barely moves day to day, so the chart looks the same
+    while the file the dashboard downloads is ~5x smaller.
+
     Returns a long-format DataFrame:
         date | scheme_code | fund_name | rolling_1y_return_pct
 
     Saved to: data/output/rolling_returns.csv
     """
-    print("\n  Calculating rolling 1Y returns...")
+    print("\n  Calculating rolling 1Y returns (weekly points)...")
 
     results = []
 
@@ -482,7 +487,13 @@ def calc_rolling_returns(nav_history_df, window=252):
         group = group.sort_values("date").copy()
         group["rolling_1y_return_pct"] = (
             group["nav"].pct_change(periods=window) * 100
-        ).round(4)
+        ).round(2)
+        group = group.dropna(subset=["rolling_1y_return_pct"])
+
+        # Keep the last trading day of each calendar week
+        week = pd.to_datetime(group["date"]).dt.to_period("W")
+        group = group.groupby(week.values).tail(1)
+
         group["scheme_code"] = code
         group["fund_name"]   = name
         results.append(group[["date", "scheme_code", "fund_name", "rolling_1y_return_pct"]])
