@@ -761,6 +761,74 @@ body {
   box-shadow: 0 2px 8px rgba(255, 255, 255, 0.15);
 }
 
+/* Rolling-returns picker: search + category groups (scrolls when the universe is large) */
+.rolling-search {
+  display: block;
+  width: 100%;
+  max-width: 340px;
+  padding-left: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.line-chart-selectors {
+  flex-direction: column;
+  flex-wrap: nowrap;
+  max-height: 220px;
+  overflow-y: auto;
+}
+
+.selector-group {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.selector-group-label {
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+  min-width: 100%;
+}
+
+.series-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin-right: 0.4rem;
+  vertical-align: middle;
+}
+
+/* Scatter category legend */
+.chart-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+  margin-top: 0.75rem;
+  font-size: 0.72rem;
+  color: var(--text-secondary);
+}
+
+.chart-legend-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.chart-legend-swatch {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 1.5px solid;
+}
+
+.chart-legend-note {
+  color: var(--text-muted);
+  margin-left: auto;
+}
+
 /* Ranks and Scores styling */
 .rank-badge {
   font-size: 0.7rem;

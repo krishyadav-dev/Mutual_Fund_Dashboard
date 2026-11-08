@@ -40,6 +40,8 @@ document.addEventListener("DOMContentLoaded", () => {
   let deepdiveAumChartInstance = null;
   let costCalculatorChartInstance = null;
   let selectedRollingCodes = []; // Funds selected for line chart
+  let rollingSearchTerm = ""; // Search text for the rolling-returns fund picker
+  let deepdiveListenerAttached = false; // Deep Dive select listener is attached once
   let activeDeepdiveCode = null; // Currently selected fund scheme code for Deep Dive
 
   // Category Theme Colors for charts (Muted, minimalist palettes)
@@ -65,6 +67,41 @@ document.addEventListener("DOMContentLoaded", () => {
     const palette = isLight ? categoryColorsLight : categoryColorsDark;
     const fallback = isLight ? defaultColorLight : defaultColorDark;
     return palette[category] || fallback;
+  }
+
+  // Display order + short labels for the 4 canonical broad categories
+  // (used for grouping the rolling-returns picker, Deep Dive dropdown and scatter legend)
+  const CATEGORY_LABELS = {
+    "Equity Scheme": "Equity",
+    "Hybrid Scheme": "Hybrid",
+    "Debt Scheme": "Debt",
+    "Other Scheme": "Index / Others"
+  };
+
+  function groupFundsByCategory(funds) {
+    const order = Object.keys(CATEGORY_LABELS);
+    const groups = new Map();
+    funds.forEach(f => {
+      const key = order.includes(f.broad_category) ? f.broad_category : "__other";
+      if (!groups.has(key)) groups.set(key, []);
+      groups.get(key).push(f);
+    });
+    return [...order, "__other"]
+      .filter(key => groups.has(key))
+      .map(key => ({
+        label: CATEGORY_LABELS[key] || "Other",
+        funds: groups.get(key).sort((a, b) => a.fund_name.localeCompare(b.fund_name))
+      }));
+  }
+
+  // Distinct line colours for the rolling-returns chart, assigned by selection order
+  // so several funds from the same category stay distinguishable (max 5 selected)
+  const seriesColorsDark = ["#22d3ee", "#f472b6", "#a3e635", "#fbbf24", "#a78bfa"];
+  const seriesColorsLight = ["#2aa198", "#d33682", "#859900", "#b58900", "#6c71c4"];
+
+  function getSeriesColor(index) {
+    const palette = document.body.classList.contains("light-mode") ? seriesColorsLight : seriesColorsDark;
+    return palette[index % palette.length];
   }
 
   function getGridColor() {
@@ -628,17 +665,41 @@ document.addEventListener("DOMContentLoaded", () => {
     const container = document.getElementById("rolling-selectors-container");
     if (fundMetrics.length === 0) return;
 
-    container.innerHTML = fundMetrics.map(fund => {
-      const isSelected = selectedRollingCodes.includes(fund.scheme_code);
-      return `
-        <button class="selector-pill ${isSelected ? 'active' : ''}" data-code="${fund.scheme_code}">
-          ${truncateString(fund.fund_name, 22)}
+    const pill = (fund, isSelected, colorIndex) => `
+        <button class="selector-pill ${isSelected ? 'active' : ''}" data-code="${fund.scheme_code}" title="${fund.fund_name}">
+          ${isSelected ? `<span class="series-dot" style="background:${getSeriesColor(colorIndex)}"></span>` : ''}${truncateString(fund.fund_name, 32)}
         </button>
       `;
-    }).join('');
+
+    // Selected funds first (in selection order = line colour order)
+    const selectedFunds = selectedRollingCodes
+      .map(code => fundMetrics.find(f => f.scheme_code === code))
+      .filter(Boolean);
+
+    // Remaining funds, filtered by the search box and grouped by category
+    const term = rollingSearchTerm.trim().toLowerCase();
+    const remaining = fundMetrics.filter(f =>
+      !selectedRollingCodes.includes(f.scheme_code) &&
+      (!term || f.fund_name.toLowerCase().includes(term) || (f.fund_house || "").toLowerCase().includes(term))
+    );
+
+    let html = `
+      <div class="selector-group">
+        <span class="selector-group-label">Selected (${selectedFunds.length}/5)</span>
+        ${selectedFunds.map((f, i) => pill(f, true, i)).join('')}
+      </div>`;
+    html += groupFundsByCategory(remaining).map(group => `
+      <div class="selector-group">
+        <span class="selector-group-label">${group.label}</span>
+        ${group.funds.map(f => pill(f, false)).join('')}
+      </div>`).join('');
+    if (remaining.length === 0 && term) {
+      html += `<div class="selector-group"><span class="selector-group-label">No funds match your search</span></div>`;
+    }
+    container.innerHTML = html;
 
     // Attach selector toggle events
-    document.querySelectorAll(".selector-pill").forEach(btn => {
+    container.querySelectorAll(".selector-pill").forEach(btn => {
       btn.addEventListener("click", (e) => {
         const code = parseInt(e.currentTarget.dataset.code);
         if (selectedRollingCodes.includes(code)) {
@@ -686,8 +747,9 @@ document.addEventListener("DOMContentLoaded", () => {
     // 2. AUM Bar Chart
     renderAUMDistribution();
 
-    // 3. Rolling Returns Line Chart
+    // 3. Rolling Returns Line Chart (+ picker, whose colour dots follow the theme)
     updateRollingReturnsChart();
+    renderRollingSelectors();
   }
 
   // Helper to convert hex colors to transparent rgba colors for glassy styling
@@ -829,8 +891,8 @@ document.addEventListener("DOMContentLoaded", () => {
                   `Risk (Vol): ${item.x.toFixed(1)}%`,
                   `Return (CAGR 3Y): ${item.y.toFixed(1)}%`,
                   `AUM: ₹${item.aum ? item.aum.toLocaleString('en-IN') : 'N/A'} Cr`,
-                  `Sharpe Ratio: ${item.sharpe.toFixed(2)}`,
-                  `Score: ${item.score.toFixed(0)}`
+                  `Sharpe Ratio: ${item.sharpe != null ? item.sharpe.toFixed(2) : 'N/A'}`,
+                  `Score: ${item.score != null ? item.score.toFixed(0) : 'N/A'}`
                 ];
               }
             }
@@ -859,6 +921,21 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
     document.getElementById("riskReturnChart").classList.add("rendered");
+
+    // Category colour legend (only categories present in the chart)
+    const legend = document.getElementById("riskReturnLegend");
+    if (legend) {
+      const present = new Set(scatterData.map(d => d.category));
+      const items = Object.keys(CATEGORY_LABELS)
+        .filter(cat => present.has(cat))
+        .map(cat => `
+          <span class="chart-legend-item">
+            <span class="chart-legend-swatch" style="background:${hexToRgbA(getCategoryTheme(cat).color, 0.45)}; border-color:${getCategoryTheme(cat).color}"></span>
+            ${CATEGORY_LABELS[cat]}
+          </span>`);
+      items.push(`<span class="chart-legend-item chart-legend-note">Bubble size = AUM</span>`);
+      legend.innerHTML = items.join('');
+    }
   }
 
   // Visual 2: Category AUM Distribution Bar Chart
@@ -950,11 +1027,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (rollingReturns.length === 0 || selectedRollingCodes.length === 0) return;
 
-    const datasets = selectedRollingCodes.map(code => {
+    const datasets = selectedRollingCodes.map((code, index) => {
       const fund = fundMetrics.find(f => f.scheme_code === code);
       if (!fund) return null;
 
-      const theme = getCategoryTheme(fund.broad_category);
+      const lineColor = getSeriesColor(index);
 
       const fundRolling = rollingReturns
         .filter(r => r.scheme_code === code)
@@ -968,8 +1045,8 @@ document.addEventListener("DOMContentLoaded", () => {
       return {
         label: truncateString(fund.fund_name, 22),
         data: points,
-        borderColor: theme.color,
-        backgroundColor: theme.bg,
+        borderColor: lineColor,
+        backgroundColor: hexToRgbA(lineColor, 0.15),
         borderWidth: 2,
         pointRadius: 0,
         pointHoverRadius: 4,
@@ -1164,6 +1241,12 @@ document.addEventListener("DOMContentLoaded", () => {
   document.getElementById("scheme-search").addEventListener("input", (e) => {
     activeSearch = e.target.value;
     renderScreener();
+  });
+
+  // Rolling-returns fund picker search
+  document.getElementById("rolling-search").addEventListener("input", (e) => {
+    rollingSearchTerm = e.target.value;
+    renderRollingSelectors();
   });
 
   // Expense Ratio Select Change
@@ -1364,17 +1447,24 @@ document.addEventListener("DOMContentLoaded", () => {
     const select = document.getElementById("deepdive-scheme-select");
     if (!select || fundMetrics.length === 0) return;
 
-    select.innerHTML = fundMetrics.map(fund => `
-      <option value="${fund.scheme_code}" ${fund.scheme_code === activeDeepdiveCode ? 'selected' : ''}>
-        ${fund.fund_name}
-      </option>
+    // Grouped by category, alphabetical within each group
+    select.innerHTML = groupFundsByCategory(fundMetrics).map(group => `
+      <optgroup label="${group.label}">
+        ${group.funds.map(fund => `
+          <option value="${fund.scheme_code}" ${fund.scheme_code === activeDeepdiveCode ? 'selected' : ''}>
+            ${fund.fund_name}
+          </option>`).join('')}
+      </optgroup>
     `).join('');
 
-    // Attach selector change listener
-    select.addEventListener("change", (e) => {
-      activeDeepdiveCode = parseInt(e.target.value);
-      renderDeepDive();
-    });
+    // Attach selector change listener once (this function re-runs on every data reload)
+    if (!deepdiveListenerAttached) {
+      select.addEventListener("change", (e) => {
+        activeDeepdiveCode = parseInt(e.target.value);
+        renderDeepDive();
+      });
+      deepdiveListenerAttached = true;
+    }
   }
 
   function renderDeepDive() {
