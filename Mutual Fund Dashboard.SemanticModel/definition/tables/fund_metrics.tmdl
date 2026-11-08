@@ -101,7 +101,7 @@ table fund_metrics
 		annotation UnderlyingDateTimeDataType = Date
 
 	column fund_age_years
-		dataType: int64
+		dataType: double
 		formatString: 0
 		lineageTag: df27364d-62a1-4054-aee6-a2071a83b66f
 		summarizeBy: sum
@@ -408,13 +408,87 @@ table fund_metrics
 
 		annotation SummarizationSetBy = Automatic
 
+	column aum_cr
+		dataType: double
+		lineageTag: ec3e3bfc-d6cf-4f7e-87a4-9c3b8fa8a469
+		summarizeBy: sum
+		sourceColumn: aum_cr
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column morningstar_stars
+		dataType: int64
+		formatString: 0
+		lineageTag: 54f780e7-3e02-4bde-99c1-7838158e24cd
+		summarizeBy: sum
+		sourceColumn: morningstar_stars
+
+		annotation SummarizationSetBy = Automatic
+
+	column expense_ratio_pct
+		dataType: double
+		lineageTag: 173d1156-a404-4946-820c-ea49b819752e
+		summarizeBy: sum
+		sourceColumn: expense_ratio_pct
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column return_per_cost
+		dataType: double
+		lineageTag: f2f09cc7-614c-4644-a6b4-189aa4fa125a
+		summarizeBy: sum
+		sourceColumn: return_per_cost
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column return_per_cost_rank
+		dataType: int64
+		formatString: 0
+		lineageTag: 80d98b86-fe77-4ce3-8dd3-b829c1ed94c7
+		summarizeBy: sum
+		sourceColumn: return_per_cost_rank
+
+		annotation SummarizationSetBy = Automatic
+
+	column true_net_return
+		dataType: double
+		lineageTag: 031c9a2a-549a-4edc-93f8-1d4e703cd14d
+		summarizeBy: sum
+		sourceColumn: true_net_return
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
 	partition fund_metrics = m
 		mode: import
 		source =
 				let
-				    Source = Csv.Document(File.Contents("C:\Users\anude\OneDrive\Documents\codeBase\mutual_funds\data\output\fund_metrics.csv"),[Delimiter=",", Columns=35, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+				    Source = Csv.Document(File.Contents("C:\Users\krish\OneDrive\Documents\Programming\Mutual_Fund_Dashboard\data\output\fund_metrics.csv"), [Delimiter = ",", Columns = 41, Encoding = 65001, QuoteStyle = QuoteStyle.None]),
 				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
-				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"scheme_code", Int64.Type}, {"fund_name", type text}, {"fund_house", type text}, {"broad_category", type text}, {"sub_category", type text}, {"full_category", type text}, {"scheme_type", type text}, {"benchmark_used", type text}, {"inception_date", type date}, {"fund_age_years", Int64.Type}, {"total_nav_days", Int64.Type}, {"latest_nav", type number}, {"nav_52w_high", type number}, {"nav_52w_low", type number}, {"nav_52w_change_pct", type number}, {"cagr_1y", type number}, {"cagr_3y", type number}, {"cagr_5y", type number}, {"return_1m_pct", type number}, {"return_3m_pct", type number}, {"return_6m_pct", type number}, {"return_1y_pct", type number}, {"cagr_3y_snap", type number}, {"cagr_5y_snap", type number}, {"volatility_pct", type number}, {"max_drawdown_pct", type number}, {"beta", type number}, {"tracking_error_pct", type number}, {"sharpe_ratio", type number}, {"sortino_ratio", type number}, {"calmar_ratio", type number}, {"alpha_pct", type number}, {"composite_score", type number}, {"universe_rank", Int64.Type}, {"category_rank", Int64.Type}}),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{
+				        {"scheme_code", Int64.Type}, {"fund_name", type text}, {"fund_house", type text},
+				        {"broad_category", type text}, {"sub_category", type text}, {"full_category", type text},
+				        {"scheme_type", type text}, {"benchmark_used", type text}, {"inception_date", type date},
+				        {"fund_age_years", type number}, {"total_nav_days", Int64.Type}, {"latest_nav", type number},
+				        {"nav_52w_high", type number}, {"nav_52w_low", type number}, {"nav_52w_change_pct", type number},
+				        {"aum_cr", type number}, {"morningstar_stars", Int64.Type},
+				        {"cagr_1y", type number}, {"cagr_3y", type number}, {"cagr_5y", type number},
+				        {"return_1m_pct", type number}, {"return_3m_pct", type number}, {"return_6m_pct", type number},
+				        {"return_1y_pct", type number}, {"cagr_3y_snap", type number}, {"cagr_5y_snap", type number},
+				        {"volatility_pct", type number}, {"max_drawdown_pct", type number}, {"beta", type number},
+				        {"tracking_error_pct", type number}, {"sharpe_ratio", type number}, {"sortino_ratio", type number},
+				        {"calmar_ratio", type number}, {"alpha_pct", type number},
+				        {"expense_ratio_pct", type number}, {"return_per_cost", type number},
+				        {"return_per_cost_rank", Int64.Type}, {"true_net_return", type number},
+				        {"composite_score", type number}, {"universe_rank", Int64.Type}, {"category_rank", Int64.Type}
+				    }),
 				    #"Replaced Value" = Table.ReplaceValue(#"Changed Type","Index Fund - Nifty 50","",Replacer.ReplaceText,{"sub_category"}),
 				    #"Replaced Value1" = Table.ReplaceValue(#"Replaced Value","Index Funds ","Index Fund - Nifty 50",Replacer.ReplaceText,{"sub_category"})
 				in
