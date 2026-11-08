@@ -704,6 +704,30 @@ document.addEventListener("DOMContentLoaded", () => {
     return hex;
   }
 
+  // Chart.js sizes axes to the data points' centres only, so large bubbles near
+  // an edge spill outside the plot. Extend the axis range by each bubble's
+  // radius (pixels → axis units) wherever a bubble would overflow.
+  function padScaleForBubbles(scale) {
+    const isY = scale.axis === "y";
+    const lengthPx = isY ? scale.height : scale.width;
+    const range = scale.max - scale.min;
+    if (!lengthPx || !range) return;
+
+    const unitsPerPx = range / lengthPx;
+    let min = scale.min;
+    let max = scale.max;
+    scale.chart.data.datasets.forEach(ds => {
+      ds.data.forEach(d => {
+        const value = isY ? d.y : d.x;
+        const pad = ((d.radius || 0) + 4) * unitsPerPx; // + hover growth and border
+        min = Math.min(min, value - pad);
+        max = Math.max(max, value + pad);
+      });
+    });
+    scale.min = min;
+    scale.max = max;
+  }
+
   // Visual 1: Risk vs. Return Profile (3Y CAGR vs Volatility)
   function renderRiskReturnScatter() {
     const ctx = document.getElementById("riskReturnChart").getContext("2d");
@@ -713,15 +737,20 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     const isLight = document.body.classList.contains("light-mode");
 
+    // Bubble size: square-root scale of AUM (area ∝ AUM), normalised to the
+    // largest fund so radii stay within MIN–MAX px however large AUM values get.
+    const MIN_RADIUS = 6;
+    const MAX_RADIUS = 22;
+    const maxAum = Math.max(0, ...fundMetrics.map(f => f.aum_cr || 0));
+
     const scatterData = fundMetrics
       .filter(f => f.volatility_pct !== null && f.cagr_3y !== null)
       .map(f => {
         const theme = getCategoryTheme(f.broad_category);
 
-        // Performance square root scale based on AUM
-        let radius = 6;
-        if (f.aum_cr) {
-          radius = 6 + (Math.sqrt(f.aum_cr) * 0.13);
+        let radius = MIN_RADIUS;
+        if (f.aum_cr && maxAum > 0) {
+          radius = MIN_RADIUS + (MAX_RADIUS - MIN_RADIUS) * Math.sqrt(f.aum_cr / maxAum);
         }
 
         return {
@@ -814,7 +843,8 @@ document.addEventListener("DOMContentLoaded", () => {
               text: 'Volatility (Annualised Risk %)',
               color: getAxisTitleColor()
             },
-            grid: { color: getGridColor() }
+            grid: { color: getGridColor() },
+            afterDataLimits: padScaleForBubbles
           },
           y: {
             title: {
@@ -822,7 +852,8 @@ document.addEventListener("DOMContentLoaded", () => {
               text: '3-Year CAGR (Return %)',
               color: getAxisTitleColor()
             },
-            grid: { color: getGridColor() }
+            grid: { color: getGridColor() },
+            afterDataLimits: padScaleForBubbles
           }
         }
       }
@@ -1284,13 +1315,20 @@ document.addEventListener("DOMContentLoaded", () => {
       const isLight = document.body.classList.toggle("light-mode");
       localStorage.setItem("dashboard_theme", isLight ? "light" : "dark");
 
-      // Update Chart defaults
-      initGlobalChartDefaults();
+      // Let the browser paint the new theme first, then re-draw theme-coloured
+      // elements in a separate task so the click itself stays fast (INP).
+      requestAnimationFrame(() => setTimeout(() => {
+        initGlobalChartDefaults();
 
-      // Re-draw all charts and elements to sync with the active theme
-      renderCharts();
-      renderDeepDive();
-      renderScreener();
+        // Only re-draw charts on the visible tab; hidden tabs re-draw with the
+        // current theme when switchPage() opens them.
+        const activePage = document.querySelector(".page-section.active")?.id;
+        if (activePage === "visuals-page") renderCharts();
+        else if (activePage === "deepdive-page") renderDeepDive();
+
+        // Screener rows use inline theme colours and aren't re-rendered by switchPage()
+        renderScreener();
+      }, 0));
     });
   }
   setupThemeToggle();
